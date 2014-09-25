@@ -1,0 +1,146 @@
+execve("/usr/bin/awk", ["awk"], [/* 65 vars */]) = 0
+brk(0)                                  = 0xb7ef4000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7730000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=126671, ...}) = 0
+mmap2(NULL, 126671, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7711000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/usr/lib/i386-linux-gnu/libsigsegv.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\200\t\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0644, st_size=9608, ...}) = 0
+mmap2(NULL, 12408, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb770d000
+mmap2(0xb770f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0xb770f000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\320\n\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0644, st_size=13856, ...}) = 0
+mmap2(NULL, 16512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7708000
+mmap2(0xb770b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0xb770b000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\0F\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0644, st_size=280108, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7707000
+mmap2(NULL, 282784, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb76c1000
+mmap2(0xb7705000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x43000) = 0xb7705000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1758972, ...}) = 0
+mmap2(NULL, 1768060, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7511000
+mprotect(0xb76ba000, 4096, PROT_NONE)   = 0
+mmap2(0xb76bb000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a9000) = 0xb76bb000
+mmap2(0xb76be000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb76be000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7510000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb7510700, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mprotect(0xb76bb000, 8192, PROT_READ)   = 0
+mprotect(0xb7705000, 4096, PROT_READ)   = 0
+mprotect(0xb770b000, 4096, PROT_READ)   = 0
+mprotect(0xb770f000, 4096, PROT_READ)   = 0
+mprotect(0xb77bd000, 8192, PROT_READ)   = 0
+mprotect(0xb7753000, 4096, PROT_READ)   = 0
+munmap(0xb7711000, 126671)              = 0
+brk(0)                                  = 0xb7ef4000
+brk(0xb7f15000)                         = 0xb7f15000
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=2919792, ...}) = 0
+mmap2(NULL, 2097152, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7310000
+mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 3, 0x2c5000) = 0xb772f000
+close(3)                                = 0
+open("/usr/lib/i386-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=26256, ...}) = 0
+mmap2(NULL, 26256, PROT_READ, MAP_SHARED, 3, 0) = 0xb7728000
+close(3)                                = 0
+rt_sigaction(SIGFPE, {0xb778e530, [FPE], SA_RESTART}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGBUS, {0xb778e530, [BUS], SA_RESTART}, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGSEGV, {0xb770dab0, [HUP INT QUIT USR1 USR2 PIPE ALRM TERM CHLD URG XCPU XFSZ VTALRM PROF WINCH IO PWR], SA_SIGINFO}, NULL, 8) = 0
+open("/proc/self/maps", O_RDONLY)       = 3
+read(3, "b7310000-b7510000 r--p 00000000 "..., 1024) = 1024
+read(3, "o\nb770d000-b770f000 r-xp 0000000"..., 1024) = 1024
+read(3, "0 \nb7ef4000-b7f15000 rw-p 000000"..., 1024) = 116
+close(3)                                = 0
+sigaltstack({ss_sp=0xb7ef4a70, ss_flags=0, ss_size=16384}, NULL) = 0
+rt_sigaction(SIGSEGV, {0xb770dab0, [HUP INT QUIT USR1 USR2 PIPE ALRM TERM CHLD URG XCPU XFSZ VTALRM PROF WINCH IO PWR], SA_STACK|SA_SIGINFO}, NULL, 8) = 0
+open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=2570, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7727000
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2570
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0xb7727000, 4096)                = 0
+open("/usr/share/locale/en_US/LC_MESSAGES/gawk.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/en/LC_MESSAGES/gawk.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale-langpack/en_US/LC_MESSAGES/gawk.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale-langpack/en/LC_MESSAGES/gawk.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+write(2, "Usage: awk [POSIX or GNU style o"..., 66Usage: awk [POSIX or GNU style options] -f progfile [--] file ...
+) = 66
+write(2, "Usage: awk [POSIX or GNU style o"..., 64Usage: awk [POSIX or GNU style options] [--] 'program' file ...
+) = 64
+write(2, "POSIX options:\t\tGNU long options"..., 45POSIX options:		GNU long options: (standard)
+) = 45
+write(2, "\t-f progfile\t\t--file=progfile\n", 30	-f progfile		--file=progfile
+) = 30
+write(2, "\t-F fs\t\t\t--field-separator=fs\n", 30	-F fs			--field-separator=fs
+) = 30
+write(2, "\t-v var=val\t\t--assign=var=val\n", 30	-v var=val		--assign=var=val
+) = 30
+write(2, "Short options:\t\tGNU long options"..., 47Short options:		GNU long options: (extensions)
+) = 47
+write(2, "\t-b\t\t\t--characters-as-bytes\n", 28	-b			--characters-as-bytes
+) = 28
+write(2, "\t-c\t\t\t--traditional\n", 20	-c			--traditional
+) = 20
+write(2, "\t-C\t\t\t--copyright\n", 18	-C			--copyright
+) = 18
+write(2, "\t-d[file]\t\t--dump-variables[=fil"..., 35	-d[file]		--dump-variables[=file]
+) = 35
+write(2, "\t-e 'program-text'\t--source='pro"..., 43	-e 'program-text'	--source='program-text'
+) = 43
+write(2, "\t-E file\t\t\t--exec=file\n", 23	-E file			--exec=file
+) = 23
+write(2, "\t-g\t\t\t--gen-pot\n", 16	-g			--gen-pot
+)   = 16
+write(2, "\t-h\t\t\t--help\n", 13	-h			--help
+)      = 13
+write(2, "\t-L [fatal]\t\t--lint[=fatal]\n", 28	-L [fatal]		--lint[=fatal]
+) = 28
+write(2, "\t-n\t\t\t--non-decimal-data\n", 25	-n			--non-decimal-data
+) = 25
+write(2, "\t-N\t\t\t--use-lc-numeric\n", 23	-N			--use-lc-numeric
+) = 23
+write(2, "\t-O\t\t\t--optimize\n", 17	-O			--optimize
+)  = 17
+write(2, "\t-p[file]\t\t--profile[=file]\n", 28	-p[file]		--profile[=file]
+) = 28
+write(2, "\t-P\t\t\t--posix\n", 14	-P			--posix
+)     = 14
+write(2, "\t-r\t\t\t--re-interval\n", 20	-r			--re-interval
+) = 20
+write(2, "\t-S\t\t\t--sandbox\n", 16	-S			--sandbox
+)   = 16
+write(2, "\t-t\t\t\t--lint-old\n", 17	-t			--lint-old
+)  = 17
+write(2, "\t-V\t\t\t--version\n", 16	-V			--version
+)   = 16
+write(2, "\nTo report bugs, see node `Bugs'"..., 121
+To report bugs, see node `Bugs' in `gawk.info', which is
+section `Reporting Problems and Bugs' in the printed version.
+
+) = 121
+write(2, "gawk is a pattern scanning and p"..., 116gawk is a pattern scanning and processing language.
+By default it reads standard input and writes standard output.
+
+) = 116
+write(2, "Examples:\n\tgawk '{ sum += $1 }; "..., 93Examples:
+	gawk '{ sum += $1 }; END { print sum }' file
+	gawk -F: '{ print $1 }' /etc/passwd
+) = 93
+exit_group(1)                           = ?
++++ exited with 1 +++

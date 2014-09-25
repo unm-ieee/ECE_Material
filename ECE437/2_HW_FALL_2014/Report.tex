@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{graphics}
+\usepackage{color}
+\pagestyle{fancy}
+\rhead{Steven Seppala}
+\lhead{ECE 437: OPERATING SYSTEMS}
+\cfoot{Page : \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  %backgroundcolor=\color{dkgreen},
+  numbers=left,
+  numberstyle=\tiny\color{mauve},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+\begin{document}
+
+\lstset{language=bash} 
+
+\begin {enumerate}
+	\item Use Linux utilities to explore the format of a linkable object file.
+		\begin {enumerate}
+			\item 
+				Math.o file type is : 	REL (Relocatable file)\\
+				Math.o magic number is:\\	7f 45 4c 46 02 01 01 03 00 00 00 00 00 00 00 00 \\
+				Math.o number of section headers: 29\\
+			
+			\item Section listings with memory map \\
+			\begin{center}
+				\begin{tabular}{|c|c|c|}
+				\hline{}
+				Section Number & Section Name &  MemoryMap\\
+				\hline{}
+				1 & .text & .text 				\\
+				2 & .rela.text & .text			\\
+				3 & .data & .data 				\\
+				4 & .bss & .bss					\\
+				22 & .comment & .text			\\
+				19 & .debug\_str & .debug^{1} 	\\
+				27 & .symtab & .symtab^{2} 		\\
+				\end{tabular}
+				\\
+			\end{center}
+			1: \\Debug: This section holds information for symbolic debugging. The contents are unspecified. All section names with the prefix .debug are reserved for future use in the ABI.\\
+			2: \\Symtab: This section holds a symbol table. If the file has a loadable segment that includes the symbol table, the section's attributes will include the SHF\_ALLOC bit; otherwise, that bit will be off.\\
+			\item Symbol Table \\
+			The variables that are in the symbol table are \underline{aa} and \underline{bb}}.\\
+			The functions inside the symbol table are \underline{int\_mul}, \underline{int\_add}, \underline{printf}, and \underline{main}.\\
+			The variable \underline{cc} is not in the symbol table because it is declared inside the function main, and thus will only be used in the main function. \\
+			The two functions \underline{int\_mul} and \underline{int\_add} are in the symbol table because they are functions that the linker will need to find, in order to resolve references.\\
+			This is the same reason that the function main and printf are included in the symbol table.\\
+			If a symbols scope is outside of the file, or references something outside of the file, then it's symbol must be on the symbol table, otherwise the linker will not be able to find it. This is essentially why the symbol \underline{cc} is not on the symbol table, because its scope is only within \underline{main} .\\
+		\end{enumerate}
+		\\
+		\\
+		\\
+	\item  Explore the format of an executable object file
+		\begin {enumerate}
+			\item Simplemath executeable examination\\
+			\begin{center}
+				\begin{tabular}{|c|c|c|}
+					\hline{}
+					Name & Type & Section \\
+					\hline{}
+					aa & OBJECT & .data 	\\
+					bb & OBJECT & .bss  	\\
+					int\_add & FUNC & .text	\\
+					int\_mul & FUNC & .text	\\
+					main & FUNC & .text		\\
+				\end{tabular}
+			\end{center}
+			\item \textbf{Differences between \emph{simplemath} and \emph{simplemath.o}}
+			\\
+			\raggedright{
+				Where program headers are concered, the object file does not have any, and the executeable simplemath file does have 56 bytes of program headers, and a total of 9 program headers. \\
+				Both the object file and the executeable file contain section headers, however the executeable contains quite a few more than the object file does. The ones that are more noticable are that the executable file contains a .dynamic, .got, and initalizers for the program and for arrays. The headers are for dynamic linking information and a global offset table and finally code to initalize variables and other things before entering the main function, respectively.\\
+				It would seem that the executeable file contains section headers that are meant to set up values and initalize memory before it will start executeing code, whereas the object file contains headers that will only setup a memory offset to where those things will happen.\\
+				Symbol tables are also interesting, there is a dynamic symbol table for the executeable file, whereas there isn't one for the object file. The dynamic symbol table in the executeable file seems to link to functions or other things that are called inside the stdio.h header file used. 
+				The regular symbol table in the executeable file contains almost twice as many symbol enteries, however they do not start until about halfway into the table.
+				The executeable file contains symbol entires to setup IO, program frames, header files, external functions, and the global offset table. 
+				The symbol table for the object file starts about 75\% of the way through. It only has entries for things declared specifically inside the object files that it was linked from.
+			}
+		\end {enumerate}
+		\\
+	\item Build your own math library for sharing. 
+		\begin{enumerate}
+			\item The first thing that I did was, in my Makefile for the 
+			project, I included flags to compile all of the \emph{.c} files 
+			into PIC \emph{.o} files. As shown here: 
+			\\
+			\\
+			\\
+			\\
+			\\
+			\lstinputlisting[linerange={1-7,9-29,38-41}]{Makefile}
+
+			\\
+			After I had the correct PIC files, I was then able to incrimentally
+			link them into a \emph{.so} file. I then had to rename this .so file 
+			so that when I linked the next PIC object, it wouldn't overwrite 
+			the current shared object file. After doing this three times, I had the
+			\emph{libmymath.so} file that was desiered. I was then able to 
+			use the compiler and build the shared object into an executeable file. 
+			The command I used to do this was extremely long and redundant:
+			\begin{lstlisting}[language=bash]
+gcc -L./ -Wl,-rpath=\$(PWD) -o simpleone -lmymath -lmath
+			\end{lstlisting}
+			Where the shared object's I made were \emph{libmymath.so} and
+			\emph{libmath.so}. The compiler qould not recognize the library otherwise. 
+			\\
+			Once I had done this, the file compiled with no errors and I was able to execute it.
+			I did not have to make any changes to the \emph{.c} files themselves. 
+			After playing with the compiler a bit more, I found that an easier way to do this,
+			that wouldn't involve so many extrenuous shared objects being made, is to link all the object files
+			at once into a single shared object. Doing this would include all of the functions need, and then the 
+			only extra thing that would have to be done, is export the wokring diretory as the libraries path.
+			\emph{This can be shown here in my Makefile version 2.}
+			\lstinputlisting{Makefile}
+		\end{enumerate}
+		
+		
+\end{enumerate}
+\end{document}

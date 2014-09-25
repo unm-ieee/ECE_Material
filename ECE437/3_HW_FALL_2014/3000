@@ -1,0 +1,6 @@
+
+Matrix size: N=3000; # of Child Processes M=1; blk sise 3000
+P00 PID1812: 00:00:456 to 04:57:638  elapsed 297182 msecs
+	     usr 297125 sys 0 (in msecs) Context Switch 322
+Parent PID 1812: Elapsed 297693 msecs
+

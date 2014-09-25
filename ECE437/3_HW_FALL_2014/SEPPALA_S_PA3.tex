@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{graphics}
+\usepackage{lstlinebgrd}
+\usepackage{color}
+\usepackage[margin=0.7in]{geometry}
+\pagestyle{fancy}
+\rhead{Steven Seppala}
+\lhead{ECE 437: OPERATING SYSTEMS}
+\cfoot{Page : \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+	\definecolor{dkgreen}{rgb}{0,0.8,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  %backgroundcolor=\color{dkgreen},
+  numbers=left,
+  numberstyle=\tiny\color{mauve},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+\begin{document}
+\lstset{language=[ANSI]C}
+
+\begin{enumerate}
+	\item \textbf{Process and process IDs.}
+	\begin{enumerate}
+	\item Output:\\
+		\lstinputlisting[language=bash,basicstyle=\small]{psdashl_output}
+	\item Zombie:\\
+		\lstinputlisting[language=bash,basicstyle=\small,linebackgroundcolor={\ifnum\value{lstnumber}=13\color{dkgreen}\fi}]{zombie}
+		\raggedright{The parent process is the PID 23169. This is the process that
+					called the child process; and is ultimately its parent process.}
+	\item PID less than 10: \\
+		\lstinputlisting[language=bash,basicstyle=\small]{pidlt10}
+	\item PID trace on grep: \\
+		\lstinputlisting[language=bash,basicstyle=\small]{pidtree}
+	\end{enumerate}
+	\item \textbf{Process creaation with fork and wait \emph{(Run on my computer)}: \\}
+		\lstinputlisting{forkoff}
+		\lstinputlisting[linerange={24-70}]{myfork.c}
+	\item \textbf{Program execution with execl \emph{(Run on my computer)}: \\}
+		\lstinputlisting{execoff}
+		\lstinputlisting[linerange={24-62}]{myexec.c}
+	\item \textbf{Process performance measurement with gettimeofday and getrusage. }
+	\begin{enumerate}
+	\item \textbf{\emph{CPU CORES : 4 \\ CLK SPEED : 2927.000 MHz \\ LOAD AVG : 4.35}}
+	
+	\item Fill in the blanks \\
+		\begin{table}[ht]
+		\caption{mm437\_seq.c} % title of Table
+		\centering % used for centering table
+		\begin{tabular}{c c c c c c} % centered columns (4 columns)
+		\hline\hline %inserts double horizontal lines
+		N & Elapsed Time & USR Time & SYS Time & USR+SYS Time & \# of Context Switches\\ [0.5ex] % inserts table 
+		%heading
+		\hline % inserts single horizontal line
+		750 & 3345 & 3344 & 0 & 3344 & 4 & \\
+		1500 & 30320 & 30315 & 0 & 30315 & 33 & \\
+		3000 & 297182 & 297125 & 0 & 297125 & 322 & \\ [1ex] % [1ex] adds vertical space
+		\hline %inserts single line
+		\end{tabular}
+		\label{table:nonlin} % is used to refer this table in the text
+		\end{table}
+	\end{enumerate}
+	\item Multiple Processes Creation with shared memory \\
+		\begin{enumerate}
+			\item M = 1 \\
+				\begin{table}[ht]
+				\caption{mm437\_seq.c} % title of Table
+				\centering % used for centering table
+				\begin{tabular}{c c c c c c} % centered columns (4 columns)
+				\hline\hline %inserts double horizontal lines
+				N & Elapsed Time & USR Time & SYS Time & USR+SYS Time & \# of Context Switches\\ [0.5ex] % inserts table 
+				%heading
+				\hline % inserts single horizontal line
+				750 & 8340 & 8335 & 3 & 8338 & 11 & \\
+				1500 & 79480 & 79431 & 31 & 79462 & 89 & \\
+				3000 & 706143 & 705878 & 127 & 706005 & 777 & \\ [1ex] % [1ex] adds vertical space
+				\hline %inserts single line
+				\end{tabular}
+				\label{table:nonlin} % is used to refer this table in the text
+				\end{table}
+		\item M = 2 \\
+				\begin{table}[ht]
+				\caption{mm437\_seq.c} % title of Table
+				\centering % used for centering table
+				\begin{tabular}{c c c c c c} % centered columns (4 columns)
+				\hline\hline %inserts double horizontal lines
+				N & Elapsed Time & USR Time & SYS Time & USR+SYS Time & \# of Context Switches\\ [0.5ex] % inserts table 
+				%heading
+				\hline % inserts single horizontal line
+				750 & 8803 & 8794 & 7 & 8801 & 11 & \\
+				1500 & 97662 & 97594 & 32 & 97626 & 223 & \\
+				3000 & 712610 & 712215 & 245 & 712460 & 977 & \\ [1ex] % [1ex] adds vertical space
+				\hline %inserts single line
+				\end{tabular}
+				\label{table:nonlin} % is used to refer this table in the text
+				\end{table}
+				\\
+				\\
+				\\
+				\\
+				\pagebreak
+		\item M = 4 \\
+				\begin{table}[ht]
+				\caption{mm437\_seq.c} % title of Table
+				\centering % used for centering table
+				\begin{tabular}{c c c c c c} % centered columns (4 columns)
+				\hline\hline %inserts double horizontal lines
+				N & Elapsed Time & USR Time & SYS Time & USR+SYS Time & \# of Context Switches\\ [0.5ex] % inserts table 
+				%heading
+				\hline % inserts single horizontal line
+				750 & 12986 & 12982 & 1 & 12983 & 15 & \\
+				1500 & 88525 & 83034 & 27 & 83061 & 629 & \\
+				3000 & 687655 & 687600 & 45 & 687645 & 989 & \\ [1ex] % [1ex] adds vertical space
+				\hline %inserts single line
+				\end{tabular}
+				\label{table:nonlin} % is used to refer this table in the text
+				\end{table}
+			
+		\end{enumerate}
+		
+		
+		
+\end{enumerate}
+
+
+
+\end{document}

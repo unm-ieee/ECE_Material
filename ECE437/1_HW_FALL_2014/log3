@@ -1,0 +1,53 @@
+2c2
+< brk(0)                                  = 0x97a5000
+---
+> brk(0)                                  = 0x89d1000
+4c4
+< mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77a4000
+---
+> mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb778e000
+8c8
+< mmap2(NULL, 126671, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7785000
+---
+> mmap2(NULL, 126671, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb776f000
+14,17c14,17
+< mmap2(NULL, 1768060, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb75d5000
+< mprotect(0xb777e000, 4096, PROT_NONE)   = 0
+< mmap2(0xb777f000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a9000) = 0xb777f000
+< mmap2(0xb7782000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7782000
+---
+> mmap2(NULL, 1768060, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb75bf000
+> mprotect(0xb7768000, 4096, PROT_NONE)   = 0
+> mmap2(0xb7769000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a9000) = 0xb7769000
+> mmap2(0xb776c000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb776c000
+19,21c19,21
+< mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75d4000
+< set_thread_area({entry_number:-1 -> 6, base_addr:0xb75d4940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+< mprotect(0xb777f000, 8192, PROT_READ)   = 0
+---
+> mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75be000
+> set_thread_area({entry_number:-1 -> 6, base_addr:0xb75be940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+> mprotect(0xb7769000, 8192, PROT_READ)   = 0
+23,27c23,28
+< mprotect(0xb77c7000, 4096, PROT_READ)   = 0
+< munmap(0xb7785000, 126671)              = 0
+< brk(0)                                  = 0x97a5000
+< brk(0x97c6000)                          = 0x97c6000
+< open("MyOSclass", O_RDONLY)             = -1 ENOENT (No such file or directory)
+---
+> mprotect(0xb77b1000, 4096, PROT_READ)   = 0
+> munmap(0xb776f000, 126671)              = 0
+> brk(0)                                  = 0x89d1000
+> brk(0x89f2000)                          = 0x89f2000
+> open("MyOSclass", O_RDONLY)             = 3
+> close(3)                                = 0
+29,32c30,33
+< mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77a3000
+< write(1, "\n Program Failed, figure out why"..., 36
+<  Program Failed, figure out why...
+< ) = 36
+---
+> mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb778d000
+> write(1, "\n Program ran successfully \n", 28
+>  Program ran successfully 
+> ) = 28

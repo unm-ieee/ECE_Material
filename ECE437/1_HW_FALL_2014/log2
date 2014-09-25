@@ -1,0 +1,35 @@
+execve("./checkfile", ["./checkfile"], [/* 65 vars */]) = 0
+brk(0)                                  = 0x89d1000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb778e000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=126671, ...}) = 0
+mmap2(NULL, 126671, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb776f000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1758972, ...}) = 0
+mmap2(NULL, 1768060, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb75bf000
+mprotect(0xb7768000, 4096, PROT_NONE)   = 0
+mmap2(0xb7769000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a9000) = 0xb7769000
+mmap2(0xb776c000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb776c000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75be000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb75be940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mprotect(0xb7769000, 8192, PROT_READ)   = 0
+mprotect(0x8049000, 4096, PROT_READ)    = 0
+mprotect(0xb77b1000, 4096, PROT_READ)   = 0
+munmap(0xb776f000, 126671)              = 0
+brk(0)                                  = 0x89d1000
+brk(0x89f2000)                          = 0x89f2000
+open("MyOSclass", O_RDONLY)             = 3
+close(3)                                = 0
+fstat64(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb778d000
+write(1, "\n Program ran successfully \n", 28
+ Program ran successfully 
+) = 28
+exit_group(0)                           = ?
++++ exited with 0 +++

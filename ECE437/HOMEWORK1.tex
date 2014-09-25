@@ -1,0 +1,234 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage[defaultmono]{droidmono}
+
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+
+\usepackage{geometry}
+\geometry{total={210mm,297mm},
+left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{center}
+\vspace{2ex}
+{\huge \textsc{\@title}}
+\vspace{1ex}
+\\
+\linia\\
+\@author \hfill \@date
+\vspace{4ex}
+\end{center}
+}
+\makeatother
+%%%
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Page \thepage}
+\chead{}
+\rhead{Steven Seppala}
+\lfoot{Homework \textnumero{} 1}
+\cfoot{Operating Systems}
+\rfoot{ECE 437}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+%%%----------Document begins right below this-------%%%
+%%%----------%%%----------%%%----------%%%----------%%%
+\begin{document}
+
+\title{Homework \textnumero{} 1}
+
+\author{Steven Seppala}
+
+\date{21 September 2014}
+
+\maketitle
+
+\section*{Question 1.5}
+
+There are two modes of operation. \\
+\begin{center}
+1) Kernel Mode \\
+2) User Mode \\
+\end{center}
+
+Kernel mode is the privileged mode. If the mode bit is in the low state (0), then the system is in kernel mode. By using this and also making some instructions privileged, we can protect the system \ from users who either do not know how to use some commands that can be dangerous, and we can protect
+other users from those same users who might be malicious or just not know what they are doing. These instructions are operations such as IO interfacing, task scheduling, and other such operations. \par
+    User mode is when the mode bit is high (1). When we are in user mode, we can not perform privileged operations. If we try to, the operating system raises exceptions and tells the user that they are not allowed to execute that instruction. 
+
+\section*{Problem 1.6}
+\begin{center}
+\begin{enumerate}
+\item Privileged.
+\item Not - Privileged.
+\item Privileged.
+\item Not - Privileged.
+\item Privileged.
+\item Privileged.
+\item Not - Privileged.
+\item Privileged.
+\end{enumerate}
+\end{center}
+\pagebreak
+
+\section*{Problem 1.20}
+\begin{enumerate}
+\item Direct memory access command blocks are written to main memory which contains pointers to the source and destination of the transfer and a number of bytes that are to be transferred. The CPU writes the address of the command block to the DMA controller. It can start a DMA operation by writing values into special function registers. The device then starts the operation once it comes from the CPU. When it is finished it interrupts the CPU to tell it that the operation is finished. The OS uses device drivers to watch the hardware controllers that do this, the device drivers have special registers and buffers so that the CPU isn't tied down with these operations.
+
+\item The device controller sends an interrupt to the CPU. Both the device and the CPU can access the memory simultaneously. The memory controller provides access to the memory bus in a fair manner between the two.  \par 
+\setlength\parindent{24pt} The CPU starts the transfer by creating the interface with the correct arguments to be transferred.
+The controller reads the block and into the buffer and verifies the check-sum, then begins to copy the block into the memory given to it by the DMA. Then it increments the DMA address and decrements the DMA count. Once the count is zero the process is finished and an interrupt is generated.
+
+\item The CPU isn't allowed to execute other programs while the DMA is transferring the data. It can still access data in the caches where there is no interference with user programs; such as primary and secondary caches. When the DMA sends the interrupts it can cause a user process to be suspended.
+\end{enumerate}
+
+\section*{Problem 2.6}
+First a fork() command must be called, followed by exec(). The fork() command creates a copy of the process which called it, including it's file pointers (std in, std out, and std err). Then exec() loads the program that is called into memory. 
+
+\section*{Problem 2.21}
+It provides minimal process and memory management with communication facility. The communication is done indirectly through message passing. All new processes are added to the user space and do not require modifications of the kernel. It provides more security and reliability since the majority of services running are the user's instead of the kernel's.
+\par 
+However, the main disadvantage of these is performance reduction due to increasted system overhead.
+
+\pagebreak
+
+\section*{Problem 3.2}
+The code produces eight (8) process in total, counting the parent as well. 
+
+\section*{Problem 3.14}
+ppid = 2600\\
+child pid = 2603\\
+\\
+Line A : "child : pid = 0" .  \\
+Line B : "child : pid1 = 2603".\\
+Line C : "parent : pid 2603".\\
+Line D : "parent : pid1 = 2600".\\
+
+\section*{Problem 3.18}
+\begin{enumerate}
+\item Synchronous communication allows rendezvous between the sender and receiver. A benefit is that neither process has to block its execution, which gives better performance. \par A drawback is that blocking the send could lead to uncertainty when it will be delivered and it could be delivered when the receiver no longer has interest. 
+
+\item Automatic buffering provides a que with unknown length. This ensures the sender will never have to block while waiting to copy a message.  There are no specifications on how this is implemented though, one specification may waste enormous amounts of memory.
+\par 
+    Explicit buffering dictates how long the buffer is to be. The sender may be blocked while waiting for space in the que; but it is less likely that memory will be wasted while explicitly buffering. 
+    
+\item Send by copy is better for network generalization and synchronization. It doesn't allow the receiver to alter the sate of the parameter but send by reference does.  Send by reference is more efficient for larger data but hard to code for because the programmer must write shared memory implications.
+
+\item The implications are mostly related to buffering fixed size messages. Fixed size messages are easier to implement at the kernel level but require more programing. 
+\\Variable sized messages are more complex for the kernel but easier to program for. The number of variable sized messages that can be held by a buffer is dependant on how long the messages accumulate to be, and thus is unknown until it is known. 
+\end{enumerate}
+
+\section*{Problem 4.7}
+If a web server for instance ran only a single thread, then it could only service one client at a time; making the time between clients receiving data possibly enormous.  It is generally better to run this as a process that contains numerous threads. 
+
+\section*{Problem 4.17}
+
+Line C : "CHILD : value = 0" \\
+Line P : "PARENT: value = 5" \\
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+0 S  1000  4548 26809  0  80   0 -  1943 wait   pts/26   00:00:00 bash
+0 S  1000  4563  4548  0  80   0 -  1944 wait   pts/26   00:00:00 bash
+0 S  1000  4580  4563  0  80   0 -  1944 wait   pts/26   00:00:00 bash
+0 S  1000 13153  2247  0  80   0 -  2142 wait   pts/26   00:00:01 bash
+0 T  1000 16121 13153  0  80   0 -  1074 signal pts/26   00:00:00 rm
+1 S  1000 21326  4580  0  80   0 -  1944 wait   pts/26   00:00:00 bash
+0 R  1000 21330 21326  0  80   0 -  1248 -      pts/26   00:00:00 ps
+0 S  1000 21331 21326  0  80   0 -  1059 pipe_w pts/26   00:00:00 tee
+0 S  1000 26809 13153  0  80   0 -  2138 wait   pts/26   00:00:00 bash
+0 T  1000 27762 26809  0  80   0 -  3163 signal pts/26   00:00:00 grep
+0 T  1000 27837 26809  0  80   0 -  3163 signal pts/26   00:00:00 grep
+1 T  1000 28430 26809  0  80   0 -  1951 signal pts/26   00:00:00 bash
+1 T  1000 29772 26809  0  80   0 -  1968 signal pts/26   00:00:00 bash
+0 T  1000 29773 29772  0  80   0 -  4796 signal pts/26   00:00:00 command-not-fou
+0 T  1000 31895 13153  0  80   0 - 27304 signal pts/26   00:00:00 pdflatex
+0 T  1000 31900 13153  0  80   0 - 27304 signal pts/26   00:00:00 pdflatex

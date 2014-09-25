@@ -1,0 +1,64 @@
+\documentclass[a4paper]{article}
+\usepackage{atbegshi,picture}
+
+\AtBeginShipout{\AtBeginShipoutUpperLeft{%
+  \put(\dimexpr\paperwidth-1cm\relax,-1.5cm){\makebox[0pt][r]{\framebox{Steven Seppala \n ECE437 Fall2014}}}%
+}}
+
+\begin{document}
+
+\begin {enumerate}
+	\item Strace a small program
+		\begin {enumerate}
+		\item Part A.
+			\begin {enumerate}
+			\item The first system call to have an error is "access("/etc/ld.so.nohwcap", F OK)". The Error for this is no file that this is referencing is a hardware optimization library. It could be a reason that the program failed.
+			\item Next was "access("/etc/ld.so.preload", R OK)". This also failed because of a non-existant file. 
+			\item After that call, the system tried to access the ld.so.nohwcap library again it failed this call because there was no file by that name.
+			\item Fourth, the program called "brk(0x97c6000)" and got a return value of the argument. Under the man page for this system call, it tells us that the return value will be the new system break on succes, and the current system break on failue. Since the argument is the current break, and the reutn is the same, this system called failed. This implies that the programs memory did not increase or decrease.
+			\item Finally, the system call which proved catastrophic for the program was "open("MyOSclass", O RDONLY)" , the return for this was "-1 ENOENT" . The return value would have given the program a NULL return in the C code. Which would mean that the failure message would have been triggered. Which would mean that the program failed.
+			\end {enumerate}
+		\item Part B.
+			\begin {enumerate}
+			\item The two files ran nearly the same both times, the system call of "open("MyOSclass", O RDONLY)" gave a return value of 3. This means that system call succeeded and the file was opened, we know this because the return value was non-negative. Which, in the C code, gave a value of not NULL. This indicated that the program should print out the success message.
+			\end {enumerate}
+		\item The function "fopen" is not a system call. It mainly corilates to the system call of "open".
+		\item The function "printf" is not a system call. It mainly corilates to the system call of "write".
+		\end{enumerate}
+	\item Strace a Linux utility command. I chose awk.
+		\begin {enumerate}
+		\item mmap2 : maps files or devices into memory. Returns a void type and its arguments are mmap2(void *addr, size t length, int prot, int flags, int fd, off t pgoffset) . 
+        \item fstat64 : it returns information about a file, no permissions are needed of the file. Returns an int type and its arguments are fstat(int fd, struct stat *buf).
+        \item brk : it changes the location of the program break, which defines the end of the process data segment. It returns an int type and its arguments are brk(void *addr).
+        \item rt sigaction : it is used to change the acition taken by a process on the recipt of a signal. It returns an int and its arguments are sigaction(int signum, const struct sigaction *act, struct sigaction *oldact).
+        \end {enumerate}
+	\item Strace on "ls".
+		\begin {enumerate}
+		\item mmap2 : Minimum 21 $\mu$s Maximum : 47 $\mu$s Mean : 26.869 $\mu$s
+		\item close : Minimum 11 $\mu$s Maximum : 24 $\mu$s Mean : 18.91  $\mu$s
+		\item fstat64 : Minimum 28 $\mu$s Maximum : 35 $\mu$s Mean : 30.2  $\mu$s
+		\item mprotect : Minimum 19 $\mu$s Maximum : 27 $\mu$s Mean : 23.33  $\mu$s
+		\item access : Minimum 19 $\mu$s Maximum : 68 $\mu$s Mean : 27.62  $\mu$s
+		\item read : Minimum 19 $\mu$s Maximum : 68 $\mu$s Mean : 27.625  $\mu$s
+		\end {enumerate}
+	\item Strace on "htop"
+		 \begin{table}[ht]
+		\caption{Strace Calls} % title of Table
+		\centering % used for centering table
+		\begin{tabular}{c c c} % centered columns (4 columns)
+		\hline\hline %inserts double horizontal lines
+		System Call & Number of calls & Time spent in call  \\ [0.5ex] % inserts table 
+		%heading
+		\hline % inserts single horizontal line
+		read & 43987 & 4.425 ms\\ % inserting body of the table
+		open & 42813 & 1.610 ms\\
+		close & 42866 & 1.090 ms\\
+		getdents & 102 & 1.077 ms\\
+		stat64 & 14305 & 0.395 ms\\ [1ex] % [1ex] adds vertical space
+		\hline %inserts single line
+		\end{tabular}
+		\label{table:nonlin} % is used to refer this table in the text
+		\end{table}
+\end {enumerate}
+
+\end{document}

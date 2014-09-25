@@ -1,0 +1,6 @@
+
+Matrix size: N=750; # of Child Processes M=1; blk sise 750
+P00 PID1787: 00:00:026 to 00:03:371  elapsed 3345 msecs
+	     usr 3344 sys 0 (in msecs) Context Switch 4
+Parent PID 1787: Elapsed 3381 msecs
+

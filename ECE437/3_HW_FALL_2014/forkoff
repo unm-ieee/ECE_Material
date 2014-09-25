@@ -1,0 +1,3 @@
+from C0: own PID=21377, parent's PID=21376
+from C1: own PID=21378, parent's PID=21376
+from P0: own PID=21376, PID of C0=21377, PID of C1=21378, total elapsed time in milliseconds= 2.6610
