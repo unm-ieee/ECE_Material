@@ -1,0 +1,387 @@
+(gdb) print f
+$14 = 34
+(gdb) print i
+$15 = 0
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+
+Starting program: /nfs/student/s/sseppala/Desktop/LabWork/Lab1 
+
+Breakpoint 1, main () at LabExcersize1.c:5
+5	int f = 34;
+(gdb) print f
+$16 = 0
+(gdb) continue
+Continuing.
+
+Breakpoint 2, main () at LabExcersize1.c:6
+6	float i = 2345.2345;
+(gdb) print f
+$17 = 34
+(gdb) continue
+Continuing.
+
+Breakpoint 3, main () at LabExcersize1.c:7
+7	float n2 = 0.0;
+(gdb) print i
+$18 = 2345.23462
+(gdb) continue
+Continuing.
+
+Breakpoint 4, main () at LabExcersize1.c:8
+8	float t5 = -5.000001;
+(gdb) print n2
+$19 = 0
+(gdb) continue
+Continuing.
+[Inferior 1 (process 8392) exited normally]
+(gdb) print n2
+No symbol "n2" in current context.
+(gdb) help examine
+Undefined command: "examine".  Try "help".
+(gdb) examine help
+Undefined command: "examine".  Try "help".
+(gdb) examine
+Undefined command: "examine".  Try "help".
+(gdb) examine
+Undefined command: "examine".  Try "help".
+(gdb) help x
+Examine memory: x/FMT ADDRESS.
+ADDRESS is an expression for the memory address to examine.
+FMT is a repeat count followed by a format letter and a size letter.
+Format letters are o(octal), x(hex), d(decimal), u(unsigned decimal),
+  t(binary), f(float), a(address), i(instruction), c(char) and s(string).
+Size letters are b(byte), h(halfword), w(word), g(giant, 8 bytes).
+The specified number of objects of the specified size are printed
+according to the format.
+
+Defaults for format and size letters are those previously used.
+Default count is 1.  Default address is following last thing printed
+with this command or "print".
+(gdb) run
+Starting program: /nfs/student/s/sseppala/Desktop/LabWork/Lab1 
+
+Breakpoint 1, main () at LabExcersize1.c:5
+5	int f = 34;
+(gdb) continue
+Continuing.
+
+Breakpoint 2, main () at LabExcersize1.c:6
+6	float i = 2345.2345;
+(gdb) continue
+Continuing.
+
+Breakpoint 3, main () at LabExcersize1.c:7
+7	float n2 = 0.0;
+(gdb) x/4b n2
+0x0:	Cannot access memory at address 0x0
+(gdb) x/4b i
+0x929:	Cannot access memory at address 0x929
+(gdb) print x/4b i 
+No symbol "x" in current context.
+(gdb) print i
+$20 = 2345.23462
+(gdb) x/4b f 
+0x22:	Cannot access memory at address 0x22
+(gdb) x/4b 0x22
+0x22:	Cannot access memory at address 0x22
+(gdb) x/4b *f 
+Cannot access memory at address 0x22
+(gdb) x f
+0x22:	Cannot access memory at address 0x22
+(gdb) x/b f
+0x22:	Cannot access memory at address 0x22
+(gdb) x/b &f
+0x7fffffffe6f0:	34
+(gdb) x/4b &f
+0x7fffffffe6f0:	34	0	0	0
+(gdb) x/32b &f
+0x7fffffffe6f0:	34	0	0	0	0	0	0	0
+0x7fffffffe6f8:	109	-57	-93	-9	-1	127	0	0
+0x7fffffffe700:	0	0	0	0	0	0	0	0
+0x7fffffffe708:	-40	-25	-1	-1	-1	127	0	0
+(gdb) x/8b &f
+0x7fffffffe6f0:	34	0	0	0	0	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/4b &i
+0x7fffffffe6ec:	-63	-109	18	69
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) x/8b &i
+0x7fffffffe6ec:	-63	-109	18	69	34	0	0	0
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 9039] will be killed.
+
+Quit anyway? (y or n) y
+sseppala@b146-13:~/Desktop/LabWork$ clang -g LabExcersize1.c -o  Lab1
+LabExcersize1.c:21:12: error: redefinition of 'i' with a different type
+floatunion i = 2345.2345;
+           ^
+LabExcersize1.c:6:7: note: previous definition is here
+float i = 2345.2345;
+      ^
+LabExcersize1.c:22:12: error: redefinition of 'n2' with a different type
+floatunion n2 = 0.0;
+           ^
+LabExcersize1.c:7:7: note: previous definition is here
+float n2 = 0.0;
+      ^
+LabExcersize1.c:23:12: error: redefinition of 't5' with a different type
+floatunion t5 = -5.000001;
+           ^
+LabExcersize1.c:8:7: note: previous definition is here
+float t5 = -5.000001;
+      ^
+3 errors generated.
+sseppala@b146-13:~/Desktop/LabWork$ clang -g LabExcersize1.c -o  Lab1
+LabExcersize1.c:21:12: error: initializing 'floatunion' with an expression of
+      incompatible type 'double';
+floatunion fu1 = 2345.2345;
+           ^     ~~~~~~~~~
+LabExcersize1.c:22:12: error: initializing 'floatunion' with an expression of
+      incompatible type 'double';
+floatunion fu2 = 0.0;
+           ^     ~~~
+LabExcersize1.c:23:12: error: initializing 'floatunion' with an expression of
+      incompatible type 'double';
+floatunion fu3 = -5.000001;
+           ^     ~~~~~~~~~
+3 errors generated.
+sseppala@b146-13:~/Desktop/LabWork$ clear
+
+sseppala@b146-13:~/Desktop/LabWork$ clang -g LabExcersize1.c -o  Lab1
+LabExcersize1.c:21:12: error: initializing 'floatunion' with an expression of
+      incompatible type 'double';
+floatunion fu1 = 2345.2345;
+           ^     ~~~~~~~~~
+LabExcersize1.c:22:12: error: initializing 'floatunion' with an expression of
+      incompatible type 'double';
+floatunion fu2 = 0.0;
+           ^     ~~~
+LabExcersize1.c:23:12: error: initializing 'floatunion' with an expression of
+      incompatible type 'double';
+floatunion fu3 = -5.000001;
+           ^     ~~~~~~~~~
+3 errors generated.
+sseppala@b146-13:~/Desktop/LabWork$ clang -g LabExcersize1.c -o  Lab1
+LabExcersize1.c:24:5: error: assigning to 'floatunion' from incompatible type 'int';
+fu1 =10;
+    ^~~
+LabExcersize1.c:25:5: error: assigning to 'floatunion' from incompatible type 'int';
+fu2 = -5;
+    ^ ~~
+LabExcersize1.c:26:5: error: assigning to 'floatunion' from incompatible type 'double';
+fu3 = 5.01;
+    ^ ~~~~
+3 errors generated.
+sseppala@b146-13:~/Desktop/LabWork$ clang -g LabExcersize1.c -o  Lab1
+LabExcersize1.c:21:5: error: assigning to 'floatunion' from incompatible type 'int';
+fu1 =10;
+    ^~~
+LabExcersize1.c:22:5: error: assigning to 'floatunion' from incompatible type 'int';
+fu2 = -5;
+    ^ ~~
+LabExcersize1.c:23:5: error: assigning to 'floatunion' from incompatible type 'double';
+fu3 = 5.01;
+    ^ ~~~~
+3 errors generated.
+sseppala@b146-13:~/Desktop/LabWork$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sseppala@b146-13:~/Desktop/LabWork$ clang -g LabExcersize1.c -o  Lab1
+LabExcersize1.c:21:5: error: assigning to 'floatunion' from incompatible type 'int';
+fu1 =10;
+    ^~~
+LabExcersize1.c:22:5: error: assigning to 'floatunion' from incompatible type 'int';
+fu2 = -5;
+    ^ ~~
+LabExcersize1.c:23:5: error: assigning to 'floatunion' from incompatible type 'double';
+fu3 = 5.01;
+    ^ ~~~~
+3 errors generated.
+sseppala@b146-13:~/Desktop/LabWork$ clang -g LabExcersize1.c -o  Lab1
+LabExcersize1.c:3:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main()
+^~~~
+LabExcersize1.c:21:5: error: assigning to 'floatunion' from incompatible type 'int';
+fu1 =10;
+    ^~~
+LabExcersize1.c:22:5: error: assigning to 'floatunion' from incompatible type 'int';
+fu2 = -5;
+    ^ ~~
+LabExcersize1.c:23:5: error: assigning to 'floatunion' from incompatible type 'double';
+fu3 = 5.01;
+    ^ ~~~~
+1 warning and 3 errors generated.
+sseppala@b146-13:~/Desktop/LabWork$ gcc -g LabExcersize1.c -o  Lab1
+LabExcersize1.c: In function ‘main’:
+LabExcersize1.c:21:5: error: incompatible types when assigning to type ‘floatunion’ from type ‘int’
+LabExcersize1.c:22:5: error: incompatible types when assigning to type ‘floatunion’ from type ‘int’
+LabExcersize1.c:23:5: error: incompatible types when assigning to type ‘floatunion’ from type ‘double’
+sseppala@b146-13:~/Desktop/LabWork$ clang -g LabExcersize1.c -o  Lab1
+LabExcersize1.c:3:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main()
+^~~~
+1 warning generated.
+sseppala@b146-13:~/Desktop/LabWork$ gdb Lab1
+GNU gdb (Ubuntu/Linaro 7.4-2012.04-0ubuntu2.1) 7.4-2012.04
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+For bug reporting instructions, please see:
+<http://bugs.launchpad.net/gdb-linaro/>...
+Reading symbols from /nfs/student/s/sseppala/Desktop/LabWork/Lab1...done.
+(gdb) break 21
+Breakpoint 1 at 0x4004f4: file LabExcersize1.c, line 21.
+(gdb) break 22
+Breakpoint 2 at 0x4004fa: file LabExcersize1.c, line 22.
+(gdb) break 23
+Breakpoint 3 at 0x400500: file LabExcersize1.c, line 23.
+(gdb) break 34
+No line 34 in the current file.
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) break 24
+Breakpoint 4 at 0x400506: file LabExcersize1.c, line 24.
+(gdb) run
+Starting program: /nfs/student/s/sseppala/Desktop/LabWork/Lab1 
+
+Breakpoint 1, main () at LabExcersize1.c:21
+21	fu1.f =10;
+(gdb) continue
+Continuing.
+
+Breakpoint 2, main () at LabExcersize1.c:22
+22	fu2.f = -5;
+(gdb) x/b &fu1
+0x7fffffffe6f0:	0
+(gdb) x/8b &fu1
+0x7fffffffe6f0:	0	0	32	65	0	0	0	0
+(gdb) union
+Undefined command: "union".  Try "help".
+(gdb) print union
+A syntax error in expression, near `'.
+(gdb) print 'union'
+A syntax error in expression, near `'.
+(gdb) x/8b &fu1.f
+0x7fffffffe6f0:	0	0	32	65	0	0	0	0
+(gdb) x/8b &fu1.b
+0x7fffffffe6f0:	0	0	32	65	0	0	0	0
+(gdb) x/h fu1
+Value can't be converted to integer.
+(gdb) x/h &fu1
+0x7fffffffe6f0:	0
+(gdb) x/8h &fu1
+0x7fffffffe6f0:	0	16672	0	0	-14483	-2141	32767	0
+(gdb) x/4b &fu1
+0x7fffffffe6f0:	0	0	32	65
+(gdb) set variable fu1.f = 11
+(gdb) print fu1
+$1 = {f = 11, b = {fraction = 3145728, exponent = 130, sign = 0}}
+(gdb) x/4b fu1.b.fraction
+0x300000:	Cannot access memory at address 0x300000
+(gdb) x/4b &fu1.b.fraction
+0x7fffffffe6f0:	0	0	48	65
+(gdb) x/4b &fu1.b.exponent
+0x7fffffffe6f0:	0	0	48	65
+(gdb) x/b &fu1.b.exponent
+0x7fffffffe6f0:	0
+(gdb) x/b &fu1.b.fraction
+0x7fffffffe6f0:	0
+(gdb) print fu1.b
+$2 = {fraction = 3145728, exponent = 130, sign = 0}
+(gdb) x/h &fu1.b
+0x7fffffffe6f0:	0
+(gdb) x/h &fu1.b.fraction
+0x7fffffffe6f0:	0
+(gdb) x/h &b.fraction
+No symbol "b" in current context.
+(gdb) x/h &fu1.b.sign
+0x7fffffffe6f0:	0
+(gdb) x/h &fu2.b.sign
+0x7fffffffe6e8:	0
+(gdb) print fu2
+$3 = {f = 0, b = {fraction = 0, exponent = 0, sign = 0}}
+(gdb) continue
+Continuing.
+
+Breakpoint 3, main () at LabExcersize1.c:23
+23	fu3.f = 5.01;
+(gdb) print fu2
+$4 = {f = -5, b = {fraction = 2097152, exponent = 129, sign = 1}}
+(gdb) x/b &fu2.b.sign
+0x7fffffffe6e8:	0
+(gdb) x/b &fu2.b.exponent
+0x7fffffffe6e8:	0
+(gdb) x/4b &fu2.b.exponent
+0x7fffffffe6e8:	0	0	-96	-64
+(gdb) x/4b &fu2.b.sign
+0x7fffffffe6e8:	0	0	-96	-64
+(gdb) x/4b &fu2.b.fraction
+0x7fffffffe6e8:	0	0	-96	-64
+(gdb) x/4b &fu2.b
+0x7fffffffe6e8:	0	0	-96	-64
+(gdb) p/x fu2
+$5 = {f = 0xfffffffb, b = {fraction = 0x200000, exponent = 0x81, sign = 0x1}}
+(gdb) x/4b &fu2.b
+0x7fffffffe6e8:	0x00	0x00	0xa0	0xc0
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 9121] will be killed.
+
+Quit anyway? (y or n) y
+

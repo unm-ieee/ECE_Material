@@ -1,0 +1,151 @@
+
+**** 04/06/13 12:03:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * ECE 322L Lab - Lab 1 NMOS
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+
+Rs 3 0 535 
+Rd 5 4 1.08e3
+R2 2 0 6.18e3
+
+Vcc 5 0 dc 3
+*D G S S
+m1 4 2 3 3 ntype l=1.0u w=1.0u
+
+.model ntype nmos level=1 vto=1 kp=0.925e-3
+
+
+.PROBE
+*.TRAN 0.0 40ns 0ns 20ps
+*.PRINT TRAN V(3) V(4) V(5)
+.OP
+.END
+
+**** 04/06/13 12:03:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * ECE 322L Lab - Lab 1 NMOS
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ntype           
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1            
+          KP  925.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    0            
+       XPART    0            
+
+
+**** 04/06/13 12:03:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * ECE 322L Lab - Lab 1 NMOS
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    2)    0.0000  (    3) 1.610E-09  (    4)    3.0000  (    5)    3.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    Vcc         -3.010E-12
+
+    TOTAL POWER DISSIPATION   9.03E-12  WATTS
+
+
+**** 04/06/13 12:03:33 *********** Evaluation PSpice (Nov 1999) **************
+
+ * ECE 322L Lab - Lab 1 NMOS
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         m1        
+MODEL        ntype     
+ID           3.01E-12 
+VGS         -1.61E-09 
+VDS          3.00E+00 
+VBS          0.00E+00 
+VTH          1.00E+00 
+VDSAT        0.00E+00 
+Lin0/Sat1   -1.00E+00 
+if          -1.00E+00 
+ir          -1.00E+00 
+TAU         -1.00E+00 
+GM           0.00E+00 
+GDS          0.00E+00 
+GMB          0.00E+00 
+CBD          0.00E+00 
+CBS          0.00E+00 
+CGSOV        0.00E+00 
+CGDOV        0.00E+00 
+CGBOV        0.00E+00 
+CGS          0.00E+00 
+CGD          0.00E+00 
+CGB          0.00E+00 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

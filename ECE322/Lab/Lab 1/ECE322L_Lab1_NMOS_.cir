@@ -1,0 +1,20 @@
+* ECE 322L Lab - Lab 1 NMOS
+
+
+Rs 3 0 535 
+Rd 5 4 1.08e3
+R2 2 0 6.18e3
+
+Vcc 5 0 dc 3
+*D G S S
+m1 4 2 3 3 ntype l=1.0u w=1.0u
+
+.model ntype nmos level=1 vto=1 kp=0.925e-3
+
+
+.PROBE
+*.TRAN 0.0 40ns 0ns 20ps
+*.PRINT TRAN V(3) V(4) V(5)
+.OP
+.END
+

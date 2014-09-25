@@ -1,0 +1,170 @@
+
+**** 10/09/12 18:21:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+  
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+V1 0 2 3V
+
+R2 0 2 6.8k
+
+
+
+Rd 4 2 .6k
+
+Rs 0 3 1.5k
+
+M1 4 2 3 3 ptype l=1u w=1u 
+.model ptype pmos level=2 vto=-1 kp=.111806
+
+
+
+
+
+
+
+
+
+.op
+
+.end
+
+**** 10/09/12 18:21:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+  
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ptype           
+               PMOS            
+       LEVEL    2            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO   -1            
+          KP     .111806     
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 10/09/12 18:21:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+  
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    2)   -3.0000  (    3)   -1.8514  (    4)   -2.2594  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V1          -1.675E-03
+
+    TOTAL POWER DISSIPATION   5.03E-03  WATTS
+
+
+**** 10/09/12 18:21:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+  
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M1        
+MODEL        ptype     
+ID          -1.23E-03 
+VGS         -1.15E+00 
+VDS         -4.08E-01 
+VBS          0.00E+00 
+VTH         -1.00E+00 
+VDSAT       -1.49E-01 
+Lin0/Sat1   -1.00E+00 
+if          -1.00E+00 
+ir          -1.00E+00 
+TAU         -1.00E+00 
+GM           1.66E-02 
+GDS          0.00E+00 
+GMB          0.00E+00 
+CBD          0.00E+00 
+CBS          0.00E+00 
+CGSOV        0.00E+00 
+CGDOV        0.00E+00 
+CGBOV        0.00E+00 
+CGS          2.30E-16 
+CGD          0.00E+00 
+CGB          0.00E+00 
+
+          JOB CONCLUDED
+
+**** 10/09/12 18:21:11 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+  
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

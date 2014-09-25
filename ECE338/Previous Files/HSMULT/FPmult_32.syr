@@ -1,0 +1,366 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: FPmult_32.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FPmult_32.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FPmult_32"
+Output Format                      : NGC
+Target Device                      : xc7a8-3-csg324
+
+---- Source Options
+Top Module Name                    : FPmult_32
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\ECE.CLASSES\ECE338\homeworkfirst2013\HSMULT\multiplier.vhd" into library work
+Parsing entity <FPmult_32>.
+Parsing architecture <single_cycle> of entity <fpmult_32>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <FPmult_32> (architecture <single_cycle>) from library <work>.
+WARNING:HDLCompiler:89 - "D:\ECE.CLASSES\ECE338\homeworkfirst2013\HSMULT\multiplier.vhd" Line 51: <fpnormalize> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\ECE.CLASSES\ECE338\homeworkfirst2013\HSMULT\multiplier.vhd" Line 63: <fpround> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\ECE.CLASSES\ECE338\homeworkfirst2013\HSMULT\multiplier.vhd" Line 75: <packfp> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "D:\ECE.CLASSES\ECE338\homeworkfirst2013\HSMULT\multiplier.vhd" Line 86: <unpackfp> remains a black-box since it has no binding entity.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FPmult_32>.
+    Related source file is "d:/ece.classes/ece338/homeworkfirst2013/hsmult/multiplier.vhd".
+INFO:Xst:3210 - "d:/ece.classes/ece338/homeworkfirst2013/hsmult/multiplier.vhd" line 255: Output port <isDN> of the instance <I0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/ece.classes/ece338/homeworkfirst2013/hsmult/multiplier.vhd" line 266: Output port <isDN> of the instance <I1> is unconnected or connected to loadless signal.
+    Found 9-bit adder for signal <n0089> created at line 194.
+    Found 9-bit adder for signal <I4combo.mw_I4sum> created at line 194.
+    Found 32x32-bit multiplier for signal <I2combo.dtemp> created at line 202.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 Multiplexer(s).
+Unit <FPmult_32> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 2
+ 9-bit adder                                           : 2
+# Multiplexers                                         : 21
+ 1-bit 2-to-1 multiplexer                              : 21
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 8-bit adder carry in                                  : 1
+# Multiplexers                                         : 21
+ 1-bit 2-to-1 multiplexer                              : 21
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <FPmult_32> ...
+
+Mapping all equations...
+WARNING:Xst:2036 - Inserting OBUF on port <result<31>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<30>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<29>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<28>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<27>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<26>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<25>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<24>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<23>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<22>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<21>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<20>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<19>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<18>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<17>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<16>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<15>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<14>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<13>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<12>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<11>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<10>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<9>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<8>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<7>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<6>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<5>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<4>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<3>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<2>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<1>> driven by black box <PackFP>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <result<0>> driven by black box <PackFP>. Possible simulation mismatch.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FPmult_32, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FPmult_32.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 39
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 10
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      LUT6                        : 9
+#      MUXCY                       : 7
+#      VCC                         : 1
+#      XORCY                       : 8
+# IO Buffers                       : 96
+#      IBUF                        : 64
+#      OBUF                        : 32
+# DSPs                             : 4
+#      DSP48E1                     : 4
+# Others                           : 6
+#      FPnormalize                 : 2
+#      FPround                     : 1
+#      PackFP                      : 1
+#      UnpackFP                    : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a8csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   22  out of   5000     0%  
+    Number used as Logic:                22  out of   5000     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     22
+   Number with an unused Flip Flop:      22  out of     22   100%  
+   Number with an unused LUT:             0  out of     22     0%  
+   Number of fully used LUT-FF pairs:     0  out of     22     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          96
+ Number of bonded IOBs:                  96  out of    200    48%  
+
+Specific Feature Utilization:
+ Number of DSP48E1s:                      4  out of     20    20%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 6.866ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 54814951 / 239
+-------------------------------------------------------------------------
+Delay:               6.866ns (Levels of Logic = 4)
+  Source:            I1:SIG<16> (PAD)
+  Destination:       I9:SIG_in<27> (PAD)
+
+  Data Path: I1:SIG<16> to I9:SIG_in<27>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    UnpackFP:SIG<16>       1   0.000   0.279  I1 (B_SIG<16>)
+     DSP48E1:A16->PCOUT47    1   2.970   0.000  Mmult_I2combo.dtemp (Mmult_I2combo.dtemp_PCOUT_to_Mmult_I2combo.dtemp1_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  Mmult_I2combo.dtemp1 (Mmult_I2combo.dtemp1_PCOUT_to_Mmult_I2combo.dtemp2_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  Mmult_I2combo.dtemp2 (Mmult_I2combo.dtemp2_PCOUT_to_Mmult_I2combo.dtemp3_PCIN_47)
+     DSP48E1:PCIN47->P13    0   1.107   0.000  Mmult_I2combo.dtemp3 (I2combo.dtemp<47>)
+    FPnormalize:SIG_in<27>        0.000          I9
+    ----------------------------------------
+    Total                      6.866ns (6.587ns logic, 0.279ns route)
+                                       (95.9% logic, 4.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.34 secs
+ 
+--> 
+
+Total memory usage is 447240 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   36 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

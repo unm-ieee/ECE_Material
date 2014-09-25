@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Compat Version="1" Minor="4">
+	<CompatParts>
+	</CompatParts>
+	<ConfigModes>
+	</ConfigModes>
+	<PortProps>
+		<Port Name="count_out[3]"/>
+		<Port Name="count_out[2]"/>
+		<Port Name="count_out[1]"/>
+		<Port Name="count_out[0]"/>
+		<Port Name="clk"/>
+		<Port Name="reset"/>
+		<Port Name="pause"/>
+	</PortProps>
+</Compat>
+

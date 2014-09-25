@@ -1,0 +1,23 @@
+b8 54 ce 6a 4c 
+68 81 8e 04 08 
+c3
+
+dyno.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	b8 54 ce 6a 4c       	mov    $0x4c6ace54,%eax
+   5:	68 81 8e 04 08       	push   $0x8048e81
+   a:	c3                   	ret    
+
+dyno.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	b8 54 ce 6a 4c       	mov    $0x4c6ace54,%eax
+   5:	ff 35 81 8e 04 08    	pushl  0x8048e81
+   b:	c3                   	ret    

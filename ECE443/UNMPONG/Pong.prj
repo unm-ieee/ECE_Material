@@ -1,0 +1,2 @@
+vhdl work "../VHDL-Pong-master/KeyboardController.vhd"
+vhdl work "../VHDL-Pong-master/Pong.vhd"

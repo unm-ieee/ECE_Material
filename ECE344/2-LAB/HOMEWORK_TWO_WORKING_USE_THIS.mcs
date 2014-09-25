@@ -1,0 +1,71 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=C:\Users\user\Dropbox\ECE.CLASSES\ECE344\TWO LAB\HW3_3.o
+Folder=Intermediary
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\MPLAB C32 Suite\lib;C:\Program Files\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
+SOLK=<src>|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\HW3_3.S|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\vec_table.s|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\leds.S||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-gdwarf-2
+TraceCmdString=
+DebugOptions=--defsym=__DEBUG=1 --defsym=__MPLAB_DEBUGGER_PK3=1
+[File001]
+Location=C:\Users\user\Dropbox\ECE.CLASSES\ECE344\TWO LAB\vec_table.o
+Folder=Intermediary
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\MPLAB C32 Suite\lib;C:\Program Files\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
+SOLK=<src>|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\HW3_3.S|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\vec_table.s|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\leds.S||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-gdwarf-2
+TraceCmdString=
+DebugOptions=--defsym=__DEBUG=1 --defsym=__MPLAB_DEBUGGER_PK3=1
+[File002]
+Location=C:\Users\user\Dropbox\ECE.CLASSES\ECE344\TWO LAB\leds.o
+Folder=Intermediary
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\MPLAB C32 Suite\lib;C:\Program Files\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
+SOLK=<src>|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\HW3_3.S|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\vec_table.s|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\leds.S||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-gdwarf-2
+TraceCmdString=
+DebugOptions=--defsym=__DEBUG=1 --defsym=__MPLAB_DEBUGGER_PK3=1
+[File003]
+Location=C:\Users\user\Dropbox\ECE.CLASSES\ECE344\TWO LAB\HOMEWORK_TWO_WORKING_USE_THIS.elf
+Folder=Output
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C32 Suite\bin\pic32-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\MPLAB C32 Suite\lib;C:\Program Files\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
+SOLK=<src>|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\HW3_3.S|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\vec_table.s|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\leds.S||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map"
+TraceCmdString=
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_PK3=1 --defsym=__ICD2RAM=1
+[File004]
+Location=C:\Users\user\Dropbox\ECE.CLASSES\ECE344\TWO LAB\HOMEWORK_TWO_WORKING_USE_THIS.hex
+Folder=Output
+DeviceName=PIC32MX460F512L
+LanguageToolSuiteID={14495C23-81F8-43F3-8A44-859C583D7760}
+LanguageToolID={C68E5105-1196-4333-A0BF-3DC57271E614}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C32 Suite\bin\pic32-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\Program Files\Microchip\MPLAB C32 Suite\lib;C:\Program Files\Microchip\MPLAB C32 Suite\pic32mx\lib;||$(LKRDIR)||
+SOLK=<src>|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\HW3_3.S|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\vec_table.s|C:\Users\user\Dropbox\ECE.CLASSES\ECE344\THREE LAB\leds.S||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map"
+TraceCmdString=
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_PK3=1 --defsym=__ICD2RAM=1
+[TOOL_LOC_STAMPS]
+tool_loc{92E15EC6-5E91-4BF4-B5FA-C80AD2601AA7}=C:\Program Files\Microchip\MPLAB C32 Suite\bin\pic32-as.exe
+tool_loc{C68E5105-1196-4333-A0BF-3DC57271E614}=C:\Program Files\Microchip\MPLAB C32 Suite\bin\pic32-ld.exe

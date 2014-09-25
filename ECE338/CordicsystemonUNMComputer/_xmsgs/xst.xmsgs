@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="0" delta="new" >Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 25: Using initial value <arg fmt="%s" index="1">&quot;000000000000000000000000000000000000&quot;</arg> for <arg fmt="%s" index="2">y_initial</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 26: Using initial value <arg fmt="%s" index="1">&quot;111111111111111111111111111111111111&quot;</arg> for <arg fmt="%s" index="2">x_initial</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 30: Using initial value <arg fmt="%s" index="1">35</arg> for <arg fmt="%s" index="2">done</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 31: Using initial value <arg fmt="%s" index="1">&quot;000000000000000000000000000000000000&quot;</arg> for <arg fmt="%s" index="2">zero</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 136: Assignment to <arg fmt="%s" index="1">read_adr</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 145: <arg fmt="%s" index="1">zero</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 173: <arg fmt="%s" index="1">zero</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1401" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 144: Signal <arg fmt="%s" index="1">Z[35]</arg> in unit <arg fmt="%s" index="2">CORDIC</arg> is connected to following multiple drivers:
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1379" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 171: Driver <arg fmt="%d" index="1">0</arg>: <arg fmt="%s" index="2">output signal Z[35] of instance Flip-flop</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1379" delta="new" >"D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 144: Driver <arg fmt="%d" index="1">1</arg>: <arg fmt="%s" index="2">output signal Z[35] of instance Flip-flop</arg>
+</msg>
+
+</messages>
+

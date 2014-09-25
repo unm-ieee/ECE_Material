@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Cordic_TB IS
+end entity;
+  
+architecture Cordic_TB of Cordic_TB is
+
+signal Clock : std_logic;
+signal Reset : std_logic;
+signal Address : std_logic;
+signal Request : std_logic;
+signal Read_H : std_logic;
+
+signal Data_Bus : std_logic_vector(31 downto 0);
+signal Ack : std_logic;
+
+
+type State_Type is (S0, S1, S2, S3, S4, S5);
+
+signal Current_State : State_Type; 
+signal Next_State : State_Type; 
+
+begin
+
+Clock_Control : process
+    begin
+        clock <= '1'
+        wait for 10 ns;
+        clock <= '0';
+        wait for 10 ns;
+    end process;    
+        
+Testbench_Cordid : process
+    begin
+    
+    
+    
+    
+    wait;    
+    end process;    
+end architecture; 

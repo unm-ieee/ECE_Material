@@ -1,0 +1,42 @@
+MAil Box technique
+######################################################
+
+.set LED, 0x8448
+.org 0x1000
+b PITCODE
+
+.org 0x3000
+li r0, 0x0
+
+##LED's
+li r27, 0
+lis r1, LED	#LED address
+stw r0, 4(r1)	#tristate LED's
+
+#set up PIT
+li r31, 200	#send 
+mtpit r31
+
+lis r31, b0000010001000000		#0x800
+mttcr r31
+mttsr r0
+mtevpr r0
+wrteei 1
+
+here:
+lwz r31, 0(r2)	#load mailbox
+cmpi 1, r31, 0
+bt 6, here
+addi r27, r27, 1
+stw r27, 0(r1)
+stw r0, 0(r2)
+b here
+
+nop
+nop
+
+PITCODE:
+	lis r31, b0000100000000000	# clear interrupt
+	mttsr r31
+	stw r2, 0(r2)
+	rfi

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo Building the manual...
+makeinfo ctocpp
+makeinfo --no-split --html ctocpp.texi
+echo Done...

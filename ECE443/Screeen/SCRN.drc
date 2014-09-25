@@ -1,0 +1,8 @@
+Release 14.6 Drc P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Nov 20 13:29:01 2013
+
+drc -z SCRN.ncd SCRN.pcf
+
+DRC detected 0 errors and 0 warnings.

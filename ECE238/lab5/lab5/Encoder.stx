@@ -1,0 +1,55 @@
+Release 13.1 - xst O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to F:/ECE CLASSES/ECE238/lab5/lab5/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to F:/ECE CLASSES/ECE238/lab5/lab5/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" in Library work.
+Entity <encoder> compiled.
+ERROR:HDLParsers:1402 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 38. Object input of mode IN can not be updated.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 48. Size mismatch.  String literal "0000" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 49. Size mismatch.  String literal "0001" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 50. Size mismatch.  String literal "0010" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 51. Size mismatch.  String literal "0011" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 52. Size mismatch.  String literal "0100" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 53. Size mismatch.  String literal "0101" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 54. Size mismatch.  String literal "0110" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 55. Size mismatch.  String literal "0111" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 48. Size mismatch.  String literal "0000" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 49. Size mismatch.  String literal "0001" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 50. Size mismatch.  String literal "0010" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 51. Size mismatch.  String literal "0011" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 52. Size mismatch.  String literal "0100" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 53. Size mismatch.  String literal "0101" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 54. Size mismatch.  String literal "0110" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3384 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 55. Size mismatch.  String literal "0111" is of size 4 but is expected to be of size 8.
+ERROR:HDLParsers:3312 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 59. Undefined symbol 'ABCD'.
+ERROR:HDLParsers:164 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 59. parse error, unexpected TOKOUT, expecting ALL or IDENTIFIER or CHARACTER_LITERAL or STRING_LITERAL
+ERROR:HDLParsers:3312 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 61. Undefined symbol 'MUX_BC'.
+ERROR:HDLParsers:1209 - "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" Line 61. MUX_BC: Undefined symbol (last report in this block)
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.61 secs
+ 
+--> 
+
+Total memory usage is 151560 kilobytes
+
+Number of errors   :   21 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

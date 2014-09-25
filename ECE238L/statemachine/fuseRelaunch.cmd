@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Ryan/Desktop/School/ECE238L/statemachine/tb_isim_beh.exe" -prj "C:/Users/Ryan/Desktop/School/ECE238L/statemachine/tb_beh.prj" "work.tb" 

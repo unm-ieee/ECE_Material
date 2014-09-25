@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\238user\Desktop\Steven\tutorial_5
+T_opt
+Z1 V?GoenN3l=OOd@]KUa491P0
+Z2 04 10 8 work counter_tb behavior 1
+Z3 =1-001aa0dc90cd-4f31b12a-2b2-128
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;10.0b;49
+Z7 dC:\Users\238user\Desktop\Steven\tutorial_5
+Ecounter
+Z8 w1328655851
+Z9 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z10 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z11 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z12 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+R7
+Z13 8counter.vhd
+Z14 Fcounter.vhd
+l0
+L33
+Z15 VaO`e`eC@hS_CNHbTSHzCW1
+Z16 OE;C;10.0b;49
+31
+Z17 !s108 1328656682.097000
+Z18 !s90 -reportprogress|300|-explicit|-93|counter.vhd|
+Z19 !s107 counter.vhd|
+Z20 o-explicit -93
+Z21 tExplicit 1
+Z22 !s100 XVl^m3Ff@D2l;jZ=8WIAn1
+Abehavioral
+R9
+R10
+R11
+R12
+Z23 DEx4 work 7 counter 0 22 aO`e`eC@hS_CNHbTSHzCW1
+l46
+L40
+Z24 V?ZjRQAWGGV]FifH0@6OCH0
+R16
+31
+Z25 !s108 1328656273.961000
+R18
+R19
+R20
+R21
+Z26 !s100 P>AI=3Y2?2nGAK6ZFg6I02
+Ecounter_tb
+Z27 w1328656661
+R11
+R12
+R7
+Z28 8counter_tb.vhd
+Z29 Fcounter_tb.vhd
+l0
+L35
+Z30 V=2SNfU>l`S3N`8bYdn0153
+R16
+31
+Z31 !s108 1328656682.237000
+Z32 !s90 -reportprogress|300|-explicit|-93|counter_tb.vhd|
+Z33 !s107 counter_tb.vhd|
+R20
+R21
+Z34 !s100 mmX2FZ8HJ_UI<<S[oW`[h2
+Abehavior
+R11
+R12
+Z35 DEx4 work 10 counter_tb 0 22 =2SNfU>l`S3N`8bYdn0153
+l63
+L38
+Z36 V_;I]RPzcEAdFCSTJYBZ`03
+R16
+31
+R31
+R32
+R33
+R20
+R21
+Z37 !s100 @3I9VGRg<f=>A3ZDK0>h]2

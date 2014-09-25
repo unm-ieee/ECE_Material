@@ -1,0 +1,72 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/sseppala/Desktop/MIPSCPU/r/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/sseppala/Desktop/MIPSCPU/r/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: D_MEMORY.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\sseppala\Desktop\MIPSCPU\ALU_Top.vhd" into library work
+Parsing entity <ALU32>.
+Parsing architecture <ALU32> of entity <alu32>.
+Parsing VHDL file "C:\Users\sseppala\Desktop\MIPSCPU\Data_Memory.vhd" into library work
+Parsing entity <DATA_MEM>.
+Parsing architecture <DATA_MEM> of entity <data_mem>.
+Parsing VHDL file "C:\Users\sseppala\Desktop\MIPSCPU\Instruction_Memory.vhd" into library work
+Parsing entity <INSTR_MEM>.
+Parsing architecture <INSTR_MEM> of entity <instr_mem>.
+Parsing VHDL file "C:\Users\sseppala\Desktop\MIPSCPU\MIPS.vhd" into library work
+Parsing entity <MIPS>.
+Parsing architecture <MIPS> of entity <mips>.
+Parsing VHDL file "C:\Users\sseppala\Desktop\MIPSCPU\Registers.vhd" into library work
+Parsing entity <REGISTERS>.
+Parsing architecture <FOR_438> of entity <registers>.
+Parsing VHDL file "C:\Users\sseppala\Desktop\MIPSCPU\MIPS_Top.vhd" into library work
+Parsing entity <MIPS_Top>.
+Parsing architecture <MIPS_Top> of entity <mips_top>.
+ERROR:HDLCompiler:104 - "C:\Users\sseppala\Desktop\MIPSCPU\MIPS_Top.vhd" Line 101: Cannot find <i_memory> in library <work>. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+ERROR:HDLCompiler:104 - "C:\Users\sseppala\Desktop\MIPSCPU\MIPS_Top.vhd" Line 312: Cannot find <d_memory> in library <work>. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+ERROR:HDLCompiler:854 - "C:\Users\sseppala\Desktop\MIPSCPU\MIPS_Top.vhd" Line 13: Unit <mips_top> ignored due to previous errors.
+VHDL file C:\Users\sseppala\Desktop\MIPSCPU\MIPS_Top.vhd ignored due to errors
+--> 
+
+Total memory usage is 212360 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

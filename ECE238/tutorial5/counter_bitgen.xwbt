@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\238user\Desktop\Steven\tutorial5\counter.ncd
+OUTFILE=C:\Users\238user\Desktop\Steven\tutorial5\counter.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\238user\Desktop\Steven\tutorial5
+LICENSE=ISE
+USER_INFO=174556800_206273187_206649829_841

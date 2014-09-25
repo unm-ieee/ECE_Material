@@ -1,0 +1,43 @@
+
+C to C++ converter ( requires the Python interpreter)
+Content of the ctocpp archive
+
+Documentation
+
+README           Read it first.
+COPYING           The GPL license.
+NEWS             Last changes.
+CONTENT         This file.
+INSTALL            From autoconf, installing instructions.
+ctocpp.texi       Manuals, to be converted into info or html by makeinfo.
+
+Programs
+
+ctocpp.py         Main program.
+mklist.py           Builds a list of sources into a file.  
+mkheader.py     Rebuild header files of any sources according to rules.
+mkclass.py       Builds classes into new .hpp files from old .h files.
+allhead.py         Makes the list of all header files.
+mkcpp.py          Converts variables and functions into members of classes.
+
+Libraries used by the converter
+
+wstring.py
+pattern.py
+lexer.py
+
+Various utilities
+
+iscomp.py        Tests if all sources compiled.
+search.py         Searches for strings inside files.
+mover.py          Moves the project into other directories.
+pmake.py         Compiles a list of sources.
+objlist.py          Builds a list of object files, into a file.
+mkdict.py         From headers files, makes a list of classes.
+
+Command files (with bat extension under Windows)
+
+mktar               Makes the archive.
+mkdoc              Builds the manual.
+configure         Tests if python installed.
+setup               Installs into the Unix system.

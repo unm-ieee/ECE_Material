@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/sseppala/hw1/ATB_FPM.xst" -ofn "C:/Users/sseppala/hw1/ATB_FPM.syr" 
+xst -intstyle ise -ifn "C:/Users/sseppala/hw1/ATB_FPM.xst" -ofn "C:/Users/sseppala/hw1/ATB_FPM.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM.xst" -ofn "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM.xst" -ofn "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM.syr" 
+vhdtdtfi -lib work CSAdder_vhd.vhd -lib work WTA7_3_vhd.vhd -lib work RRU7_3.vhd -lib work RRU3_2.vhd -lib work FP_MULTIPLIER.vhd -lib work Tester.vhd -prj hw1 -o ATB_FPM.spl -module ATB_FPM -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ATB_FPM.spl D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM.sym 

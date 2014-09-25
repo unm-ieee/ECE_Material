@@ -1,0 +1,407 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity UPDOWN is
+
+  port (
+    SYS_RST : in  STD_LOGIC;
+    SYS_CLK : in  STD_LOGIC;
+    UP      : in  STD_LOGIC;
+    ENBL    : in  STD_LOGIC;
+    COUNT   : out STD_LOGIC_VECTOR ( 3 downto 0 )  := "0000"
+  );
+
+end entity UPDOWN;
+
+architecture CLASSICAL of UPDOWN is
+
+signal CNTR : STD_LOGIC_VECTOR ( 3 downto 0 ) := "0000";
+alias A : STD_LOGIC is CNTR(0);
+alias B : STD_LOGIC is CNTR(1);
+alias C : STD_LOGIC is CNTR(2);
+alias D : STD_LOGIC is CNTR(3);
+
+signal A_IN : STD_LOGIC;
+signal B_IN : STD_LOGIC;
+signal C_IN : STD_LOGIC;
+signal D_IN : STD_LOGIC;
+
+begin
+
+THE_CNT_REG_PROC:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      CNTR <= "0000";
+    elsif RISING_EDGE ( SYS_CLK ) then
+      CNTR <= D_IN & C_IN & B_IN & A_IN;
+    end if;
+  end process;
+  COUNT <= CNTR;
+
+  A_IN <= ( A and (not ENBL)) or ((not A) and ENBL);
+
+  B_IN <= ( ENBL and UP and (not D) and (not B) and A ) or
+          ( ENBL and UP and (not D) and B and (not A) ) or
+	  ( ENBL and (not UP) and C and (not B) and (not A) ) or
+	  ( ENBL and (not UP) and D and (not A) )             or
+	  ( (not up) and B and A )                            or
+	  ( (not ENBL) and B );
+
+  C_IN <= ( ENBL and (not UP) and D and (not B) and (not A) ) or
+          ( ENBL and UP and (not C) and B and A )             or
+	  ( C and B and (not A) )                             or
+	  ( (not UP) and C and A )                            or
+	  ( (not ENBL) and (not D) and C )                    or
+	  ( UP and C and (not B) );
+
+  D_IN <= ( ENBL and (not UP) and (not D) and (not C) and
+                    (not B) and (not A) )                     or
+	  ( ENBL and UP and C and B and A )                   or
+	  ( UP and D and (not A) )                            or
+	  ( (not UP) and D and A )                            or
+	  ( (not ENBL) and D  ) ;
+
+end architecture CLASSICAL;
+
+architecture ONE_HOT_GATE of UPDOWN is
+
+signal ST0 : STD_LOGIC;
+signal ST1 : STD_LOGIC;
+signal ST2 : STD_LOGIC;
+signal ST3 : STD_LOGIC;
+signal ST4 : STD_LOGIC;
+signal ST5 : STD_LOGIC;
+signal ST6 : STD_LOGIC;
+signal ST7 : STD_LOGIC;
+signal ST8 : STD_LOGIC;
+signal ST9 : STD_LOGIC;
+
+begin
+
+FLIP_FLOP_ST0:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST0 <= '1';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST9 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST1 = '1' ) or
+	 ( ENBL = '0' and ST0 = '1') then
+        ST0 <= '1';
+      else
+        ST0 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST1:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST1 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST0 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST2 = '1' ) or
+	 ( ENBL = '0' and ST1 = '1') then
+        ST1 <= '1';
+      else
+        ST1 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST2:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST2 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST1 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST3 = '1' ) or
+	 ( ENBL = '0' and ST2 = '1') then
+        ST2 <= '1';
+      else
+        ST2 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST3:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST3 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST2 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST4 = '1' ) or
+	 ( ENBL = '0' and ST3 = '1') then
+        ST3 <= '1';
+      else
+        ST3 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST4:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST4 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST3 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST5 = '1' ) or
+	 ( ENBL = '0' and ST4 = '1') then
+        ST4 <= '1';
+      else
+        ST4 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST5:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST5 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST4 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST6 = '1' ) or
+	 ( ENBL = '0' and ST5 = '1') then
+        ST5 <= '1';
+      else
+        ST5 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST6:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST6 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST5 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST7 = '1' ) or
+	 ( ENBL = '0' and ST6 = '1') then
+        ST6 <= '1';
+      else
+        ST6 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST7:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST7 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST6 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST8 = '1' ) or
+	 ( ENBL = '0' and ST7 = '1') then
+        ST7 <= '1';
+      else
+        ST7 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST8:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST8 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST7 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST9 = '1' ) or
+	 ( ENBL = '0' and ST8 = '1') then
+        ST8 <= '1';
+      else
+        ST8 <= '0';
+      end if;
+    end if;
+  end process;
+
+FLIP_FLOP_ST9:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      ST9 <= '0';
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ( ENBL = '1' and UP = '1' and ST8 = '1' ) or
+         ( ENBL = '1' and UP = '0' and ST0 = '1' ) or
+	 ( ENBL = '0' and ST9 = '1') then
+        ST9 <= '1';
+      else
+        ST9 <= '0';
+      end if;
+    end if;
+  end process;
+
+  COUNT <= "0000" when ST0 = '1' else
+           "0001" when ST1 = '1' else
+           "0010" when ST2 = '1' else
+           "0011" when ST3 = '1' else
+           "0100" when ST4 = '1' else
+           "0101" when ST5 = '1' else
+           "0110" when ST6 = '1' else
+           "0111" when ST7 = '1' else
+           "1000" when ST8 = '1' else
+           "1001";
+
+end architecture ONE_HOT_GATE;
+
+architecture CASE_STMT of UPDOWN is
+
+type PSR_TYPE is ( ST0, ST1, ST2, ST3, ST4, ST5, ST6, ST7, ST8, ST9 );
+signal PSR : PSR_TYPE;
+
+begin
+
+PSR_PROC:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      PSR <= ST0;
+    elsif RISING_EDGE ( SYS_CLK ) then
+      case PSR is
+
+        when ST0 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST1;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST9;
+	  else
+	    PSR <= ST0;
+	  end if;
+
+        when ST1 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST2;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST0;
+	  else
+	    PSR <= ST1;
+	  end if;
+
+        when ST2 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST3;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST1;
+	  else
+	    PSR <= ST2;
+	  end if;
+
+        when ST3 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST4;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST2;
+	  else
+	    PSR <= ST3;
+	  end if;
+
+        when ST4 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST5;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST3;
+	  else
+	    PSR <= ST4;
+	  end if;
+
+        when ST5 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST6;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST4;
+	  else
+	    PSR <= ST5;
+	  end if;
+
+        when ST6 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST7;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST5;
+	  else
+	    PSR <= ST6;
+	  end if;
+
+        when ST7 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST8;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST6;
+	  else
+	    PSR <= ST7;
+	  end if;
+
+        when ST8 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST9;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST7;
+	  else
+	    PSR <= ST8;
+	  end if;
+
+        when ST9 =>
+	  if ENBL = '1' and UP = '1' then
+	    PSR <= ST0;
+	  elsif ENBL = '1' and UP = '0' then
+	    PSR <= ST8;
+	  else
+	    PSR <= ST9;
+	  end if;
+
+      end case;
+    end if;
+  end process;
+  
+  COUNT <= "0000" when PSR = ST0 else
+           "0001" when PSR = ST1 else
+           "0010" when PSR = ST2 else
+           "0011" when PSR = ST3 else
+           "0100" when PSR = ST4 else
+           "0101" when PSR = ST5 else
+           "0110" when PSR = ST6 else
+           "0111" when PSR = ST7 else
+           "1000" when PSR = ST8 else
+           "1001";
+
+end architecture CASE_STMT;
+
+architecture BEHAVIORAL of UPDOWN is
+
+signal CNTR : STD_LOGIC_VECTOR ( 3 downto 0 ) := "0000";
+
+begin
+
+CNT_REG_PROC:
+  process ( SYS_RST, SYS_CLK ) is
+  begin
+    if SYS_RST = '1' then
+      CNTR <= "0000";
+    elsif RISING_EDGE ( SYS_CLK ) then
+      if ENBL = '1' and UP = '1' then
+        if CNTR = "1001" then
+          CNTR <= "0000";
+        else
+          CNTR <= CNTR + 1;
+        end if;
+      elsif ENBL = '1' and UP = '0' then
+        if CNTR = "0000" then
+          CNTR <= "1001";
+        else
+          CNTR <= CNTR - 1;
+        end if;
+      end if;
+    end if;
+  end process;
+  COUNT <= CNTR;
+
+end architecture BEHAVIORAL;

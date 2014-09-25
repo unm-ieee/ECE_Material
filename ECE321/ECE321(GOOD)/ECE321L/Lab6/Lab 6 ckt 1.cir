@@ -1,0 +1,24 @@
+
+
+R2 2 0 6.8k
+
+V1 2 0 3V
+
+Rd 2 4 1.5k
+
+Rs 3 0 .6k
+
+M1 4 2 3 3 ntype l=1u w=1u 
+.model ntype nmos level=2 vto=1 kp=1.825e-3
+
+
+
+
+
+
+
+
+
+.op
+
+.end

@@ -1,0 +1,6 @@
+work	"../../../ROBOT/And_gate.vhd"
+work	"../../../ROBOT/Reverse_out.vhd"
+work	"../../../ROBOT/Reverse_out_02.vhd"
+work	"../../../ROBOT/Top_layer(2).vhd"
+work	"../../../ROBOT/main(1).vhd"
+work	"state_5.vhd"

@@ -1,0 +1,37 @@
+Release 13.2 Map O.61xd (nt64)
+Xilinx Mapping Report File for Design 'hw11_1'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off
+-c 100 -o hw11_1_map.ncd hw11_1.ngd hw11_1.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Sat Mar 17 00:34:46 2012
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Security:9 - No 'ISE' nor 'WebPack' feature was available for part
+'xc3s500e'.
+ERROR:Map:258 - A problem was encountered attempting to get the license for this
+   architecture. 
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - No license file was found.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+INFO:Security:68 - Please run the Xilinx License Configuration Manager

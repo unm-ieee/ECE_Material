@@ -1,0 +1,55 @@
+01:  A C program with a struct and a "tostring()" function that string-ifies
+the contents for printing with printf("%s").
+
+02:  Any C program ending in .c and compilable with gcc can be renamed to .cpp
+and compiled with g++. Eliminate the <stdbool.h> file since bool is a C++
+builtin.
+
+03.  C++ structs can include functions as members, and the member function is
+bound to the member data.
+
+04.  Convert struct to class. Make all members public to maintain compatibility
+with struct; private will be introduced in step 7.  (Protected will not be
+introduced until we get to the concept of inheritance.)
+
+05.  Introduce the notion of a "constructor" and show an example of one that
+cleans up the initialization of the objects.
+
+06.  Add the default constructor back (since we added a constructor of our own
+in step 5, the default constructor wasn't automatically provided.)
+
+07.  Make the member data private and keep the member functions public.
+Demonstrate private access control (with a commented line that the student
+uncomments to see the compiler error message.)  Later we will create
+getter/setter functions to provide controlled access to private member data.
+
+08.  Replace printf() with operator<< and introduce the term "namespace", but
+without an in-depth treatment; just enough to justify the "using namespace
+std;" line.
+
+09.  Upgrade from <string.h> and char* to <string> and C++ string class.  At
+this point there are no <*.h> files included, only C++ class headers.
+
+10.  Introduce object references and compare/contrast with pointers.
+
+11.  Introduce operator<< overloading, so we can write cout  << jane << endl;,
+where jane is a Person object and operator<< has been overloaded to output it.
+Also introduce "this" so we can pass a reference to the current object.
+
+12.  Add getter/setter functions to get around private: member restrictions.
+
+13.  Demonstrate malloc/free and new/delete/delete[] to compare and contrast
+dynamic memory allocation.
+
+14.  Add an Instructor class to introduce the concept of Inheritance.  Introduce
+the "protected:" visibility.
+
+15.  Illustrate virtual functions, overriding, and polymorphism.
+
+16.  Abstract classes.
+
+Coming Soon:
+
+17.  Templates.
+
+18.  Namespaces (named and anonymous)

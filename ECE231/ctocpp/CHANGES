@@ -1,0 +1,39 @@
+Changes in the C to C++ Converter
+
+1.4 February 2009
+-------------------------
+No changes.
+Scripts moved from Scriptol.org to Scriptol.com.
+
+
+1.4  August 2005 
+----------------
+Modified by Georg Wittenburg
+http://page.mi.fu-berlin.de/~wittenbu/
+
+* lexer.py:		added support for compiler directive removal.
+* allhead.py:	added relative path of current file.
+* mklist.py:	added relative path of current file.
+* ctocpp.py:	simplified.
+
+
+1.3 April 2004
+-------------
+* Included a configure and setup.py files for integration into the Unix system.
+* The manual is now packed into a single file.
+* "../" strings in include statements are now converted to absolute path.
+
+
+1.2  May 2003
+-------------
+* Multi-line declarations now recognized.
+
+1.1 March 2003
+---------------
+* Added a textinfo file. 
+
+1.0 2000
+-----------------
+* First public release
+
+

@@ -1,0 +1,72 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: State_M.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" into library work
+Parsing entity <State_M>.
+ERROR:HDLCompiler:580 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 10: Mismatch on label ; expected state_m
+ERROR:HDLCompiler:854 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 4: Unit <state_m> ignored due to previous errors.
+Parsing architecture <behavioral> of entity <state_m>.
+ERROR:HDLCompiler:374 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 12: Entity <state_m> is not yet compiled.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 23: <rising_edge> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 21: <reset> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 19: <clk> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 34: <output> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 37: <output> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 33: <input> is not declared.
+ERROR:HDLCompiler:806 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 41: Syntax error near ";".
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 43: <output> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 46: <output> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 42: <input> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 52: <output> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 55: <output> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 51: <input> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 62: <output> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 65: <output> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Desktop\ROBOT\state_machine(1).vhd" Line 61: <input> is not declared.
+Sorry, too many errors..
+--> 
+
+Total memory usage is 180912 kilobytes
+
+Number of errors   :   19 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

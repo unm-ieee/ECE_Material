@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/ECE.CLASSES/ECE338/Async JK Flip Flop/JKFlipFlop_ise12migration/ATB_JKFF_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="atb_jkff" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_textio" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/atb_jkff/count" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">count</obj_property>
+      <obj_property name="ObjectShortName">count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/x_j" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">x_j</obj_property>
+      <obj_property name="ObjectShortName">x_j</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/x_k" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">x_k</obj_property>
+      <obj_property name="ObjectShortName">x_k</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/x_q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">x_q</obj_property>
+      <obj_property name="ObjectShortName">x_q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/x_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">x_clk</obj_property>
+      <obj_property name="ObjectShortName">x_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider9" type="divider">
+      <obj_property name="label">New Divider</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/TCOMP/q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">q</obj_property>
+      <obj_property name="ObjectShortName">q</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/TCOMP/f1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">f1</obj_property>
+      <obj_property name="ObjectShortName">f1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/x_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">x_clk</obj_property>
+      <obj_property name="ObjectShortName">x_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/TCOMP/f0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">f0</obj_property>
+      <obj_property name="ObjectShortName">f0</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider10" type="divider">
+      <obj_property name="label">New Divider</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/TCOMP/j" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">j</obj_property>
+      <obj_property name="ObjectShortName">j</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/TCOMP/k" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">k</obj_property>
+      <obj_property name="ObjectShortName">k</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/TCOMP/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_jkff/TCOMP/q" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">q</obj_property>
+      <obj_property name="ObjectShortName">q</obj_property>
+   </wvobject>
+</wave_config>

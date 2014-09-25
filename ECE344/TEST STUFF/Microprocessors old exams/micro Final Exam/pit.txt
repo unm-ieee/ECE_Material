@@ -1,0 +1,42 @@
+.set timer 200000
+.set LED 0x8146
+.set mbox 0x5000
+.set switch 0x7000
+.orx 0x1000
+b pitcode
+
+.org 0x3000
+li r5, mbox
+li r0,0
+li r10,0
+li r17,0x7000
+lis r1,timer@h
+ori r1,r1,timer@l
+mtpit r1
+lis r31,0x0440
+mttcr r31
+li r2, LED
+stw r0,4(r2)
+mtevpr r0
+wrteei 1
+
+loop:
+lwz r31,0(r5)
+cmpi 1, r31,0
+bt 6 loop
+stw r0,0(r5)#clear mbox
+addi r10,r10,1
+stw r10,0(r2)
+b loop
+
+pitcode:
+lis r31, 0x0800
+mttsr r31
+stmw r0,0(r17)	#context sw
+lmw r0,128(r17)
+li r1,0x7000
+stw r5,0(r5) #loading a value into mbox
+stmw r0,128(r17)
+lmw r0 0(r17)
+rfi
+

@@ -1,0 +1,31 @@
+##############################################################################
+## Filename:          osd_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Aug 18 14:42:45 2008 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a        all
+lib interrupt_control_v2_01_a  all
+lib axi_lite_ipif_v1_01_a all
+lib axi_osd_v3_00_a HWT vhdl 
+
+lib axi_osd_v3_00_a MemXLib_utils vhdl 
+lib axi_osd_v3_00_a MemXLib_arch vhdl
+lib axi_osd_v3_00_a osd_meminit_pkg vhdl
+
+lib axi_osd_v3_00_a osd_package vhdl
+lib axi_osd_v3_00_a version_reg vhdl
+lib axi_osd_v3_00_a mux_tree vhdl
+lib axi_osd_v3_00_a mult_add_pipeline vhdl
+lib axi_osd_v3_00_a alpha_blend_elem vhdl
+lib axi_osd_v3_00_a alpha_blend_ctrl vhdl
+lib axi_osd_v3_00_a osd_counters vhdl
+lib axi_osd_v3_00_a osd_priority_mux vhdl
+lib axi_osd_v3_00_a osd_rt_gpu2 vhdl
+lib axi_osd_v3_00_a osd_priority_select vhdl
+lib axi_osd_v3_00_a axis_input_buffer vhdl
+lib axi_osd_v3_00_a axis_output_buffer vhdl
+lib axi_osd_v3_00_a osd_backbone vhdl
+
+lib axi_osd_v3_00_a user_logic vhdl
+lib axi_osd_v3_00_a axi_osd vhdl

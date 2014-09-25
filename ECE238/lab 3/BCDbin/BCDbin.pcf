@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map O.40d on Mon Mar 05 19:39:05 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Binary<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "Binary<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Binary<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "Binary<3>" LOCATE = SITE "N17" LEVEL 1;
+COMP "OUTPUT<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "OUTPUT<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "OUTPUT<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "OUTPUT<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "OUTPUT<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "Disp" LOCATE = SITE "K17" LEVEL 1;
+SCHEMATIC END;
+

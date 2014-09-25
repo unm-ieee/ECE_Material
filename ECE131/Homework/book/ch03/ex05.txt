@@ -1,0 +1,6 @@
+Line 3: Void should not be capitalized
+Line 5: INT should be int
+Line 6: Comment unterminated
+Line 7: Statement needs semicolon
+Line 8: Comment terminated wrongly
+Line 9: No comma separating arguments

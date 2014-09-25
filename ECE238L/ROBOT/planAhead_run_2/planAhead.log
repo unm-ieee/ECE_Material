@@ -1,0 +1,87 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Wed Feb 13 13:59:15 2013
+# Process ID: 1808
+# Log file: C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/pa.fromNetlist.tcl
+# create_project -name ROBOT -dir "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/planAhead_run_2" -part xc6slx16csg324-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/Ryan/Desktop/School/ECE238L/ROBOT} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "top_layer.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.ucf' to fileset 'constrs_1'
+# add_files [list {top_layer.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx16csg324-3
+Release 14.4 - ngc2edif P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design top_layer.ngc ...
+WARNING:NetListWriters:298 - No output is written to top_layer.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file top_layer.edif ...
+ngc2edif: Total memory usage is 80664 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/ROBOT.data/cache/top_layer_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/ROBOT.data/cache/top_layer_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.ucf]
+Finished Parsing UCF File [C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+
+Phase 0 | Netlist Checksum: c9422b3a
+link_design: Time (s): elapsed = 00:00:28 . Memory (MB): peak = 556.953 ; gain = 157.137
+startgroup
+set_property package_pin K2 [get_ports data_in_Left]
+endgroup
+startgroup
+set_property package_pin K1 [get_ports data_in_Right]
+endgroup
+startgroup
+set_property package_pin T12 [get_ports Direction_01]
+endgroup
+startgroup
+set_property package_pin V12 [get_ports Direction_02]
+endgroup
+startgroup
+set_property package_pin N10 [get_ports pwm_out_01]
+endgroup
+startgroup
+set_property package_pin P11 [get_ports pwm_out_02]
+endgroup
+save_constraints
+close_design
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/Ryan/Desktop/School/ECE238L/ROBOT\planAhead_pid1808.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Feb 13 14:03:23 2013...
+INFO: [Common 17-83] Releasing license: PlanAhead

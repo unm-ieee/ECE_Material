@@ -1,0 +1,7 @@
+vhdl work "One_Bit.vhd"
+vhdl work "Registers.vhd"
+vhdl work "Instruction_Memory.vhd"
+vhdl work "Data_Memory.vhd"
+vhdl work "ALU_Top.vhd"
+vhdl work "MIPS_Top.vhd"
+vhdl work "TB_MIPS_Top.vhd"

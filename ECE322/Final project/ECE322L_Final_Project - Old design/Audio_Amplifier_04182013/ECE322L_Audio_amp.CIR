@@ -1,0 +1,36 @@
+ECE 322L Audio Amplifier Project
+* Designed by: M. Chaves, G. Iven, A. Rasoulof
+
+#REVISION: Rev: 163
+
+.INC ECE322L_Audio_amp.MIS
+Q1 12V 13 A1  2N2222/N  
+R5 A1 0  3k  
+Q4 12V 14 15  2N3055/TI  
+R15 15 0  20  
+R16 Vout 0  8  
+C4 15 Vout  1000u  
+C2 A1 16  100u  
+V3 17 0 AC 1   SIN 0 .02 1k 
+C1 Vin 13  100u  
+R2 12V 13  75k  
+R3 13 0  750k  
+Q2 A2 16 18  2N2222/N  
+R9 18 0  25  
+R8 12V A2  300  
+R6 12V 16  500k  
+R7 16 0  500k  
+Q3 A3 19 20  2N2222/N  
+R13 20 0  15  
+C3 A2 19  100u  
+R12 12V A3  250  
+R10 12V 19  150k  
+R11 19 0  500k  
+V1 12V 0 12 
+V2 0 -12V 12 
+R1 17 Vin  10k  
+R17 A3 14  100  
+
+.INC ECE322L_Audio_amp.CMD
+
+.END

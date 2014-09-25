@@ -1,0 +1,3 @@
+vhdl work "../Lab 6/L5P2 StateMachine2.vhd"
+vhdl work "../Lab 6/L5P2 StateMachine1.vhd"
+vhdl work "../Lab 6/L5P3 StateMachineCombine.vhd"

@@ -1,0 +1,35 @@
+### This file is a general .ucf for Nexys3 rev B board
+### To use it in a project:
+### - remove or comment the lines corresponding to unused pins
+### - rename the used signals according to the project
+#
+###Clock signal
+NET "clk"  LOC = "V10";# ;
+#Net "clk" LOC=V10 | IOSTANDARD=LVCMOS33;
+#Net "clk" TNM_NET = sys_clk_pin;;
+#TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz; #100000;
+#;
+### Pic USB-HID interface;
+Net "kb_data" LOC = J13;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L39P_M1A3, Sch name = PIC-SDI1
+Net "kb_clk"  LOC = L12;#| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L40P_GCLK11_M1A5, Sch name = PIC-SCK1
+#
+##NET "PS2MouseData" LOC = K14 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L39N_M1ODT, Sch name = PIC-SDO1
+##NET "PS2MouseClk" LOC = L13| IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L40N_GCLK10_M1A6, Sch name = PIC-SS1
+#
+#
+### Usb-RS232 interface
+##Net "RxD" LOC = N17 | IOSTANDARD=LVCMOS33; #Bank = 1, pin name = IO_L48P_HDC_M1DQ8, Sch name = MCU-RX
+##Net "TxD" LOC = N18 | IOSTANDARD=LVCMOS33; #Bank = 1, pin name = IO_L48N_M1DQ9, Sch name = MCU-TX
+#
+### VGA Connector
+#NET "vgaRed<0>" LOC = U7 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L43P, Sch name = RED0
+#NET "red_out" LOC = V7 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L43N, Sch name = RED1
+NET "red_out" LOC = N7 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L44P, Sch name = RED2
+#NET "vgaGreen<0>" LOC = P8 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L44N, Sch name = GRN0
+#NET "vgaGreen<1>" LOC = T6 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L45P, Sch name = GRN1
+NET "green_out" LOC = V6 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L45N, Sch name = GRN2
+#NET "vgaBlue<0>" LOC = R7 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L46P, Sch name = BLU1
+NET "blue_out" LOC = T7 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L46N, Sch name = BLU2
+#
+NET "hsync_out" LOC = N6 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L47P, Sch name = HSYNC
+NET "vsync_out" LOC = P7 | IOSTANDARD = LVCMOS33; # Bank = 2, pin name = IO_L47N, Sch name = VSYNC

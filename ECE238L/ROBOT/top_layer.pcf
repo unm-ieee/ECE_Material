@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.49d on Wed Feb 13 14:14:49 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Direction_01" LOCATE = SITE "T12" LEVEL 1;
+COMP "Direction_02" LOCATE = SITE "V12" LEVEL 1;
+COMP "data_in_Left" LOCATE = SITE "K2" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "data_in_Right" LOCATE = SITE "K1" LEVEL 1;
+COMP "pwm_out_01" LOCATE = SITE "N10" LEVEL 1;
+COMP "cmpPwm<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "pwm_out_02" LOCATE = SITE "P11" LEVEL 1;
+COMP "cmpPwm<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "cmpPwm<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "cmpPwm<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "cmpPwm<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "cmpPwm<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "cmpPwm<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "cmpPwm<7>" LOCATE = SITE "T5" LEVEL 1;
+SCHEMATIC END;
+

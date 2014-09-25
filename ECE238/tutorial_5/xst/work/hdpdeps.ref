@@ -1,0 +1,7 @@
+V3 3
+FL C:/Users/238user/Desktop/Steven/tutorial_5/counter.vhd 2012/02/21.16:18:07 O.40d
+EN work/counter 1329866293 \
+      FL C:/Users/238user/Desktop/Steven/tutorial_5/counter.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/counter/Behavioral 1329866294 \
+      FL C:/Users/238user/Desktop/Steven/tutorial_5/counter.vhd EN work/counter 1329866293

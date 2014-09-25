@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Ryan/Desktop/School/ECE238L/pong/pong.xst" -ofn "C:/Users/Ryan/Desktop/School/ECE238L/pong/pong.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/Desktop/School/ECE238L/pong/pong.xst" -ofn "C:/Users/Ryan/Desktop/School/ECE238L/pong/pong.syr" 

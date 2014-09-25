@@ -1,0 +1,2 @@
+vhdl work "CORDIC.vhd"
+vhdl work "CordicTB.vhd"

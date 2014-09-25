@@ -1,0 +1,26 @@
+This will be in Cartesian format, the order of results are:
+Real part
+Imaginary part
+Magnitude
+Phase
+Power
+Root
+Conjugate
+Addition
+Subtraction
+Multiplication
+Division
+
+0.707000
+-0.707000
+0.999849
+-0.785398
+-0.000000 -0.999698 
+0.923810 -0.382655 
+0.707000 0.707000 
+2.707000 3.293000 
+-1.293000 -4.707000 
+4.242000 1.414000 
+-0.070700 -0.212100 
+
+	Next Complex Number

@@ -1,0 +1,12 @@
+NET "s0dp"         LOC = "T17";            
+NET "s1a"         LOC = "T18";           
+NET "s2b"         LOC = "U17";            
+NET "s3c"         LOC = "U18";             
+NET "s4d"         LOC = "M14";              
+NET "s5e"         LOC = "N14";             
+NET "s6f"         LOC = "L14";      
+NET "s7g"         LOC = "M13";         
+NET "B0"         LOC = "B8" ;         
+NET "B1"         LOC = "A8" ;
+NET "B2"         LOC = "C9" ;
+NET "B3"         LOC = "D9" ;

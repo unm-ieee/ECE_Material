@@ -1,0 +1,8 @@
+NET "blue_out"  LOC = "T7"  ; 
+NET "clk"  LOC = "V10"  ; 
+NET "green_out"  LOC = "V6"  ; 
+NET "hsync_out"  LOC = "N6"  ; 
+NET "kb_clk"  LOC = "L12"  ; 
+NET "kb_data"  LOC = "J13"  ; 
+NET "red_out"  LOC = "N7"  ; 
+NET "vsync_out"  LOC = "P7"  ; 

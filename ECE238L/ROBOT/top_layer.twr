@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------
+Release 14.4 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml top_layer.twx top_layer.ncd -o top_layer.twr top_layer.pcf
+-ucf top_layer.ucf
+
+Design file:              top_layer.ncd
+Physical constraint file: top_layer.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2012-12-04)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+-------------+------------+------------+------------+------------+------------------+--------+
+             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------+------------+------------------+--------+
+data_in_Left |    2.380(R)|      SLOW  |   -1.384(R)|      FAST  |clk_BUFGP         |   0.000|
+data_in_Right|    2.523(R)|      SLOW  |   -1.517(R)|      FAST  |clk_BUFGP         |   0.000|
+-------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Direction_01|         7.914(R)|      SLOW  |         4.158(R)|      FAST  |clk_BUFGP         |   0.000|
+Direction_02|         8.187(R)|      SLOW  |         4.287(R)|      FAST  |clk_BUFGP         |   0.000|
+pwm_out_01  |         9.919(R)|      SLOW  |         4.521(R)|      FAST  |clk_BUFGP         |   0.000|
+pwm_out_02  |        10.967(R)|      SLOW  |         4.669(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.718|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+cmpPwm<0>      |pwm_out_01     |    9.158|
+cmpPwm<0>      |pwm_out_02     |   10.206|
+cmpPwm<1>      |pwm_out_01     |    8.957|
+cmpPwm<1>      |pwm_out_02     |   10.005|
+cmpPwm<2>      |pwm_out_01     |    8.478|
+cmpPwm<2>      |pwm_out_02     |    9.526|
+cmpPwm<3>      |pwm_out_01     |    8.111|
+cmpPwm<3>      |pwm_out_02     |    9.159|
+cmpPwm<4>      |pwm_out_01     |    8.381|
+cmpPwm<4>      |pwm_out_02     |    9.429|
+cmpPwm<5>      |pwm_out_01     |    8.104|
+cmpPwm<5>      |pwm_out_02     |    9.152|
+cmpPwm<6>      |pwm_out_01     |    7.573|
+cmpPwm<6>      |pwm_out_02     |    8.621|
+cmpPwm<7>      |pwm_out_01     |    7.877|
+cmpPwm<7>      |pwm_out_02     |    8.925|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Feb 13 14:15:30 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 220 MB
+
+
+

@@ -1,0 +1,33 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/TB_MIPS_Top_isim_beh.exe -prj C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/TB_MIPS_Top_beh.prj work.TB_MIPS_Top 
+ISim O.61xd (signature 0x1cce1bb2)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/One_Bit.vhd" into library work
+Parsing VHDL file "C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/Registers.vhd" into library work
+Parsing VHDL file "C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/Instruction_Memory.vhd" into library work
+Parsing VHDL file "C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/Data_Memory.vhd" into library work
+Parsing VHDL file "C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/ALU_Top.vhd" into library work
+Parsing VHDL file "C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/MIPS_Top.vhd" into library work
+Parsing VHDL file "C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/TB_MIPS_Top.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture instr_mem of entity INSTR_MEM [instr_mem_default]
+Compiling architecture register_set of entity register_set [register_set_default]
+Compiling architecture one_bit of entity one_bit [one_bit_default]
+Compiling architecture alu32 of entity ALU32 [alu32_default]
+Compiling architecture data_mem of entity DATA_MEM [data_mem_default]
+Compiling architecture mips_top of entity MIPS_Top [mips_top_default]
+Compiling architecture tb_mips_top of entity tb_mips_top
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 19 VHDL Units
+Built simulation executable C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/TB_MIPS_Top_isim_beh.exe
+Fuse Memory Usage: 26648 KB
+Fuse CPU Usage: 483 ms

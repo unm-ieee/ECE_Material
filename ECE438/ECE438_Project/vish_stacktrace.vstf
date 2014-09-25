@@ -1,0 +1,9 @@
+# Current time Mon Dec 12 18:02:36 2011
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.0b"
+# Version = "2011.05"
+# Date = "May  5 2011"
+# Platform = win32
+
+Exception c0000005 has occurred at address 00631c47. Traceback:

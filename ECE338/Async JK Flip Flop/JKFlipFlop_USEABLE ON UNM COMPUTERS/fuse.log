@@ -1,0 +1,21 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "D:/ECE.CLASSES/ECE338/Async JK Flip Flop/JKFlipFlop_ise12migration/ATB_JKFF_isim_beh.exe" -prj "D:/ECE.CLASSES/ECE338/Async JK Flip Flop/JKFlipFlop_ise12migration/ATB_JKFF_beh.prj" "work.ATB_JKFF" 
+ISim O.87xd (signature 0xc3576ebc)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/Async JK Flip Flop/JKFlipFlop_ise12migration/../FlippityFlopper.vhd" into library work
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/Async JK Flip Flop/JKFlipFlop_ise12migration/../FF_TestBench.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture behavioral of entity JKFF [jkff_default]
+Compiling architecture atb_jkff of entity atb_jkff
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 7 VHDL Units
+Built simulation executable D:/ECE.CLASSES/ECE338/Async JK Flip Flop/JKFlipFlop_ise12migration/ATB_JKFF_isim_beh.exe
+Fuse Memory Usage: 29492 KB
+Fuse CPU Usage: 670 ms

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Par" num="282" delta="old" >No user timing constraints were detected or you have set the option to ignore timing constraints (&quot;par -x&quot;). Place and Route will run in &quot;Performance Evaluation Mode&quot; to automatically improve the performance of all internal clocks in this design. Because there are not defined timing requirements, a timing score will not be reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock. Note: For the fastest runtime, set the effort level to &quot;std&quot;.  For best performance, set the effort level to &quot;high&quot;.
+</msg>
+
+<msg type="error" file="Place" num="1018" delta="new" >A clock IOB / clock component pair have been found that are not placed at an optimal clock IOB / clock site pair. The clock component &lt;<arg fmt="%s" index="1">clk_BUFGP/BUFG</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">BUFGMUX_X2Y1</arg>&gt;. The IO component &lt;<arg fmt="%s" index="3">clk</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">IPAD93</arg>&gt;.  This will not allow the use of the fast path between the IO and the Clock buffer. If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .ucf file to demote this message to a WARNING and allow your design to continue. However, the use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design. A list of all the COMP.PINs used in this clock placement rule is listed below. These examples can be used directly in the .ucf file to override this clock rule.
+<arg fmt="%s" index="5">&lt; NET &quot;clk&quot; CLOCK_DEDICATED_ROUTE = FALSE; &gt;
+</arg>
+</msg>
+
+<msg type="warning" file="ParHelpers" num="360" delta="new" >Design is not completely routed.
+
+</msg>
+
+<msg type="warning" file="Par" num="100" delta="new" >Design is not completely routed. There are <arg fmt="%d" index="1">23</arg> signals that are not
+completely routed in this design. See the &quot;<arg fmt="%s" index="2">counter.unroutes</arg>&quot; file for a list of
+all unrouted signals. Check for other warnings in your PAR report that might
+indicate why these nets are unroutable. These nets can also be evaluated
+in FPGA Editor by selecting &quot;Unrouted Nets&quot; in the List Window.
+
+</msg>
+
+</messages>
+

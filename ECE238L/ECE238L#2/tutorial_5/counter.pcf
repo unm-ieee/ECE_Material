@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map O.40d on Tue Feb 07 16:58:13 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "pause" LOCATE = SITE "L13" LEVEL 1;
+COMP "reset" LOCATE = SITE "K17" LEVEL 1;
+COMP "count_out<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "count_out<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "count_out<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "count_out<3>" LOCATE = SITE "F11" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

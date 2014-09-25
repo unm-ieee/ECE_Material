@@ -1,0 +1,32 @@
+ISim log file
+Running: C:\Users\Ryan\Desktop\School\ECE238L\test\testvb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Ryan/Desktop/School/ECE238L/test/testvb_isim_beh.wdb 
+ISim O.61xd (signature 0x1cce1bb2)
+----------------------------------------------------------------------
+INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:68 - Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
+WARNING:Security:44 - No license file was found.
+       Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+ERROR:Security:14 - No feature was available for 'ISIM'.
+
+No such feature exists.
+Feature:       ISIM
+License path:  C:/.Xilinx;C:\Xilinx\13.2\ISE_DS\ISE\/data\*.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_licenses\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_licenses\XilinxFree.lic;C:\Xilinx\13.2\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-5,357
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".
+----------------------------------------------------------------------
+WARNING: A full ISim License cannot be checked out due to the issues listed above. Please use Xilinx License Configuration Manager to fix these issues in order to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

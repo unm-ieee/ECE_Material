@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ryan/Desktop/tutorial_5/counter_tb_vhd_isim_beh.exe" -prj "C:/Users/Ryan/Desktop/tutorial_5/counter_tb_vhd_beh.prj" "work.counter_tb_vhd" 

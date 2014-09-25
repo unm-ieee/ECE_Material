@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{graphics}
+\usepackage{color}
+\pagestyle{fancy}
+\rhead{Steven Seppala}
+\lhead{ECE 440: Networks}
+\cfoot{Page : \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+	\definecolor{dkgreen}{rgb}{0,0.6,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  %backgroundcolor=\color{dkgreen},
+  numbers=left,
+  numberstyle=\tiny\color{mauve},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+\begin{document}
+\begin{enumerate}
+	\item Problem 5 \\
+	\begin{enumerate}
+		\item A: \\
+			\raggedright{Delay = 150/100 = 1.5 hrs\\
+			Toll booth delay = 12 sec\\
+			10 cars $\Rightarrow$  120sec\\
+			3 toll booths $\Rightarrow$ 3 $*$ 2mins $\Rightarrow$  6mins\\
+			End-to-end delay $\Rightarrow$ 1.5hrs + 6mins $\Rightarrow$ \\
+			\textcolor{mauve}{End-to-end delay 1 hour 36 minutes}\\}
+		\item B: \\
+			\raggedright{Same delay\\
+			Same toll booth delay\\
+			8 cars $*$ 12 seconds $\Rightarrow$ 96 seconds\\
+			96 seconds $*$ 3 $\Rightarrow$ 4 mins 48 seconds\\
+			End-to-end delay $\Rightarrow$ 1.5 hrs $+$ 4 mins 48 seconds\\
+			\textcolor{mauve}{End-to-end delay $\Rightarrow$ 1 hour 34 mins 48 seconds}\\}
+	\end{enumerate}
+	\item Problem 10\\
+		\raggedright{
+			End-to-end delay = $\frac{L}{R1}+\frac{L}{R2}+\frac{L}{R3}+
+								\frac{d1}{s1}+\frac{d2}{s2}+\frac{d3}{s3}+
+								d_{proc}+d_{proc}$ \\
+			Packet size = 1500 bytes\\
+			Propagation speed $= 2.5 * 10^{8}$\\
+			Transmission rate $= 2Mbps$\\
+			Packet switching delay $= 3msec$\\
+			Link length $=$ 1) 5000km, 2) 4000km, 3) 1000km\\
+			$\frac{L}{R1} = \frac{1500*8}{2*10^{6}} \Rightarrow 6 msec$\\
+			$\frac{d1}{s1} = \frac{5000*10^{3}}{2.5*10^{8}} \Rightarrow 20 msec$\\
+			$\frac{L}{R2} = 6msec$\\
+			$\frac{d2}{s2} = \frac{4000*10^{3}}{2.5*10^{8}} \Rightarrow 16 msec$\\
+			$\frac{L}{R3} = 6msec$\\
+			$\frac{d3}{s3} = \frac{1000*10^{3}}{2.5*10^{8}} \Rightarrow  4 msec$\\
+			End-to-end delay $= 6msec+6msec+6msec+20msec+16msec+4msec+3msec+3msec= \textcolor{mauve}{64msec}$\\
+		}
+
+	\item Problem 11\\
+		\raggedright{
+			Transmission Rate $R_{1} = R_{2} = R_{3} = R$ \\
+			$d_{proc} = 0$\\
+			$\Rightarrow$\\
+			End-to-end delay $= 6msec + 20msec + 16msec + 4msec = \textcolor{mauve}{ 46msec}$\\
+			}
+			
+\end{enumerate}
+
+
+\end{document}
+

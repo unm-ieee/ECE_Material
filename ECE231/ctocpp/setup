@@ -1,0 +1,4 @@
+#!/bin/sh
+
+python setup.py
+chmod +x /usr/local/bin/ctocpp

@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map O.40d on Mon Apr 23 18:36:52 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "output_out" LOCATE = SITE "C11" LEVEL 1;
+COMP "x_in" LOCATE = SITE "L13" LEVEL 1;
+COMP "Reset_in" LOCATE = SITE "N17" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "D18" LEVEL 1;
+PIN clk_in_pin<0> = BEL "clk_in" PINNAME PAD;
+PIN "clk_in_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "clk_in_BUFGP/IBUFG" BEL "clk_in_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

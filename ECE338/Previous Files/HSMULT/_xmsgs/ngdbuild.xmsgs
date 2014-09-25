@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="NgdBuild" num="604" delta="old" ><arg fmt="%s" index="1">logical</arg> block &apos;<arg fmt="%s" index="2">I0</arg>&apos; with type &apos;<arg fmt="%s" index="3">UnpackFP</arg>&apos; could not be resolved. A pin name misspelling can cause this, a missing edif or ngc file, case mismatch between the block name and the edif or ngc file name, or the misspelling of a type name. Symbol &apos;<arg fmt="%s" index="4">UnpackFP</arg>&apos; is not supported in target &apos;<arg fmt="%s" index="5">artix7</arg>&apos;.
+</msg>
+
+<msg type="error" file="NgdBuild" num="604" delta="old" ><arg fmt="%s" index="1">logical</arg> block &apos;<arg fmt="%s" index="2">I1</arg>&apos; with type &apos;<arg fmt="%s" index="3">UnpackFP</arg>&apos; could not be resolved. A pin name misspelling can cause this, a missing edif or ngc file, case mismatch between the block name and the edif or ngc file name, or the misspelling of a type name. Symbol &apos;<arg fmt="%s" index="4">UnpackFP</arg>&apos; is not supported in target &apos;<arg fmt="%s" index="5">artix7</arg>&apos;.
+</msg>
+
+<msg type="error" file="NgdBuild" num="604" delta="old" ><arg fmt="%s" index="1">logical</arg> block &apos;<arg fmt="%s" index="2">I5</arg>&apos; with type &apos;<arg fmt="%s" index="3">PackFP</arg>&apos; could not be resolved. A pin name misspelling can cause this, a missing edif or ngc file, case mismatch between the block name and the edif or ngc file name, or the misspelling of a type name. Symbol &apos;<arg fmt="%s" index="4">PackFP</arg>&apos; is not supported in target &apos;<arg fmt="%s" index="5">artix7</arg>&apos;.
+</msg>
+
+<msg type="error" file="NgdBuild" num="604" delta="old" ><arg fmt="%s" index="1">logical</arg> block &apos;<arg fmt="%s" index="2">I9</arg>&apos; with type &apos;<arg fmt="%s" index="3">FPnormalize</arg>&apos; could not be resolved. A pin name misspelling can cause this, a missing edif or ngc file, case mismatch between the block name and the edif or ngc file name, or the misspelling of a type name. Symbol &apos;<arg fmt="%s" index="4">FPnormalize</arg>&apos; is not supported in target &apos;<arg fmt="%s" index="5">artix7</arg>&apos;.
+</msg>
+
+<msg type="error" file="NgdBuild" num="604" delta="old" ><arg fmt="%s" index="1">logical</arg> block &apos;<arg fmt="%s" index="2">I11</arg>&apos; with type &apos;<arg fmt="%s" index="3">FPround</arg>&apos; could not be resolved. A pin name misspelling can cause this, a missing edif or ngc file, case mismatch between the block name and the edif or ngc file name, or the misspelling of a type name. Symbol &apos;<arg fmt="%s" index="4">FPround</arg>&apos; is not supported in target &apos;<arg fmt="%s" index="5">artix7</arg>&apos;.
+</msg>
+
+<msg type="error" file="NgdBuild" num="604" delta="old" ><arg fmt="%s" index="1">logical</arg> block &apos;<arg fmt="%s" index="2">I10</arg>&apos; with type &apos;<arg fmt="%s" index="3">FPnormalize</arg>&apos; could not be resolved. A pin name misspelling can cause this, a missing edif or ngc file, case mismatch between the block name and the edif or ngc file name, or the misspelling of a type name. Symbol &apos;<arg fmt="%s" index="4">FPnormalize</arg>&apos; is not supported in target &apos;<arg fmt="%s" index="5">artix7</arg>&apos;.
+</msg>
+
+</messages>
+

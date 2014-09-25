@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="1731" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCRN.vhd" Line 73: found &apos;<arg fmt="%d" index="1">0</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;mod&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;mod&quot;</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1731" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCRN.vhd" Line 71: found &apos;<arg fmt="%d" index="1">0</arg>&apos; definitions of operator <arg fmt="%s" index="2">&quot;mod&quot;</arg>, cannot determine exact overloaded matching definition for <arg fmt="%s" index="2">&quot;mod&quot;</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCRN.vhd" Line 18: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+

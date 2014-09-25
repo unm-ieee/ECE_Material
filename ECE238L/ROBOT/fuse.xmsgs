@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 103: Syntax error near &quot;<arg fmt="%s" index="1">-</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="841" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 103: Expecting type <arg fmt="%s" index="2"> void</arg> for &lt;<arg fmt="%s" index="1">ieee</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="40" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 104: <arg fmt="%s" index="1">is_x</arg> is not a <arg fmt="%s" index="2"> void</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="432" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 104: Formal &lt;<arg fmt="%s" index="1">s</arg>&gt; has no actual or default value.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 110: Syntax error near &quot;<arg fmt="%s" index="1">ENTITY</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="841" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 111: Expecting type <arg fmt="%s" index="2"> void</arg> for &lt;<arg fmt="%s" index="1">tb</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="62" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 132: <arg fmt="%s" index="1">std_logic</arg> is not a variable
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 133: Syntax error near &quot;<arg fmt="%s" index="1">signal</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="62" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 133: <arg fmt="%s" index="1">std_logic</arg> is not a variable
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 134: Syntax error near &quot;<arg fmt="%s" index="1">signal</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="62" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 134: <arg fmt="%s" index="1">std_logic</arg> is not a variable
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 135: Syntax error near &quot;<arg fmt="%s" index="1">signal</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="62" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 135: <arg fmt="%s" index="1">std_logic</arg> is not a variable
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 138: Syntax error near &quot;<arg fmt="%s" index="1">signal</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1728" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 138: Type error near <arg fmt="%s" index="1">std_logic</arg> ; current type <arg fmt="%s" index="2">std_ulogic</arg>; expected type <arg fmt="%s" index="3"> void</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 139: Syntax error near &quot;<arg fmt="%s" index="1">signal</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1728" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 139: Type error near <arg fmt="%s" index="1">std_logic</arg> ; current type <arg fmt="%s" index="2">std_ulogic</arg>; expected type <arg fmt="%s" index="3"> void</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 140: Syntax error near &quot;<arg fmt="%s" index="1">signal</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1728" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/tb.vhd" Line 140: Type error near <arg fmt="%s" index="1">std_logic</arg> ; current type <arg fmt="%s" index="2">std_ulogic</arg>; expected type <arg fmt="%s" index="3"> void</arg>
+</msg>
+
+</messages>
+

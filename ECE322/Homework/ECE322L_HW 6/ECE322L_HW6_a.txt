@@ -1,0 +1,126 @@
+
+**** 03/07/13 10:18:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ *ECE322L Homework 6
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+Vcc 1 0 DC 5
+Vbb 2 0 DC 0
+RC 1 3 5k
+RB 2 4 50K
+RL 3 0 10K
+
+
+*Qxxx C B E NPN
+Q1 3 4 0 NPN
+
+.MODEL NPN NPN(BF=75)
+*.MODEL NPN NPN(BF=75 Is=823.235E-18)
+*.MODEL NPN NPN(BF=75 Is=3.56735E-15)
+
+.OP
+
+**** 03/07/13 10:18:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ *ECE322L Homework 6
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NPN             
+               NPN             
+          IS  100.000000E-18 
+          BF   75            
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/07/13 10:18:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ *ECE322L Homework 6
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    3.3333  (    4) 166.7E-09  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    Vcc         -3.333E-04
+    Vbb          3.333E-12
+
+    TOTAL POWER DISSIPATION   1.67E-03  WATTS
+
+
+**** 03/07/13 10:18:11 *********** Evaluation PSpice (Nov 1999) **************
+
+ *ECE322L Homework 6
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q1        
+MODEL        NPN       
+IB          -3.33E-12 
+IC           6.67E-12 
+VBE          1.67E-07 
+VBC         -3.33E+00 
+VCE          3.33E+00 
+BETADC      -2.00E+00 
+GM           3.87E-15 
+RPI          7.47E+13 
+RX           0.00E+00 
+RO           1.00E+12 
+CBE          0.00E+00 
+CBC          0.00E+00 
+CJS          0.00E+00 
+BETAAC       2.89E-01 
+CBX/CBX2     0.00E+00 
+FT/FT2       6.15E+04 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

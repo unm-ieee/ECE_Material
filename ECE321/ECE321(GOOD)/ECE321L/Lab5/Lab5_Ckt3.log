@@ -1,0 +1,22 @@
+Circuit: *Circuit HW1, problem 1.13*
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Nov 18 20:42:23 2012
+Total elapsed time: 0.386 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2610
+traniter = 2605
+tranpoints = 1244
+accept = 1186
+rejected = 58
+matrix size = 8
+fillins = 0
+solver = Normal
+Matrix Compiler1: 300 bytes object code size  1.1/1.2/[0.9]
+Matrix Compiler2: 636 bytes object code size  1.1/1.2/[0.9]
+
+

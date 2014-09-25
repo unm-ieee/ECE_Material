@@ -1,0 +1,28 @@
+Command line:
+   CORDIC_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1409
+
+Wed Apr 17 15:24:43 2013
+
+
+ Elaboration Time: 0.093601 sec
+
+ Current Memory Usage: 830.12 Meg
+
+ Total Signals          : 26
+ Total Nets             : 6986
+ Total Signal Drivers   : 52
+ Total Blocks           : 4
+ Total Primitive Blocks : 4
+ Total Processes        : 43
+ Total Traceable Variables  : 41
+ Total Scalar Nets and Variables : 7591
+
+ Total Simulation Time: 0.171601 sec
+
+ Current Memory Usage: 1144.69 Meg
+
+Wed Apr 17 15:25:25 2013
+

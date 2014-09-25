@@ -1,0 +1,19 @@
+Running: C:\Xilinx\13.1\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o F:/ECE238/lab5/lab5/Encoder_isim_beh.exe -prj F:/ECE238/lab5/lab5/Encoder_beh.prj work.Encoder 
+ISim O.40d (signature 0x79f3f3a8)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "F:/ECE238/lab5/lab5/../encoder.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 99128 KB
+Fuse CPU Usage: 607 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Compiling architecture behavioral of entity encoder
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 VHDL Units
+Built simulation executable F:/ECE238/lab5/lab5/Encoder_isim_beh.exe
+Fuse Memory Usage: 105896 KB
+Fuse CPU Usage: 1294 ms

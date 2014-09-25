@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/ATB_CORDIC_isim_beh.exe" -prj "D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/ATB_CORDIC_beh.prj" "work.ATB_CORDIC" 

@@ -1,0 +1,7 @@
+vhdl isim_temp "state_5.vhd"
+vhdl isim_temp "../../../ROBOT/Reverse_out_02.vhd"
+vhdl isim_temp "../../../ROBOT/Reverse_out.vhd"
+vhdl isim_temp "../../../ROBOT/main(1).vhd"
+vhdl isim_temp "../../../ROBOT/And_gate.vhd"
+vhdl isim_temp "../../../ROBOT/Top_layer(2).vhd"
+vhdl isim_temp "tb.vhd"

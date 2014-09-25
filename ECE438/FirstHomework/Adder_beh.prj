@@ -1,0 +1,3 @@
+vhdl work "LACUnit.vhd"
+vhdl work "FA.vhd"
+vhdl work "Adder.vhd"

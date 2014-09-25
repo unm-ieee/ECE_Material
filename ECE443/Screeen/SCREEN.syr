@@ -1,0 +1,432 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> 
+Reading design: SCREEN.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SCREEN.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SCREEN"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : SCREEN
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCREEN.vhd" into library work
+Parsing entity <SCREEN>.
+Parsing architecture <IN_CLASS> of entity <screen>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SCREEN> (architecture <IN_CLASS>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SCREEN>.
+    Related source file is "/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCREEN.vhd".
+    Found 10-bit register for signal <XCNT>.
+    Found 4-bit register for signal <STATE>.
+    Found 10-bit register for signal <YCNT>.
+    Found 2-bit register for signal <DIV>.
+    Found 2-bit adder for signal <DIV[1]_GND_6_o_add_0_OUT> created at line 30.
+    Found 10-bit adder for signal <XCNT[9]_GND_6_o_add_2_OUT> created at line 37.
+    Found 10-bit adder for signal <YCNT[9]_GND_6_o_add_3_OUT> created at line 48.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <SCREEN> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 2-bit adder                                           : 1
+# Registers                                            : 4
+ 10-bit register                                       : 2
+ 2-bit register                                        : 1
+ 4-bit register                                        : 1
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <SCREEN>.
+The following registers are absorbed into counter <DIV>: 1 register on signal <DIV>.
+The following registers are absorbed into counter <XCNT>: 1 register on signal <XCNT>.
+The following registers are absorbed into counter <YCNT>: 1 register on signal <YCNT>.
+Unit <SCREEN> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <SCREEN> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SCREEN, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SCREEN.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 101
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 18
+#      LUT2                        : 1
+#      LUT3                        : 10
+#      LUT4                        : 10
+#      LUT5                        : 4
+#      LUT6                        : 14
+#      MUXCY                       : 18
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 26
+#      FD                          : 12
+#      FD_1                        : 4
+#      FDR                         : 10
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 8
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              26  out of  18224     0%  
+ Number of Slice LUTs:                   61  out of   9112     0%  
+    Number used as Logic:                61  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     61
+   Number with an unused Flip Flop:      35  out of     61    57%  
+   Number with an unused LUT:             0  out of     61     0%  
+   Number of fully used LUT-FF pairs:    26  out of     61    42%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    232     8%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+DIV_1                              | BUFG                   | 24    |
+CLOCK                              | BUFGP                  | 2     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.541ns (Maximum Frequency: 220.204MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.734ns
+   Maximum combinational path delay: 5.385ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DIV_1'
+  Clock period: 4.541ns (frequency: 220.204MHz)
+  Total number of paths / destination ports: 604 / 34
+-------------------------------------------------------------------------
+Delay:               4.541ns (Levels of Logic = 4)
+  Source:            YCNT_8 (FF)
+  Destination:       STATE_3 (FF)
+  Source Clock:      DIV_1 falling
+  Destination Clock: DIV_1 falling
+
+  Data Path: YCNT_8 to STATE_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   1.028  YCNT_8 (YCNT_8)
+     LUT5:I0->O            4   0.203   0.684  GND_6_o_YCNT[9]_equal_5_o<9>11 (GND_6_o_YCNT[9]_equal_5_o<9>1)
+     LUT6:I5->O           11   0.205   0.883  PWR_6_o_YCNT[9]_equal_8_o<9>1 (PWR_6_o_YCNT[9]_equal_8_o)
+     LUT6:I5->O            1   0.205   0.580  GND_6_o_STATE[3]_select_19_OUT<3>_SW0 (N7)
+     LUT6:I5->O            1   0.205   0.000  GND_6_o_STATE[3]_select_19_OUT<3> (GND_6_o_STATE[3]_select_19_OUT<3>)
+     FD_1:D                    0.102          STATE_3
+    ----------------------------------------
+    Total                      4.541ns (1.367ns logic, 3.174ns route)
+                                       (30.1% logic, 69.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 1.950ns (frequency: 512.794MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.950ns (Levels of Logic = 1)
+  Source:            DIV_0 (FF)
+  Destination:       DIV_0 (FF)
+  Source Clock:      CLOCK rising
+  Destination Clock: CLOCK rising
+
+  Data Path: DIV_0 to DIV_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  DIV_0 (DIV_0)
+     INV:I->O              1   0.206   0.579  Mcount_DIV_xor<0>11_INV_0 (Result<0>)
+     FD:D                      0.102          DIV_0
+    ----------------------------------------
+    Total                      1.950ns (0.755ns logic, 1.195ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DIV_1'
+  Total number of paths / destination ports: 18 / 10
+-------------------------------------------------------------------------
+Offset:              4.734ns (Levels of Logic = 2)
+  Source:            STATE_3 (FF)
+  Destination:       RGB<7> (PAD)
+  Source Clock:      DIV_1 falling
+
+  Data Path: STATE_3 to RGB<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             9   0.447   0.934  STATE_3 (STATE_3)
+     LUT3:I1->O            1   0.203   0.579  Mmux_RGB81 (RGB_7_OBUF)
+     OBUF:I->O                 2.571          RGB_7_OBUF (RGB<7>)
+    ----------------------------------------
+    Total                      4.734ns (3.221ns logic, 1.513ns route)
+                                       (68.0% logic, 32.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               5.385ns (Levels of Logic = 3)
+  Source:            SWS<7> (PAD)
+  Destination:       RGB<7> (PAD)
+
+  Data Path: SWS<7> to RGB<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.808  SWS_7_IBUF (SWS_7_IBUF)
+     LUT3:I0->O            1   0.205   0.579  Mmux_RGB81 (RGB_7_OBUF)
+     OBUF:I->O                 2.571          RGB_7_OBUF (RGB<7>)
+    ----------------------------------------
+    Total                      5.385ns (3.998ns logic, 1.387ns route)
+                                       (74.2% logic, 25.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |    1.950|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DIV_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+DIV_1          |         |         |    4.541|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 13.24 secs
+ 
+--> 
+
+
+Total memory usage is 394400 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,28 @@
+* Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+* TDB File:  C:\Users\Tony\Desktop\321_Project\RunFrom\ledit_demo, Cell:  Cell0
+* Extract Definition File:  C:\Users\Tony\Desktop\321_Project\RunFrom\template.ext
+* Extract Date and Time:  12/02/2012 - 18:30
+
+.include 2um_CMOS.modlib
+
+
+* NODE NAME ALIASES
+*       1 = VDD (2,40.5)
+*       2 = GND (0.5,1.5)
+*       3 = Out (49.5,22)
+*       5 = In (0.5,22)
+
+
+M1 3 4 1 1 cmosp L=2u W=5u AD=27.5p PD=21u AS=80p PS=52u 
+* M1 DRAIN GATE SOURCE BULK (37.5 27 39.5 32) 
+M2 4 5 1 1 cmosp L=2u W=5u AD=27.5p PD=21u AS=80p PS=52u 
+* M2 DRAIN GATE SOURCE BULK (12 27 14 32) 
+M3 3 4 2 2 cmosn L=2u W=5u AD=27.5p PD=21u AS=80p PS=52u 
+* M3 DRAIN GATE SOURCE BULK (37.5 10 39.5 15) 
+M4 4 5 2 2 cmosn L=2u W=5u AD=27.5p PD=21u AS=80p PS=52u 
+* M4 DRAIN GATE SOURCE BULK (12 10 14 15) 
+
+* Total Nodes: 5
+* Total Elements: 4
+* Extract Elapsed Time: 0 seconds
+.END

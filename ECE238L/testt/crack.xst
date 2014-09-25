@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Ryan/Desktop/School/ECE238L/testt/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Ryan/Desktop/School/ECE238L/testt/xst"
+elaborate
+-ifn crack.prj
+-ifmt mixed

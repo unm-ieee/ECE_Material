@@ -1,0 +1,60 @@
+Z:/ECE438_Project/Registers.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/ECE438_Project/Registers.vhd
+Model Technology ModelSim SE vcom 10.0b Compiler 2011.05 May  5 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity REGISTERS
+-- Compiling architecture FOR_438 of REGISTERS
+
+} {} {}} Z:/ECE438_Project/One_Bit.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/ECE438_Project/One_Bit.vhd
+Model Technology ModelSim SE vcom 10.0b Compiler 2011.05 May  5 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity one_bit
+-- Compiling architecture one_bit of one_bit
+
+} {} {}} Z:/ECE438_Project/ALU_Top.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/ECE438_Project/ALU_Top.vhd
+Model Technology ModelSim SE vcom 10.0b Compiler 2011.05 May  5 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU32
+-- Compiling architecture ALU32 of ALU32
+
+} {} {}} Z:/ECE438_Project/TB_MIPS_Top.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/ECE438_Project/TB_MIPS_Top.vhd
+Model Technology ModelSim SE vcom 10.0b Compiler 2011.05 May  5 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity TB_MIPS_Top
+-- Compiling architecture TB_MIPS_Top of TB_MIPS_Top
+-- Loading entity MIPS_Top
+
+} {} {}} Z:/ECE438_Project/Data_Memory.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/ECE438_Project/Data_Memory.vhd
+Model Technology ModelSim SE vcom 10.0b Compiler 2011.05 May  5 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling entity D_MEMORY
+-- Compiling architecture FOR_438 of D_MEMORY
+
+} {} {}} Z:/ECE438_Project/Instruction_Memory.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/ECE438_Project/Instruction_Memory.vhd
+Model Technology ModelSim SE vcom 10.0b Compiler 2011.05 May  5 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling entity I_MEMORY
+-- Compiling architecture FOR_438 of I_MEMORY
+
+} {} {}}

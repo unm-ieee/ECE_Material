@@ -1,0 +1,221 @@
+
+**** 09/17/13 17:21:07 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+.lib "nom.lib"
+
+vdd 1 0 dc 5
+
+vina 2 0 pulse(0 5 0us 0.001us 0.001us 40us 80us)
+vinb 3 0 pulse(0 5 20us 0.001us 0.001us 40us 80us)
+
+
+m1 4 2 5 5 cmosn l=2u w=8u
+m2 5 3 0 0 cmosn l=2u w=8u
+m3 4 2 1 1 cmosp l=2u w=8u
+m4 4 3 1 1 cmosp l=2u w=8u
+
+
+.MODEL cmosn nmos LEVEL=2 VTO=0.6 KP=50u
+.MODEL cmosp pmos LEVEL=2 VTO=-0.6 KP=50u
+
+c1 4 0 100f
+
+.op
+
+.probe
+
+.TRAN 1n 60u 0u
+
+.end
+
+**** 09/17/13 17:21:07 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               cmosn           cmosp           
+               NMOS            PMOS            
+       LEVEL    2               2            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .6             -.6          
+          KP   50.000000E-06   50.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX  100.000000E-09  100.000000E-09 
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 09/17/13 17:21:07 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    0.0000  (    4)    5.0000      
+
+(    5)    2.5000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    vdd         -2.510E-12
+    vina         0.000E+00
+    vinb         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-11  WATTS
+
+
+**** 09/17/13 17:21:07 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         m1          m2          m3          m4        
+MODEL        cmosn       cmosn       cmosp       cmosp     
+ID           2.51E-12    2.51E-12   -1.26E-12   -1.26E-12 
+VGS         -2.50E+00    0.00E+00   -5.00E+00   -5.00E+00 
+VDS          2.50E+00    2.50E+00   -1.43E-09   -1.43E-09 
+VBS          0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+VTH          6.00E-01    6.00E-01   -6.00E-01   -6.00E-01 
+VDSAT        0.00E+00    0.00E+00   -4.40E+00   -4.40E+00 
+Lin0/Sat1   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+if          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+ir          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+TAU         -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+GM           0.00E+00    0.00E+00    2.85E-13    2.85E-13 
+GDS          0.00E+00    0.00E+00    8.80E-04    8.80E-04 
+GMB          0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CBD          0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CBS          0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGSOV        0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGDOV        0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGBOV        0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+CGS          0.00E+00    0.00E+00    2.76E-15    2.76E-15 
+CGD          0.00E+00    0.00E+00    2.76E-15    2.76E-15 
+CGB          5.53E-15    5.53E-15    0.00E+00    0.00E+00 
+**** 09/17/13 17:21:07 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    0.0000  (    4)    5.0000      
+
+(    5)    2.5000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    vdd         -2.510E-12
+    vina         0.000E+00
+    vinb         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/17/13 17:21:07 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+
+**** 09/17/13 17:21:07 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+  
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+

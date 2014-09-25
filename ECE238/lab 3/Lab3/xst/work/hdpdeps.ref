@@ -1,0 +1,6 @@
+V3 3
+FL "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.vhd" 2012/03/05.17:53:40 O.40d
+EN work/Bin2BCD_Converter 1330995223 \
+      FL "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.vhd" PB ieee/std_logic_1164 1296775758
+AR work/Bin2BCD_Converter/Behavioral 1330995224 \
+      FL "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.vhd" EN work/Bin2BCD_Converter 1330995223

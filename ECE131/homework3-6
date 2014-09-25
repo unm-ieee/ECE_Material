@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int love(void)
+
+{
+
+char number;
+
+printf("Nice banner?");
+scanf("%c", &number);
+
+if  (number = Yes)
+		printf("Just to mess with you Anaka my love >:D\n");
+
+
+return 1;
+
+}

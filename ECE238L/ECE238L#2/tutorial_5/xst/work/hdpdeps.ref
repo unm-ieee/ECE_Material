@@ -1,0 +1,9 @@
+V3 3
+FL "C:/Users/238user/Desktop/238/Lab 2/tutorial_5/counter.vhd" 2012/02/07.16:57:41 O.40d
+EN work/counter 1328659079 \
+      FL "C:/Users/238user/Desktop/238/Lab 2/tutorial_5/counter.vhd" \
+      PB ieee/std_logic_1164 1296775758 PB ieee/STD_LOGIC_UNSIGNED 1296775760 \
+      PB ieee/NUMERIC_STD 1296775759
+AR work/counter/Behavioral 1328659080 \
+      FL "C:/Users/238user/Desktop/238/Lab 2/tutorial_5/counter.vhd" \
+      EN work/counter 1328659079

@@ -1,0 +1,6 @@
+AR mux behavioral F:/mux.vhdl sub00/vhpl05 1335225651
+EN encoder NULL F:/encoder.vhdl sub00/vhpl01 1335225648
+AR encoder cond_arch F:/encoder.vhdl sub00/vhpl02 1335225649
+EN mux NULL F:/mux.vhdl sub00/vhpl04 1335225650
+AR decoder behavioral F:/decoder.vhdl sub00/vhpl03 1335225647
+EN decoder NULL F:/decoder.vhdl sub00/vhpl00 1335225646

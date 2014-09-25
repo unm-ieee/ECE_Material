@@ -1,0 +1,54 @@
+Release 13.2 Map O.61xd (nt64)
+Xilinx Map Application Log File for Design 'd'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off
+-c 100 -o d_map.ncd d.ngd d.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Sat Mar 17 01:22:32 2012
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:51 - The XILINXD_LICENSE_FILE environment variable is not set.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+INFO:Security:68 - Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - No license file was found.
+       Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+ERROR:Security:9 - No 'ISE' nor 'WebPack' feature was available for part
+'xc3s500e'.
+----------------------------------------------------------------------
+No such feature exists.
+Feature:       WebPack
+License path: 
+C:/.Xilinx;C:\Xilinx\13.2\ISE_DS\ISE\/data\*.lic;C:\Xilinx\13.2\ISE_DS\ISE\/core
+gen/core_licenses\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_licenses\Xi
+linxFree.lic;C:\Xilinx\13.2\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-5,357.  System Error: 2 ""
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".No such feature exists.
+Feature:       ISE
+License path: 
+C:/.Xilinx;C:\Xilinx\13.2\ISE_DS\ISE\/data\*.lic;C:\Xilinx\13.2\ISE_DS\ISE\/core
+gen/core_licenses\Xilinx.lic;C:\Xilinx\13.2\ISE_DS\ISE\/coregen/core_licenses\Xi
+linxFree.lic;C:\Xilinx\13.2\ISE_DS\EDK/data/core_licenses\Xilinx.lic;
+FLEXnet Licensing error:-5,357
+For further information, refer to the FLEXnet Licensing documentation,
+available at "www.acresso.com".
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR:Map:258 - A problem was encountered attempting to get the license for this
+   architecture. 
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   0

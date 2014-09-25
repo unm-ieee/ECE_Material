@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.xst" -ofn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 "SCREEN.ngc" SCREEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SCREEN_map.ncd SCREEN.ngd SCREEN.pcf 
+par -w -intstyle ise -ol high -mt off SCREEN_map.ncd SCREEN.ncd SCREEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SCREEN.twx SCREEN.ncd -o SCREEN.twr SCREEN.pcf 
+bitgen -intstyle ise -f SCREEN.ut SCREEN.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.xst" -ofn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MOD_MAST.ucf -p xc6slx16-csg324-3 "SCREEN.ngc" SCREEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SCREEN_map.ncd SCREEN.ngd SCREEN.pcf 
+par -w -intstyle ise -ol high -mt off SCREEN_map.ncd SCREEN.ncd SCREEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SCREEN.twx SCREEN.ncd -o SCREEN.twr SCREEN.pcf -ucf MOD_MAST.ucf 
+bitgen -intstyle ise -f SCREEN.ut SCREEN.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.xst" -ofn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MASTER_UCF.ucf -uc MOD_MAST.ucf -p xc6slx16-csg324-3 "SCREEN.ngc" SCREEN.ngd  
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.xst" -ofn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MOD_MAST.ucf -p xc6slx16-csg324-3 "SCREEN.ngc" SCREEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SCREEN_map.ncd SCREEN.ngd SCREEN.pcf 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.xst" -ofn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MOD_MAST.ucf -p xc6slx16-csg324-3 "SCREEN.ngc" SCREEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SCREEN_map.ncd SCREEN.ngd SCREEN.pcf 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.xst" -ofn "F:/ECE.CLASSES/ECE 443/Screeen/SCREEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MOD_MAST.ucf -p xc6slx16-csg324-3 "SCREEN.ngc" SCREEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SCREEN_map.ncd SCREEN.ngd SCREEN.pcf 
+par -w -intstyle ise -ol high -mt off SCREEN_map.ncd SCREEN.ncd SCREEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SCREEN.twx SCREEN.ncd -o SCREEN.twr SCREEN.pcf -ucf MOD_MAST.ucf 
+bitgen -intstyle ise -f SCREEN.ut SCREEN.ncd 
+xst -intstyle ise -ifn "/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCREEN.xst" -ofn "/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCREEN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MOD_MAST.ucf -p xc6slx16-csg324-3 "SCREEN.ngc" SCREEN.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SCREEN_map.ncd SCREEN.ngd SCREEN.pcf 
+par -w -intstyle ise -ol high -mt off SCREEN_map.ncd SCREEN.ncd SCREEN.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SCREEN.twx SCREEN.ncd -o SCREEN.twr SCREEN.pcf -ucf MOD_MAST.ucf 
+bitgen -intstyle ise -f SCREEN.ut SCREEN.ncd 

@@ -1,0 +1,156 @@
+
+**** 11/21/12 11:37:29 *********** Evaluation PSpice (Nov 1999) **************
+
+  
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+R2 2 0 6.8k
+
+V1 2 0 3V
+
+Rd 2 4 1.5k
+
+Rs 3 0 .6k
+
+M1 4 2 3 3 ntype l=1u w=1u 
+.model ntype nmos level=2 vto=1 kp=1.825e-3
+
+
+
+
+
+
+
+
+
+.op
+
+.end
+
+**** 11/21/12 11:37:29 *********** Evaluation PSpice (Nov 1999) **************
+
+  
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ntype           
+               NMOS            
+       LEVEL    2            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1            
+          KP    1.825000E-03 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    0            
+       XPART    0            
+
+
+**** 11/21/12 11:37:29 *********** Evaluation PSpice (Nov 1999) **************
+
+  
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    2)    3.0000  (    3)     .6813  (    4)    1.2967  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V1          -1.577E-03
+
+    TOTAL POWER DISSIPATION   4.73E-03  WATTS
+
+
+**** 11/21/12 11:37:29 *********** Evaluation PSpice (Nov 1999) **************
+
+  
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M1        
+MODEL        ntype     
+ID           1.14E-03 
+VGS          2.32E+00 
+VDS          6.15E-01 
+VBS          0.00E+00 
+VTH          1.00E+00 
+VDSAT        1.32E+00 
+Lin0/Sat1   -1.00E+00 
+if          -1.00E+00 
+ir          -1.00E+00 
+TAU         -1.00E+00 
+GM           1.12E-03 
+GDS          1.28E-03 
+GMB          0.00E+00 
+CBD          0.00E+00 
+CBS          0.00E+00 
+CGSOV        0.00E+00 
+CGDOV        0.00E+00 
+CGBOV        0.00E+00 
+CGS          1.78E-16 
+CGD          1.57E-16 
+CGB          0.00E+00 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

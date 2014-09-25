@@ -1,0 +1,34 @@
+*Anthony P Mancuso*
+*ECE321, HW-11, PSPICE Verification of HW-10 tplh*
+
+m1 12 10 0 0 cmosn l=.25u w=2.5u
+m2 12 10 9 9 cmosp l=.25u w=4.25u
+
+.model cmosp pmos level=2 vto=-0.4 kp=60u
+.model cmosn nmos level=2 vto=0.4 kp=100u
+
+r1 12 1 120
+c1 1 0 75e-15
+r2 1 2 165
+c2 2 0 100e-15
+r3 2 3 80
+c3 3 0 95e-15
+r4 2 4 105
+c4 4 0 65e-15
+r5 4 5 220
+c5 5 0 200e-15
+r6 1 6 100
+c6 6 0 15e-15
+r7 6 7 150
+c7 7 0 45e-15
+r8 7 8 90
+c8 8 0 50e-15
+
+vdd 9 0 dc 1.5V
+vin 10 0 pulse(1.5 0 0ps 1ps 1ps 5ns 10ns)
+
+*.DC Vin 0 5 0.01*
+.op
+.probe
+.tran 100ps 20ns
+.end

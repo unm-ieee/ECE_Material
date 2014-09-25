@@ -1,0 +1,28 @@
+Command line:
+   FP_MULTIPLIER_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1217
+
+Mon Mar 04 10:37:17 2013
+
+
+ Elaboration Time: 0.187201 sec
+
+ Current Memory Usage: 855.163 Meg
+
+ Total Signals          : 10432
+ Total Nets             : 5190
+ Total Signal Drivers   : 2450
+ Total Blocks           : 1860
+ Total Primitive Blocks : 1228
+ Total Processes        : 2450
+ Total Traceable Variables  : 1576
+ Total Scalar Nets and Variables : 7299
+
+ Total Simulation Time: 0.280801 sec
+
+ Current Memory Usage: 855.163 Meg
+
+Mon Mar 04 10:37:24 2013
+

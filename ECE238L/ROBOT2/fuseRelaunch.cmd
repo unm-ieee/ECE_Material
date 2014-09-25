@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT2/state5_isim_beh.exe" -prj "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT2/state5_beh.prj" "work.state5" 

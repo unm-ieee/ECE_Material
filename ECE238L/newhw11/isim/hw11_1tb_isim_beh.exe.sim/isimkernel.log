@@ -1,0 +1,29 @@
+Command line:
+   hw11_1tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3736
+
+Wed Jan 23 14:25:05 2013
+
+
+ Elaboration Time: 0.156 sec
+
+ Current Memory Usage: 496.882 Meg
+
+ Total Signals          : 3
+ Total Nets             : 3
+ Total Signal Drivers   : 1
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 1
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 363
+Total Line Count : 2
+
+ Total Simulation Time: 0.343202 sec
+
+ Current Memory Usage: 496.882 Meg
+
+Wed Jan 23 14:25:24 2013
+

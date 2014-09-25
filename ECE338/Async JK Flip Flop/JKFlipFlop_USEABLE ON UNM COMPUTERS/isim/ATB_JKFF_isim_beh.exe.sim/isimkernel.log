@@ -1,0 +1,28 @@
+Command line:
+   ATB_JKFF_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  5930
+
+Fri May 03 14:13:26 2013
+
+
+ Elaboration Time: 0.0624 sec
+
+ Current Memory Usage: 825.782 Meg
+
+ Total Signals          : 11
+ Total Nets             : 7
+ Total Signal Drivers   : 7
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 5
+ Total Traceable Variables  : 12
+ Total Scalar Nets and Variables : 3960
+
+ Total Simulation Time: 0.655205 sec
+
+ Current Memory Usage: 668.496 Meg
+
+Fri May 03 14:21:55 2013
+

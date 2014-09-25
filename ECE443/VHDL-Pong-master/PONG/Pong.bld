@@ -1,0 +1,39 @@
+Release 14.6 ngdbuild P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /home/rapture/Desktop/14.6/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -nt timestamp -uc /media/rapture/My
+Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.ucf -p xc6slx16-csg324-3
+Pong.ngc Pong.ngd
+
+Reading NGO file "/media/rapture/My Passport/ECE.CLASSES/ECE
+443/VHDL-Pong-master/PONG/Pong.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "/media/rapture/My
+Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 408084 kilobytes
+
+Writing NGD file "Pong.ngd" ...
+Total REAL time to NGDBUILD completion:  8 sec
+Total CPU time to NGDBUILD completion:   6 sec
+
+Writing NGDBUILD log file "Pong.bld"...

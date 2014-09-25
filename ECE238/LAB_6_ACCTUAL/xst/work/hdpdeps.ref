@@ -1,0 +1,20 @@
+V3 11
+FL "F:/ECE238/Lab 6/L5P2 StateMachine1.vhd" 2012/04/21.09:25:30 O.40d
+EN work/StateMachineOne 1335227790 FL "F:/ECE238/Lab 6/L5P2 StateMachine1.vhd" \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/StateMachineOne/StateMachineArch 1335227791 \
+      FL "F:/ECE238/Lab 6/L5P2 StateMachine1.vhd" EN work/StateMachineOne 1335227790
+FL "F:/ECE238/Lab 6/L5P2 StateMachine2.vhd" 2012/04/21.09:25:40 O.40d
+EN work/StateMachineTwo 1335227792 FL "F:/ECE238/Lab 6/L5P2 StateMachine2.vhd" \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/StateMachineTwo/StateMachineArch 1335227793 \
+      FL "F:/ECE238/Lab 6/L5P2 StateMachine2.vhd" EN work/StateMachineTwo 1335227792
+FL "F:/ECE238/Lab 6/L5P3 StateMachineCombine.vhd" 2012/04/23.18:36:20 O.40d
+EN work/Circuit 1335227794 FL "F:/ECE238/Lab 6/L5P3 StateMachineCombine.vhd" \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/Circuit/Behavioral 1335227795 \
+      FL "F:/ECE238/Lab 6/L5P3 StateMachineCombine.vhd" EN work/Circuit 1335227794 \
+      CP StateMachineOne CP StateMachineTwo

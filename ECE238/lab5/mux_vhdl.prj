@@ -1,0 +1,3 @@
+vhdl work "F:\encoder.vhdl"
+vhdl work "F:\decoder.vhdl"
+vhdl work "F:\mux.vhdl"

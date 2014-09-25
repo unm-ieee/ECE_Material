@@ -1,0 +1,19 @@
+V3 9
+FL C:/Users/Ryan/Desktop/School/ECE238L/newhw11/newnew.vhd 2012/03/16.23:41:13 O.61xd
+EN work/ANDGATE1 1331966482 \
+      FL C:/Users/Ryan/Desktop/School/ECE238L/newhw11/newnew.vhd \
+      PB ieee/std_logic_1164 1308643377
+AR work/ANDGATE1/Behavioral 1331966483 \
+      FL C:/Users/Ryan/Desktop/School/ECE238L/newhw11/newnew.vhd EN work/ANDGATE1 1331966482
+EN work/NOTGATE1 1331966484 \
+      FL C:/Users/Ryan/Desktop/School/ECE238L/newhw11/newnew.vhd \
+      PB ieee/std_logic_1164 1308643377
+AR work/NOTGATE1/Behavioral 1331966485 \
+      FL C:/Users/Ryan/Desktop/School/ECE238L/newhw11/newnew.vhd EN work/NOTGATE1 1331966484
+EN work/circuit 1331966486 \
+      FL C:/Users/Ryan/Desktop/School/ECE238L/newhw11/newnew.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/circuit/Structural 1331966487 \
+      FL C:/Users/Ryan/Desktop/School/ECE238L/newhw11/newnew.vhd EN work/circuit 1331966486 \
+      CP NOTGATE1 CP ANDGATE1

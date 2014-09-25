@@ -1,0 +1,9 @@
+V3 3
+FL C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.vhd 2012/02/07.18:23:53 O.40d
+EN work/wksheet 1328664239 \
+      FL C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.vhd \
+      PB ieee/std_logic_1164 1296775758 PB ieee/std_logic_arith 1296775759 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/wksheet/Behavioral 1328664240 \
+      FL C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.vhd \
+      EN work/wksheet 1328664239

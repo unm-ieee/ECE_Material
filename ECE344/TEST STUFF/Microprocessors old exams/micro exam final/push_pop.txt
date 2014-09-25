@@ -1,0 +1,19 @@
+li r1, 0x7777
+li r10,10
+bl push
+here: b here
+
+push:
+mflr r24
+stmw r24,0(r1)
+addi r1,r1,-28
+addi r10,r10,-1
+cmpi 1,r10,0
+bt 6 pop
+bl push
+
+pop:
+lmw r24,0(r1) 
+mtlr r24
+addi r1,r1,28
+blr

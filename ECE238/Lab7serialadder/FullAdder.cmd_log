@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "F:/ECE238/Lab7serialadder/FullAdder.xst" -ofn "F:/ECE238/Lab7serialadder/FullAdder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 FullAdder.ngc FullAdder.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o FullAdder_map.ncd FullAdder.ngd FullAdder.pcf 

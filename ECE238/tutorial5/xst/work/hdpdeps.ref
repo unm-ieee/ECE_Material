@@ -1,0 +1,7 @@
+V3 4
+FL C:/Users/238user/Desktop/Steven/counter.vhd 2012/02/06.18:39:57 O.40d
+FL G:/ECE238/counter.vhd 2012/02/13.20:14:22 O.40d
+EN work/counter 1335022360 FL G:/ECE238/counter.vhd PB ieee/std_logic_1164 1296775758 \
+      PB ieee/STD_LOGIC_UNSIGNED 1296775760
+AR work/counter/Behavioral 1335022361 \
+      FL G:/ECE238/counter.vhd EN work/counter 1335022360

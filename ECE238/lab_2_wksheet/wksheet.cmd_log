@@ -1,0 +1,39 @@
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.xst" -ofn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 wksheet.ngc wksheet.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wksheet_map.ncd wksheet.ngd wksheet.pcf 
+par -w -intstyle ise -ol high -t 1 wksheet_map.ncd wksheet.ncd wksheet.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wksheet.twx wksheet.ncd -o wksheet.twr wksheet.pcf 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.xst" -ofn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 wksheet.ngc wksheet.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wksheet_map.ncd wksheet.ngd wksheet.pcf 
+par -w -intstyle ise -ol high -t 1 wksheet_map.ncd wksheet.ncd wksheet.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wksheet.twx wksheet.ncd -o wksheet.twr wksheet.pcf 
+bitgen -intstyle ise -f wksheet.ut wksheet.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc wksheet.ucf -p xc3s500e-fg320-4 wksheet.ngc wksheet.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wksheet_map.ncd wksheet.ngd wksheet.pcf 
+par -w -intstyle ise -ol high -t 1 wksheet_map.ncd wksheet.ncd wksheet.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wksheet.twx wksheet.ncd -o wksheet.twr wksheet.pcf -ucf wksheet.ucf 
+bitgen -intstyle ise -f wksheet.ut wksheet.ncd 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.xst" -ofn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc wksheet.ucf -p xc3s500e-fg320-4 wksheet.ngc wksheet.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wksheet_map.ncd wksheet.ngd wksheet.pcf 
+par -w -intstyle ise -ol high -t 1 wksheet_map.ncd wksheet.ncd wksheet.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wksheet.twx wksheet.ncd -o wksheet.twr wksheet.pcf -ucf wksheet.ucf 
+bitgen -intstyle ise -f wksheet.ut wksheet.ncd 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.xst" -ofn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc wksheet.ucf -p xc3s500e-fg320-4 wksheet.ngc wksheet.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wksheet_map.ncd wksheet.ngd wksheet.pcf 
+par -w -intstyle ise -ol high -t 1 wksheet_map.ncd wksheet.ncd wksheet.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wksheet.twx wksheet.ncd -o wksheet.twr wksheet.pcf -ucf wksheet.ucf 
+bitgen -intstyle ise -f wksheet.ut wksheet.ncd 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.xst" -ofn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc wksheet.ucf -p xc3s500e-fg320-4 wksheet.ngc wksheet.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wksheet_map.ncd wksheet.ngd wksheet.pcf 
+par -w -intstyle ise -ol high -t 1 wksheet_map.ncd wksheet.ncd wksheet.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wksheet.twx wksheet.ncd -o wksheet.twr wksheet.pcf -ucf wksheet.ucf 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.xst" -ofn "C:/Users/238user/Desktop/Steven/lab_2_wksheet/wksheet.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc wksheet.ucf -p xc3s500e-fg320-4 wksheet.ngc wksheet.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o wksheet_map.ncd wksheet.ngd wksheet.pcf 
+par -w -intstyle ise -ol high -t 1 wksheet_map.ncd wksheet.ncd wksheet.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml wksheet.twx wksheet.ncd -o wksheet.twr wksheet.pcf -ucf wksheet.ucf 
+bitgen -intstyle ise -f wksheet.ut wksheet.ncd 

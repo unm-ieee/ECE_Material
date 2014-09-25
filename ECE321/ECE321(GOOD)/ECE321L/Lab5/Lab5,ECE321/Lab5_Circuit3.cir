@@ -1,0 +1,24 @@
+*Circuit HW1, problem 1.13*
+
+Vdd 1 0 5
+
+vina 2 0 pulse ( 0 5 0us .001us .001us 40us 80us)
+vinb 3 0 pulse ( 0 5 20us .001us .001us 40us 80us)
+
+M1 4 2 5 5 cmosn l=2e-6 w=8e-6
+M2 5 3 0 0 cmosn l=2e-6 w=8e-6
+M3 4 2 1 1 cmosp l=2e-6 w=8e-6
+M4 4 3 1 1 cmosp l=2e-6 w=8e-6
+
+.MODEL cmosn nmos LEVEL=2 VTO=0.6 KP=50e-6
+.MODEL cmosp pmos LEVEL=2 VTO=-0.6 KP=50e-6
+
+c1 4 0 500pf
+
+
+
+.PROBE
+.TRAN  1n  60e-6s   
+
+.end
+

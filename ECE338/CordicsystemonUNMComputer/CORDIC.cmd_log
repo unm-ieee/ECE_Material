@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/CORDIC.xst" -ofn "D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/CORDIC.syr" 

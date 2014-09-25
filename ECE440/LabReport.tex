@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{graphics}
+\usepackage{color}
+\pagestyle{fancy}
+\rhead{Steven Seppala, Seth Decker}
+\lhead{ECE 440: Networks}
+\cfoot{Page : \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+	\definecolor{dkgreen}{rgb}{0,0.6,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  %backgroundcolor=\color{dkgreen},
+  numbers=left,
+  numberstyle=\tiny\color{mauve},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+\begin{document}
+\lstset{language=} 
+
+\centering
+{
+	For our traceroutes we used a UNM computer attached to the ECE server.\\
+	\\
+	\\
+}
+\begin{enumerate}
+	\item The three traceroutes show similar routes up to line 7. The lines
+			up to seven are most likely the network from our host network to the
+			access ISP. The packets are then sent to either regional ISPs, tier 1
+			ISPs or content delivery networks.
+
+	\item The default maximum number of hops for the traceroute command is
+			30. Both presidencia.gob.ve and jnto.go.jp take longer than 30 hops.
+			We tried increasing the number of hops to the maximum value 255 and it
+			still did not respond.
+
+	\item presidencia.gob.ve took over 200ms before it stopped responding and
+			jnto.go.jp took over 100ms while google.com only took 34ms. There are
+			a few reasons why this is. For one, .ve and .jp are Venezuela and
+			Japan networks, so there will be a lot of cable that will introduce
+			propagation delay. While Venezuela is closer to the US than Japan,
+			Japan has a much faster network. Venezuela may not be able to keep up
+			the demand that Japan can get due to their infrastructure, which can
+			introduce slow downs like queueing delay. Google on the other hand is
+			so fast because we connect to one of their content delivery networks
+			that are able to handle enormous amount of traffic.
+\end{enumerate}
+
+\centering
+{	
+	Attached below are our trace routes for  presidencia.gob.ve ,  www.jnto.go.jp, and google.com; respectively.\\
+}
+
+\lstinputlisting{ve}\\
+\lstinputlisting{jp}\\
+\lstinputlisting{google}\\
+
+\end{document}

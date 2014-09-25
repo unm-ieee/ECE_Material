@@ -1,0 +1,75 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Ryan/Desktop/School/ECE238L/Robot491/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.49 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Ryan/Desktop/School/ECE238L/Robot491/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.50 secs
+ 
+--> Reading design: top_layer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\state_5.vhd" into library work
+Parsing entity <state_5>.
+Parsing architecture <rtl> of entity <state_5>.
+Parsing VHDL file "C:\Users\Ryan\Downloads\Top_layer.vhd" into library work
+Parsing entity <top_layer>.
+ERROR:HDLCompiler:806 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 5: Syntax error near "(".
+ERROR:HDLCompiler:854 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 4: Unit <top_layer> ignored due to previous errors.
+Parsing architecture <A> of entity <top_layer>.
+ERROR:HDLCompiler:374 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 15: Entity <top_layer> is not yet compiled.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 19: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 20: <std_logic_vector> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 21: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 22: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 23: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 24: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 31: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 32: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 33: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 34: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 35: <std_logic_vector> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 36: <std_logic_vector> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 40: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 45: <ck> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 46: <cmppwm> is not declared.
+ERROR:HDLCompiler:69 - "C:\Users\Ryan\Downloads\Top_layer.vhd" Line 47: <pwm_out> is not declared.
+Sorry, too many errors..
+--> 
+
+Total memory usage is 177116 kilobytes
+
+Number of errors   :   19 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

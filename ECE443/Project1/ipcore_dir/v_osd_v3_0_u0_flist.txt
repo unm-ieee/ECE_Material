@@ -1,0 +1,11 @@
+# Output products list for <v_osd_v3_0_u0>
+v_osd_v3_0_u0.asy
+v_osd_v3_0_u0.gise
+v_osd_v3_0_u0.ngc
+v_osd_v3_0_u0.vhd
+v_osd_v3_0_u0.vho
+v_osd_v3_0_u0.xco
+v_osd_v3_0_u0.xise
+v_osd_v3_0_u0_flist.txt
+v_osd_v3_0_u0_readme.txt
+v_osd_v3_0_u0_xmdf.tcl

@@ -1,0 +1,121 @@
+EDA Netlist Writer report for SAMul1
+Tue Apr 10 18:36:51 2007
+Quartus II Version 7.1 Build 156 04/30/2007 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. Timing Analysis Settings
+  6. Timing Analysis Generated Files
+  7. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                             ;
++--------------------------------+---------------------------------------+
+; EDA Netlist Writer Status      ; Successful - Tue Apr 10 18:36:51 2007 ;
+; Revision Name                  ; SAMul1                                ;
+; Top-level Entity Name          ; SAMul1                                ;
+; Family                         ; Cyclone                               ;
+; Simulation Files Creation      ; Successful                            ;
+; Timing Analysis Files Creation ; Successful                            ;
++--------------------------------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                          ;
++--------------------------------------------------------------------------------------------+-----------------+
+; Option                                                                                     ; Setting         ;
++--------------------------------------------------------------------------------------------+-----------------+
+; Tool Name                                                                                  ; ModelSim (VHDL) ;
+; Generate netlist for functional simulation only                                            ; Off             ;
+; Time scale                                                                                 ; 1 ps            ;
+; Truncate long hierarchy paths                                                              ; Off             ;
+; Map illegal HDL characters                                                                 ; Off             ;
+; Flatten buses into individual nodes                                                        ; Off             ;
+; Maintain hierarchy                                                                         ; Off             ;
+; Bring out device-wide set/reset signals as ports                                           ; Off             ;
+; Enable glitch filtering                                                                    ; Off             ;
+; Do not write top level VHDL entity                                                         ; Off             ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off             ;
+; Architecture name in VHDL output netlist                                                   ; structure       ;
++--------------------------------------------------------------------------------------------+-----------------+
+
+
++------------------------------------------------------------+
+; Simulation Generated Files                                 ;
++------------------------------------------------------------+
+; Generated Files                                            ;
++------------------------------------------------------------+
+; E:/VHDL programs/SAmul1/simulation/modelsim/SAMul1.vho     ;
+; E:/VHDL programs/SAmul1/simulation/modelsim/SAMul1_vhd.sdo ;
++------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Timing Analysis Settings                               ;
++-------------------------------------+------------------+
+; Option                              ; Setting          ;
++-------------------------------------+------------------+
+; Tool Name                           ; PrimeTime (VHDL) ;
+; Time scale                          ; 1 ps             ;
+; Truncate long hierarchy paths       ; Off              ;
+; Map illegal HDL characters          ; Off              ;
+; Flatten buses into individual nodes ; Off              ;
++-------------------------------------+------------------+
+
+
++------------------------------------------------------------+
+; Timing Analysis Generated Files                            ;
++------------------------------------------------------------+
+; Generated Files                                            ;
++------------------------------------------------------------+
+; E:/VHDL programs/SAmul1/timing/primetime/SAMul1.vho        ;
+; E:/VHDL programs/SAmul1/timing/primetime/SAMul1_vhd.sdo    ;
+; E:/VHDL programs/SAmul1/timing/primetime/SAMul1_pt_vhd.tcl ;
++------------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus II EDA Netlist Writer
+    Info: Version 7.1 Build 156 04/30/2007 SJ Web Edition
+    Info: Processing started: Tue Apr 10 18:36:46 2007
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off SAMul1 -c SAMul1
+Info: Generated files "SAMul1.vho" and "SAMul1_vhd.sdo" in directory "E:/VHDL programs/SAmul1/simulation/modelsim/" for EDA simulation tool
+Info: Generated files "SAMul1.vho" and "SAMul1_vhd.sdo" in directory "E:/VHDL programs/SAmul1/timing/primetime/" for EDA timing analysis tool
+Warning: Expected ENABLE_CLOCK_LATENCY to be set to ON but is set to OFF
+Info: Generated PrimeTime Tcl script file E:/VHDL programs/SAmul1/timing/primetime/SAMul1_pt_vhd.tcl
+Info: Quartus II EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Allocated 110 megabytes of memory during processing
+    Info: Processing ended: Tue Apr 10 18:36:52 2007
+    Info: Elapsed time: 00:00:06
+
+

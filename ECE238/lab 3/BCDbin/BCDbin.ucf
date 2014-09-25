@@ -1,0 +1,11 @@
+
+NET "OUTPUT(4)" LOC = "C11" ; # LED<4>
+NET "OUTPUT(3)" LOC = "F11" ; # LED<3>
+NET "OUTPUT(2)" LOC = "E11" ; # LED<2>
+NET "OUTPUT(1)" LOC = "E12" ; # LED<1>
+NET "OUTPUT(0)" LOC = "F12" ; # LED<0>
+NET "Binary(3)" LOC = "N17" ; # SW3
+NET "Binary(2)" LOC = "H18" ; # SW2
+NET "Binary(1)" LOC = "L14" ; # SW1
+NET "Binary(0)" LOC = "L13" ; # SW0
+NET "Disp" LOC = "K17" | PULLDOWN ;

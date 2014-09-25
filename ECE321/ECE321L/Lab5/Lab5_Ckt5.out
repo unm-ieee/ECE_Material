@@ -1,0 +1,123 @@
+
+**** 11/21/12 11:36:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ **
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+Vdd 1 0 5
+
+vina 2 0 pulse ( 0 5 0us .001us .001us 40us 80us)
+vinb 3 0 pulse ( 0 5 10us .001us .001us 40us 80us)
+vinc 4 0 pulse ( 0 5 20us .001us .001us 40us 80us)
+
+M1 8 2 1 1 cmosp l=2e-6 w=8e-6
+M2 9 3 8 8 cmosp l=2e-6 w=8e-6
+M3 10 4 9 9 cmosp l=2e-6 w=8e-6
+M4 10 2 0 0 cmosn l=2e-6 w=8e-6
+M5 10 3 0 0 cmosn l=2e-6 w=8e-6
+M6 10 4 0 0 cmosn l=2e-6 w=8e-6
+
+
+.MODEL cmosn nmos LEVEL=2 VTO=0.6 KP=50e-6
+.MODEL cmosp pmos LEVEL=2 VTO=-0.6 KP=50e-6
+
+c1 10 0 500pf
+
+
+
+.PROBE
+.TRAN  1n  180e-6s   
+
+.end
+
+**** 11/21/12 11:36:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ **
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               cmosn           cmosp           
+               NMOS            PMOS            
+       LEVEL    2               2            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .6             -.6          
+          KP   50.000000E-06   50.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX  100.000000E-09  100.000000E-09 
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 11/21/12 11:36:40 *********** Evaluation PSpice (Nov 1999) **************
+
+ **
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    0.0000  (    4)    0.0000      
+
+(    8)    5.0000  (    9)    5.0000  (   10)    5.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    Vdd         -1.503E-11
+    vina         0.000E+00
+    vinb         0.000E+00
+    vinc         0.000E+00
+
+    TOTAL POWER DISSIPATION   7.52E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .08
+

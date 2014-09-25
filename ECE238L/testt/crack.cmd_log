@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Ryan/Desktop/School/ECE238L/testt/crack.xst" -ofn "C:/Users/Ryan/Desktop/School/ECE238L/testt/crack.syr" 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Ryan\Desktop\School\ECE238L\ROBOT\top_layer.ncd
+OUTFILE=C:\Users\Ryan\Desktop\School\ECE238L\ROBOT\top_layer.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Ryan\Desktop\School\ECE238L\ROBOT
+LICENSE=WebPack
+USER_INFO=209364116_0_0_336

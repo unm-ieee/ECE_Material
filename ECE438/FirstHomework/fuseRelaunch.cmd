@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/ATB_MIPS_ALU_isim_beh.exe" -prj "/media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/ATB_MIPS_ALU_beh.prj" "work.ATB_MIPS_ALU" 

@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+dC:\modeltech64_10.1b\examples
+Ejkff
+Z0 w1367611996
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dE:\ECE.CLASSES\ECE 443
+Z4 8E:/ECE.CLASSES/ECE338/Async JK Flip Flop/FlippityFlopper.vhd
+Z5 FE:/ECE.CLASSES/ECE338/Async JK Flip Flop/FlippityFlopper.vhd
+l0
+L4
+Vc2acL_ZhH5>=QP[c04PI62
+!s100 ILS`kVS1>INFWcJb@[9_E0
+Z6 OL;C;10.1b;51
+32
+!i10b 1
+Z7 !s108 1379016888.825000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|E:/ECE.CLASSES/ECE338/Async JK Flip Flop/FlippityFlopper.vhd|
+Z9 !s107 E:/ECE.CLASSES/ECE338/Async JK Flip Flop/FlippityFlopper.vhd|
+Z10 o-work work -2002 -explicit
+Z11 tExplicit 1
+Abehavioral
+R1
+R2
+DEx4 work 4 jkff 0 22 c2acL_ZhH5>=QP[c04PI62
+l19
+L15
+Vm5ELmCVo5N7maC9l@080i0
+!s100 ^6U>ibF3TMC9z?EjH^BED3
+R6
+32
+!i10b 1
+R7
+R8
+R9
+R10
+R11

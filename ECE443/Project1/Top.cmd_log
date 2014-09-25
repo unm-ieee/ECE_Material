@@ -1,0 +1,196 @@
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "D:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/Project1/Top.xst" -ofn "F:/ECE.CLASSES/ECE 443/Project1/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 "Top.ngc" Top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 

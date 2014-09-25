@@ -1,0 +1,36 @@
+#INCLUDE <STDIO.H>
+#INCLUDE <STDLIB.H>
+#INCLUDE <CTYPE.H>
+
+INT MAIN()
+{
+    CHAR CH;
+    FILE *FIN  = FOPEN("EX03.C", "R");
+    FILE *FOUT = FOPEN("EX03_UPPER.TXT", "W");
+
+    IF (FIN == NULL)
+    {
+        PRINTF("CANNOT OPEN INPUT FILE\N");
+        EXIT(1);
+    }
+
+    IF (FOUT == NULL)
+    {
+        PRINTF("CANNOT OPEN OUTPUT FILE\N");
+        EXIT(2);
+    }
+
+    WHILE(!FEOF(FIN))
+    {
+        CH = FGETC(FIN);
+        FPUTC(TOUPPER(CH), FOUT);
+    }
+
+    FCLOSE(FOUT);
+    FCLOSE(FIN);
+
+    RETURN 0;
+}
+
+Extra line 1
+Extra line 2

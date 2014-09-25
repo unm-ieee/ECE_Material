@@ -1,0 +1,21 @@
+*Anthony P Mancuso*
+*ECE321, Weak Mux Test*
+
+m1 12 10 0 0 cmosn l=.2u w=.5u
+m2 12 10 9 9 cmosp l=.2u w=.5u
+m3 6 7 10 0 cmosn l=.2u w=.5u
+m4 10 7 8 9 cmosp l=.2u w=.5u
+
+.model cmosp pmos level=2 vto=-0.4 kp=60u
+.model cmosn nmos level=2 vto=0.4 kp=100u
+
+vdd 9 0 dc 1.5V
+v0 8 0 pulse(1.5 0 0ps 1ps 1ps 5ns 10ns)
+v1 6 0 pulse(0 1.5 0ps 1ps 1ps 10ns 20ns)
+vs 7 0 pulse(1.5 0 0ps 1ps 1ps 20ns 40ns)
+
+*.DC Vin 0 5 0.01*
+.op
+.probe
+.tran 100ps 200ns
+.end

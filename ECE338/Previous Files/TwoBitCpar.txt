@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity TWOBITCPAR is
+  port (
+    A_VAL : in  STD_LOGIC_VECTOR ( 1 downto 0 );
+    B_VAL : in  STD_LOGIC_VECTOR ( 1 downto 0 );
+    A_LT_B : out STD_LOGIC;
+    A_EQ_B : out STD_LOGIC;
+    A_GT_B : out STD_LOGIC
+  );
+end entity TWOBITCPAR;
+
+architecture FOR_CLASS of TWOBITCPAR is
+
+signal A_GT_B_INT : STD_LOGIC;
+signal A_LT_B_INT : STD_LOGIC;
+signal A_EQ_B_INT : STD_LOGIC;
+
+begin
+
+  A_GT_B_INT <= ( A_VAL(0) and ( not B_VAL(1)) and ( not B_VAL(0))) or
+                ( A_VAL(1) and A_VAL(0) and (not B_VAL(0)) )        or
+		( A_VAL(1) and ( not B_VAL(1))) ;
+
+  A_LT_B_INT <= ( (not A_VAL(1)) and (not A_VAL(0)) and B_VAL(0) )  or
+                ( (not A_VAL(0)) and B_VAL(1) and B_VAL(0) )        or
+		( (not A_VAL(1)) and B_VAL(1) ) ;
+
+  A_EQ_B_INT <= A_GT_B_INT nor A_LT_B_INT;
+
+  A_LT_B <= A_LT_B_INT after 4 ns;
+  A_EQ_B <= A_EQ_B_INT after 4 ns;
+  A_GT_B <= A_GT_B_INT after 4 ns;
+  
+
+end architecture FOR_CLASS;

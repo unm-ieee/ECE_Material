@@ -1,0 +1,11 @@
+
+nitro.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	68 15 8e 04 08       	push   $0x8048e15
+   5:	8d 6c 24 28          	lea    0x28(%esp),%ebp
+   9:	b8 54 ce 6a 4c       	mov    $0x4c6ace54,%eax
+   e:	c3                   	ret    

@@ -1,0 +1,52 @@
+#5 set up uart
+.set 0x8400
+.set IAR 0x4
+.set IER 0x8
+.set IPR 0xc
+.set MER 0x1c
+.set INTC 0x8350
+.set RXfifo 0x0
+.set STAT 0x8
+.set CONT 0xc
+.set LED's..
+.
+.
+
+.org 0x3000
+li r30, INTC
+lis r31, uart
+lis r1, 0x8
+stw r1, IER(r30)
+li r1,0x10
+stw r1,count(r31)
+#for LED
+lis r0,0
+stw r0,4(LED's)
+.
+.
+#
+lis r1,0x3
+stw r1,MER(r30)
+mtevpr r1
+wrteei 1
+#for LED
+lwz r1,0(r30)
+bt 6 here
+stw r0,0(r30)
+#
+here:b here
+.org 0x2000000
+lwz r1,IPR(30)
+andi. r1,r,0x8
+bf 2,ISR
+#6 ISR part of the code
+ISR:
+li r1,0x8
+stw r1,IAR(r31) #ack int
+lwz r1,stat(r31) #clear rx
+andi. r1,r1,1
+bf 2, valid
+
+valid:
+lwz r1,RXFifo(r31)
+rfi

@@ -1,0 +1,12 @@
+Release 13.4 Drc O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Tue Dec 03 14:50:17 2013
+
+drc -z Pong.ncd Pong.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net gameOver_G is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

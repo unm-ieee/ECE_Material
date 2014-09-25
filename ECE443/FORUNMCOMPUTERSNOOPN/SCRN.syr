@@ -1,0 +1,526 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: SCRN.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SCRN.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SCRN"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : SCRN
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "F:\ECE.CLASSES\ECE 443\Screeen\SCRN.vhd" into library work
+Parsing entity <SCRN>.
+Parsing architecture <Behavioral> of entity <scrn>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SCRN> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SCRN>.
+    Related source file is "f:/ece.classes/ece 443/screeen/scrn.vhd".
+    Found 1-bit register for signal <screen_process_enable>.
+    Found 10-bit register for signal <X>.
+    Found 10-bit register for signal <Y>.
+    Found 2-bit register for signal <NW_CLK.divider>.
+    Found 2-bit adder for signal <NW_CLK.divider[1]_GND_6_o_add_1_OUT> created at line 42.
+    Found 10-bit adder for signal <X[9]_GND_6_o_add_4_OUT> created at line 54.
+    Found 10-bit adder for signal <Y[9]_GND_6_o_add_6_OUT> created at line 57.
+WARNING:Xst:737 - Found 1-bit latch for signal <Hsync>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Vsync>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <xx_vga<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <xx_vga<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <xx_vga<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_draw.GO<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_draw.GO<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <n0017> created at line 72
+    Found 10-bit comparator lessequal for signal <PWR_6_o_X[9]_LessThan_18_o> created at line 73
+    Found 10-bit comparator greater for signal <GND_6_o_Y[9]_LessThan_19_o> created at line 79
+    Found 10-bit comparator greater for signal <Y[9]_GND_6_o_LessThan_20_o> created at line 79
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   7 Latch(s).
+	inferred   4 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <SCRN> synthesized.
+
+Synthesizing Unit <mod_10u_4u>.
+    Related source file is "".
+    Found 14-bit adder for signal <n0333> created at line 0.
+    Found 14-bit adder for signal <GND_7_o_b[3]_add_1_OUT> created at line 0.
+    Found 13-bit adder for signal <n0337> created at line 0.
+    Found 13-bit adder for signal <GND_7_o_b[3]_add_3_OUT> created at line 0.
+    Found 12-bit adder for signal <n0341> created at line 0.
+    Found 12-bit adder for signal <GND_7_o_b[3]_add_5_OUT> created at line 0.
+    Found 11-bit adder for signal <n0345> created at line 0.
+    Found 11-bit adder for signal <GND_7_o_b[3]_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <n0349> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[3]_add_9_OUT> created at line 0.
+    Found 10-bit adder for signal <n0353> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <n0357> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <n0361> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_15_OUT> created at line 0.
+    Found 10-bit adder for signal <n0365> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_17_OUT> created at line 0.
+    Found 10-bit adder for signal <n0369> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_19_OUT> created at line 0.
+    Found 10-bit adder for signal <n0373> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_21_OUT> created at line 0.
+    Found 14-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  22 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred 101 Multiplexer(s).
+Unit <mod_10u_4u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 47
+ 10-bit adder                                          : 30
+ 11-bit adder                                          : 4
+ 12-bit adder                                          : 4
+ 13-bit adder                                          : 4
+ 14-bit adder                                          : 4
+ 2-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 10-bit register                                       : 2
+ 2-bit register                                        : 1
+# Latches                                              : 7
+ 1-bit latch                                           : 7
+# Comparators                                          : 26
+ 10-bit comparator greater                             : 2
+ 10-bit comparator lessequal                           : 15
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 205
+ 1-bit 2-to-1 multiplexer                              : 202
+ 10-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <init_draw.GO_29> has a constant value of 0 in block <SCRN>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <SCRN>.
+The following registers are absorbed into counter <NW_CLK.divider>: 1 register on signal <NW_CLK.divider>.
+The following registers are absorbed into counter <X>: 1 register on signal <X>.
+The following registers are absorbed into counter <Y>: 1 register on signal <Y>.
+Unit <SCRN> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 22
+ 10-bit adder carry in                                 : 20
+ 4-bit adder carry in                                  : 2
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Comparators                                          : 26
+ 10-bit comparator greater                             : 2
+ 10-bit comparator lessequal                           : 15
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 204
+ 1-bit 2-to-1 multiplexer                              : 202
+ 4-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <init_draw.GO_29> has a constant value of 0 in block <SCRN>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    init_draw.GO_0 in unit <SCRN>
+
+
+Optimizing unit <SCRN> ...
+
+Optimizing unit <mod_10u_4u> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SCRN, actual ratio is 2.
+Latch xx_vga_7 has been replicated 1 time(s) to handle iob=true attribute.
+Latch xx_vga_5 has been replicated 2 time(s) to handle iob=true attribute.
+Latch xx_vga_2 has been replicated 2 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SCRN.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 258
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 11
+#      LUT2                        : 6
+#      LUT3                        : 35
+#      LUT4                        : 8
+#      LUT5                        : 37
+#      LUT6                        : 49
+#      MUXCY                       : 48
+#      VCC                         : 1
+#      XORCY                       : 54
+# FlipFlops/Latches                : 34
+#      FD                          : 10
+#      FDR                         : 3
+#      FDRE                        : 9
+#      FDSE                        : 1
+#      LD                          : 1
+#      LD_1                        : 10
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              24  out of  18224     0%  
+ Number of Slice LUTs:                  154  out of   9112     1%  
+    Number used as Logic:               154  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    156
+   Number with an unused Flip Flop:     132  out of    156    84%  
+   Number with an unused LUT:             2  out of    156     1%  
+   Number of fully used LUT-FF pairs:    22  out of    156    14%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    232     4%  
+    IOB Flip Flops/Latches:              10
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 23    |
+init_draw.GO_0                     | NONE(xx_vga_2)         | 11    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.962ns (Maximum Frequency: 252.391MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 3.648ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.962ns (frequency: 252.391MHz)
+  Total number of paths / destination ports: 1089 / 46
+-------------------------------------------------------------------------
+Delay:               3.962ns (Levels of Logic = 3)
+  Source:            Y_1 (FF)
+  Destination:       Y_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Y_1 to Y_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.447   1.089  Y_1 (Y_1)
+     LUT5:I0->O           12   0.203   0.909  PWR_6_o_Y[9]_equal_8_o<9>_SW0 (N4)
+     LUT6:I5->O            8   0.205   0.803  PWR_6_o_Y[9]_equal_8_o<9> (PWR_6_o_Y[9]_equal_8_o)
+     LUT5:I4->O            1   0.205   0.000  Y_1_rstpot (Y_1_rstpot)
+     FD:D                      0.102          Y_1
+    ----------------------------------------
+    Total                      3.962ns (1.162ns logic, 2.800ns route)
+                                       (29.3% logic, 70.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'init_draw.GO_0'
+  Clock period: 2.240ns (frequency: 446.518MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.240ns (Levels of Logic = 1)
+  Source:            init_draw.GO_0 (LATCH)
+  Destination:       init_draw.GO_0 (LATCH)
+  Source Clock:      init_draw.GO_0 rising
+  Destination Clock: init_draw.GO_0 rising
+
+  Data Path: init_draw.GO_0 to init_draw.GO_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              11   0.498   0.882  init_draw.GO_0 (init_draw.GO_0)
+     INV:I->O              2   0.206   0.616  n0017_inv1_INV_0 (init_draw.GO_0_G)
+     LD:D                      0.037          init_draw.GO_0
+    ----------------------------------------
+    Total                      2.240ns (0.741ns logic, 1.499ns route)
+                                       (33.1% logic, 66.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'init_draw.GO_0'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            xx_vga_7_1 (LATCH)
+  Destination:       vga<7> (PAD)
+  Source Clock:      init_draw.GO_0 rising
+
+  Data Path: xx_vga_7_1 to vga<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             1   0.498   0.579  xx_vga_7_1 (xx_vga_7_1)
+     OBUF:I->O                 2.571          vga_7_OBUF (vga<7>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.962|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock init_draw.GO_0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   14.648|         |         |         |
+init_draw.GO_0 |    2.240|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.72 secs
+ 
+--> 
+
+Total memory usage is 254492 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

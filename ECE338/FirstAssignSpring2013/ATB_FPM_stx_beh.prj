@@ -1,0 +1,6 @@
+vhdl isim_temp "CSAdder_vhd.vhd"
+vhdl isim_temp "WTA7_3_vhd.vhd"
+vhdl isim_temp "RRU7_3.vhd"
+vhdl isim_temp "RRU3_2.vhd"
+vhdl isim_temp "FP_MULTIPLIER.vhd"
+vhdl isim_temp "Tester.vhd"

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "F:/ECE238/lab5/lab5/Encoder_isim_beh.exe" -prj "F:/ECE238/lab5/lab5/Encoder_beh.prj" "work.Encoder" 

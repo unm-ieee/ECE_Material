@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/BCDbin/BCDbin.xst" -ofn "F:/ECE238/lab 3/BCDbin/BCDbin.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCDbin.ucf -p xc3s500e-fg320-4 "BCDbin.ngc" BCDbin.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o BCDbin_map.ncd BCDbin.ngd BCDbin.pcf 
+par -w -intstyle ise -ol high -t 1 BCDbin_map.ncd BCDbin.ncd BCDbin.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml BCDbin.twx BCDbin.ncd -o BCDbin.twr BCDbin.pcf -ucf BCDbin.ucf 
+bitgen -intstyle ise -f BCDbin.ut BCDbin.ncd 

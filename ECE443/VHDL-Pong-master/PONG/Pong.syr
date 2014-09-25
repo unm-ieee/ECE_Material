@@ -1,0 +1,1084 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+Reading design: Pong.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Pong.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Pong"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Pong
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/KeyboardController.vhd" into library work
+Parsing entity <KeyboardController>.
+INFO:HDLCompiler:1676 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/KeyboardController.vhd" Line 11. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/KeyboardController.vhd" Line 12. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Behavioral> of entity <keyboardcontroller>.
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" into library work
+Parsing entity <Pong>.
+Parsing architecture <Behavioral> of entity <pong>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Pong> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 49: Using initial value 30 for paddlehalfheight since it is never assigned
+WARNING:HDLCompiler:439 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 28: Formal port leftpaddledirection of mode buffer cannot be associated with actual port leftpaddledirection of mode out
+INFO:HDLCompiler:1408 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/KeyboardController.vhd" Line 11. leftpaddledirection is declared here
+WARNING:HDLCompiler:439 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 29: Formal port rightpaddledirection of mode buffer cannot be associated with actual port rightpaddledirection of mode out
+INFO:HDLCompiler:1408 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/KeyboardController.vhd" Line 12. rightpaddledirection is declared here
+
+Elaborating entity <KeyboardController> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:1408 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/KeyboardController.vhd" Line 11. leftpaddledirection is declared here
+INFO:HDLCompiler:1408 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/KeyboardController.vhd" Line 12. rightpaddledirection is declared here
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 182: gameover should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 314: leftpaddley should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 316: rightpaddley should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 323: bally should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 325: bally should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 327: bally should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 331: leftlifes should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 332: rightlifes should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 337: leftlifes should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 338: rightlifes should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Pong>.
+    Related source file is "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd".
+    Found 11-bit register for signal <ballX>.
+    Found 10-bit register for signal <ballY>.
+    Found 8-bit register for signal <ballSpeedX>.
+    Found 8-bit register for signal <ballSpeedY>.
+    Found 1-bit register for signal <screen_process_enable>.
+    Found 20-bit register for signal <ballMovementClockCounter>.
+    Found 1-bit register for signal <ballMovementClock>.
+    Found 20-bit register for signal <paddleMovementClockCounter>.
+    Found 1-bit register for signal <paddleMovementClock>.
+    Found 10-bit register for signal <horizontalPosition>.
+    Found 10-bit register for signal <verticalPosition>.
+    Found 1-bit register for signal <hsyncEnable>.
+    Found 1-bit register for signal <vsyncEnable>.
+    Found 9-bit register for signal <leftPaddleY>.
+    Found 9-bit register for signal <rightPaddleY>.
+    Found 7-bit register for signal <resetCounter>.
+    Found 1-bit register for signal <resetBall>.
+    Found 3-bit register for signal <leftLifes>.
+    Found 3-bit register for signal <rightLifes>.
+    Found 1-bit register for signal <hsync_out>.
+    Found 1-bit register for signal <vsync_out>.
+    Found 1-bit register for signal <red_out>.
+    Found 1-bit register for signal <green_out>.
+    Found 1-bit register for signal <blue_out>.
+    Found 2-bit register for signal <NW_CLK.divider>.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_119_OUT> created at line 234.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_122_OUT> created at line 235.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_125_OUT> created at line 236.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_128_OUT> created at line 237.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_131_OUT> created at line 238.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_134_OUT> created at line 239.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_137_OUT> created at line 240.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_140_OUT> created at line 241.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_143_OUT> created at line 242.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_146_OUT> created at line 243.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_149_OUT> created at line 244.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_157_OUT> created at line 251.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_158_OUT> created at line 251.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_160_OUT> created at line 252.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_163_OUT> created at line 253.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_166_OUT> created at line 254.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_169_OUT> created at line 255.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_172_OUT> created at line 256.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_175_OUT> created at line 257.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_178_OUT> created at line 258.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_181_OUT> created at line 259.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_184_OUT> created at line 260.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_187_OUT> created at line 261.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_235_OUT> created at line 291.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_236_OUT> created at line 291.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_238_OUT> created at line 292.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_241_OUT> created at line 293.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_244_OUT> created at line 294.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_247_OUT> created at line 295.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_250_OUT> created at line 296.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_253_OUT> created at line 297.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_256_OUT> created at line 298.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_259_OUT> created at line 299.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_262_OUT> created at line 300.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_265_OUT> created at line 301.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_268_OUT> created at line 302.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_271_OUT> created at line 303.
+    Found 11-bit subtractor for signal <GND_6_o_GND_6_o_sub_274_OUT> created at line 304.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_310_OUT> created at line 314.
+    Found 10-bit subtractor for signal <GND_6_o_GND_6_o_sub_316_OUT> created at line 316.
+    Found 11-bit subtractor for signal <ballY[9]_GND_6_o_sub_322_OUT> created at line 323.
+    Found 12-bit subtractor for signal <ballX[10]_GND_6_o_sub_326_OUT> created at line 323.
+    Found 11-bit subtractor for signal <ballY[9]_GND_6_o_sub_330_OUT> created at line 325.
+    Found 12-bit subtractor for signal <ballX[10]_GND_6_o_sub_334_OUT> created at line 325.
+    Found 11-bit subtractor for signal <ballY[9]_GND_6_o_sub_338_OUT> created at line 327.
+    Found 12-bit subtractor for signal <ballX[10]_GND_6_o_sub_342_OUT> created at line 327.
+    Found 11-bit subtractor for signal <ballY[9]_GND_6_o_sub_406_OUT> created at line 391.
+    Found 12-bit subtractor for signal <ballX[10]_GND_6_o_sub_410_OUT> created at line 393.
+    Found 11-bit subtractor for signal <ballY[9]_GND_6_o_sub_416_OUT> created at line 394.
+    Found 11-bit subtractor for signal <ballY[9]_GND_6_o_sub_419_OUT> created at line 396.
+    Found 2-bit adder for signal <NW_CLK.divider[1]_GND_6_o_add_1_OUT> created at line 101.
+    Found 20-bit adder for signal <ballMovementClockCounter[19]_GND_6_o_add_4_OUT> created at line 110.
+    Found 20-bit adder for signal <paddleMovementClockCounter[19]_GND_6_o_add_8_OUT> created at line 122.
+    Found 10-bit adder for signal <verticalPosition[9]_GND_6_o_add_15_OUT> created at line 141.
+    Found 10-bit adder for signal <horizontalPosition[9]_GND_6_o_add_17_OUT> created at line 144.
+    Found 10-bit adder for signal <n0887> created at line 314.
+    Found 10-bit adder for signal <n0892> created at line 316.
+    Found 11-bit adder for signal <n0995> created at line 323.
+    Found 12-bit adder for signal <n0997> created at line 323.
+    Found 11-bit adder for signal <n0999> created at line 325.
+    Found 12-bit adder for signal <n1001> created at line 325.
+    Found 11-bit adder for signal <n1003> created at line 327.
+    Found 12-bit adder for signal <n1005> created at line 327.
+    Found 9-bit adder for signal <n1007[8:0]> created at line 337.
+    Found 10-bit adder for signal <n0924> created at line 338.
+    Found 32-bit adder for signal <n0753> created at line 352.
+    Found 32-bit adder for signal <n0755> created at line 362.
+    Found 7-bit adder for signal <resetCounter[6]_GND_6_o_add_392_OUT> created at line 384.
+    Found 12-bit adder for signal <n1019> created at line 388.
+    Found 8-bit adder for signal <ballY[9]_GND_6_o_add_407_OUT> created at line 391.
+    Found 8-bit adder for signal <PWR_6_o_ballSpeedY[7]_add_408_OUT> created at line 392.
+    Found 11-bit adder for signal <n1026> created at line 394.
+    Found 8-bit adder for signal <ballY[9]_GND_6_o_add_420_OUT> created at line 396.
+    Found 12-bit adder for signal <n1032> created at line 409.
+    Found 10-bit adder for signal <ballY[9]_ballSpeedY[7]_add_452_OUT> created at line 419.
+    Found 10-bit subtractor for signal <photonX> created at line 39.
+    Found 9-bit subtractor for signal <photonY> created at line 40.
+    Found 8-bit subtractor for signal <GND_6_o_ballSpeedY[7]_sub_422_OUT<7:0>> created at line 397.
+    Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_425_OUT<2:0>> created at line 399.
+    Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_428_OUT<2:0>> created at line 404.
+    Found 8-bit subtractor for signal <ballSpeedY[7]_unary_minus_452_OUT<7:0>> created at line 0.
+    Found 3x5-bit multiplier for signal <leftLifes[2]_PWR_6_o_MuLt_357_OUT> created at line 337.
+    Found 3x5-bit multiplier for signal <rightLifes[2]_PWR_6_o_MuLt_363_OUT> created at line 338.
+WARNING:Xst:737 - Found 1-bit latch for signal <gameOver>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit comparator greater for signal <GND_6_o_horizontalPosition[9]_LessThan_23_o> created at line 152
+    Found 10-bit comparator greater for signal <horizontalPosition[9]_GND_6_o_LessThan_24_o> created at line 152
+    Found 10-bit comparator greater for signal <GND_6_o_verticalPosition[9]_LessThan_25_o> created at line 158
+    Found 10-bit comparator greater for signal <verticalPosition[9]_GND_6_o_LessThan_26_o> created at line 158
+    Found 10-bit comparator lessequal for signal <n0045> created at line 186
+    Found 10-bit comparator lessequal for signal <n0050> created at line 188
+    Found 10-bit comparator lessequal for signal <n0055> created at line 190
+    Found 10-bit comparator lessequal for signal <n0060> created at line 192
+    Found 10-bit comparator lessequal for signal <n0062> created at line 192
+    Found 10-bit comparator lessequal for signal <n0069> created at line 198
+    Found 10-bit comparator lessequal for signal <n0074> created at line 200
+    Found 10-bit comparator lessequal for signal <n0079> created at line 202
+    Found 10-bit comparator lessequal for signal <n0081> created at line 202
+    Found 9-bit comparator lessequal for signal <n0083> created at line 202
+    Found 10-bit comparator lessequal for signal <n0088> created at line 206
+    Found 10-bit comparator lessequal for signal <n0090> created at line 206
+    Found 10-bit comparator lessequal for signal <n0095> created at line 207
+    Found 10-bit comparator lessequal for signal <n0097> created at line 207
+    Found 9-bit comparator lessequal for signal <n0099> created at line 207
+    Found 10-bit comparator lessequal for signal <n0105> created at line 208
+    Found 10-bit comparator lessequal for signal <n0111> created at line 209
+    Found 10-bit comparator lessequal for signal <n0113> created at line 209
+    Found 10-bit comparator lessequal for signal <n0123> created at line 217
+    Found 10-bit comparator lessequal for signal <n0128> created at line 219
+    Found 10-bit comparator lessequal for signal <n0130> created at line 219
+    Found 10-bit comparator lessequal for signal <n0137> created at line 225
+    Found 10-bit comparator lessequal for signal <n0142> created at line 227
+    Found 9-bit comparator lessequal for signal <n0144> created at line 227
+    Found 10-bit comparator lessequal for signal <n0149> created at line 229
+    Found 10-bit comparator lessequal for signal <n0151> created at line 229
+    Found 10-bit comparator lessequal for signal <n0156> created at line 233
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_121_o> created at line 234
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_124_o> created at line 235
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_127_o> created at line 236
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_130_o> created at line 237
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_133_o> created at line 238
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_136_o> created at line 239
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_139_o> created at line 240
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_142_o> created at line 241
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_145_o> created at line 242
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_148_o> created at line 243
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_151_o> created at line 244
+    Found 10-bit comparator lessequal for signal <n0194> created at line 250
+    Found 9-bit comparator lessequal for signal <n0196> created at line 250
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_159_o> created at line 251
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_162_o> created at line 252
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_165_o> created at line 253
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_168_o> created at line 254
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_171_o> created at line 255
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_174_o> created at line 256
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_177_o> created at line 257
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_180_o> created at line 258
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_183_o> created at line 259
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_186_o> created at line 260
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_189_o> created at line 261
+    Found 10-bit comparator lessequal for signal <n0235> created at line 267
+    Found 10-bit comparator lessequal for signal <n0237> created at line 267
+    Found 9-bit comparator lessequal for signal <n0239> created at line 267
+    Found 10-bit comparator lessequal for signal <n0244> created at line 268
+    Found 10-bit comparator lessequal for signal <n0246> created at line 268
+    Found 9-bit comparator lessequal for signal <n0254> created at line 274
+    Found 9-bit comparator lessequal for signal <n0256> created at line 274
+    Found 10-bit comparator lessequal for signal <n0260> created at line 276
+    Found 9-bit comparator lessequal for signal <n0262> created at line 276
+    Found 10-bit comparator lessequal for signal <n0267> created at line 278
+    Found 10-bit comparator lessequal for signal <n0269> created at line 278
+    Found 9-bit comparator lessequal for signal <n0274> created at line 282
+    Found 9-bit comparator lessequal for signal <n0276> created at line 282
+    Found 10-bit comparator lessequal for signal <n0280> created at line 284
+    Found 10-bit comparator lessequal for signal <n0285> created at line 286
+    Found 9-bit comparator lessequal for signal <n0287> created at line 286
+    Found 9-bit comparator lessequal for signal <n0289> created at line 286
+    Found 10-bit comparator lessequal for signal <n0294> created at line 288
+    Found 9-bit comparator lessequal for signal <n0296> created at line 288
+    Found 10-bit comparator lessequal for signal <n0301> created at line 290
+    Found 10-bit comparator lessequal for signal <n0303> created at line 290
+    Found 9-bit comparator lessequal for signal <n0305> created at line 290
+    Found 9-bit comparator lessequal for signal <n0307> created at line 290
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_237_o> created at line 291
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_240_o> created at line 292
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_243_o> created at line 293
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_246_o> created at line 294
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_249_o> created at line 295
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_252_o> created at line 296
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_255_o> created at line 297
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_258_o> created at line 298
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_261_o> created at line 299
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_264_o> created at line 300
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_267_o> created at line 301
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_270_o> created at line 302
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_273_o> created at line 303
+    Found 11-bit comparator equal for signal <GND_6_o_GND_6_o_equal_276_o> created at line 304
+    Found 10-bit comparator lessequal for signal <n0385> created at line 313
+    Found 10-bit comparator lessequal for signal <n0387> created at line 313
+    Found 10-bit comparator lessequal for signal <n0390> created at line 314
+    Found 10-bit comparator lessequal for signal <n0393> created at line 314
+    Found 10-bit comparator lessequal for signal <n0398> created at line 315
+    Found 10-bit comparator lessequal for signal <n0400> created at line 315
+    Found 10-bit comparator lessequal for signal <n0403> created at line 316
+    Found 10-bit comparator lessequal for signal <n0406> created at line 316
+    Found 4-bit comparator lessequal for signal <n0413> created at line 319
+    Found 11-bit comparator lessequal for signal <n0417> created at line 323
+    Found 11-bit comparator lessequal for signal <n0421> created at line 323
+    Found 12-bit comparator lessequal for signal <n0424> created at line 323
+    Found 12-bit comparator lessequal for signal <n0428> created at line 323
+    Found 11-bit comparator lessequal for signal <n0434> created at line 325
+    Found 11-bit comparator lessequal for signal <n0438> created at line 325
+    Found 12-bit comparator lessequal for signal <n0441> created at line 325
+    Found 12-bit comparator lessequal for signal <n0445> created at line 325
+    Found 11-bit comparator lessequal for signal <n0451> created at line 327
+    Found 11-bit comparator lessequal for signal <n0455> created at line 327
+    Found 12-bit comparator lessequal for signal <n0458> created at line 327
+    Found 12-bit comparator lessequal for signal <n0462> created at line 327
+    Found 10-bit comparator lessequal for signal <n0467> created at line 331
+    Found 10-bit comparator greater for signal <photonX[9]_GND_6_o_LessThan_349_o> created at line 331
+    Found 10-bit comparator lessequal for signal <n0473> created at line 332
+    Found 10-bit comparator greater for signal <photonX[9]_BUS_0016_LessThan_355_o> created at line 332
+    Found 10-bit comparator lessequal for signal <n0484> created at line 337
+    Found 9-bit comparator lessequal for signal <n0486> created at line 337
+    Found 9-bit comparator lessequal for signal <n0488> created at line 337
+    Found 10-bit comparator lessequal for signal <n0497> created at line 338
+    Found 32-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_379_o> created at line 350
+    Found 32-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_381_o> created at line 351
+    Found 32-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_386_o> created at line 360
+    Found 32-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_388_o> created at line 361
+    Found 12-bit comparator greater for signal <BUS_0026_GND_6_o_LessThan_398_o> created at line 388
+    Found 11-bit comparator greater for signal <GND_6_o_ballX[10]_LessThan_399_o> created at line 388
+    Found 11-bit comparator greater for signal <BUS_0027_GND_6_o_LessThan_402_o> created at line 389
+    Found 11-bit comparator greater for signal <GND_6_o_ballY[9]_LessThan_405_o> created at line 389
+    Found 12-bit comparator greater for signal <GND_6_o_ballX[10]_LessThan_411_o> created at line 393
+    Found 11-bit comparator greater for signal <ballX[10]_GND_6_o_LessThan_412_o> created at line 393
+    Found 11-bit comparator greater for signal <BUS_0031_GND_6_o_LessThan_415_o> created at line 394
+    Found 11-bit comparator greater for signal <GND_6_o_ballY[9]_LessThan_418_o> created at line 394
+    Found 12-bit comparator greater for signal <GND_6_o_BUS_0034_LessThan_424_o> created at line 398
+    Found 12-bit comparator greater for signal <BUS_0035_GND_6_o_LessThan_427_o> created at line 403
+    Found 10-bit comparator greater for signal <ballY[9]_GND_6_o_LessThan_449_o> created at line 412
+    Found 10-bit comparator greater for signal <GND_6_o_ballY[9]_LessThan_451_o> created at line 415
+    Found 10-bit comparator greater for signal <photonX[9]_PWR_6_o_LessThan_475_o> created at line 431
+    Found 9-bit comparator greater for signal <photonY[8]_PWR_6_o_LessThan_476_o> created at line 431
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred  80 Adder/Subtractor(s).
+	inferred 141 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred 139 Comparator(s).
+	inferred  67 Multiplexer(s).
+Unit <Pong> synthesized.
+
+Synthesizing Unit <KeyboardController>.
+    Related source file is "/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/KeyboardController.vhd".
+WARNING:Xst:647 - Input <Clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 7-bit register for signal <bitCount>.
+    Found 8-bit register for signal <scancode>.
+    Found 1-bit register for signal <breakReceived>.
+    Found 32-bit register for signal <LeftPaddleDirection>.
+    Found 32-bit register for signal <RightPaddleDirection>.
+    Found 1-bit register for signal <scancodeReady>.
+    Found 7-bit adder for signal <bitCount[6]_GND_7_o_add_5_OUT> created at line 40.
+    Found 7-bit comparator greater for signal <GND_7_o_bitCount[6]_LessThan_2_o> created at line 36
+    Found 7-bit comparator greater for signal <bitCount[6]_GND_7_o_LessThan_3_o> created at line 36
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  81 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <KeyboardController> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 5x3-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 81
+ 10-bit adder                                          : 6
+ 10-bit subtractor                                     : 5
+ 11-bit adder                                          : 4
+ 11-bit subtractor                                     : 42
+ 12-bit adder                                          : 5
+ 12-bit subtractor                                     : 4
+ 2-bit adder                                           : 1
+ 20-bit adder                                          : 2
+ 3-bit subtractor                                      : 2
+ 32-bit adder                                          : 2
+ 7-bit adder                                           : 2
+ 8-bit adder                                           : 2
+ 8-bit addsub                                          : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 31
+ 1-bit register                                        : 13
+ 10-bit register                                       : 3
+ 11-bit register                                       : 1
+ 2-bit register                                        : 1
+ 20-bit register                                       : 2
+ 3-bit register                                        : 2
+ 32-bit register                                       : 2
+ 7-bit register                                        : 2
+ 8-bit register                                        : 3
+ 9-bit register                                        : 2
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 141
+ 10-bit comparator greater                             : 9
+ 10-bit comparator lessequal                           : 49
+ 11-bit comparator equal                               : 36
+ 11-bit comparator greater                             : 6
+ 11-bit comparator lessequal                           : 6
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 6
+ 32-bit comparator greater                             : 4
+ 4-bit comparator lessequal                            : 1
+ 7-bit comparator greater                              : 2
+ 9-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 17
+# Multiplexers                                         : 67
+ 1-bit 2-to-1 multiplexer                              : 29
+ 10-bit 2-to-1 multiplexer                             : 3
+ 11-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 26
+ 8-bit 2-to-1 multiplexer                              : 4
+# Xors                                                 : 10
+ 1-bit xor2                                            : 10
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <RightPaddleDirection_1> in Unit <kbController> is equivalent to the following 29 FFs/Latches, which will be removed : <RightPaddleDirection_2> <RightPaddleDirection_3> <RightPaddleDirection_4> <RightPaddleDirection_5> <RightPaddleDirection_6> <RightPaddleDirection_7> <RightPaddleDirection_8> <RightPaddleDirection_9> <RightPaddleDirection_10> <RightPaddleDirection_11> <RightPaddleDirection_12> <RightPaddleDirection_13> <RightPaddleDirection_14> <RightPaddleDirection_15> <RightPaddleDirection_16> <RightPaddleDirection_17> <RightPaddleDirection_18> <RightPaddleDirection_19> <RightPaddleDirection_20> <RightPaddleDirection_21> <RightPaddleDirection_22> <RightPaddleDirection_23> <RightPaddleDirection_24> <RightPaddleDirection_25> <RightPaddleDirection_26> <RightPaddleDirection_27> <RightPaddleDirection_28> <RightPaddleDirection_29> <RightPaddleDirection_30> 
+INFO:Xst:2261 - The FF/Latch <LeftPaddleDirection_1> in Unit <kbController> is equivalent to the following 29 FFs/Latches, which will be removed : <LeftPaddleDirection_2> <LeftPaddleDirection_3> <LeftPaddleDirection_4> <LeftPaddleDirection_5> <LeftPaddleDirection_6> <LeftPaddleDirection_7> <LeftPaddleDirection_8> <LeftPaddleDirection_9> <LeftPaddleDirection_10> <LeftPaddleDirection_11> <LeftPaddleDirection_12> <LeftPaddleDirection_13> <LeftPaddleDirection_14> <LeftPaddleDirection_15> <LeftPaddleDirection_16> <LeftPaddleDirection_17> <LeftPaddleDirection_18> <LeftPaddleDirection_19> <LeftPaddleDirection_20> <LeftPaddleDirection_21> <LeftPaddleDirection_22> <LeftPaddleDirection_23> <LeftPaddleDirection_24> <LeftPaddleDirection_25> <LeftPaddleDirection_26> <LeftPaddleDirection_27> <LeftPaddleDirection_28> <LeftPaddleDirection_29> <LeftPaddleDirection_30> 
+
+Synthesizing (advanced) Unit <KeyboardController>.
+The following registers are absorbed into counter <bitCount>: 1 register on signal <bitCount>.
+Unit <KeyboardController> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Pong>.
+The following registers are absorbed into counter <ballMovementClockCounter>: 1 register on signal <ballMovementClockCounter>.
+The following registers are absorbed into counter <paddleMovementClockCounter>: 1 register on signal <paddleMovementClockCounter>.
+The following registers are absorbed into counter <horizontalPosition>: 1 register on signal <horizontalPosition>.
+The following registers are absorbed into counter <verticalPosition>: 1 register on signal <verticalPosition>.
+The following registers are absorbed into counter <NW_CLK.divider>: 1 register on signal <NW_CLK.divider>.
+The following registers are absorbed into counter <leftLifes>: 1 register on signal <leftLifes>.
+The following registers are absorbed into counter <rightLifes>: 1 register on signal <rightLifes>.
+The following registers are absorbed into counter <resetCounter>: 1 register on signal <resetCounter>.
+	Multiplier <Mmult_leftLifes[2]_PWR_6_o_MuLt_357_OUT> in block <Pong> and adder/subtractor <Madd_n1007[8:0]> in block <Pong> are combined into a MAC<Maddsub_leftLifes[2]_PWR_6_o_MuLt_357_OUT>.
+	Multiplier <Mmult_rightLifes[2]_PWR_6_o_MuLt_363_OUT> in block <Pong> and adder/subtractor <Madd_n0924> in block <Pong> are combined into a MAC<Maddsub_rightLifes[2]_PWR_6_o_MuLt_363_OUT>.
+Unit <Pong> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 2
+ 5x3-to-10-bit MAC                                     : 1
+ 5x3-to-9-bit MAC                                      : 1
+# Adders/Subtractors                                   : 70
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 5
+ 11-bit adder                                          : 4
+ 11-bit subtractor                                     : 42
+ 12-bit adder                                          : 5
+ 12-bit subtractor                                     : 4
+ 32-bit adder                                          : 2
+ 8-bit adder                                           : 2
+ 8-bit addsub                                          : 1
+ 8-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 9
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 2
+ 3-bit down counter                                    : 2
+ 7-bit up counter                                      : 2
+# Registers                                            : 140
+ Flip-Flops                                            : 140
+# Comparators                                          : 141
+ 10-bit comparator greater                             : 9
+ 10-bit comparator lessequal                           : 49
+ 11-bit comparator equal                               : 36
+ 11-bit comparator greater                             : 6
+ 11-bit comparator lessequal                           : 6
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 6
+ 32-bit comparator greater                             : 4
+ 4-bit comparator lessequal                            : 1
+ 7-bit comparator greater                              : 2
+ 9-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 17
+# Multiplexers                                         : 67
+ 1-bit 2-to-1 multiplexer                              : 29
+ 10-bit 2-to-1 multiplexer                             : 3
+ 11-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 26
+ 8-bit 2-to-1 multiplexer                              : 4
+# Xors                                                 : 10
+ 1-bit xor2                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <RightPaddleDirection_1> in Unit <KeyboardController> is equivalent to the following 29 FFs/Latches, which will be removed : <RightPaddleDirection_2> <RightPaddleDirection_3> <RightPaddleDirection_4> <RightPaddleDirection_5> <RightPaddleDirection_6> <RightPaddleDirection_7> <RightPaddleDirection_8> <RightPaddleDirection_9> <RightPaddleDirection_10> <RightPaddleDirection_11> <RightPaddleDirection_12> <RightPaddleDirection_13> <RightPaddleDirection_14> <RightPaddleDirection_15> <RightPaddleDirection_16> <RightPaddleDirection_17> <RightPaddleDirection_18> <RightPaddleDirection_19> <RightPaddleDirection_20> <RightPaddleDirection_21> <RightPaddleDirection_22> <RightPaddleDirection_23> <RightPaddleDirection_24> <RightPaddleDirection_25> <RightPaddleDirection_26> <RightPaddleDirection_27> <RightPaddleDirection_28> <RightPaddleDirection_29> <RightPaddleDirection_30> 
+INFO:Xst:2261 - The FF/Latch <LeftPaddleDirection_1> in Unit <KeyboardController> is equivalent to the following 29 FFs/Latches, which will be removed : <LeftPaddleDirection_2> <LeftPaddleDirection_3> <LeftPaddleDirection_4> <LeftPaddleDirection_5> <LeftPaddleDirection_6> <LeftPaddleDirection_7> <LeftPaddleDirection_8> <LeftPaddleDirection_9> <LeftPaddleDirection_10> <LeftPaddleDirection_11> <LeftPaddleDirection_12> <LeftPaddleDirection_13> <LeftPaddleDirection_14> <LeftPaddleDirection_15> <LeftPaddleDirection_16> <LeftPaddleDirection_17> <LeftPaddleDirection_18> <LeftPaddleDirection_19> <LeftPaddleDirection_20> <LeftPaddleDirection_21> <LeftPaddleDirection_22> <LeftPaddleDirection_23> <LeftPaddleDirection_24> <LeftPaddleDirection_25> <LeftPaddleDirection_26> <LeftPaddleDirection_27> <LeftPaddleDirection_28> <LeftPaddleDirection_29> <LeftPaddleDirection_30> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    ballX_6 in unit <Pong>
+    ballX_5 in unit <Pong>
+    ballX_4 in unit <Pong>
+    ballX_3 in unit <Pong>
+    ballX_2 in unit <Pong>
+    ballX_1 in unit <Pong>
+    ballX_0 in unit <Pong>
+    ballSpeedX_0 in unit <Pong>
+    ballSpeedY_0 in unit <Pong>
+    ballY_4 in unit <Pong>
+    ballY_3 in unit <Pong>
+    ballY_2 in unit <Pong>
+    ballY_1 in unit <Pong>
+    ballY_0 in unit <Pong>
+    gameOver in unit <Pong>
+
+
+Optimizing unit <Pong> ...
+
+Optimizing unit <KeyboardController> ...
+WARNING:Xst:1293 - FF/Latch <ballY_9> has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ballSpeedX_4> in Unit <Pong> is equivalent to the following 3 FFs/Latches, which will be removed : <ballSpeedX_5> <ballSpeedX_6> <ballSpeedX_7> 
+INFO:Xst:2261 - The FF/Latch <ballSpeedY_3> in Unit <Pong> is equivalent to the following 4 FFs/Latches, which will be removed : <ballSpeedY_4> <ballSpeedY_5> <ballSpeedY_6> <ballSpeedY_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Pong, actual ratio is 18.
+WARNING:Xst:1426 - The value init of the FF/Latch ballY_0_LD hinder the constant cleaning in the block Pong.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch ballY_4_LD hinder the constant cleaning in the block Pong.
+   You should achieve better results by setting this init to 0.
+FlipFlop horizontalPosition_0 has been replicated 2 time(s)
+FlipFlop horizontalPosition_1 has been replicated 3 time(s)
+FlipFlop horizontalPosition_2 has been replicated 3 time(s)
+FlipFlop horizontalPosition_3 has been replicated 4 time(s)
+FlipFlop horizontalPosition_4 has been replicated 6 time(s)
+FlipFlop horizontalPosition_5 has been replicated 5 time(s)
+FlipFlop horizontalPosition_6 has been replicated 4 time(s)
+FlipFlop horizontalPosition_7 has been replicated 3 time(s)
+FlipFlop horizontalPosition_8 has been replicated 1 time(s)
+FlipFlop verticalPosition_0 has been replicated 3 time(s)
+FlipFlop verticalPosition_1 has been replicated 3 time(s)
+FlipFlop verticalPosition_2 has been replicated 3 time(s)
+FlipFlop verticalPosition_3 has been replicated 3 time(s)
+FlipFlop verticalPosition_4 has been replicated 3 time(s)
+FlipFlop verticalPosition_5 has been replicated 2 time(s)
+FlipFlop verticalPosition_6 has been replicated 2 time(s)
+FlipFlop verticalPosition_7 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 221
+ Flip-Flops                                            : 221
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Pong.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1819
+#      GND                         : 1
+#      INV                         : 16
+#      LUT1                        : 106
+#      LUT2                        : 100
+#      LUT3                        : 118
+#      LUT4                        : 288
+#      LUT5                        : 236
+#      LUT6                        : 486
+#      MUXCY                       : 299
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 166
+# FlipFlops/Latches                : 224
+#      FD                          : 4
+#      FDCE                        : 15
+#      FDE                         : 40
+#      FDE_1                       : 8
+#      FDPE                        : 14
+#      FDR                         : 96
+#      FDR_1                       : 1
+#      FDRE                        : 43
+#      LD                          : 3
+# Clock Buffers                    : 4
+#      BUFG                        : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      OBUF                        : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             224  out of  18224     1%  
+ Number of Slice LUTs:                 1350  out of   9112    14%  
+    Number used as Logic:              1350  out of   9112    14%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1441
+   Number with an unused Flip Flop:    1217  out of   1441    84%  
+   Number with an unused LUT:            91  out of   1441     6%  
+   Number of fully used LUT-FF pairs:   133  out of   1441     9%  
+   Number of unique control sets:        34
+
+IO Utilization: 
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    232     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------+-------------------------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)                     | Load  |
+--------------------------------------+-------------------------------------------+-------+
+clk                                   | BUFGP                                     | 45    |
+paddleMovementClock                   | NONE(leftPaddleY_0)                       | 18    |
+screen_process_enable                 | BUFG                                      | 78    |
+ballMovementClock                     | BUFG                                      | 57    |
+kb_clk                                | BUFGP                                     | 16    |
+kbController/scancodeReady            | NONE(kbController/RightPaddleDirection_31)| 7     |
+gameOver_G(GND_6_o_GND_6_o_OR_47_o1:O)| NONE(*)(gameOver)                         | 1     |
+gameOver                              | NONE(ballY_0_LD)                          | 2     |
+--------------------------------------+-------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.332ns (Maximum Frequency: 107.156MHz)
+   Minimum input arrival time before clock: 3.347ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.301ns (frequency: 232.518MHz)
+  Total number of paths / destination ports: 1271 / 90
+-------------------------------------------------------------------------
+Delay:               4.301ns (Levels of Logic = 2)
+  Source:            paddleMovementClockCounter_11 (FF)
+  Destination:       paddleMovementClockCounter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: paddleMovementClockCounter_11 to paddleMovementClockCounter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.981  paddleMovementClockCounter_11 (paddleMovementClockCounter_11)
+     LUT6:I0->O            1   0.203   0.924  GND_6_o_paddleMovementClockCounter[19]_equal_10_o<19>3 (GND_6_o_paddleMovementClockCounter[19]_equal_10_o<19>2)
+     LUT5:I0->O           21   0.203   1.113  GND_6_o_paddleMovementClockCounter[19]_equal_10_o<19>4 (GND_6_o_paddleMovementClockCounter[19]_equal_10_o)
+     FDR:R                     0.430          paddleMovementClockCounter_0
+    ----------------------------------------
+    Total                      4.301ns (1.283ns logic, 3.018ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'paddleMovementClock'
+  Clock period: 6.214ns (frequency: 160.933MHz)
+  Total number of paths / destination ports: 27684 / 36
+-------------------------------------------------------------------------
+Delay:               6.214ns (Levels of Logic = 35)
+  Source:            leftPaddleY_1 (FF)
+  Destination:       leftPaddleY_0 (FF)
+  Source Clock:      paddleMovementClock rising
+  Destination Clock: paddleMovementClock rising
+
+  Data Path: leftPaddleY_1 to leftPaddleY_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             15   0.447   1.086  leftPaddleY_1 (leftPaddleY_1)
+     LUT2:I0->O            1   0.203   0.000  Madd_n0753_lut<1> (Madd_n0753_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n0753_cy<1> (Madd_n0753_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<2> (Madd_n0753_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<3> (Madd_n0753_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<4> (Madd_n0753_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<5> (Madd_n0753_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<6> (Madd_n0753_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<7> (Madd_n0753_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<8> (Madd_n0753_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<9> (Madd_n0753_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<10> (Madd_n0753_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<11> (Madd_n0753_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<12> (Madd_n0753_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<13> (Madd_n0753_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<14> (Madd_n0753_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<15> (Madd_n0753_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<16> (Madd_n0753_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<17> (Madd_n0753_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<18> (Madd_n0753_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<19> (Madd_n0753_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<20> (Madd_n0753_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<21> (Madd_n0753_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<22> (Madd_n0753_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<23> (Madd_n0753_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<24> (Madd_n0753_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<25> (Madd_n0753_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<26> (Madd_n0753_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<27> (Madd_n0753_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<28> (Madd_n0753_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n0753_cy<29> (Madd_n0753_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_n0753_cy<30> (Madd_n0753_cy<30>)
+     XORCY:CI->O           3   0.180   0.995  Madd_n0753_xor<31> (n0753<31>)
+     LUT5:I0->O            0   0.203   0.000  Mcompar_GND_6_o_GND_6_o_LessThan_379_o_lutdi4 (Mcompar_GND_6_o_GND_6_o_LessThan_379_o_lutdi4)
+     MUXCY:DI->O           1   0.339   0.684  Mcompar_GND_6_o_GND_6_o_LessThan_379_o_cy<5> (Mcompar_GND_6_o_GND_6_o_LessThan_379_o_cy<5>)
+     LUT2:I0->O            9   0.203   0.829  GND_6_o_GND_6_o_AND_162_o1 (GND_6_o_GND_6_o_AND_162_o)
+     FDE:CE                    0.322          leftPaddleY_0
+    ----------------------------------------
+    Total                      6.214ns (2.620ns logic, 3.594ns route)
+                                       (42.2% logic, 57.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'screen_process_enable'
+  Clock period: 9.332ns (frequency: 107.156MHz)
+  Total number of paths / destination ports: 18909 / 182
+-------------------------------------------------------------------------
+Delay:               9.332ns (Levels of Logic = 9)
+  Source:            horizontalPosition_3_1 (FF)
+  Destination:       red_out (FF)
+  Source Clock:      screen_process_enable rising
+  Destination Clock: screen_process_enable rising
+
+  Data Path: horizontalPosition_3_1 to red_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             10   0.447   1.085  horizontalPosition_3_1 (horizontalPosition_3_1)
+     LUT3:I0->O            8   0.205   0.803  GND_6_o_photonX[9]_LessThan_95_o21 (GND_6_o_photonX[9]_LessThan_95_o2)
+     LUT5:I4->O            1   0.205   0.808  Mmux_color<0>138111_SW0_SW2_SW0 (N273)
+     LUT6:I3->O            1   0.205   0.808  Mmux_color<0>138111_SW0_SW2 (N229)
+     LUT6:I3->O            4   0.205   0.684  Mmux_color<0>138111 (Mmux_color<0>138111)
+     LUT6:I5->O            1   0.205   0.808  Mmux_color<0>13185 (Mmux_color<0>13192)
+     LUT5:I2->O            1   0.205   0.684  Mmux_color<0>13198_SW0 (N172)
+     LUT6:I4->O            1   0.203   0.684  Mmux_color<0>13198 (Mmux_color<0>13205)
+     LUT6:I4->O            1   0.203   0.580  Mmux_color<0>13199 (Mmux_color<0>13206)
+     LUT6:I5->O            1   0.205   0.000  red_out_glue_set (red_out_glue_set)
+     FDR:D                     0.102          red_out
+    ----------------------------------------
+    Total                      9.332ns (2.390ns logic, 6.942ns route)
+                                       (25.6% logic, 74.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ballMovementClock'
+  Clock period: 8.243ns (frequency: 121.315MHz)
+  Total number of paths / destination ports: 38166 / 121
+-------------------------------------------------------------------------
+Delay:               8.243ns (Levels of Logic = 8)
+  Source:            ballY_3_C_3 (FF)
+  Destination:       ballSpeedY_1 (FF)
+  Source Clock:      ballMovementClock rising
+  Destination Clock: ballMovementClock rising
+
+  Data Path: ballY_3_C_3 to ballSpeedY_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             13   0.447   1.037  ballY_3_C_3 (ballY_3_C_3)
+     LUT3:I1->O           37   0.203   1.467  ballY_31 (ballY_3)
+     LUT5:I3->O            4   0.203   0.912  Msub_ballY[9]_GND_6_o_sub_416_OUT_xor<4>11 (ballY[9]_GND_6_o_sub_416_OUT<4>)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_GND_6_o_ballY[9]_LessThan_405_o_lut<2> (Mcompar_GND_6_o_ballY[9]_LessThan_405_o_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_6_o_ballY[9]_LessThan_405_o_cy<2> (Mcompar_GND_6_o_ballY[9]_LessThan_405_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_6_o_ballY[9]_LessThan_405_o_cy<3> (Mcompar_GND_6_o_ballY[9]_LessThan_405_o_cy<3>)
+     MUXCY:CI->O           6   0.213   0.849  Mcompar_GND_6_o_ballY[9]_LessThan_405_o_cy<4> (Mcompar_GND_6_o_ballY[9]_LessThan_405_o_cy<4>)
+     LUT3:I1->O           19   0.203   1.072  BUS_0026_GND_6_o_AND_166_o3 (BUS_0026_GND_6_o_AND_166_o)
+     LUT5:I4->O            5   0.205   0.714  _n1199_inv1 (_n1199_inv)
+     FDCE:CE                   0.322          ballSpeedY_1
+    ----------------------------------------
+    Total                      8.243ns (2.192ns logic, 6.051ns route)
+                                       (26.6% logic, 73.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'kb_clk'
+  Clock period: 4.078ns (frequency: 245.221MHz)
+  Total number of paths / destination ports: 203 / 37
+-------------------------------------------------------------------------
+Delay:               4.078ns (Levels of Logic = 2)
+  Source:            kbController/bitCount_4 (FF)
+  Destination:       kbController/bitCount_6 (FF)
+  Source Clock:      kb_clk falling
+  Destination Clock: kb_clk falling
+
+  Data Path: kbController/bitCount_4 to kbController/bitCount_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.447   0.912  kbController/bitCount_4 (kbController/bitCount_4)
+     LUT3:I0->O            7   0.205   1.138  kbController/_n0113_inv31 (kbController/_n0113_inv3)
+     LUT6:I0->O            6   0.203   0.744  kbController/Mcount_bitCount_val1 (kbController/Mcount_bitCount_val)
+     FDRE:R                    0.430          kbController/bitCount_1
+    ----------------------------------------
+    Total                      4.078ns (1.285ns logic, 2.793ns route)
+                                       (31.5% logic, 68.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'kbController/scancodeReady'
+  Clock period: 3.961ns (frequency: 252.458MHz)
+  Total number of paths / destination ports: 27 / 12
+-------------------------------------------------------------------------
+Delay:               3.961ns (Levels of Logic = 3)
+  Source:            kbController/breakReceived (FF)
+  Destination:       kbController/LeftPaddleDirection_31 (FF)
+  Source Clock:      kbController/scancodeReady rising
+  Destination Clock: kbController/scancodeReady rising
+
+  Data Path: kbController/breakReceived to kbController/LeftPaddleDirection_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             10   0.447   1.104  kbController/breakReceived (kbController/breakReceived)
+     LUT5:I1->O            3   0.203   0.755  kbController/_n0119_inv1 (kbController/_n0119_inv)
+     LUT3:I1->O            1   0.203   0.944  kbController/LeftPaddleDirection_31_glue_set (kbController/LeftPaddleDirection_31_glue_set)
+     LUT6:I0->O            1   0.203   0.000  kbController/LeftPaddleDirection_31_glue_rst (kbController/LeftPaddleDirection_31_glue_rst)
+     FD:D                      0.102          kbController/LeftPaddleDirection_31
+    ----------------------------------------
+    Total                      3.961ns (1.158ns logic, 2.803ns route)
+                                       (29.2% logic, 70.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'kb_clk'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              3.347ns (Levels of Logic = 2)
+  Source:            kb_data (PAD)
+  Destination:       kbController/scancodeReady (FF)
+  Destination Clock: kb_clk falling
+
+  Data Path: kb_data to kbController/scancodeReady
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.912  kb_data_IBUF (kb_data_IBUF)
+     LUT6:I3->O            1   0.205   0.579  kbController/bitCount_cst1 (kbController/bitCount_cst)
+     FDR_1:R                   0.430          kbController/scancodeReady
+    ----------------------------------------
+    Total                      3.347ns (1.857ns logic, 1.490ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'screen_process_enable'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            hsync_out (FF)
+  Destination:       hsync_out (PAD)
+  Source Clock:      screen_process_enable rising
+
+  Data Path: hsync_out to hsync_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  hsync_out (hsync_out_OBUF)
+     OBUF:I->O                 2.571          hsync_out_OBUF (hsync_out)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ballMovementClock
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+ballMovementClock  |    8.243|         |         |         |
+gameOver           |         |    9.219|         |         |
+gameOver_G         |         |    4.139|         |         |
+paddleMovementClock|    7.539|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.301|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gameOver_G
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+ballMovementClock|         |         |    1.826|         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock kbController/scancodeReady
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+kbController/scancodeReady|    3.961|         |         |         |
+kb_clk                    |         |    4.802|         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock kb_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+kb_clk         |         |         |    4.078|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock paddleMovementClock
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+kbController/scancodeReady|    6.408|         |         |         |
+paddleMovementClock       |    6.214|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock screen_process_enable
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+ballMovementClock    |    9.063|         |         |         |
+gameOver             |         |   10.170|         |         |
+gameOver_G           |         |    3.600|         |         |
+paddleMovementClock  |    7.291|         |         |         |
+screen_process_enable|    9.332|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 161.00 secs
+Total CPU time to Xst completion: 153.29 secs
+ 
+--> 
+
+
+Total memory usage is 641400 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

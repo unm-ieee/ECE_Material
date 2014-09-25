@@ -1,0 +1,223 @@
+##############################################################
+#
+# Xilinx Core Generator version 13.4
+# Date: Tue Oct 01 20:24:08 2013
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+#  Generated from component: xilinx.com:ip:v_osd:3.0
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = false
+SET asysymbol = true
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = false
+SET designentry = VHDL
+SET device = xc6slx16
+SET devicefamily = spartan6
+SET flowvendor = Other
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET package = csg324
+SET removerpms = false
+SET simulationfiles = Structural
+SET speedgrade = -3
+SET verilogsim = false
+SET vhdlsim = true
+# END Project Options
+# BEGIN Select
+SELECT Video_On_Screen_Display family Xilinx,_Inc. 3.0
+# END Select
+# BEGIN Parameters
+CSET alpha_channel_enable=false
+CSET component_name=VGA_DISPLAY
+CSET data_channel_width=8
+CSET interface_type=EDK_pCore
+CSET layer0_box_instruction_enable=true
+CSET layer0_color_table_memory_type=Auto-Configure
+CSET layer0_color_table_size=16
+CSET layer0_font_ascii_offset=32
+CSET layer0_font_bits_per_pixel=1
+CSET layer0_font_character_height=8
+CSET layer0_font_character_width=8
+CSET layer0_font_number_of_characters=96
+CSET layer0_global_alpha_enable=false
+CSET layer0_global_alpha_value=255
+CSET layer0_height=0
+CSET layer0_horizontal_start_position=0
+CSET layer0_instruction_memory_size=48
+CSET layer0_line_instruction_enable=false
+CSET layer0_priority=0
+CSET layer0_text_instruction_enable=true
+CSET layer0_text_max_string_length=32
+CSET layer0_text_number_of_strings=8
+CSET layer0_type=External_AXIS
+CSET layer0_vertical_start_position=0
+CSET layer0_width=0
+CSET layer1_box_instruction_enable=true
+CSET layer1_color_table_memory_type=Auto-Configure
+CSET layer1_color_table_size=16
+CSET layer1_font_ascii_offset=32
+CSET layer1_font_bits_per_pixel=1
+CSET layer1_font_character_height=8
+CSET layer1_font_character_width=8
+CSET layer1_font_number_of_characters=96
+CSET layer1_global_alpha_enable=false
+CSET layer1_global_alpha_value=255
+CSET layer1_height=0
+CSET layer1_horizontal_start_position=0
+CSET layer1_instruction_memory_size=48
+CSET layer1_line_instruction_enable=false
+CSET layer1_priority=1
+CSET layer1_text_instruction_enable=true
+CSET layer1_text_max_string_length=32
+CSET layer1_text_number_of_strings=8
+CSET layer1_type=External_AXIS
+CSET layer1_vertical_start_position=0
+CSET layer1_width=0
+CSET layer2_box_instruction_enable=true
+CSET layer2_color_table_memory_type=Auto-Configure
+CSET layer2_color_table_size=16
+CSET layer2_font_ascii_offset=32
+CSET layer2_font_bits_per_pixel=1
+CSET layer2_font_character_height=8
+CSET layer2_font_character_width=8
+CSET layer2_font_number_of_characters=96
+CSET layer2_global_alpha_enable=false
+CSET layer2_global_alpha_value=255
+CSET layer2_height=0
+CSET layer2_horizontal_start_position=0
+CSET layer2_instruction_memory_size=48
+CSET layer2_line_instruction_enable=false
+CSET layer2_priority=2
+CSET layer2_text_instruction_enable=true
+CSET layer2_text_max_string_length=32
+CSET layer2_text_number_of_strings=8
+CSET layer2_type=External_AXIS
+CSET layer2_vertical_start_position=0
+CSET layer2_width=0
+CSET layer3_box_instruction_enable=true
+CSET layer3_color_table_memory_type=Auto-Configure
+CSET layer3_color_table_size=16
+CSET layer3_font_ascii_offset=32
+CSET layer3_font_bits_per_pixel=1
+CSET layer3_font_character_height=8
+CSET layer3_font_character_width=8
+CSET layer3_font_number_of_characters=96
+CSET layer3_global_alpha_enable=false
+CSET layer3_global_alpha_value=255
+CSET layer3_height=0
+CSET layer3_horizontal_start_position=0
+CSET layer3_instruction_memory_size=48
+CSET layer3_line_instruction_enable=false
+CSET layer3_priority=3
+CSET layer3_text_instruction_enable=true
+CSET layer3_text_max_string_length=32
+CSET layer3_text_number_of_strings=8
+CSET layer3_type=External_AXIS
+CSET layer3_vertical_start_position=0
+CSET layer3_width=0
+CSET layer4_box_instruction_enable=true
+CSET layer4_color_table_memory_type=Auto-Configure
+CSET layer4_color_table_size=16
+CSET layer4_font_ascii_offset=32
+CSET layer4_font_bits_per_pixel=1
+CSET layer4_font_character_height=8
+CSET layer4_font_character_width=8
+CSET layer4_font_number_of_characters=96
+CSET layer4_global_alpha_enable=false
+CSET layer4_global_alpha_value=255
+CSET layer4_height=0
+CSET layer4_horizontal_start_position=0
+CSET layer4_instruction_memory_size=48
+CSET layer4_line_instruction_enable=false
+CSET layer4_priority=4
+CSET layer4_text_instruction_enable=true
+CSET layer4_text_max_string_length=32
+CSET layer4_text_number_of_strings=8
+CSET layer4_type=External_AXIS
+CSET layer4_vertical_start_position=0
+CSET layer4_width=0
+CSET layer5_box_instruction_enable=true
+CSET layer5_color_table_memory_type=Auto-Configure
+CSET layer5_color_table_size=16
+CSET layer5_font_ascii_offset=32
+CSET layer5_font_bits_per_pixel=1
+CSET layer5_font_character_height=8
+CSET layer5_font_character_width=8
+CSET layer5_font_number_of_characters=96
+CSET layer5_global_alpha_enable=false
+CSET layer5_global_alpha_value=255
+CSET layer5_height=0
+CSET layer5_horizontal_start_position=0
+CSET layer5_instruction_memory_size=48
+CSET layer5_line_instruction_enable=false
+CSET layer5_priority=5
+CSET layer5_text_instruction_enable=true
+CSET layer5_text_max_string_length=32
+CSET layer5_text_number_of_strings=8
+CSET layer5_type=External_AXIS
+CSET layer5_vertical_start_position=0
+CSET layer5_width=0
+CSET layer6_box_instruction_enable=true
+CSET layer6_color_table_memory_type=Auto-Configure
+CSET layer6_color_table_size=16
+CSET layer6_font_ascii_offset=32
+CSET layer6_font_bits_per_pixel=1
+CSET layer6_font_character_height=8
+CSET layer6_font_character_width=8
+CSET layer6_font_number_of_characters=96
+CSET layer6_global_alpha_enable=false
+CSET layer6_global_alpha_value=255
+CSET layer6_height=0
+CSET layer6_horizontal_start_position=0
+CSET layer6_instruction_memory_size=48
+CSET layer6_line_instruction_enable=false
+CSET layer6_priority=6
+CSET layer6_text_instruction_enable=true
+CSET layer6_text_max_string_length=32
+CSET layer6_text_number_of_strings=8
+CSET layer6_type=External_AXIS
+CSET layer6_vertical_start_position=0
+CSET layer6_width=0
+CSET layer7_box_instruction_enable=true
+CSET layer7_color_table_memory_type=Auto-Configure
+CSET layer7_color_table_size=16
+CSET layer7_font_ascii_offset=32
+CSET layer7_font_bits_per_pixel=1
+CSET layer7_font_character_height=8
+CSET layer7_font_character_width=8
+CSET layer7_font_number_of_characters=96
+CSET layer7_global_alpha_enable=false
+CSET layer7_global_alpha_value=255
+CSET layer7_height=0
+CSET layer7_horizontal_start_position=0
+CSET layer7_instruction_memory_size=48
+CSET layer7_line_instruction_enable=false
+CSET layer7_priority=7
+CSET layer7_text_instruction_enable=true
+CSET layer7_text_max_string_length=32
+CSET layer7_text_number_of_strings=8
+CSET layer7_type=External_AXIS
+CSET layer7_vertical_start_position=0
+CSET layer7_width=0
+CSET number_of_data_channels=2
+CSET number_of_layers=1
+CSET output_mode=XSVI_Interface
+CSET screen_width=1280
+# END Parameters
+# BEGIN Extra information
+MISC pkg_timestamp=2012-01-07T15:29:19Z
+# END Extra information
+GENERATE
+# CRC: cd11fd9d

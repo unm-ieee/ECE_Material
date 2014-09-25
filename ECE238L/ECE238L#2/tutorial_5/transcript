@@ -1,0 +1,38 @@
+# Reading C:/modeltech_10.0b/tcl/vsim/pref.tcl 
+# //  ModelSim SE 10.0b May  5 2011 
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {counter_tb.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 10.0b Compiler 2011.05 May  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter
+# -- Compiling architecture Behavioral of counter
+# Model Technology ModelSim SE vcom 10.0b Compiler 2011.05 May  5 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity counter_tb_vhd
+# -- Compiling architecture behavior of counter_tb_vhd
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.counter_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: Failed to find design unit work.counter_tb.
+# Optimization failed
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./counter_tb.fdo PAUSED at line 28

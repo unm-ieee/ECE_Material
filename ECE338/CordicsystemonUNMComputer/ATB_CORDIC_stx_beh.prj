@@ -1,0 +1,2 @@
+vhdl isim_temp "../Cordicsystem/CORDIC.vhd"
+vhdl isim_temp "../Cordicsystem/TestBench.vhd"

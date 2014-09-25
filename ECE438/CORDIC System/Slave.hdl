@@ -1,0 +1,127 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Slave is
+  port(
+    Clock : in std_logic;
+    Reset : in std_logic;
+    Address : in std_logic;
+    Request : in std_logic;
+    Read_H : in std_logic;
+    
+    Data_Bus : inout std_logic_vector(31 downto 0);
+    ACK : out std_logic;
+    );
+  end entity;
+  
+architecture Slave of Slave is
+
+type State_Type is (Reset_State, Idle, S1, S2, S3, S4, S5, S6, S7);
+
+signal Current_State : State_Type; 
+signal Next_State : State_Type; 
+
+signal Z_Value : std_logic_vector(31 downto 0) := (others => '0');
+signal X_Value : std_logic_vector(31 downto 0) := (others => '0');
+signal Y_Value : std_logic_vector(31 downto 0) := (others => '0');
+
+
+begin
+  
+State_Control : process (Clock, Reset)
+    begin
+        if (Reset = '1') then
+          Current_State <= Reset_State;
+        elsif (Clock'event and Clock = '1') then
+            Current_State <= Next_State;
+        end if;
+    end process; 
+  
+  
+case => Current_State is
+  
+  when reset_state =>
+      ACK <= 'z';
+      Data_Bus <= (others => 'z');
+      next_state <= Idle;
+     
+        
+  when Idle =>  
+    if Request = '0' and Read_H = '0' then
+      next_state <= idle;
+    
+    elsif Request = '0' and Read_H = '1' then
+      next_state <= idle;
+    
+    elsif Request = '1' and Read_H = '0' then
+      next_state <= S1; 
+    
+    else Request = '1' and Read_h = '1' then
+      next_state <= S6;
+    end if;  
+     
+           
+  when S1 =>      
+    if address = X"FFFF_1040" then
+      Z_Value <= Data_Bus;
+      next_state <= S2;
+    else  
+      next_state <= idle;
+    end if;     
+    
+    
+  when S2 =>
+    ACK <= '1';
+    if request = '1' then
+      next_state <= S2;
+    else
+      next_state <= S3;
+    end if;    
+
+   
+  when S3 =>
+    ACK <= '0';
+    next_state <= reset_state;
+  
+  
+  when S4 => 
+    ACK <= '1';
+    if request = '1' then
+      if address = X"FFFF_1040" then
+        Data_Bus <= Z_Value;
+        next_state <= S5;
+      elsif address = X"FFFF_1044" then 
+        Data_Bus <= X_Value;
+        next_state <= S5;
+      elsif address = X"FFFF_1048" then 
+        Data_Bus <= Y_Value;
+        next_state <= S5;    
+      else  
+        next_state <= idle;
+      end if;
+    else      
+      next_state < S4;
+    end if;  
+    
+
+  when S5 =>
+    ACK <= '0';
+    next_state <= reset_state;  
+    
+  when S6 =>
+    Z_Value = Z_Value + 
+    
+  
+  when S7 =>  
+
+
+
+end case;
+
+
+
+
+
+
+end architecture; 
+    

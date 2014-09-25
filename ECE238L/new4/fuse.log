@@ -1,0 +1,13 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Ryan/Desktop/School/ECE238L/new4/TBV_isim_beh.exe -prj C:/Users/Ryan/Desktop/School/ECE238L/new4/TBV_beh.prj work.TBV 
+ISim O.61xd (signature 0x1cce1bb2)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Ryan/Desktop/School/ECE238L/new4/lab5.vhd" into library work
+ERROR:HDLCompiler:806 - "C:/Users/Ryan/Desktop/School/ECE238L/new4/lab5.vhd" Line 12: Syntax error near "LED1".
+ERROR:HDLCompiler:854 - "C:/Users/Ryan/Desktop/School/ECE238L/new4/lab5.vhd" Line 6: Unit <lab5> ignored due to previous errors.
+ERROR:HDLCompiler:374 - "C:/Users/Ryan/Desktop/School/ECE238L/new4/lab5.vhd" Line 21: Entity <lab5> is not yet compiled.
+ERROR:HDLCompiler:806 - "C:/Users/Ryan/Desktop/School/ECE238L/new4/lab5.vhd" Line 28: Syntax error near "LED1".
+ERROR:HDLCompiler:69 - "C:/Users/Ryan/Desktop/School/ECE238L/new4/lab5.vhd" Line 27: <led0> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/Ryan/Desktop/School/ECE238L/new4/lab5.vhd" Line 25: <a> is not declared.
+VHDL file C:/Users/Ryan/Desktop/School/ECE238L/new4/lab5.vhd ignored due to errors

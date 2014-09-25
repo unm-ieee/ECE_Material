@@ -1,0 +1,109 @@
+#include "complex.h"
+#include "complex-functions.c"
+
+main()
+{
+    double raisetopower, x, y, r, theta;
+    complex b, c, n[2];
+    double real1, imag1, real2, imag2, d, e, f, g, mag, pha, pwr, rot, pc, cp;
+    char *in, *out;
+    char reading [255];
+    double filesize;
+    int mRoot, nPower;
+    double tempRealorMag, tempImagorPhase, userInput1, userInput2;
+    complex secondnumberimaginary, atemp, secondnumberreal,secondnumber, stemp, mtemp, dtemp, ptemp, rtemp, ctemp, areal, aimag,a;
+    char *ascii;
+    int L[1000],i=0,form;
+    FILE *input, *output;                    //reading & writing
+    size_t userinput, useroutput;            //size of filename
+    input = fopen ("input.txt", "rb");       // rb... open file for reading
+	output = fopen ("output.txt", "a+");
+
+	while((getc(input))!=EOF)
+	{
+		fseek ( input, -1, SEEK_CUR );   		
+		fscanf(input,"%s", reading) ;        // fgets (reading, 255, input);
+        L[i] = strtod (reading, &ascii);
+   		i++;
+		fclose(input);	
+	}
+	
+	if (L[2] == 0)
+	{	
+		printf("\nEnter real part: ");
+        	scanf("%lf", &userInput1);
+        	printf("\nEnter imaginary part: ");
+        	scanf("%lf", &userInput2);
+        	secondnumber.real = userInput1;
+        	secondnumber.imaginary = userInput2;
+	}
+
+	if (L[2] == 1)
+	{
+		printf("\nEnter Magnitude: ");
+        	scanf("%lf", &userInput1);
+        	printf("\nEnter Phase: ");
+        	scanf("%lf", &userInput2);
+        	secondnumber.real = userInput1;	
+	        secondnumber.imaginary = userInput2;
+	}
+		
+	i=0;
+
+	for( L[1] ; L[1] > 0 ; L[1] = L[1] - 1)
+	    {
+	    nPower=L[i+3];
+	    mRoot=L[i+4];
+	    real1=L[i+5];
+	    imag1=L[i+6];
+	    areal = secondnumberreal;
+	    aimag = secondnumberimaginary;
+	    //printf("%f\n",a.real);
+	if (L[2] == 0)
+	{	
+		real1 = L[i+5];
+		imag1 = L[i+6];
+	}
+
+	if (L[2] == 1)
+	{
+		real1 = L[i+5];
+		imag1 = L[i+6];
+	}
+  
+
+	form = L[2];
+
+
+// Real part, Imaginary part, Magnitude, Phase, Power, Root, 
+// and Conjugate of complex number input array
+    	    fprintf(output, "%lf\n", getReal(areal, form));
+    	    fprintf(output, "%lf\n", getImaginary(aimag, form));
+    	    fprintf(output, "%lf\n", getMagnitude(areal, form));
+    	    fprintf(output, "%lf\n", getPhase(aimag, form));
+
+    	    ptemp = getPower(nPower, a, form);
+    	    rtemp = getRoot(mRoot, a, form);
+    	    ctemp = getConjugate(a);
+        
+    	    fprintf(output, "%lf %lf \n", ptemp.real, ptemp.imaginary);
+    	    fprintf(output, "%lf %lf \n", rtemp.real, rtemp.imaginary);
+    	    fprintf(output, "%lf %lf \n", ctemp.real, ctemp.imaginary);
+        
+// Addition, Subtraction, Multiplication, Division with Second Number entered by user
+    	    atemp = add(a, secondnumber, form);
+    	    stemp = subtract(a, secondnumber, form);
+    	    mtemp = multiply(a, secondnumber, form);
+    	    dtemp = divide(a, secondnumber, form);
+
+    	    fprintf(output, "%lf %lf \n", atemp.real, atemp.imaginary);
+    	    fprintf(output, "%lf %lf \n", stemp.real, stemp.imaginary);
+    	    fprintf(output, "%lf %lf \n", mtemp.real, mtemp.imaginary);
+    	    fprintf(output, "%lf %lf \n", dtemp.real, dtemp.imaginary);
+    	    
+    	    fprintf(output, "\n\tNext Complex Number");
+     	
+	    i +=5;
+	    }
+	
+}

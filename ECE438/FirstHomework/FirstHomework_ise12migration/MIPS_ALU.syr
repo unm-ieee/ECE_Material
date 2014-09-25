@@ -1,0 +1,392 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Reading design: MIPS_ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MIPS_ALU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MIPS_ALU"
+Output Format                      : NGC
+Target Device                      : xc7a8-3-csg324
+
+---- Source Options
+Top Module Name                    : MIPS_ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\ECE.CLASSES\ECE438\FirstHomework\FirstHomework_ise12migration\LACUnit.vhd" into library work
+Parsing entity <LACUNit>.
+Parsing architecture <BASIC> of entity <lacunit>.
+Parsing VHDL file "D:\ECE.CLASSES\ECE438\FirstHomework\FirstHomework_ise12migration\FA.vhd" into library work
+Parsing entity <FA>.
+Parsing architecture <Behavioral> of entity <fa>.
+Parsing VHDL file "D:\ECE.CLASSES\ECE438\FirstHomework\FirstHomework_ise12migration\Top.vhd" into library work
+Parsing entity <MIPS_ALU>.
+Parsing architecture <Behavioral> of entity <mips_alu>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <MIPS_ALU> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "D:\ECE.CLASSES\ECE438\FirstHomework\FirstHomework_ise12migration\Top.vhd" Line 87: Assignment to slt_h ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\ECE.CLASSES\ECE438\FirstHomework\FirstHomework_ise12migration\Top.vhd" Line 88: Assignment to adn ignored, since the identifier is never used
+
+Elaborating entity <FA> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <LACUNit> (architecture <BASIC>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MIPS_ALU>.
+    Related source file is "d:/ece.classes/ece438/firsthomework/firsthomework_ise12migration/top.vhd".
+INFO:Xst:3210 - "d:/ece.classes/ece438/firsthomework/firsthomework_ise12migration/top.vhd" line 106: Output port <Prop> of the instance <LAC0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/ece.classes/ece438/firsthomework/firsthomework_ise12migration/top.vhd" line 106: Output port <Gen> of the instance <LAC0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/ece.classes/ece438/firsthomework/firsthomework_ise12migration/top.vhd" line 120: Output port <Prop> of the instance <LAC1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/ece.classes/ece438/firsthomework/firsthomework_ise12migration/top.vhd" line 120: Output port <Gen> of the instance <LAC1> is unconnected or connected to loadless signal.
+    Found 32-bit adder for signal <B_IN[31]_GND_7_o_add_10_OUT> created at line 90.
+    Found 1-bit tristate buffer for signal <F_OUT<31>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<30>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<29>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<28>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<27>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<26>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<25>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<24>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<23>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<22>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<21>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<20>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<19>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<18>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<17>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<16>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<15>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<14>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<13>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<12>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<11>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<10>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<9>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<8>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<7>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<6>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<5>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<4>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<3>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<2>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<1>> created at line 132
+    Found 1-bit tristate buffer for signal <F_OUT<0>> created at line 132
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 321 Multiplexer(s).
+	inferred  32 Tristate(s).
+Unit <MIPS_ALU> synthesized.
+
+Synthesizing Unit <FA>.
+    Related source file is "d:/ece.classes/ece438/firsthomework/firsthomework_ise12migration/fa.vhd".
+WARNING:Xst:647 - Input <a<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <b<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <FA> synthesized.
+
+Synthesizing Unit <LACUNit>.
+    Related source file is "d:/ece.classes/ece438/firsthomework/firsthomework_ise12migration/lacunit.vhd".
+    Summary:
+Unit <LACUNit> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Multiplexers                                         : 321
+ 1-bit 2-to-1 multiplexer                              : 320
+ 32-bit 2-to-1 multiplexer                             : 1
+# Tristates                                            : 32
+ 1-bit tristate buffer                                 : 32
+# Xors                                                 : 48
+ 1-bit xor2                                            : 32
+ 4-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Multiplexers                                         : 321
+ 1-bit 2-to-1 multiplexer                              : 320
+ 32-bit 2-to-1 multiplexer                             : 1
+# Xors                                                 : 48
+ 1-bit xor2                                            : 32
+ 4-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <MIPS_ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MIPS_ALU, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MIPS_ALU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 236
+#      GND                         : 1
+#      INV                         : 31
+#      LUT1                        : 1
+#      LUT3                        : 17
+#      LUT4                        : 4
+#      LUT5                        : 12
+#      LUT6                        : 105
+#      MUXCY                       : 31
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 32
+# IO Buffers                       : 102
+#      IBUF                        : 69
+#      OBUF                        : 1
+#      OBUFT                       : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a8csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  170  out of   5000     3%  
+    Number used as Logic:               170  out of   5000     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    170
+   Number with an unused Flip Flop:     170  out of    170   100%  
+   Number with an unused LUT:             0  out of    170     0%  
+   Number of fully used LUT-FF pairs:     0  out of    170     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                         102
+ Number of bonded IOBs:                 102  out of    200    51%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 4.967ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2471 / 33
+-------------------------------------------------------------------------
+Delay:               4.967ns (Levels of Logic = 13)
+  Source:            B_IN<0> (PAD)
+  Destination:       F_OUT<28> (PAD)
+
+  Data Path: B_IN<0> to F_OUT<28>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.001   0.305  B_IN_0_IBUF (B_IN_0_IBUF)
+     LUT1:I0->O            1   0.097   0.000  Madd_B_IN[31]_GND_7_o_add_10_OUT_cy<0>_rt (Madd_B_IN[31]_GND_7_o_add_10_OUT_cy<0>_rt)
+     MUXCY:S->O            1   0.353   0.000  Madd_B_IN[31]_GND_7_o_add_10_OUT_cy<0> (Madd_B_IN[31]_GND_7_o_add_10_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_B_IN[31]_GND_7_o_add_10_OUT_cy<1> (Madd_B_IN[31]_GND_7_o_add_10_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_B_IN[31]_GND_7_o_add_10_OUT_cy<2> (Madd_B_IN[31]_GND_7_o_add_10_OUT_cy<2>)
+     XORCY:CI->O           1   0.370   0.295  Madd_B_IN[31]_GND_7_o_add_10_OUT_xor<3> (B_IN[31]_GND_7_o_add_10_OUT<3>)
+     LUT6:I5->O            4   0.097   0.393  Mmux_X_B_IN261 (X_B_IN<3>)
+     LUT3:I1->O            2   0.097   0.516  LAC0/C11 (LAC0/C1)
+     LUT5:I2->O            3   0.097   0.693  LAC0/C31 (LAC0/C3)
+     LUT5:I0->O            3   0.097   0.521  LAC1/C11 (LAC1/C1)
+     LUT5:I2->O            2   0.097   0.515  LAC1/C31 (LAC1/C3)
+     LUT3:I0->O            1   0.097   0.279  LAC1/Gen1 (COUT_OBUF)
+     OBUF:I->O                 0.000          COUT_OBUF (COUT)
+    ----------------------------------------
+    Total                      4.967ns (1.449ns logic, 3.518ns route)
+                                       (29.2% logic, 70.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.33 secs
+ 
+--> 
+
+Total memory usage is 427560 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

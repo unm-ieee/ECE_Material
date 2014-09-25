@@ -1,0 +1,14 @@
+" A simple .vimrc, useful for ECE 131
+
+" A little VIM magic here
+set nocompatible
+source $VIMRUNTIME/vimrc_example.vim
+
+" ECE 131 formatting standards
+" No tabs in files, four-space indentation
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+" Turn on the status line
+set laststatus=2

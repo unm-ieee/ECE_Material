@@ -1,0 +1,4 @@
+#File: makefile
+complex: complex.o
+	gcc complex.c -lm -o complex
+

@@ -1,0 +1,16 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM_isim_beh.exe -prj C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM_beh.prj work.PWM 
+ISim O.61xd (signature 0x1cce1bb2)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" into library work
+ERROR:HDLCompiler:806 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 14: Syntax error near "constantckPwmRange".
+ERROR:HDLCompiler:806 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 21: Syntax error near "and".
+ERROR:HDLCompiler:69 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 22: <cntpwm> is not declared.
+ERROR:HDLCompiler:806 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 23: Syntax error near "if".
+ERROR:HDLCompiler:806 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 27: Syntax error near "<".
+ERROR:HDLCompiler:806 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 30: Syntax error near "else".
+ERROR:HDLCompiler:806 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 33: Syntax error near "if".
+ERROR:HDLCompiler:69 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 25: <cntpwm> is not declared.
+ERROR:HDLCompiler:854 - "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd" Line 11: Unit <behavioral> ignored due to previous errors.
+VHDL file C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM.vhd ignored due to errors

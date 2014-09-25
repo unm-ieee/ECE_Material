@@ -1,0 +1,25 @@
+1
+Length is 0
+5 is in list.
+7 is in list.
+6 is in list.
+9 is in list.
+PrintList
+5769
+1 is in list.
+PrintList
+57691
+4 not in list.
+5 found in list.
+9 found in list.
+10 not in list.
+List is full.
+5 is deleted.
+List is not full.
+1 is deleted.
+6 is deleted.
+9 is deleted.
+PrintList
+7
+PrintList
+List is empty.

@@ -1,0 +1,2 @@
+vhdl isim_temp "../FlippityFlopper.vhd"
+vhdl isim_temp "../FF_TestBench.vhd"

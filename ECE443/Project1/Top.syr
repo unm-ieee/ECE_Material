@@ -1,0 +1,485 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "F:\ECE.CLASSES\ECE 443\Project1\Top.vhd" into library work
+Parsing entity <Top>.
+Parsing architecture <Behavioral> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Top> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "f:/ece.classes/ece 443/project1/top.vhd".
+WARNING:Xst:647 - Input <Button0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <ZCNT>.
+    Found 8-bit register for signal <ROT>.
+    Found 8-bit register for signal <ROT2>.
+    Found 26-bit register for signal <divider>.
+    Found 26-bit adder for signal <divider[25]_GND_5_o_add_0_OUT> created at line 79.
+    Found 8-bit adder for signal <ZCNT[7]_GND_5_o_add_2_OUT> created at line 88.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <Top> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 26-bit adder                                          : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 4
+ 26-bit register                                       : 1
+ 8-bit register                                        : 3
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Top>.
+The following registers are absorbed into counter <divider>: 1 register on signal <divider>.
+The following registers are absorbed into counter <ZCNT>: 1 register on signal <ZCNT>.
+Unit <Top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 26-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <divider_23> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <divider_24> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <divider_25> of sequential type is unconnected in block <Top>.
+
+Optimizing unit <Top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 106
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 29
+#      LUT2                        : 2
+#      LUT5                        : 8
+#      LUT6                        : 3
+#      MUXCY                       : 29
+#      VCC                         : 1
+#      XORCY                       : 31
+# FlipFlops/Latches                : 47
+#      FD                          : 47
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 2
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              47  out of  18224     0%  
+ Number of Slice LUTs:                   44  out of   9112     0%  
+    Number used as Logic:                44  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     50
+   Number with an unused Flip Flop:       3  out of     50     6%  
+   Number with an unused LUT:             6  out of     50    12%  
+   Number of fully used LUT-FF pairs:    41  out of     50    82%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                  11  out of    232     4%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 23    |
+divider_22                         | NONE(ZCNT_0)           | 8     |
+divider_21                         | NONE(ROT2_0)           | 16    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.329ns (Maximum Frequency: 429.277MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.681ns
+   Maximum combinational path delay: 5.721ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.134ns (frequency: 468.647MHz)
+  Total number of paths / destination ports: 276 / 23
+-------------------------------------------------------------------------
+Delay:               2.134ns (Levels of Logic = 3)
+  Source:            divider_21 (FF)
+  Destination:       divider_22 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: divider_21 to divider_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              17   0.447   1.028  divider_21 (divider_21)
+     LUT1:I0->O            1   0.205   0.000  Mcount_divider_cy<21>_rt (Mcount_divider_cy<21>_rt)
+     MUXCY:S->O            0   0.172   0.000  Mcount_divider_cy<21> (Mcount_divider_cy<21>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_divider_xor<22> (Result<22>)
+     FD:D                      0.102          divider_22
+    ----------------------------------------
+    Total                      2.134ns (1.106ns logic, 1.028ns route)
+                                       (51.8% logic, 48.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'divider_22'
+  Clock period: 1.837ns (frequency: 544.292MHz)
+  Total number of paths / destination ports: 36 / 8
+-------------------------------------------------------------------------
+Delay:               1.837ns (Levels of Logic = 9)
+  Source:            ZCNT_0 (FF)
+  Destination:       ZCNT_7 (FF)
+  Source Clock:      divider_22 rising
+  Destination Clock: divider_22 rising
+
+  Data Path: ZCNT_0 to ZCNT_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  ZCNT_0 (ZCNT_0)
+     INV:I->O              1   0.206   0.000  Mcount_ZCNT_lut<0>_INV_0 (Mcount_ZCNT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcount_ZCNT_cy<0> (Mcount_ZCNT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_ZCNT_cy<1> (Mcount_ZCNT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_ZCNT_cy<2> (Mcount_ZCNT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_ZCNT_cy<3> (Mcount_ZCNT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_ZCNT_cy<4> (Mcount_ZCNT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_ZCNT_cy<5> (Mcount_ZCNT_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_ZCNT_cy<6> (Mcount_ZCNT_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_ZCNT_xor<7> (Result<7>1)
+     FD:D                      0.102          ZCNT_7
+    ----------------------------------------
+    Total                      1.837ns (1.221ns logic, 0.616ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'divider_21'
+  Clock period: 2.329ns (frequency: 429.277MHz)
+  Total number of paths / destination ports: 34 / 16
+-------------------------------------------------------------------------
+Delay:               2.329ns (Levels of Logic = 2)
+  Source:            ROT2_5 (FF)
+  Destination:       ROT2_0 (FF)
+  Source Clock:      divider_21 rising
+  Destination Clock: divider_21 rising
+
+  Data Path: ROT2_5 to ROT2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.755  ROT2_5 (ROT2_5)
+     LUT2:I0->O            2   0.203   0.617  ROT2[7]_ROT2[7]_OR_9_o_SW0 (N6)
+     LUT6:I5->O            1   0.205   0.000  ROT2[7]_ROT2[7]_OR_9_o (ROT2_0_rstpot)
+     FD:D                      0.102          ROT2_0
+    ----------------------------------------
+    Total                      2.329ns (0.957ns logic, 1.372ns route)
+                                       (41.1% logic, 58.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'divider_21'
+  Total number of paths / destination ports: 16 / 8
+-------------------------------------------------------------------------
+Offset:              4.681ns (Levels of Logic = 2)
+  Source:            ROT_0 (FF)
+  Destination:       LED0 (PAD)
+  Source Clock:      divider_21 rising
+
+  Data Path: ROT_0 to LED0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.879  ROT_0 (ROT_0)
+     LUT5:I2->O            1   0.205   0.579  Mmux_LED011 (LED0_OBUF)
+     OBUF:I->O                 2.571          LED0_OBUF (LED0)
+    ----------------------------------------
+    Total                      4.681ns (3.223ns logic, 1.458ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'divider_22'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            ZCNT_0 (FF)
+  Destination:       LED0 (PAD)
+  Source Clock:      divider_22 rising
+
+  Data Path: ZCNT_0 to LED0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.617  ZCNT_0 (ZCNT_0)
+     LUT5:I4->O            1   0.205   0.579  Mmux_LED011 (LED0_OBUF)
+     OBUF:I->O                 2.571          LED0_OBUF (LED0)
+    ----------------------------------------
+    Total                      4.419ns (3.223ns logic, 1.196ns route)
+                                       (72.9% logic, 27.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16 / 8
+-------------------------------------------------------------------------
+Delay:               5.721ns (Levels of Logic = 3)
+  Source:            A (PAD)
+  Destination:       LED0 (PAD)
+
+  Data Path: A to LED0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   1.147  A_IBUF (A_IBUF)
+     LUT5:I0->O            1   0.203   0.579  Mmux_LED011 (LED0_OBUF)
+     OBUF:I->O                 2.571          LED0_OBUF (LED0)
+    ----------------------------------------
+    Total                      5.721ns (3.996ns logic, 1.725ns route)
+                                       (69.8% logic, 30.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.134|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock divider_21
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divider_21     |    2.329|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock divider_22
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+divider_22     |    1.837|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.74 secs
+ 
+--> 
+
+Total memory usage is 250812 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

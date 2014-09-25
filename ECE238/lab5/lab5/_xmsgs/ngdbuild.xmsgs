@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="NgdBuild" num="578" delta="old" >Design contains no instances.
+</msg>
+
+<msg type="error" file="NgdBuild" num="605" delta="old" ><arg fmt="%s" index="1">logical</arg> root block &apos;<arg fmt="%s" index="2">top</arg>&apos; with type &apos;<arg fmt="%s" index="3">top</arg>&apos; is unexpanded. Symbol &apos;<arg fmt="%s" index="4">top</arg>&apos; is not supported in target &apos;<arg fmt="%s" index="5">spartan3e</arg>&apos;.
+</msg>
+
+</messages>
+

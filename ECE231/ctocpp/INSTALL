@@ -1,0 +1,37 @@
+
+The Python interpreter is required to run these programs.
+(http://www.python.org) 
+
+
+INSTALL C to C++ UNDER WINDOWS
+
+- unpack the archive.
+
+
+INSTALL C to C++ UNDER LINUX/UNIX
+
+- unpack the archive
+- enter superuser mode, type su and then the root password.
+- type:
+
+ ./configure
+ ./setup
+
+ this tests first if Python is present and then copy the scripts into
+ /usr/local/bin and 
+ /usr/local/c2cpp.
+
+ To install into another location, type:
+
+ setup.py --with-prefix=directory
+
+
+
+MAKE THE DOC
+
+Use makeinfo with ctocpp.texi as parameter. See makeinfo
+doc for how to build pdf and other formats.
+Type mkdoc to build an html file.
+
+ 
+  

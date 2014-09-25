@@ -1,0 +1,28 @@
+Command line:
+   ATB_FPM_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1696
+
+Mon Mar 04 12:38:35 2013
+
+
+ Elaboration Time: 0.187201 sec
+
+ Current Memory Usage: 855.187 Meg
+
+ Total Signals          : 10435
+ Total Nets             : 5190
+ Total Signal Drivers   : 2452
+ Total Blocks           : 1863
+ Total Primitive Blocks : 1230
+ Total Processes        : 2451
+ Total Traceable Variables  : 1581
+ Total Scalar Nets and Variables : 8844
+
+ Total Simulation Time: 0.514803 sec
+
+ Current Memory Usage: 697.901 Meg
+
+Mon Mar 04 12:50:23 2013
+

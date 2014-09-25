@@ -1,0 +1,10 @@
+ISim log file
+Running: F:\ECE238\Lab7serialadder\FullAdder_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/ECE238/Lab7serialadder/FullAdder_isim_beh.wdb 
+ISim O.40d (signature 0x79f3f3a8)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

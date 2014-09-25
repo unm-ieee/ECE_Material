@@ -1,0 +1,2 @@
+vhdtdtfi -lib work CSAdder_vhd.vhd -lib work WTA7_3_vhd.vhd -lib work RRU7_3.vhd -lib work RRU3_2.vhd -lib work FP_MULTIPLIER.vhd -prj hw1 -o FP_MULTIPLIER.spl -module FP_MULTIPLIER -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 FP_MULTIPLIER.spl D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/FP_MULTIPLIER.sym 

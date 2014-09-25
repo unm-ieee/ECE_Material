@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="0" delta="new" >Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\version_reg.vhd" Line 133: Using initial value <arg fmt="%s" index="1">6</arg> for <arg fmt="%s" index="2">rev_num</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 186: Net &lt;<arg fmt="%s" index="1">active_chroma_d</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 195: Net &lt;<arg fmt="%s" index="1">active_chroma_d2</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 196: Net &lt;<arg fmt="%s" index="1">active_chroma_d3</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 217: Net &lt;<arg fmt="%s" index="1">det_v1total_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 218: Net &lt;<arg fmt="%s" index="1">det_v1fp_start_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 219: Net &lt;<arg fmt="%s" index="1">det_v1sync_start_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 220: Net &lt;<arg fmt="%s" index="1">det_v1bp_start_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 221: Net &lt;<arg fmt="%s" index="1">det_v1active_start_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 222: Net &lt;<arg fmt="%s" index="1">det_v1chroma_start_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 230: Net &lt;<arg fmt="%s" index="1">det_v1fp_start_hori_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 231: Net &lt;<arg fmt="%s" index="1">det_v1sync_start_hori_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 232: Net &lt;<arg fmt="%s" index="1">det_v1bp_start_hori_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 233: Net &lt;<arg fmt="%s" index="1">det_v1active_start_hori_int[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_detector.vhd" Line 276: Net &lt;<arg fmt="%s" index="1">det_field_id_pol_int</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 300: Assignment to <arg fmt="%s" index="1">hblank_hold</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 301: Assignment to <arg fmt="%s" index="1">hsync_hold</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 835: Assignment to <arg fmt="%s" index="1">htotal_1_v</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 266: Net &lt;<arg fmt="%s" index="1">v1total[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 267: Net &lt;<arg fmt="%s" index="1">v1fp_start[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 268: Net &lt;<arg fmt="%s" index="1">v1sync_start[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 269: Net &lt;<arg fmt="%s" index="1">v1bp_start[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 270: Net &lt;<arg fmt="%s" index="1">v1active_start[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 278: Net &lt;<arg fmt="%s" index="1">v1fp_start_hori[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 279: Net &lt;<arg fmt="%s" index="1">v1sync_start_hori[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 280: Net &lt;<arg fmt="%s" index="1">v1bp_start_hori[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"F:\ECE.CLASSES\ECE 443\Project1\ipcore_dir\tmp\_cg\_bbx\v_tc_v3_0\timebase_generator.vhd" Line 281: Net &lt;<arg fmt="%s" index="1">v1active_start_hori[10]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Design Linking license for component &lt;v_tc&gt; found. This license does not allow you to generate bitstreams for designs that incorporate this component. You may generate functional simulation netlists, but you may not evaluate this component in hardware.
+For ordering information, please refer to the product page for this component on: www.xilinx.com</arg>
+</msg>
+
+<msg type="info" file="coreutil" num="0" delta="new" ><arg fmt="%s" index="1">Design Linking license for component &lt;v_tc&gt; found. This license does not allow you to generate bitstreams for designs that incorporate this component. You may generate functional simulation netlists, but you may not evaluate this component in hardware.
+For ordering information, please refer to the product page for this component on: www.xilinx.com</arg>
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1total</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1fp_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1sync_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1bp_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1active_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1achroma_start</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1blank_hstart</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1blank_hend</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1sync_hstart</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">det_v1sync_hend</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">field_id_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">f:/ece.classes/ece 443/project1/ipcore_dir/tmp/_cg/_bbx/v_tc_v3_0_u0.vhd</arg>&quot; line <arg fmt="%s" index="2">94</arg>: Output port &lt;<arg fmt="%s" index="3">active_chroma_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">param_cfg</arg>&lt;<arg fmt="%d" index="2">16</arg>:<arg fmt="%d" index="3">11</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">timebase_generator</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

@@ -1,0 +1,23 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = C9;
+
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "count_out[0]" LOC = F12;
+NET "count_out[1]" LOC = E12;
+NET "count_out[2]" LOC = E11;
+NET "count_out[3]" LOC = F11;
+NET "count_out[4]" LOC = C11;
+NET "count_out[5]" LOC = D11;
+NET "count_out[6]" LOC = E9;
+
+NET "pause" LOC = L13;
+NET "reset" LOC = K17;
+NET "up_down" LOC = L14;
+
+# PlanAhead Generated IO constraints 
+
+NET "clk" PULLDOWN;
+NET "reset" PULLDOWN;

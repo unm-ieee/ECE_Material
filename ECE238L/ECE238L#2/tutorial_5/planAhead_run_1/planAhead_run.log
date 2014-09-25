@@ -1,0 +1,88 @@
+
+****** PlanAhead v13.1
+  **** Build 117799 by hdbuild on Thu Feb 17 11:38:00 PST 2011
+    ** Copyright 1986-1999, 2001-2011 Xilinx, Inc. All Rights Reserved.
+
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-ArchReader 0] Loading parts and site information from C:\Xilinx\13.1\ISE_DS\PlanAhead\parts\arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file 'C:\Xilinx\13.1\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file 'C:\Xilinx\13.1\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+start_gui -source {C:/Users/238user/Desktop/238/Lab 2/tutorial_5/pa.fromHdl.tcl}
+starting gui ...
+# create_project -name tutorial_5 -dir "C:/Users/238user/Desktop/238/Lab 2/tutorial_5/planAhead_run_1" -part xc3s500efg320-4
+Parsing template File [C:\Xilinx\13.1\ISE_DS\ISE\data\projnav\templates\verilog.xml].
+Finished parsing template File [C:\Xilinx\13.1\ISE_DS\ISE\data\projnav\templates\verilog.xml].
+Parsing template File [C:\Xilinx\13.1\ISE_DS\ISE\data\projnav\templates\vhdl.xml].
+Finished parsing template File [C:\Xilinx\13.1\ISE_DS\ISE\data\projnav\templates\vhdl.xml].
+Parsing template File [C:\Xilinx\13.1\ISE_DS\ISE\data\projnav\templates\ucf.xml].
+Finished parsing template File [C:\Xilinx\13.1\ISE_DS\ISE\data\projnav\templates\ucf.xml].
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property top counter $srcset
+# set_param project.paUcfFile  "counter.ucf"
+# set hdlfile [add_files [list {counter.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# add_files "counter.ucf" -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s500efg320-4
+INFO: [PlanAhead-58] Using the Verific elaboration engine
+Parsing VHDL file "C:\Xilinx\13.1\ISE_DS\PlanAhead\parts\xilinx\rtl\lib\synplify\synattr.vhd" into library synplify
+Parsing package <attributes>.
+Parsing VHDL file "C:\Xilinx\13.1\ISE_DS\PlanAhead\parts\xilinx\rtl\lib\synplify\synattr.vhd" into library synplify
+Parsing package <attributes>.
+Parsing VHDL file "C:\Users\238user\Desktop\238\Lab 2\tutorial_5\counter.vhd" into library work
+Parsing entity <counter>.
+Parsing architecture <Behavioral> of entity <counter>.
+WARNING: [HDL-746] Range is empty (null range) [/build/xfndry/O.35/env/TOS/Verific/verific/vhdl_packages/numeric_std.vhd:878]
+WARNING: [HDL-746] Range is empty (null range) [/build/xfndry/O.35/env/TOS/Verific/verific/vhdl_packages/numeric_std.vhd:879]
+
+Elaborating entity <counter> (architecture <Behavioral>) from library <work>.
+Removing all analyzed parse trees
+INFO: [HD-ArchReader 18] Reading macro library C:/Xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+INFO: [HD-ArchReader 7] Loading clock regions from C:/Xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockRegion.xml
+INFO: [HD-ArchReader 8] Loading clock buffers from C:/Xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockBuffers.xml
+INFO: [HD-ArchReader 3] Loading package from C:/Xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/Package.xml
+INFO: [HD-ArchReader 4] Loading io standards from C:/Xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [HD-ArchReader 5] Loading pkg sso from C:/Xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/SSORules.xml
+INFO: [HD-GDRC 0] Loading list of drcs for the architecture : C:/Xilinx/13.1/ISE_DS/PlanAhead/./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [HD-LIB 0] Reading timing library C:/Xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib .
+INFO: [HD-LIB 1] Done reading timing library C:/Xilinx/13.1/ISE_DS/PlanAhead/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib .
+Parsing UCF File [C:\Users\238user\Desktop\238\Lab 2\tutorial_5\counter.ucf]
+Finished Parsing UCF File [C:\Users\238user\Desktop\238\Lab 2\tutorial_5\counter.ucf]
+Time (s): 7.819w
+Time (s): 10.864w
+set_property loc "" [get_ports {count_out[1]}]
+startgroup
+set_property loc IPAD171 [get_ports {count_out[0]}]
+endgroup
+set_property loc "" [get_ports clk]
+startgroup
+set_property loc PAD45 [get_ports {count_out[0]}]
+endgroup
+startgroup
+set_property loc IPAD171 [get_ports clk]
+endgroup
+startgroup
+set_property loc PAD44 [get_ports {count_out[1]}]
+endgroup
+startgroup
+set_property loc PAD41 [get_ports {count_out[2]}]
+endgroup
+startgroup
+set_property loc PAD40 [get_ports {count_out[3]}]
+endgroup
+startgroup
+set_property loc IPAD98 [get_ports pause]
+endgroup
+startgroup
+set_property loc IPAD93 [get_ports reset]
+endgroup
+set_property PULLDOWN 1 [get_ports reset]
+set_property PULLDOWN 1 [get_ports clk]
+save_design
+exit
+INFO: [HD-Application 0] Exiting PlanAhead...
+INFO: [HD-Licensing 2] Releasing license: PlanAhead

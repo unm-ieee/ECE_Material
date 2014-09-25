@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM_isim_beh.exe" -prj "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM_beh.prj" "work.ATB_FPM" 

@@ -1,0 +1,12 @@
+# Output products list for <v_tc_v3_0_u0>
+_xmsgs\pn_parser.xmsgs
+v_tc_v3_0_u0.asy
+v_tc_v3_0_u0.gise
+v_tc_v3_0_u0.ngc
+v_tc_v3_0_u0.vhd
+v_tc_v3_0_u0.vho
+v_tc_v3_0_u0.xco
+v_tc_v3_0_u0.xise
+v_tc_v3_0_u0_flist.txt
+v_tc_v3_0_u0_readme.txt
+v_tc_v3_0_u0_xmdf.tcl

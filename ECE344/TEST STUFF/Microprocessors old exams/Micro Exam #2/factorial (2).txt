@@ -1,0 +1,39 @@
+#  This program calculates a factorial routine to the highest possible
+#  value, using a recursive subroutine.
+#
+#  Let the program be located at 0x5000
+#
+#  Initialization section of the program 
+#
+	.org 0x5000      		# The location of the program
+	li r1, 0x3000	   	   	# Location of the Stack
+	li r2, 1			# 
+	li r3, 1    		        #
+	li r4, 0			# Counter for max factorial (8!)
+	li r10, 0			#	 
+	nop				#
+	nop				#
+	bl fact				#
+ 	nop				#
+	nop				#
+	b .				#
+#
+#
+fact:   cmpi 0, r4, 12			# Check for max factorial (9)
+	bt 2, finish			# If 9, start to work recursively backwards
+  	nop 				#
+ 	mflr r10			# context switching
+       	stw r10, 0(r1)			#
+  	addi r1, r1, 4			#
+#
+	mullw r2, r2, r3		# 
+	addi r3, r3, 1			# Increment the multiplier	
+ 	addi r4, r4, 1		 	# Increment check max factorial counter	
+        bl fact	 		        # 
+#	
+finish:	subi r1, r1, 4			#
+	lwz r10, 0(r1)			# context switching
+	mtlr r10			#
+        b here				#
+#
+here: 	b here				# Forever loop, to end the program

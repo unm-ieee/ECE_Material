@@ -1,0 +1,129 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: MIPS_ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MIPS_ALU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MIPS_ALU"
+Output Format                      : NGC
+Target Device                      : xc7a8-3-csg324
+
+---- Source Options
+Top Module Name                    : MIPS_ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" into library work
+Parsing entity <LACUNit>.
+Parsing architecture <BASIC> of entity <lacunit>.
+ERROR:HDLCompiler:541 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 47: Type std_logic is not an array type and cannot be indexed.
+ERROR:HDLCompiler:288 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 47: Cannot read from 'out' object c0 ; use 'buffer' or 'inout'
+ERROR:HDLCompiler:541 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 48: Type std_logic is not an array type and cannot be indexed.
+ERROR:HDLCompiler:288 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 48: Cannot read from 'out' object c1 ; use 'buffer' or 'inout'
+ERROR:HDLCompiler:288 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 49: Cannot read from 'out' object c2 ; use 'buffer' or 'inout'
+ERROR:HDLCompiler:69 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 50: <cout> is not declared.
+ERROR:HDLCompiler:1728 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 53: Type error near p ; current type std_logic_vector; expected type std_ulogic
+ERROR:HDLCompiler:69 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 53: <c> is not declared.
+ERROR:HDLCompiler:854 - "D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd" Line 35: Unit <basic> ignored due to previous errors.
+VHDL file D:\ECE.CLASSES\ECE438\FirstHomework\LACUnit.vhd ignored due to errors
+--> 
+
+Total memory usage is 237680 kilobytes
+
+Number of errors   :    9 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

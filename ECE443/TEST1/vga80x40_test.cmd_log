@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/TEST1/vga80x40_test.xst" -ofn "F:/ECE.CLASSES/ECE 443/TEST1/vga80x40_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40.ucf -p acr2 "vga80x40_test.ngc" vga80x40_test.ngd  

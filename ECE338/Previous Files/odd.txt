@@ -1,0 +1,33 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+--  component ODD - to identify odd parity in input bits
+--
+entity ODD is
+  port (
+    DIN : in  STD_LOGIC_VECTOR ( 7 downto 0 );     -- data input bits (8)
+    ODD : out STD_LOGIC                            -- output asserted when
+  );                                               -- odd parity present
+end entity ODD;
+
+architecture ONE of ODD is
+
+signal  W_ONE : STD_LOGIC_VECTOR ( 3 downto 0 );
+signal  W_TWO : STD_LOGIC_VECTOR ( 1 downto 0 );
+
+begin
+
+-- set of four EX-OR gates looking at input data
+FIRST: for I in 0 to 3 generate
+  W_ONE(I) <= DIN(I*2) xor DIN(I*2 + 1);
+end generate;
+
+-- set of two EX-OR gates used to combine four bits of FIRST
+SECOND: for I in 0 to 1 generate
+  W_TWO(I) <= W_ONE(I*2) xor W_ONE(I*2 + 1);
+end generate;
+
+-- Final EX-OR function generating output result
+  ODD <=  W_TWO(0) xor W_TWO(1) ;
+
+end architecture ONE;

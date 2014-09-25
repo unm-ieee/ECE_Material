@@ -1,0 +1,70 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity BOOTH_MULT is
+  port (
+    A_VAL : in  STD_LOGIC_VECTOR ( 15 downto 0 );
+    B_VAL : in  STD_LOGIC_VECTOR ( 15 downto 0 );
+    F_VAL : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+end entity BOOTH_MULT;
+
+architecture COMBINATIONAL of BOOTH_MULT is
+
+component B_MODULE is
+  port (
+    BKM1     : in  STD_LOGIC;
+    BK       : in  STD_LOGIC;
+    PASS_VAL : in  STD_LOGIC_VECTOR ( 15 downto 0 );
+    A_VAL    : in  STD_LOGIC_VECTOR ( 15 downto 0 );
+    F_VAL    : out STD_LOGIC_VECTOR ( 16 downto 0 )
+  );
+end component B_MODULE;
+
+type PP_ARY_TYPE is array ( 0 to 15 ) of STD_LOGIC_VECTOR ( 31 downto 0 );
+signal PP_ARY : PP_ARY_TYPE;
+
+constant ZERO  : STD_LOGIC := '0';
+constant ZEROS : STD_LOGIC_VECTOR ( 15 downto 0 ) := ( others => '0' );
+
+begin
+
+FOR_ROW_0: B_MODULE
+  port map (
+    BKM1     => ZERO,
+    BK       => B_VAL(0),
+    PASS_VAL => ZEROS,
+    A_VAL    => A_VAL,
+    F_VAL    => PP_ARY(0)(16 downto 0 )
+  );
+
+FOR_OTHER_ROWS:
+  for K in 1 to 15 generate
+    MODULE_LABEL: B_MODULE
+    port map (
+      BKM1     => B_VAL(K-1),
+      BK       => B_VAL(K),
+      PASS_VAL => PP_ARY(K-1)(K+15 downto K),
+      A_VAL    => A_VAL,
+      F_VAL    => PP_ARY(K)(K+16 downto K )
+  );
+  end generate;
+
+  F_VAL <= PP_ARY(15)(31 downto 15) &
+           PP_ARY(14)(14) &
+           PP_ARY(13)(13) &
+           PP_ARY(12)(12) &
+           PP_ARY(11)(11) &
+           PP_ARY(10)(10) &
+           PP_ARY( 9)( 9) &
+           PP_ARY( 8)( 8) &
+           PP_ARY( 7)( 7) &
+           PP_ARY( 6)( 6) &
+           PP_ARY( 5)( 5) &
+           PP_ARY( 4)( 4) &
+           PP_ARY( 3)( 3) &
+           PP_ARY( 2)( 2) &
+           PP_ARY( 1)( 1) &
+           PP_ARY( 0)( 0);
+
+end architecture COMBINATIONAL;

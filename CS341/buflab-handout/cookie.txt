@@ -1,0 +1,13 @@
+cookie thing : 0x4c6ace54
+score board  : http://navistar.cs.unm.edu:18213/scoreboard
+	
+	::WORKS ON::
+moon, brown, callisto, chawla, lark,
+columbia, deimos, europa, ganymede,
+husband, leda, lunar, kore, mccool,
+metis, oberon, phoebe, phobos, prospero,
+ramon, rhea, setebos, sycorax, titan,
+xbox, b146-01 through b146-74
+
+
+

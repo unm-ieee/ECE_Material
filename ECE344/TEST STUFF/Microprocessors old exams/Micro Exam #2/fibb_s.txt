@@ -1,0 +1,116 @@
+﻿        Fibonacci 
+	.org 0x800
+        li r3,0x1000             # set up Addr(1)
+	li r5,1                  # constant 1
+	stw r5,0(r3)             # set F(0) = 1
+	stw r5,4(r3)             # set F(1) = 1
+	li r6,10                 # set count to 10
+	mtctr r6                 # store to counter
+label:	lwz r7,0(r3)             # loop: get F(n-2)
+	lwz r8,4(r3)             # get F(n-1)
+	add r9,r8,r7             # do the add
+	stw r9,8(r3)             # store F(n) to table
+	addi r3,r3,4             # bump pointer
+	bdnz label               # dec cntr & br if...
+	nop                      # places for
+	nop                      # breakpoints
+here:	b here                   # safety?
+	nop    
+
+
+
+
+
+recursive subroutine call
+
+.org 0x3000
+li r5,5
+bl loop
+here: b here
+loop:
+cmpi 1,0,r5,0
+bt end
+mflr r31
+stmw r31,0(r1)
+
+
+
+
+end: blr
+
+# Recursive implementation of Fibonacci sequence
+#    Note: this implementation done to demonstrate
+#          activity involved in manipulating the
+#          stack.
+#
+#  Defn:  F(0) = 0 
+#         F(1) = 1
+#         F(K) = F(K-1) + F(K-2)
+#
+#
+#  Register usage:
+#    R31 - store return address
+#    R30 - copy of input param
+#    R29 - F(k-1)
+#    R28 - F(k-2)
+#    R2  - pass parameter to and from
+#
+#  Also - like the "C" program....
+#
+#    R8  - depth
+#    R9  - maxdepth
+#    R10 - called
+#
+#
+        .org 0x100           #  Let's start this program at 0x100
+        lis r1,0x1           # Set SP to
+        ori r1,r1,0x0000     # 0x10000
+        li r8,0              # depth = 0
+        li r9,0              # maxdepth = 0
+        li r10,0             # called = 0
+#       li r2,5              # use this for start val...
+        nop
+        nop
+        bl fib               # actual call to rtn
+        nop
+        nop
+here:   b here               # forever loop
+#
+# Routine: fib
+#  recursive implementation of Fibonacci number generator
+#  input parameters:
+#    R2 is number for which Fibonacci number is needed
+#    R2 is also the location of return value
+#
+fib:    addi r10,r10,1       # called += 1
+        mr r30,r2            # copy input param
+        cmpwi 1,r30,0        # is passed param = 0
+        bt 6,rzrone          # if so, return zero
+        cmpwi 1,r30,1        # is passed param = 1
+        bt 6,rzrone          # if so, return 1
+                             # if we get this far, need
+                             # to call fib twice
+        addi r8,r8,1         # depth += 1
+        cmpw 3,r8,r9         # if ( depth > maxdepth)
+        bt 12,fib1           # skip around when less
+        mr r9,r8             # otherwise, max=now
+fib1:   mflr r31             # then, set up stack
+        addi r2,r30,-1       # this is K-1
+        addi r1,r1,-16       # predecrement SP
+        stmw r28,0(r1)       # send out stuff
+        bl fib               # then call fib
+        lmw r28,0(r1)        # restore non-volatile
+        addi r1,r1,16        # and adjust SP
+        mr r29,r2            # save param F(K-1)
+        addi r2,r30,-2       # this is k-2
+        addi r1,r1,-16       # do it again
+        stmw r28,0(r1)       # push 4 regs
+        bl fib               # call it again
+        lmw r28,0(r1)        # then restore non-volatile
+        addi r1,r1,16        # post-increment
+        mr r28,r2            # this is F(K-2)
+        add r2,r29,r28       # return F(K-1)+F(K-2)
+        mtlr r31             # fix return addr
+        addi r8,r8,-1        # depth -= 1
+rzrone: blr                  # and return
+

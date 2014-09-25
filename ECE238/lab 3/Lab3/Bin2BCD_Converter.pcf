@@ -1,0 +1,20 @@
+//! **************************************************************************
+// Written by: Map O.40d on Mon Mar 05 17:57:52 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "bcd_digit_1<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "bcd_digit_1<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "bcd_digit_1<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "bcd_digit_1<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "bcd_digit_2<0>" LOCATE = SITE "C11" LEVEL 1;
+COMP "bcd_digit_2<1>" LOCATE = SITE "D11" LEVEL 1;
+COMP "bcd_digit_2<2>" LOCATE = SITE "E9" LEVEL 1;
+COMP "bcd_digit_2<3>" LOCATE = SITE "F9" LEVEL 1;
+COMP "bin_num<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "bin_num<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "bin_num<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "bin_num<3>" LOCATE = SITE "N17" LEVEL 1;
+COMP "bindis" LOCATE = SITE "K17" LEVEL 1;
+SCHEMATIC END;
+

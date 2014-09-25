@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/tutorial5/counter.xst" -ofn "C:/Users/238user/Desktop/Steven/tutorial5/counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/238user/Desktop/Steven/counter.ucf -p xc3s500e-fg320-4 counter.ngc counter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -t 1 counter_map.ncd counter.ncd counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf 
+bitgen -intstyle ise -f counter.ut counter.ncd 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/tutorial5/counter.xst" -ofn "C:/Users/238user/Desktop/Steven/tutorial5/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/tutorial5/counter.xst" -ofn "C:/Users/238user/Desktop/Steven/tutorial5/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/tutorial5/counter.xst" -ofn "C:/Users/238user/Desktop/Steven/tutorial5/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/tutorial5/counter.xst" -ofn "C:/Users/238user/Desktop/Steven/tutorial5/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/238user/Desktop/Steven/tutorial5/counter.xst" -ofn "C:/Users/238user/Desktop/Steven/tutorial5/counter.syr" 
+xst -intstyle ise -ifn "G:/ECE238/tutorial5/counter.xst" -ofn "G:/ECE238/tutorial5/counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc G:/ECE238/counter.ucf -p xc3s500e-fg320-4 counter.ngc counter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter_map.ncd counter.ngd counter.pcf 
+par -w -intstyle ise -ol high -t 1 counter_map.ncd counter.ncd counter.pcf 

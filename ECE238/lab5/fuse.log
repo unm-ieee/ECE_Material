@@ -1,0 +1,29 @@
+Running: C:\Xilinx\13.1\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o F:/ECE238/lab5/Lab5Test_isim_beh.exe -prj F:/ECE238/lab5/Lab5Test_beh.prj work.Lab5Test 
+ISim O.40d (signature 0x79f3f3a8)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "F:/ECE238/lab5/../../encoder.vhdl" into library work
+Parsing VHDL file "F:/ECE238/lab5/../../decoder.vhdl" into library work
+Parsing VHDL file "F:/ECE238/lab5/../../mux.vhdl" into library work
+Parsing VHDL file "F:/ECE238/lab5/Lab5Test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 99256 KB
+Fuse CPU Usage: 685 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Using precompiled package textio from library std
+Using precompiled package std_logic_textio from library ieee
+Compiling architecture behavioral of entity decoder [decoder_default]
+Compiling architecture cond_arch of entity encoder [encoder_default]
+Compiling architecture behavioral of entity mux [mux_default]
+Compiling architecture behavior of entity lab5test
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 13 VHDL Units
+Built simulation executable F:/ECE238/lab5/Lab5Test_isim_beh.exe
+Fuse Memory Usage: 106024 KB
+Fuse CPU Usage: 1106 ms

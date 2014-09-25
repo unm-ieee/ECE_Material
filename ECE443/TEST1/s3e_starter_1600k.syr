@@ -1,0 +1,940 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: s3e_starter_1600k.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "s3e_starter_1600k.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "s3e_starter_1600k"
+Output Format                      : NGC
+Target Device                      : Automotive CoolRunner2
+
+---- Source Options
+Top Module Name                    : s3e_starter_1600k
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/yavga_pkg.vhd" in Library work.
+Package <yavga_pkg> compiled.
+Package body <yavga_pkg> compiled.
+Compiling vhdl file "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/chars_RAM.vhd" in Library work.
+Entity <chars_RAM> compiled.
+Entity <chars_RAM> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/charmaps_ROM.vhd" in Library work.
+Entity <charmaps_ROM> compiled.
+Entity <charmaps_ROM> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/waveform_RAM.vhd" in Library work.
+Entity <waveform_RAM> compiled.
+Entity <waveform_RAM> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/vga_ctrl.vhd" in Library work.
+Entity <vga_ctrl> compiled.
+Entity <vga_ctrl> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/s3e_starter_1600k.vhd" in Library work.
+Entity <s3e_starter_1600k> compiled.
+Entity <s3e_starter_1600k> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <s3e_starter_1600k> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <vga_ctrl> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <chars_RAM> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <charmaps_rom> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <waveform_ram> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <s3e_starter_1600k> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:753 - "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/s3e_starter_1600k.vhd" line 128: Unconnected output port 'o_chr_data' of component 'vga_ctrl'.
+    Set user-defined property "U_SET =  u1_vga_ctrl_uset" for instance <u1_vga_ctrl> in unit <s3e_starter_1600k>.
+Entity <s3e_starter_1600k> analyzed. Unit <s3e_starter_1600k> generated.
+
+Analyzing Entity <vga_ctrl> in library <work> (Architecture <rtl>).
+    Set user-defined property "U_SET =  u0_chars_RAM_uset" for instance <u0_chars_RAM> in unit <vga_ctrl>.
+    Set user-defined property "U_SET =  u1_charmaps_rom_uset" for instance <u1_charmaps_rom> in unit <vga_ctrl>.
+    Set user-defined property "U_SET =  u2_waveform_ram_uset" for instance <u2_waveform_ram> in unit <vga_ctrl>.
+INFO:Xst:1561 - "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/vga_ctrl.vhd" line 466: Mux is complete : default of case is discarded
+Entity <vga_ctrl> analyzed. Unit <vga_ctrl> generated.
+
+Analyzing Entity <chars_RAM> in library <work> (Architecture <rtl>).
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_A =  000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_B =  000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SIM_COLLISION_CHECK =  ALL" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SRVAL_A =  000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SRVAL_B =  000" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <u0_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_A =  000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_B =  000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SIM_COLLISION_CHECK =  ALL" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SRVAL_A =  000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SRVAL_B =  000" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <u1_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_A =  000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_B =  000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SIM_COLLISION_CHECK =  ALL" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SRVAL_A =  000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SRVAL_B =  000" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <u2_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_A =  000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "INIT_B =  000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SIM_COLLISION_CHECK =  ALL" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SRVAL_A =  000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "SRVAL_B =  000" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "WRITE_MODE_A =  WRITE_FIRST" for instance <u3_chars_ram> in unit <chars_RAM>.
+    Set user-defined property "WRITE_MODE_B =  WRITE_FIRST" for instance <u3_chars_ram> in unit <chars_RAM>.
+Entity <chars_RAM> analyzed. Unit <chars_RAM> generated.
+
+Analyzing Entity <charmaps_rom> in library <work> (Architecture <rtl>).
+    Set user-defined property "INIT =  000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_00 =  000000FF0000FF0000FF0000FF00000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_01 =  0000242424242424242424242424000000000000FF0000FF0000FF0000FF0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_02 =  0000929292929292929292929292000000004949494949494949494949490000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_03 =  0000AAAAAAAAAAAAAAAAAAAAAAAA000000005555555555555555555555550000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_04 =  0000F3FCF3FCF3FCF3FCF3FCF3FC00000000FF00FF00FF00FF00FF00FF000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_05 =  00000C030C030C030C030C030C0300000000CF3FCF3FCF3FCF3FCF3FCF3F0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_06 =  00000066666666000066666666000000000030C030C030C030C030C030C00000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_07 =  00000F0F0F0F0F0F0F0F0F0F0F0F00000000FF99999999FFFF99999999FF0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_08 =  0000000000000000FFFFFFFFFFFF00000000F0F0F0F0F0F0F0F0F0F0F0F00000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_09 =  00000F0F0F0F0F0F0F0F0F0F0F0F00000000FFFFFFFFFFFF0000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_0A =  0000007E42424242424242427E0000000000F0F0F0F0F0F0F0F0F0F0F0F00000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_0B =  000024492449244924492449244900000000FF81818181818181818181FF0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_0C =  0000499249924992499249924992000000002492249224922492249224920000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_0D =  0000AA55AA55AA55AA55AA55AA550000000055AA55AA55AA55AA55AA55AA0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_0E =  0000DB6DDB6DDB6DDB6DDB6DDB6D00000000DBB6DBB6DBB6DBB6DBB6DBB60000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_0F =  0000FFFFFFFFFFFFFFFFFFFFFFFF00000000B66DB66DB66DB66DB66DB66D0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_10 =  0000001000001010101010101010000000000000000000000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_11 =  0000004444FE4444444444FE4444000000000000000000000044444444440000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_12 =  0000000C12924C2010086492906000000000007C921212127C909090927C0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_13 =  000000000000000000101010101000000000007A84848A507090888848300000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_14 =  0000001008080404040404080810000000000010202040404040402020100000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_15 =  0000000010101010FE101010100000000000009292545438FE38545492920000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_16 =  0000000000000000FE0000000000000000000020100808000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_17 =  0000000000804020100804020000000000000000001818000000000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_18 =  0000003810101010101010503010000000000038448282A2928A828244380000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_19 =  0000007C820202027C020202827C0000000000FE808080807C020202827C0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_1A =  0000007C820202027C80808080FE00000000001C080808FE8888482818080000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_1B =  00000038101010101008040202FE00000000007C828282827C808080807E0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_1C =  000000FC020202027C828282827C00000000007C828282827C828282827C0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_1D =  0000002010080800000018180000000000000000001818000000181800000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_1E =  0000000000FE0000000000FE000000000000000000020C30C0300C0200000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_1F =  0000001000101008040282824438000000000000008060180618608000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_20 =  00000082828244447C442828281000000000003C42809EA2A29E828244380000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_21 =  0000007C8280808080808080827C0000000000FC82828284F884828282FC0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_22 =  000000FE80808080FC80808080FE0000000000F8848482828282848488F00000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_23 =  0000007C828282829E808080827C00000000008080808080FC80808080FE0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_24 =  0000003810101010101010101038000000000082828282827C82828282820000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_25 =  0000008282848488F088848482820000000000708888080808080808081C0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_26 =  000000828282829292AAAAAAC6820000000000FE808080808080808080800000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_27 =  0000007C8282828282828282827C000000000082868A8A8A92A2A2A2C2820000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_28 =  0000007A848AB28282828282827C00000000008080808080FC828282827C0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_29 =  0000007C820202027C808080827C000000000082848890A0FC828282827C0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_2A =  0000007C82828282828282828282000000000010101010101010101092FE0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_2B =  00000082C6AAAAAA929282828282000000000010102828284444448282820000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_2C =  0000001010101010282844448282000000000082824444283828444482820000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_2D =  00000038202020202020202020380000000000FE824040203808040482FE0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_2E =  0000003808080808080808080838000000000000000204081020408000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_2F =  000000FE00000000000000000000000000000000000000000082442810000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_30 =  0000003AC6828282C63A00000000000000000000000000000008101020200000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_31 =  0000003CC2808080C23C000000000000000000B8C6828282C6B8808080800000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_32 =  00000038C680FC82C6380000000000000000003AC6828282C63A020202020000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_33 =  00000038C6027E82C638000000000000000000808080808080F88080423C0000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_34 =  0000000C1210101010100000100000000000008282828282C6B8808080800000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_35 =  000000828488B0C0B88680808000000000000070880404040404000004000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_36 =  0000009292929292D2AC0000000000000000000E102020202020202020200000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_37 =  00000038C6828282C6380000000000000000008282828282C6B8000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_38 =  0000000202027E82C63A000000000000000000808080FC82C6B8000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_39 =  0000007C82027E80827C0000000000000000008080808080C6B8000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_3A =  0000003AC682828282820000000000000000003C4280808080F8808080800000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_3B =  0000006C92929292928200000000000000000010284482828282000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_3C =  0000003008083C42820000000000000000000082443828448200000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_3D =  00000010202020408040202020100000000000FE40300804FE00000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_3E =  0000001008080804020408080810000000000010101010101010101010100000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "INIT_3F =  00000000000000000000000000000000000000000000000C9260000000000000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "SRVAL =  000" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+    Set user-defined property "WRITE_MODE =  NO_CHANGE" for instance <Inst_charmaps_rom> in unit <charmaps_rom>.
+Entity <charmaps_rom> analyzed. Unit <charmaps_rom> generated.
+
+Analyzing Entity <waveform_ram> in library <work> (Architecture <rtl>).
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_00 =  112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_01 =  112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_02 =  112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_03 =  112F112F112F112F112F112F112F112F112F112F112F112F112F112F112F112F" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_04 =  112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_05 =  112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_06 =  112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_07 =  112B112B112B112B112B112B112B112B112B112B112B112B112B112B112B112B" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_08 =  112A114011C211F4117C10FA110E112A112A112A112A112A112A112A112A192A" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_09 =  1129112911291129112911291129112911291129112911291129112911291529" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_0A =  1128112811281128112811281128112811281128112811281128112811281128" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_0B =  1127112711271127112711271127112711271127112711271127112711271127" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_0C =  1126112611261126112611261126112611261126112611261126112611261126" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_0D =  1125112511251125112511251125112511251125112511251125112511251125" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_0E =  1124112411241124112411241124112411241124112411241124112411241124" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_0F =  1123112311231123112311231123112311231123112311231123112311231123" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_10 =  1123112311231123112311231123112311231123112311231123112311231123" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_11 =  1124112411241124112411241124112411241124112411241124112411241124" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_12 =  1125112511251125112511251125112511251125112511251125112511251125" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_13 =  1126112611261126112611261126112611261126112611261126112611261126" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_14 =  1127112711271127112711271127112711271127112711271127112711271127" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_15 =  1128112811281128112811281128112811281128112811281128112811281128" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_16 =  1129112911291129112911291129112911291129112911291129112911291129" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_17 =  112A112A112A112A112A112A112A112A112A112A112A112A112A112A112A112A" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_18 =  112B112B112B112B112B112B112B112B112B112B112B112B112B112B112B112B" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_19 =  112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_1A =  112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_1B =  112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_1C =  112F112F112F112F112F112F112F112F112F112F112F112F112F112F112F112F" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_1D =  112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_1E =  112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_1F =  112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_20 =  112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_21 =  112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_22 =  112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_23 =  112F112F112F112F112F112F112F112F112F112F112F112F112F112F112F112F" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_24 =  112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_25 =  112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_26 =  112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_27 =  112B112B112B112B112B112B112B112B112B112B112B112B112B112B112B112B" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_28 =  112A112A112A112A112A112A112A112A112A112A112A112A112A112A112A112A" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_29 =  1129112911291129112911291129112911291129112911291129112911291129" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_2A =  1128112811281128112811281128112811281128112811281128112811281128" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_2B =  1127112711271127112711271127112711271127112711271127112711271127" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_2C =  1126112611261126112611261126112611261126112611261126112611261126" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_2D =  1125112511251125112511251125112511251125112511251125112511251125" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_2E =  1124112411241124112411241124112411241124112411241124112411241124" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_2F =  1123112311231123112311231123112311231123112311231123112311231123" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_30 =  1123112311231123112311231123112311231123112311231123112311231123" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_31 =  1124112411241124112411241124112411241124112411241124112411241124" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_32 =  1125112511251125112511251125112511251125112511251125112511251125" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_33 =  1126112611261126112611261126112611261126112611261126112611261126" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_34 =  1127112711271127112711271127112711271127112711271127112711271127" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_35 =  1128112811281128112811281128112811281128112811281128112811281128" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_36 =  1129112911291129112911291129112911291129112911291129112911291129" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_37 =  112A112A112A112A112A112A112A112A112A112A112A112A112A112A112A112A" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_38 =  112B112B112B112B112B112B112B112B112B112B112B112B112B112B112B112B" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_39 =  112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_3A =  112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_3B =  112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_3C =  112F112F112F112F112F112F112F112F112F112F112F112F112F112F112F112F" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_3D =  112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E112E" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_3E =  112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D112D" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_3F =  112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C112C" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_A =  00000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "INIT_B =  00000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "SIM_COLLISION_CHECK =  ALL" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "SRVAL_A =  00000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "SRVAL_B =  00000" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "WRITE_MODE_A =  READ_FIRST" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+    Set user-defined property "WRITE_MODE_B =  READ_FIRST" for instance <Inst_waveform_RAM> in unit <waveform_ram>.
+Entity <waveform_ram> analyzed. Unit <waveform_ram> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <chars_RAM>.
+    Related source file is "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/chars_RAM.vhd".
+    Found 8-bit 4-to-1 multiplexer for signal <o_DO_r>.
+Unit <chars_RAM> synthesized.
+
+
+Synthesizing Unit <charmaps_rom>.
+    Related source file is "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/charmaps_ROM.vhd".
+Unit <charmaps_rom> synthesized.
+
+
+Synthesizing Unit <waveform_ram>.
+    Related source file is "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/waveform_RAM.vhd".
+Unit <waveform_ram> synthesized.
+
+
+Synthesizing Unit <vga_ctrl>.
+    Related source file is "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/vga_ctrl.vhd".
+    Found 1-bit register for signal <o_b>.
+    Found 1-bit register for signal <o_g>.
+    Found 1-bit register for signal <o_r>.
+    Found 1-bit register for signal <o_v_sync>.
+    Found 1-bit xor2 for signal <o_g$xor0000> created at line 459.
+    Found 1-bit xor2 for signal <o_g$xor0001> created at line 460.
+    Found 1-bit xor2 for signal <o_g$xor0002> created at line 461.
+    Found 1-bit xor2 for signal <o_g$xor0003> created at line 462.
+    Found 1-bit xor2 for signal <o_g$xor0004> created at line 463.
+    Found 1-bit xor2 for signal <o_g$xor0005> created at line 464.
+    Found 1-bit xor2 for signal <o_g$xor0006> created at line 465.
+    Found 1-bit xor2 for signal <o_g$xor0007> created at line 466.
+    Found 11-bit comparator equal for signal <or0000_0$cmp_eq0000> created at line 246.
+    Found 10-bit comparator equal for signal <or0000_0$cmp_eq0001> created at line 246.
+    Found 10-bit comparator greatequal for signal <or0002_0$cmp_ge0000> created at line 263.
+    Found 10-bit comparator greatequal for signal <or0002_0$cmp_ge0001> created at line 263.
+    Found 10-bit comparator lessequal for signal <or0002_0$cmp_le0000> created at line 263.
+    Found 10-bit comparator lessequal for signal <or0002_0$cmp_le0001> created at line 263.
+    Found 3-bit register for signal <s_bg_color>.
+    Found 1-bit register for signal <s_config_time>.
+    Found 3-bit register for signal <s_cursor_color>.
+    Found 11-bit register for signal <s_cursor_x>.
+    Found 10-bit register for signal <s_cursor_y>.
+    Found 1-bit register for signal <s_display>.
+    Found 12-bit comparator less for signal <s_display$cmp_lt0000> created at line 423.
+    Found 11-bit comparator less for signal <s_display$cmp_lt0001> created at line 423.
+    Found 11-bit up counter for signal <s_h_count>.
+    Found 1-bit register for signal <s_h_sync>.
+    Found 1-bit register for signal <s_h_sync_pulse>.
+    Found 10-bit up counter for signal <s_v_count>.
+    Found 4-bit register for signal <s_v_count_d_4>.
+    Found 1-bit register for signal <v_h_sync1>.
+    Found 10-bit register for signal <v_previous_pixel>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred   8 Xor(s).
+Unit <vga_ctrl> synthesized.
+
+
+Synthesizing Unit <s3e_starter_1600k>.
+    Related source file is "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/s3e_starter_1600k.vhd".
+WARNING:Xst:1780 - Signal <s_rnd<31:3>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <s_rnd<2:0>> is used but never assigned. This sourceless signal will be automatically connected to value 000.
+    Found 11-bit register for signal <s_chr_addr>.
+    Found 32-bit register for signal <s_chr_data>.
+    Found 4-bit register for signal <s_chr_we>.
+    Found 1-bit register for signal <s_initialized>.
+    Found 4x4-bit multiplier for signal <s_mul>.
+    Found 1-bit register for signal <s_vsync1>.
+    Found 8-bit up counter for signal <s_vsync_count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplier(s).
+Unit <s3e_starter_1600k> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 4x4-bit multiplier                                    : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 39
+ 1-bit register                                        : 32
+ 10-bit register                                       : 1
+ 11-bit register                                       : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 1
+ 4-bit register                                        : 2
+# Comparators                                          : 8
+ 10-bit comparator equal                               : 1
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator equal                               : 1
+ 11-bit comparator less                                : 1
+ 12-bit comparator less                                : 1
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block s_initialized.
+   You should achieve better results by setting this init to 1.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 4x4-bit multiplier                                    : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 28
+ Flip-Flops                                            : 28
+# Comparators                                          : 2
+ 10-bit comparator equal                               : 1
+ 11-bit comparator equal                               : 1
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch s_initialized hinder the constant cleaning in the block s3e_starter_1600k.
+   You should achieve better results by setting this init to 1.
+INFO:Xst:2261 - The FF/Latch <s_chr_addr_4> in Unit <s3e_starter_1600k> is equivalent to the following FF/Latch, which will be removed : <s_chr_addr_3> 
+INFO:Xst:2261 - The FF/Latch <s_chr_data_28> in Unit <s3e_starter_1600k> is equivalent to the following 2 FFs/Latches, which will be removed : <s_chr_data_20> <s_chr_data_12> 
+INFO:Xst:2261 - The FF/Latch <s_chr_data_27> in Unit <s3e_starter_1600k> is equivalent to the following FF/Latch, which will be removed : <s_chr_data_19> 
+INFO:Xst:2261 - The FF/Latch <s_chr_data_26> in Unit <s3e_starter_1600k> is equivalent to the following FF/Latch, which will be removed : <s_chr_data_18> 
+INFO:Xst:2261 - The FF/Latch <s_chr_data_24> in Unit <s3e_starter_1600k> is equivalent to the following 3 FFs/Latches, which will be removed : <s_chr_data_17> <s_chr_data_8> <s_chr_data_6> 
+INFO:Xst:2261 - The FF/Latch <s_chr_data_30> in Unit <s3e_starter_1600k> is equivalent to the following 3 FFs/Latches, which will be removed : <s_chr_data_22> <s_chr_data_14> <s_chr_data_9> 
+INFO:Xst:2261 - The FF/Latch <s_chr_we_0> in Unit <s3e_starter_1600k> is equivalent to the following 3 FFs/Latches, which will be removed : <s_chr_we_1> <s_chr_we_2> <s_chr_we_3> 
+INFO:Xst:2261 - The FF/Latch <s_chr_data_16> in Unit <s3e_starter_1600k> is equivalent to the following 3 FFs/Latches, which will be removed : <s_chr_data_1> <s_chr_addr_1> <s_chr_addr_0> 
+INFO:Xst:2261 - The FF/Latch <s_chr_addr_10> in Unit <s3e_starter_1600k> is equivalent to the following FF/Latch, which will be removed : <s_chr_addr_7> 
+INFO:Xst:2261 - The FF/Latch <s_chr_data_31> in Unit <s3e_starter_1600k> is equivalent to the following 13 FFs/Latches, which will be removed : <s_chr_data_29> <s_chr_data_25> <s_chr_data_23> <s_chr_data_21> <s_chr_data_15> <s_chr_data_13> <s_chr_data_7> <s_chr_data_5> <s_chr_data_0> <s_chr_addr_9> <s_chr_addr_8> <s_chr_addr_6> <s_chr_addr_2> 
+
+Optimizing unit <s3e_starter_1600k> ...
+  implementation constraint: INIT=r	 : s_initialized
+  implementation constraint: INIT=r	 : s_vsync_count_2
+  implementation constraint: INIT=r	 : s_vsync_count_6
+  implementation constraint: INIT=r	 : s_vsync_count_7
+  implementation constraint: INIT=r	 : s_vsync_count_1
+  implementation constraint: INIT=r	 : s_vsync_count_3
+  implementation constraint: INIT=r	 : s_vsync_count_4
+  implementation constraint: INIT=r	 : s_vsync_count_5
+  implementation constraint: INIT=r	 : s_vsync_count_0
+
+Optimizing unit <charmaps_rom> ...
+  implementation constraint: INIT=000	 : Inst_charmaps_rom
+  implementation constraint: INITP_00=0000000000000000000000000000000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INITP_01=0000000000000000000000000000000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INITP_02=0000000000000000000000000000000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INITP_03=0000000000000000000000000000000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INITP_04=0000000000000000000000000000000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INITP_05=0000000000000000000000000000000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INITP_06=0000000000000000000000000000000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INITP_07=0000000000000000000000000000000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_00=000000FF0000FF0000FF0000FF00000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_01=0000242424242424242424242424000000000000FF0000FF0000FF0000FF0000 : Inst_charmaps_rom
+  implementation constraint: INIT_02=0000929292929292929292929292000000004949494949494949494949490000 : Inst_charmaps_rom
+  implementation constraint: INIT_03=0000AAAAAAAAAAAAAAAAAAAAAAAA000000005555555555555555555555550000 : Inst_charmaps_rom
+  implementation constraint: INIT_04=0000F3FCF3FCF3FCF3FCF3FCF3FC00000000FF00FF00FF00FF00FF00FF000000 : Inst_charmaps_rom
+  implementation constraint: INIT_05=00000C030C030C030C030C030C0300000000CF3FCF3FCF3FCF3FCF3FCF3F0000 : Inst_charmaps_rom
+  implementation constraint: INIT_06=00000066666666000066666666000000000030C030C030C030C030C030C00000 : Inst_charmaps_rom
+  implementation constraint: INIT_07=00000F0F0F0F0F0F0F0F0F0F0F0F00000000FF99999999FFFF99999999FF0000 : Inst_charmaps_rom
+  implementation constraint: INIT_08=0000000000000000FFFFFFFFFFFF00000000F0F0F0F0F0F0F0F0F0F0F0F00000 : Inst_charmaps_rom
+  implementation constraint: INIT_09=00000F0F0F0F0F0F0F0F0F0F0F0F00000000FFFFFFFFFFFF0000000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_0A=0000007E42424242424242427E0000000000F0F0F0F0F0F0F0F0F0F0F0F00000 : Inst_charmaps_rom
+  implementation constraint: INIT_0B=000024492449244924492449244900000000FF81818181818181818181FF0000 : Inst_charmaps_rom
+  implementation constraint: INIT_0C=0000499249924992499249924992000000002492249224922492249224920000 : Inst_charmaps_rom
+  implementation constraint: INIT_0D=0000AA55AA55AA55AA55AA55AA550000000055AA55AA55AA55AA55AA55AA0000 : Inst_charmaps_rom
+  implementation constraint: INIT_0E=0000DB6DDB6DDB6DDB6DDB6DDB6D00000000DBB6DBB6DBB6DBB6DBB6DBB60000 : Inst_charmaps_rom
+  implementation constraint: INIT_0F=0000FFFFFFFFFFFFFFFFFFFFFFFF00000000B66DB66DB66DB66DB66DB66D0000 : Inst_charmaps_rom
+  implementation constraint: INIT_10=0000001000001010101010101010000000000000000000000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_11=0000004444FE4444444444FE4444000000000000000000000044444444440000 : Inst_charmaps_rom
+  implementation constraint: INIT_12=0000000C12924C2010086492906000000000007C921212127C909090927C0000 : Inst_charmaps_rom
+  implementation constraint: INIT_13=000000000000000000101010101000000000007A84848A507090888848300000 : Inst_charmaps_rom
+  implementation constraint: INIT_14=0000001008080404040404080810000000000010202040404040402020100000 : Inst_charmaps_rom
+  implementation constraint: INIT_15=0000000010101010FE101010100000000000009292545438FE38545492920000 : Inst_charmaps_rom
+  implementation constraint: INIT_16=0000000000000000FE0000000000000000000020100808000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_17=0000000000804020100804020000000000000000001818000000000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_18=0000003810101010101010503010000000000038448282A2928A828244380000 : Inst_charmaps_rom
+  implementation constraint: INIT_19=0000007C820202027C020202827C0000000000FE808080807C020202827C0000 : Inst_charmaps_rom
+  implementation constraint: INIT_1A=0000007C820202027C80808080FE00000000001C080808FE8888482818080000 : Inst_charmaps_rom
+  implementation constraint: INIT_1B=00000038101010101008040202FE00000000007C828282827C808080807E0000 : Inst_charmaps_rom
+  implementation constraint: INIT_1C=000000FC020202027C828282827C00000000007C828282827C828282827C0000 : Inst_charmaps_rom
+  implementation constraint: INIT_1D=0000002010080800000018180000000000000000001818000000181800000000 : Inst_charmaps_rom
+  implementation constraint: INIT_1E=0000000000FE0000000000FE000000000000000000020C30C0300C0200000000 : Inst_charmaps_rom
+  implementation constraint: INIT_1F=0000001000101008040282824438000000000000008060180618608000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_20=00000082828244447C442828281000000000003C42809EA2A29E828244380000 : Inst_charmaps_rom
+  implementation constraint: INIT_21=0000007C8280808080808080827C0000000000FC82828284F884828282FC0000 : Inst_charmaps_rom
+  implementation constraint: INIT_22=000000FE80808080FC80808080FE0000000000F8848482828282848488F00000 : Inst_charmaps_rom
+  implementation constraint: INIT_23=0000007C828282829E808080827C00000000008080808080FC80808080FE0000 : Inst_charmaps_rom
+  implementation constraint: INIT_24=0000003810101010101010101038000000000082828282827C82828282820000 : Inst_charmaps_rom
+  implementation constraint: INIT_25=0000008282848488F088848482820000000000708888080808080808081C0000 : Inst_charmaps_rom
+  implementation constraint: INIT_26=000000828282829292AAAAAAC6820000000000FE808080808080808080800000 : Inst_charmaps_rom
+  implementation constraint: INIT_27=0000007C8282828282828282827C000000000082868A8A8A92A2A2A2C2820000 : Inst_charmaps_rom
+  implementation constraint: INIT_28=0000007A848AB28282828282827C00000000008080808080FC828282827C0000 : Inst_charmaps_rom
+  implementation constraint: INIT_29=0000007C820202027C808080827C000000000082848890A0FC828282827C0000 : Inst_charmaps_rom
+  implementation constraint: INIT_2A=0000007C82828282828282828282000000000010101010101010101092FE0000 : Inst_charmaps_rom
+  implementation constraint: INIT_2B=00000082C6AAAAAA929282828282000000000010102828284444448282820000 : Inst_charmaps_rom
+  implementation constraint: INIT_2C=0000001010101010282844448282000000000082824444283828444482820000 : Inst_charmaps_rom
+  implementation constraint: INIT_2D=00000038202020202020202020380000000000FE824040203808040482FE0000 : Inst_charmaps_rom
+  implementation constraint: INIT_2E=0000003808080808080808080838000000000000000204081020408000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_2F=000000FE00000000000000000000000000000000000000000082442810000000 : Inst_charmaps_rom
+  implementation constraint: INIT_30=0000003AC6828282C63A00000000000000000000000000000008101020200000 : Inst_charmaps_rom
+  implementation constraint: INIT_31=0000003CC2808080C23C000000000000000000B8C6828282C6B8808080800000 : Inst_charmaps_rom
+  implementation constraint: INIT_32=00000038C680FC82C6380000000000000000003AC6828282C63A020202020000 : Inst_charmaps_rom
+  implementation constraint: INIT_33=00000038C6027E82C638000000000000000000808080808080F88080423C0000 : Inst_charmaps_rom
+  implementation constraint: INIT_34=0000000C1210101010100000100000000000008282828282C6B8808080800000 : Inst_charmaps_rom
+  implementation constraint: INIT_35=000000828488B0C0B88680808000000000000070880404040404000004000000 : Inst_charmaps_rom
+  implementation constraint: INIT_36=0000009292929292D2AC0000000000000000000E102020202020202020200000 : Inst_charmaps_rom
+  implementation constraint: INIT_37=00000038C6828282C6380000000000000000008282828282C6B8000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_38=0000000202027E82C63A000000000000000000808080FC82C6B8000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_39=0000007C82027E80827C0000000000000000008080808080C6B8000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_3A=0000003AC682828282820000000000000000003C4280808080F8808080800000 : Inst_charmaps_rom
+  implementation constraint: INIT_3B=0000006C92929292928200000000000000000010284482828282000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_3C=0000003008083C42820000000000000000000082443828448200000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_3D=00000010202020408040202020100000000000FE40300804FE00000000000000 : Inst_charmaps_rom
+  implementation constraint: INIT_3E=0000001008080804020408080810000000000010101010101010101010100000 : Inst_charmaps_rom
+  implementation constraint: INIT_3F=00000000000000000000000000000000000000000000000C9260000000000000 : Inst_charmaps_rom
+  implementation constraint: SRVAL=000	 : Inst_charmaps_rom
+  implementation constraint: WRITE_MODE=NO_CHANGE : Inst_charmaps_rom
+
+Optimizing unit <waveform_ram> ...
+
+Optimizing unit <chars_RAM> ...
+
+Optimizing unit <vga_ctrl> ...
+  implementation constraint: INIT=r	 : s_cursor_color_2
+  implementation constraint: INIT=r	 : v_previous_pixel_9
+  implementation constraint: INIT=r	 : s_bg_color_2
+  implementation constraint: INIT=r	 : s_bg_color_0
+  implementation constraint: INIT=r	 : s_bg_color_1
+  implementation constraint: INIT=r	 : v_previous_pixel_0
+  implementation constraint: INIT=r	 : v_previous_pixel_1
+  implementation constraint: INIT=s	 : v_previous_pixel_2
+  implementation constraint: INIT=s	 : v_previous_pixel_3
+  implementation constraint: INIT=r	 : v_previous_pixel_4
+  implementation constraint: INIT=s	 : v_previous_pixel_5
+  implementation constraint: INIT=r	 : v_previous_pixel_6
+  implementation constraint: INIT=r	 : v_previous_pixel_7
+  implementation constraint: INIT=s	 : v_previous_pixel_8
+  implementation constraint: INIT=r	 : s_cursor_color_0
+  implementation constraint: INIT=r	 : s_cursor_color_1
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : s3e_starter_1600k.ngr
+Top Level Output File Name         : s3e_starter_1600k
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : Automotive CoolRunner2
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 6
+
+Cell Usage :
+# BELS                             : 797
+#      AND2                        : 251
+#      AND3                        : 28
+#      AND4                        : 15
+#      AND5                        : 4
+#      AND7                        : 2
+#      AND8                        : 2
+#      GND                         : 5
+#      INV                         : 264
+#      OR2                         : 126
+#      OR3                         : 8
+#      OR4                         : 13
+#      VCC                         : 4
+#      XOR2                        : 75
+# FlipFlops/Latches                : 97
+#      FD                          : 32
+#      FDCE                        : 65
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      OBUF                        : 5
+# Others                           : 6
+#      RAMB16_S18_S18              : 1
+#      RAMB16_S9                   : 1
+#      RAMB16_S9_S9                : 4
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.53 secs
+ 
+--> 
+
+Total memory usage is 276592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

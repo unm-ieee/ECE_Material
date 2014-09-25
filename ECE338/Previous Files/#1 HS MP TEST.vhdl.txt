@@ -1,0 +1,80 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
+entity fnc_fp_mul is
+   Port ( x,y : in std_logic_vector(31 downto 0);
+          z : out std_logic_vector(31 downto 0));
+end fnc_fp_mul;
+
+architecture Behavioral of fnc_fp_mul is
+
+function fp_m(a,b:in std_logic_vector(31 downto 0)) return std_logic_vector;
+function fp_m(a,b:in std_logic_vector(31 downto 0)) return std_logic_vector is
+
+
+variable c11 : std_logic_vector(31 downto 0);
+variable p1:std_logic_vector(47 downto 0);
+variable p2,p3,z11,z1:std_logic_vector(7 downto 0);
+variable count:std_logic_vector(7 downto 0):="00000000";
+variable p11:std_logic_vector(0 to 47);
+variable a2:std_logic_vector(7 downto 0):="01111111";
+variable a3:std_logic_vector(7 downto 0):="00000001";
+variable a4:std_logic_vector(7 downto 0):="00000011";
+variable c1,c2:std_logic_vector(23 downto 0);
+variable count1:integer;
+variable p4:std_logic_vector(7 downto 0);
+
+
+
+begin
+
+
+c11(31):=a(31) xor b(31);
+p2:=a(30 downto 23) + b(30 downto 23);
+c1:='1' & a(22 downto 0);
+c2:='1' & b( 22 downto 0);
+p1:=  c1(23 downto 0) *  c2( 23 downto 0);
+p3(7 downto 0):=p2(7 downto 0)- a2(7 downto 0 );
+z11:=p3;
+for i in 0 to 47 loop
+p11(i):=p1(47-i);
+end loop;
+
+if p1(47 downto 46)="00" then
+for i in 0 to 22  loop
+count:=count+"00000001";
+if p11(i)='1' then
+exit;
+end if;
+end loop;
+count1:=conv_integer(count);
+z1(7 downto 0):= z11(7 downto 0) + count;
+c11(22 downto 0):=p1(46-count1 downto 23+count1 );
+p4(7 downto 0):=z1;
+
+
+elsif p1(47 downto 46)="01" then
+p4(7 downto 0):=z11(7 downto 0);
+c11(22 downto 0):=p1(45 downto 23);
+ 
+
+elsif p1(47 downto 46)="10" then
+  p4(7 downto 0):=z11(7 downto 0)+a3(7 downto 0);
+  c11(22 downto 0):=p1(46 downto 24);
+
+  elsif p1(47 downto 46)="11" then
+p4(7 downto 0):=z11(7 downto 0)+a4(7 downto 0);
+   c11(22 downto 0):=p1(47 downto 25);
+  end if;
+
+c11(30 downto 23):=p4(7 downto 0);  
+return c11;
+
+end function;
+
+begin
+z<=fp_m(x,y);
+end Behavioral;

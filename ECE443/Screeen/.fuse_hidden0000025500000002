@@ -1,0 +1,13 @@
+Release 14.6 ngdbuild P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /home/rapture/Desktop/14.6/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -nt timestamp -uc MASTER_UCF.ucf -p xc6slx16-csg324-3
+SCRN.ngc SCRN.ngd
+
+Reading NGO file "/media/rapture/My Passport/ECE.CLASSES/ECE
+443/Screeen/SCRN.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "MASTER_UCF.ucf" ...

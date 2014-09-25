@@ -1,0 +1,46 @@
+rapture@THINKr:~/Desktop$ ssh sseppala@moons.cs.unm.edu 'wget -O - http://navistar.cs.unm.edu:18213/' >> out.tar
+    
+    sseppala@moons.cs.unm.edu's password: 
+
+    --2013-10-19 12:06:38--  http://navistar.cs.unm.edu:18213/
+    Resolving navistar.cs.unm.edu (navistar.cs.unm.edu)... 64.106.20.229
+    Connecting to navistar.cs.unm.edu (navistar.cs.unm.edu)|64.106.20.229|:18213... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: unspecified [application/x-tar]
+    Saving to: `STDOUT'
+
+         0K .......... .......... .......... .......... .......... 1.61M
+        50K .......... .......... .......... .......... .......... 1.62M
+       100K .......... .......... .......... .......... .......... 1.62M
+       150K .......... .......... .......... .......... .......... 1.62M
+       200K .......... .......... .......... .......... .......... 1.62M
+       250K .......... .......... .......... .......... .......... 1.60M
+       300K .......... .......... .......... .......... .......... 1.61M
+       350K .......... .......... .......... .......... .......... 1.61M
+       400K .......... .......... .......... .......... .......... 1.61M
+       450K .......... .......... .......... .......... .......... 1.61M
+       500K .......... .......... .......... .......... .......... 1.62M
+       550K .......... .......... .......... .......... .......... 1.61M
+       600K .......... .......... .......... .......... .......... 1.63M
+       650K .......... .......... .......... .......... .......... 1.62M
+       700K .......... .......... .......... .......... .......... 1.62M
+       750K .......... .......... .......... .......... .......... 1.61M
+       800K .......... .......... .......... .......... .......... 1.61M
+       850K .......... .......... .......... .......... .......... 1.62M
+       900K .......... .......... .......... .......... .......... 1.62M
+       950K .......... .......... .......... .......... .......... 1.60M
+      1000K .......... .......... .......... .......... .......... 1.63M
+      1050K .......... .......... ..........                       1.61M=0.7s
+
+    2013-10-19 12:06:39 (1.62 MB/s) - written to stdout [1105920]
+
+rapture@THINKr:~/Desktop$ ls
+    14.6       ebooksclub.org__Discrete_Mathematics_with_Applications.pdf  ECE321L     SPICE                               whatever
+    Asgn2.pdf  ECE321                                                      HW_and_Sol  TeamTerradactyl: Binary Bomb_files
+    C-Lang     ECE 321                                                     out.tar     thing.py
+rapture@THINKr:~/Desktop$ tar -xvf out.tar 
+    buflab-handout/
+    buflab-handout/bufbomb
+    buflab-handout/hex2raw
+    buflab-handout/makecookie
+rapture@THINKr:~$ scp sseppala@moons.cs.unm.edu:Asgn2.pdf /home/rapture/Desktop/

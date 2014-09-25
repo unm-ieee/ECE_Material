@@ -1,0 +1,58 @@
+IsEmpty
+GetLength
+Enqueue E
+Enqueue G
+Enqueue F
+Enqueue I
+GetLength
+Dequeue
+Dequeue
+Dequeue
+Dequeue
+Enqueue B
+Enqueue C
+Enqueue C
+Enqueue D
+Dequeue
+Dequeue
+Dequeue
+Dequeue
+Enqueue E
+Dequeue
+Enqueue C
+Enqueue G
+Dequeue
+Dequeue
+GetLength
+IsEmpty
+Enqueue B
+IsEmpty
+Dequeue
+IsEmpty
+Enqueue B
+Enqueue C
+Enqueue C
+Enqueue D
+GetLength
+IsFull
+Enqueue A
+IsFull
+GetLength
+Enqueue B
+GetLength
+Dequeue
+Enqueue B
+Dequeue
+Dequeue
+Dequeue
+Dequeue
+Dequeue
+GetLength
+Dequeue
+GetLength
+Error
+Quit
+
+
+
+

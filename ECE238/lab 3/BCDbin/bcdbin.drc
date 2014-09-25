@@ -1,0 +1,8 @@
+Release 13.1 Drc O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Mon Mar 05 19:39:40 2012
+
+drc -z BCDbin.ncd BCDbin.pcf
+
+DRC detected 0 errors and 0 warnings.

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "F:/ECE.CLASSES/ECE 443/Screeen/scrn_tb_isim_beh.exe" -prj "F:/ECE.CLASSES/ECE 443/Screeen/scrn_tb_beh.prj" "work.scrn_tb" 

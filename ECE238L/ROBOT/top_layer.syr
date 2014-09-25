@@ -1,0 +1,502 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> Reading design: top_layer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_layer.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_layer"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top_layer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Ryan\Desktop\School\ECE238L\ROBOT\state_5.vhd" into library work
+Parsing entity <state_5>.
+Parsing architecture <rtl> of entity <state_5>.
+Parsing VHDL file "C:\Users\Ryan\Desktop\ROBOT\Reverse_out_02.vhd" into library work
+Parsing entity <Reverse_out_02>.
+Parsing architecture <Behavioral> of entity <reverse_out_02>.
+Parsing VHDL file "C:\Users\Ryan\Desktop\ROBOT\Reverse_out.vhd" into library work
+Parsing entity <Reverse_out_01>.
+Parsing architecture <Behavioral> of entity <reverse_out_01>.
+Parsing VHDL file "C:\Users\Ryan\Desktop\ROBOT\main(1).vhd" into library work
+Parsing entity <PWM>.
+Parsing architecture <Behavioral> of entity <pwm>.
+Parsing VHDL file "C:\Users\Ryan\Desktop\ROBOT\And_gate.vhd" into library work
+Parsing entity <And_gate>.
+Parsing architecture <Behavioral> of entity <and_gate>.
+Parsing VHDL file "C:\Users\Ryan\Desktop\ROBOT\Top_layer(2).vhd" into library work
+Parsing entity <top_layer>.
+Parsing architecture <a> of entity <top_layer>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <top_layer> (architecture <a>) from library <work>.
+
+Elaborating entity <PWM> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <state_5> (architecture <rtl>) from library <work>.
+
+Elaborating entity <And_gate> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Reverse_out_01> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Reverse_out_02> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_layer>.
+    Related source file is "C:\Users\Ryan\Desktop\ROBOT\Top_layer(2).vhd".
+    Summary:
+	no macro.
+Unit <top_layer> synthesized.
+
+Synthesizing Unit <PWM>.
+    Related source file is "C:\Users\Ryan\Desktop\ROBOT\main(1).vhd".
+    Found 14-bit register for signal <cntPwm>.
+    Found 14-bit adder for signal <cntPwm[13]_GND_6_o_add_0_OUT> created at line 26.
+    Found 9-bit comparator greater for signal <pwm_out> created at line 31
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <PWM> synthesized.
+
+Synthesizing Unit <state_5>.
+    Related source file is "C:\Users\Ryan\Desktop\School\ECE238L\ROBOT\state_5.vhd".
+    Found 3-bit register for signal <state>.
+INFO:Xst:1799 - State s2 is never reached in FSM <state>.
+INFO:Xst:1799 - State s4 is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | s0                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <state_5> synthesized.
+
+Synthesizing Unit <And_gate>.
+    Related source file is "C:\Users\Ryan\Desktop\ROBOT\And_gate.vhd".
+    Summary:
+	no macro.
+Unit <And_gate> synthesized.
+
+Synthesizing Unit <Reverse_out_01>.
+    Related source file is "C:\Users\Ryan\Desktop\ROBOT\Reverse_out.vhd".
+    Summary:
+	no macro.
+Unit <Reverse_out_01> synthesized.
+
+Synthesizing Unit <Reverse_out_02>.
+    Related source file is "C:\Users\Ryan\Desktop\ROBOT\Reverse_out_02.vhd".
+    Summary:
+	no macro.
+Unit <Reverse_out_02> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 14-bit adder                                          : 1
+# Registers                                            : 1
+ 14-bit register                                       : 1
+# Comparators                                          : 1
+ 9-bit comparator greater                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <PWM>.
+The following registers are absorbed into counter <cntPwm>: 1 register on signal <cntPwm>.
+Unit <PWM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 14-bit up counter                                     : 1
+# Comparators                                          : 1
+ 9-bit comparator greater                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00
+ s1    | 10
+ s2    | unreached
+ s3    | 01
+ s4    | unreached
+-------------------
+
+Optimizing unit <top_layer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_layer, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_layer.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 54
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 13
+#      LUT2                        : 3
+#      LUT4                        : 2
+#      LUT6                        : 4
+#      MUXCY                       : 13
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 14
+# FlipFlops/Latches                : 16
+#      FD                          : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 10
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              16  out of  18224     0%  
+ Number of Slice LUTs:                   24  out of   9112     0%  
+    Number used as Logic:                24  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     24
+   Number with an unused Flip Flop:       8  out of     24    33%  
+   Number with an unused LUT:             0  out of     24     0%  
+   Number of fully used LUT-FF pairs:    16  out of     24    66%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 16    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.914ns (Maximum Frequency: 522.507MHz)
+   Minimum input arrival time before clock: 2.391ns
+   Maximum output required time after clock: 7.900ns
+   Maximum combinational path delay: 8.658ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.914ns (frequency: 522.507MHz)
+  Total number of paths / destination ports: 109 / 16
+-------------------------------------------------------------------------
+Delay:               1.914ns (Levels of Logic = 15)
+  Source:            G1/cntPwm_0 (FF)
+  Destination:       G1/cntPwm_13 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: G1/cntPwm_0 to G1/cntPwm_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  G1/cntPwm_0 (G1/cntPwm_0)
+     INV:I->O              1   0.206   0.000  G1/Mcount_cntPwm_lut<0>_INV_0 (G1/Mcount_cntPwm_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  G1/Mcount_cntPwm_cy<0> (G1/Mcount_cntPwm_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<1> (G1/Mcount_cntPwm_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<2> (G1/Mcount_cntPwm_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<3> (G1/Mcount_cntPwm_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<4> (G1/Mcount_cntPwm_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<5> (G1/Mcount_cntPwm_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<6> (G1/Mcount_cntPwm_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<7> (G1/Mcount_cntPwm_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<8> (G1/Mcount_cntPwm_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<9> (G1/Mcount_cntPwm_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<10> (G1/Mcount_cntPwm_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  G1/Mcount_cntPwm_cy<11> (G1/Mcount_cntPwm_cy<11>)
+     MUXCY:CI->O           0   0.019   0.000  G1/Mcount_cntPwm_cy<12> (G1/Mcount_cntPwm_cy<12>)
+     XORCY:CI->O           1   0.180   0.000  G1/Mcount_cntPwm_xor<13> (Result<13>)
+     FD:D                      0.102          G1/cntPwm_13
+    ----------------------------------------
+    Total                      1.914ns (1.335ns logic, 0.579ns route)
+                                       (69.8% logic, 30.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4 / 2
+-------------------------------------------------------------------------
+Offset:              2.391ns (Levels of Logic = 2)
+  Source:            data_in_Right (PAD)
+  Destination:       G2/state_FSM_FFd1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: data_in_Right to G2/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.864  data_in_Right_IBUF (data_in_Right_IBUF)
+     LUT4:I0->O            1   0.203   0.000  G2/state_FSM_FFd2-In1 (G2/state_FSM_FFd2-In)
+     FD:D                      0.102          G2/state_FSM_FFd2
+    ----------------------------------------
+    Total                      2.391ns (1.527ns logic, 0.864ns route)
+                                       (63.9% logic, 36.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 34 / 4
+-------------------------------------------------------------------------
+Offset:              7.900ns (Levels of Logic = 6)
+  Source:            G1/cntPwm_7 (FF)
+  Destination:       pwm_out_02 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: G1/cntPwm_7 to pwm_out_02
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.961  G1/cntPwm_7 (G1/cntPwm_7)
+     LUT6:I1->O            2   0.203   0.961  T22 (T21)
+     LUT6:I1->O            1   0.203   0.000  T21_G (N9)
+     MUXF7:I1->O           1   0.140   0.808  T21 (T22)
+     LUT6:I3->O            2   0.205   0.617  G3/pwm_out_021 (pwm_out_01_OBUF)
+     LUT2:I1->O            1   0.205   0.579  G3/pwm_out_022 (pwm_out_02_OBUF)
+     OBUF:I->O                 2.571          pwm_out_02_OBUF (pwm_out_02)
+    ----------------------------------------
+    Total                      7.900ns (3.974ns logic, 3.926ns route)
+                                       (50.3% logic, 49.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 28 / 2
+-------------------------------------------------------------------------
+Delay:               8.658ns (Levels of Logic = 7)
+  Source:            cmpPwm<2> (PAD)
+  Destination:       pwm_out_02 (PAD)
+
+  Data Path: cmpPwm<2> to pwm_out_02
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.944  cmpPwm_2_IBUF (cmpPwm_2_IBUF)
+     LUT6:I0->O            2   0.203   0.961  T22 (T21)
+     LUT6:I1->O            1   0.203   0.000  T21_G (N9)
+     MUXF7:I1->O           1   0.140   0.808  T21 (T22)
+     LUT6:I3->O            2   0.205   0.617  G3/pwm_out_021 (pwm_out_01_OBUF)
+     LUT2:I1->O            1   0.205   0.579  G3/pwm_out_022 (pwm_out_02_OBUF)
+     OBUF:I->O                 2.571          pwm_out_02_OBUF (pwm_out_02)
+    ----------------------------------------
+    Total                      8.658ns (4.749ns logic, 3.909ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.914|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 25.00 secs
+ 
+--> 
+
+Total memory usage is 258256 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

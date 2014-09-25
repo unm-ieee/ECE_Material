@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%
+/////////////////////////
+\\\\\\\\\\\\\\\\\\\\\\\\\
+||||||||||||||||||||##################*fire*
+/////////////////////////
+\\\\\\\\\\\\\\\\\\\\\\\\\
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+data types::
+
+composite, complex object -- if same they are array, if different types, they
+are called record.
+
+
+subtype, 
+subtype st_ID is tpye_name[CONSTRAINT];
+
+subtype OUT_ST is STATE range S2 to S4;
+
+integer range from -(2^31-1) to 2^31-1
+
+type INT_2c is range -32768 to 32767;
+type ADR_BITS is range 31 downto 0;
+etc...
+
+predefined int types
+
+tpye NATURAL is INTEGER
+	range 0 to INTEGER'HIGH;
+ ________________________
+|Component instantiation |
+|________________________|
+genaric map (
+Time_delay => 10ns
+)
+port map(
+A => X_A
+); 
+ _______________________________
+{Conditional signal assign      } 
+{_______________________________}
+target <= wave1 when COND1 else
+	  wave2 when COND2 else
+	  wave3 when COND3 else
+          ...		   else
+	  wave_n;
+
+ ________________________________
+{Selected signal assign		 }
+{________________________________}
+target <= wave1 when thing1,
+	  wave2 when thing2,
+ 	  wave3 when last;
+		/\
+	       /\/\
+	      /\/\/\
+	     /\/\/\/\
+	    /\/\/\/\/\ 
+	   /\/\/\/\/\/\
+	  /\/\/\/\/\/\/\
+	 /\/\/\/\/\/\/\/\
+	/\/\/\/\/\/\/\/\/\
+       /\/\/\/\/\/\/\/\/\/\
+      /\/\/\/\/\/\/\/\/\/\/\
+     /\/\/\/\/\/\/\/\/\/\/\/\
+    /\/\/\/\/\/\/\/\/\/\/\/\/\
+   /\/\/\/\/\/\/\/\/\/\/\/\/\/\
+  /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+ ________________________________
+|				 |	
+|________________________________|
+
+
+

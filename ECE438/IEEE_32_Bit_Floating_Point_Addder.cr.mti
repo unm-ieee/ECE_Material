@@ -1,0 +1,166 @@
+Z:/Mant_2_To_1_Mux_Align.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Mant_2_To_1_Mux_Align.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity mant_2_to_1_mux_align
+-- Compiling architecture mant_2_to_1_mux_align of mant_2_to_1_mux_align
+
+} {} {}} Z:/Exponent_Compare.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Exponent_Compare.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity exponent_compare
+-- Compiling architecture exponent_compare of exponent_compare
+
+} {} {}} Z:/Exponent_Subtract.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Exponent_Subtract.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity exponent_subtract
+-- Compiling architecture exponent_subtract of exponent_subtract
+
+} {} {}} Z:/Post_Norm.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Post_Norm.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity post_norm
+-- Compiling architecture post_norm of post_norm
+
+} {} {}} Z:/Top.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/top.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity ieee_32_bit_floating_point_adder
+-- Compiling architecture ieee_32_bit_floating_point_adder of ieee_32_bit_floating_point_adder
+-- Loading entity exponent_compare
+-- Loading entity exponent_subtract
+-- Loading entity mant_2_to_1_mux_align
+-- Loading entity mant_2_to_1_mux
+-- Loading entity shift
+-- Loading entity la_32_bit_adder
+-- Loading entity post_norm
+
+} {} {}} Z:/TB_Pollard.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_Pollard.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Compiling entity atb_fp_adder
+-- Compiling architecture atb_fp_adder of atb_fp_adder
+
+} {} {}} Z:/Mant_2_To_1_Mux.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Mant_2_To_1_Mux.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity mant_2_to_1_mux
+-- Compiling architecture mant_2_to_1_mux of mant_2_to_1_mux
+
+} {} {}} Z:/LA_4_Bit_Adder.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/LA_4_Bit_Adder.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity la_4_bit_adder
+-- Compiling architecture la_4_bit_adder of la_4_bit_adder
+
+} {} {}} Z:/TB_Exponent_Subtract.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_Exponent_Subtract.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity tb_exponent_subtract
+-- Compiling architecture tb_exponent_subtract of tb_exponent_subtract
+-- Loading entity exponent_subtract
+
+} {} {}} Z:/Shift.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Shift.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity shift
+-- Compiling architecture shift of shift
+
+} {} {}} Z:/LA_32_Bit_Adder.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/LA_32_Bit_Adder.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity la_32_bit_adder
+-- Compiling architecture la_32_bit_adder of la_32_bit_adder
+
+} {} {}} Z:/TB_Post_Norm.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_Post_Norm.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity tb_post_norm
+-- Compiling architecture tb_post_norm of tb_post_norm
+-- Loading entity post_norm
+
+} {} {}} Z:/TB_Top.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_Top.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity tb_top
+-- Compiling architecture tb_top of tb_top
+-- Loading entity ieee_32_bit_floating_point_adder
+
+} {} {}} Z:/TB_Mant_2_To_1_Mux.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_Mant_2_To_1_Mux.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity tb_mant_2_to_1_mux
+-- Compiling architecture tb_mant_2_to_1_mux of tb_mant_2_to_1_mux
+-- Loading entity mant_2_to_1_mux_align
+
+} {} {}} Z:/TB_Shift.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_Shift.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity tb_shift
+-- Compiling architecture tb_shift of tb_shift
+-- Loading entity shift
+
+} {} {}} Z:/TB_LA_32_Bit_Adder.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_LA_32_Bit_Adder.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity tb_la_32_bit_adder
+-- Compiling architecture tb_la_32_bit_adder of tb_la_32_bit_adder
+-- Loading entity la_32_bit_adder
+
+} {} {}} Z:/TB_Exponent_Compare.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_Exponent_Compare.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity tb_exponent_compare
+-- Compiling architecture tb_exponent_compare of tb_exponent_compare
+-- Loading entity exponent_compare
+
+} {} {}}

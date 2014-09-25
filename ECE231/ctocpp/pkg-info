@@ -1,0 +1,15 @@
+Metadata-Version: 1.0
+Name: C To C++
+Version: 1.3
+Summary: Convert your C sources or projects into C++
+Home-page: http://www.scriptet.com
+Author: Denis Sureau
+Author-email: webmaster@scriptet.com
+License: GNU GPL
+Description:  C to C++ is a complete Python script to
+        convert your C programs into C++.
+        Variables are converterd to attributes and functions
+        to methods and classes are created. Then the changes
+        are propagated at each reference of the variables and
+        functions.
+Platform: All Python ones.

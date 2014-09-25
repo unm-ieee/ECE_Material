@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE338/homeworkfirst2013/HSMULT/FP_MULTIPLIER.xst" -ofn "D:/ECE.CLASSES/ECE338/homeworkfirst2013/HSMULT/FP_MULTIPLIER.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE338/homeworkfirst2013/HSMULT/FP_MULTIPLIER.xst" -ofn "D:/ECE.CLASSES/ECE338/homeworkfirst2013/HSMULT/FP_MULTIPLIER.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE338/homeworkfirst2013/HSMULT/FP_MULTIPLIER.xst" -ofn "D:/ECE.CLASSES/ECE338/homeworkfirst2013/HSMULT/FP_MULTIPLIER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a8-csg324-3 FP_MULTIPLIER.ngc FP_MULTIPLIER.ngd  

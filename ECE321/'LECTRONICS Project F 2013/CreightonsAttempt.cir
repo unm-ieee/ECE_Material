@@ -1,0 +1,73 @@
+* Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+* TDB File:  C:\Users\fenn3804\Desktop\Ledit\CreightonsAttempt, Cell:  inv
+* Extract Definition File:  C:\Users\fenn3804\Desktop\Ledit\template.ext
+* Extract Date and Time:  12/12/2013 - 15:47
+
+.include 2um_CMOS.modlib
+Vdd 1 0 dc 5v
+
+Vina 3 0 pwl(0ns,0v,
++480ns,0v,480.001ns,5v,
++640ns,5v,640.001ns,0v,
++800ns,0v,800.001ns,5v,
++960ns,5v,960.001ns,0v,
++1280ns,0v,1280.001ns,5v,
++1440ns,5v,1440.001ns,0v,
++1600ns,0v,1600.001ns,5v,
++1760ns,5v,1760.001ns,0v,
++1920ns,0v,1920.001ns,5v,
++2400ns,5v)
+
+Vinb 5 0 pwl(0ns,0v,
++160ns,0v,160.001ns,5v,
++320ns,5v,320.001ns,0v,
++800ns,0v,800.001ns,5v,
++960ns,5v,960.001ns,0v,
++1120ns,0v,1120.001ns,5v,
++1600ns,5v,1600.001ns,0v,
++1760ns,0v,1760.001ns,5v,
++1920ns,5v,1920.001ns,0v,
++2080ns,0v,2080.001ns,5v,
++2240ns,5v,2240.001ns,0v,
++2400ns,0v)
+
+* NODE NAME ALIASES
+
+*R1 3 0 .00001k
+*R2 5 0 .00001k
+
+* NODE NAME ALIASES
+
+CL 4 0 500fF
+M1 6 7 4 1 CMOSP L=2u W=5u AD=115p PD=86u AS=55p PS=42u 
+* M1 DRAIN GATE SOURCE BULK (30 50.5 32 55.5) 
+M2 1 3 7 1 CMOSP L=2u W=5u AD=160p PD=104u AS=27.5p PS=21u 
+* M2 DRAIN GATE SOURCE BULK (12 50.5 14 55.5) 
+M3 6 3 1 1 CMOSP L=2u W=5u AD=115p PD=86u AS=160p PS=104u 
+* M3 DRAIN GATE SOURCE BULK (33 74 38 76) 
+M4 1 5 8 1 CMOSP L=2u W=5u AD=160p PD=104u AS=27.5p PS=21u 
+* M4 DRAIN GATE SOURCE BULK (68 50.5 70 55.5) 
+M5 6 5 1 1 CMOSP L=2u W=5u AD=115p PD=86u AS=160p PS=104u 
+* M5 DRAIN GATE SOURCE BULK (53 74 58 76) 
+M6 6 8 4 1 CMOSP L=2u W=5u AD=115p PD=86u AS=55p PS=42u 
+* M6 DRAIN GATE SOURCE BULK (50 50.5 52 55.5) 
+M7 10 7 4 0 CMOSN L=2u W=5u AD=57.5p PD=43u AS=55p PS=42u 
+* M7 DRAIN GATE SOURCE BULK (30 34.5 32 39.5) 
+M8 9 3 4 0 CMOSN L=2u W=5u AD=57.5p PD=43u AS=55p PS=42u 
+* M8 DRAIN GATE SOURCE BULK (50.5 34.5 52.5 39.5) 
+M9 0 3 7 0 CMOSN L=2u W=5u AD=160p PD=104u AS=27.5p PS=21u 
+* M9 DRAIN GATE SOURCE BULK (12 34.5 14 39.5) 
+M10 0 5 8 0 CMOSN L=2u W=5u AD=160p PD=104u AS=27.5p PS=21u 
+* M10 DRAIN GATE SOURCE BULK (68 34.5 70 39.5) 
+M11 9 5 0 0 CMOSN L=2u W=5u AD=57.5p PD=43u AS=160p PS=104u 
+* M11 DRAIN GATE SOURCE BULK (53.5 15.5 58.5 17.5) 
+M12 10 8 0 0 CMOSN L=2u W=5u AD=57.5p PD=43u AS=160p PS=104u 
+* M12 DRAIN GATE SOURCE BULK (33 15.5 38 17.5) 
+
+* Total Nodes: 10
+* Total Elements: 12
+* Extract Elapsed Time: 0 seconds
+.op
+.probe
+.tran 100ps 2.4us
+.END

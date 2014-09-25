@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/ECE.CLASSES/ECE338/CordicFinal/ATB_CORDIC_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="atb_cordic" />
+            <top_module name="math_real" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="37" />
+   <wvobject fp_name="/atb_cordic/xx_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xx_clk</obj_property>
+      <obj_property name="ObjectShortName">xx_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/xx_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xx_rst</obj_property>
+      <obj_property name="ObjectShortName">xx_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/xx_read_h" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xx_read_h</obj_property>
+      <obj_property name="ObjectShortName">xx_read_h</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/xx_req_h" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xx_req_h</obj_property>
+      <obj_property name="ObjectShortName">xx_req_h</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/xx_ack_h" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xx_ack_h</obj_property>
+      <obj_property name="ObjectShortName">xx_ack_h</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/xx_dbus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xx_dbus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xx_dbus[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/xx_abus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xx_abus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xx_abus[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/xx_val" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xx_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xx_val[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/yy_val" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">yy_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">yy_val[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/zz_val" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">zz_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zz_val[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/z_end" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z_end[31:0]</obj_property>
+      <obj_property name="ObjectShortName">z_end[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/psr" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">psr</obj_property>
+      <obj_property name="ObjectShortName">psr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/cntr" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">cntr</obj_property>
+      <obj_property name="ObjectShortName">cntr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/cycle" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">cycle</obj_property>
+      <obj_property name="ObjectShortName">cycle</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider15" type="divider">
+      <obj_property name="label">New Divider</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/d_bus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_bus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_bus[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/alpha" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alpha[0:35]</obj_property>
+      <obj_property name="ObjectShortName">alpha[0:35]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider36" type="divider">
+      <obj_property name="label">New Divider</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/write_adr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">write_adr</obj_property>
+      <obj_property name="ObjectShortName">write_adr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/read_adr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">read_adr</obj_property>
+      <obj_property name="ObjectShortName">read_adr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/counter" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">counter</obj_property>
+      <obj_property name="ObjectShortName">counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/done" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/psr" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">psr</obj_property>
+      <obj_property name="ObjectShortName">psr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/a_bus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a_bus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_bus[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/d_bus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_bus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_bus[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/ack_h" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ack_h</obj_property>
+      <obj_property name="ObjectShortName">ack_h</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider37" type="divider">
+      <obj_property name="label">New Divider</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/z_result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z_result[35:0]</obj_property>
+      <obj_property name="ObjectShortName">z_result[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/x_result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x_result[35:0]</obj_property>
+      <obj_property name="ObjectShortName">x_result[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/y_result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y_result[35:0]</obj_property>
+      <obj_property name="ObjectShortName">y_result[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider37" type="divider">
+      <obj_property name="label">New Divider</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/z_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z_next[35:0]</obj_property>
+      <obj_property name="ObjectShortName">z_next[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/x_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x_next[35:0]</obj_property>
+      <obj_property name="ObjectShortName">x_next[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/y_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y_next[35:0]</obj_property>
+      <obj_property name="ObjectShortName">y_next[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/z" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z[35:0]</obj_property>
+      <obj_property name="ObjectShortName">z[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x[35:0]</obj_property>
+      <obj_property name="ObjectShortName">x[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/atb_cordic/UUT/y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y[35:0]</obj_property>
+      <obj_property name="ObjectShortName">y[35:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

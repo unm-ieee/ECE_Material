@@ -1,0 +1,22 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Ryan/Desktop/tutorial_5/counter_tb_vhd_isim_beh.exe -prj C:/Users/Ryan/Desktop/tutorial_5/counter_tb_vhd_beh.prj work.counter_tb_vhd 
+ISim O.61xd (signature 0x1cce1bb2)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Ryan/Desktop/tutorial_5/counter.vhd" into library work
+Parsing VHDL file "C:/Users/Ryan/Desktop/tutorial_5/counter_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity counter [counter_default]
+Compiling architecture behavior of entity counter_tb_vhd
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 8 VHDL Units
+Built simulation executable C:/Users/Ryan/Desktop/tutorial_5/counter_tb_vhd_isim_beh.exe
+Fuse Memory Usage: 26244 KB
+Fuse CPU Usage: 560 ms

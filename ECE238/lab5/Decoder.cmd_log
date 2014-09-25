@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "F:/ECE238/lab5/Decoder.xst" -ofn "F:/ECE238/lab5/Decoder.syr" 

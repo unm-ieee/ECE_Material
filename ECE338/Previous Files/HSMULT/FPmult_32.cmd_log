@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE338/homeworkfirst2013/HSMULT/FPmult_32.xst" -ofn "D:/ECE.CLASSES/ECE338/homeworkfirst2013/HSMULT/FPmult_32.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a8-csg324-3 FPmult_32.ngc FPmult_32.ngd  

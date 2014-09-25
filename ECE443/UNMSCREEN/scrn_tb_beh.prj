@@ -1,0 +1,2 @@
+vhdl work "../Screeen/SCRN.vhd"
+vhdl work "../Screeen/scrn_tb.vhd"

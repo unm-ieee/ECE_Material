@@ -1,0 +1,45 @@
+*
+
+.lib "nom.lib"
+
+vdd 1 0 dc 5
+
+vina 2 0 pulse(0 5 0us 0.001us 0.001us 40us 80us)
+vinb 3 0 pulse(0 5 20us 0.001us 0.001us 40us 80us)
+
+
+m1 0 2 3 0 cmosn l=2u w=8u
+m2 0 4 5 0 cmosn l=2u w=8u
+
+m3 6 4 1 1 cmosp l=2u w=8u
+
+m4 10 3 10 7 cmosn l=2u w=8u
+m5 0 5 10 0 cmosn l=2u w=8u
+
+m6 7 5 6 6 cmosp l=2u w=8u
+
+m7 0 7 8 0 cmosn l=2u w=8u
+
+m8 5 4 1 1 cmosp l=2u w=8u
+m9 3 2 1 1 cmosp l=2u w=8u
+m10 6 3 1 1 cmosp l=2u w=8u
+m11 7 2 6 6 cmosp l=2u w=8u
+
+m12 9 2 7 9 cmosn l=2u w=8u
+m13 0 5 9 0  cmosn l=2u w=8u
+
+m14 8 7 1 1 cmosp l=2u w=8u
+
+.MODEL cmosn nmos LEVEL=2 VTO=0.6 KP=50u
+.MODEL cmosp pmos LEVEL=2 VTO=-0.6 KP=50u
+
+c1 8 0 1n
+
+.op
+
+.probe
+
+.TRAN 1n 600u 0u
+
+.end
+

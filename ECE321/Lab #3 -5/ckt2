@@ -1,0 +1,16 @@
+*
+
+.lib "nom.lib"
+
+
+vdd 5 0 dc 5
+v- 1 0 dc -5
+rd 5 4 2k
+r1 5 2 60k
+r2 2 1 40k
+rs 3 1 1k
+
+m1 4 2 3 3 ntype l=1.0u w=1.0u
+.model ntype nmos level=2 vto=1 kp=1e-3
+
+.op

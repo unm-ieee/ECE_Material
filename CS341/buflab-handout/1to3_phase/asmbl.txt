@@ -1,0 +1,31 @@
+
+inject.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	c7 05 18 d2 04 08 54 	movl   $0x4c6ace54,0x804d218
+   7:	ce 6a 4c 
+
+inject.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	c7 05 18 d2 04 08 54 	movl   $0x4c6ace54,0x804d218
+   7:	ce 6a 4c 
+   a:	68 05 8d 04 08       	push   $0x8048d05
+   f:	c3                   	ret    
+
+dyno.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	b8 54 ce 6a 4c       	mov    $0x4c6ace54,%eax
+   5:	bd da de da de       	mov    $0xdedadeda,%ebp
+   a:	ff 35 81 8e 04 08    	pushl  0x8048e81
+  10:	c3                   	ret    

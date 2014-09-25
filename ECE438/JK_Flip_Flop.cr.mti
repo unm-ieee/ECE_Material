@@ -1,0 +1,10 @@
+Z:/TB_JK_Pollard.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_JK_Pollard.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package textio
+-- Loading package std_logic_textio
+-- Compiling entity asyn_tb
+-- Compiling architecture asyn_tb of asyn_tb
+
+} {} {}}

@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/Ryan/Desktop/School/ECE238L/andagain/sch.xst" -ofn "C:/Users/Ryan/Desktop/School/ECE238L/andagain/sch.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 sch.ngc sch.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sch_map.ncd sch.ngd sch.pcf 
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o sch_map.ncd sch.ngd sch.pcf 

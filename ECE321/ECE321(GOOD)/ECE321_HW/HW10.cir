@@ -1,0 +1,17 @@
+*HW10 Spice Verification*
+
+M1 3 2 0 0 ntype l=0.25u w=2.5u
+M2 3 2 1 1 ptype l=0.25u w=4.25u
+CL 3 0 100ff
+
+VDD 1 0 DC 1.5V
+Vin 2 0 DC 0V pulse(0 5 0ps 1ps 1ps 2ns 4ns)
+
+.model ntype nmos vto = 0.4V kp=100u lambda=0.1
+.model ptype pmos vto = -0.4V kp=60u lambda=-0.2
+
+.DC Vin 0 5 0.01
+.tran 100ps 5ns
+.probe V(2) V(3)
+.op
+.end

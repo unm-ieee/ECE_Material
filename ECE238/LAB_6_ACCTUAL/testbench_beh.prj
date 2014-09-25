@@ -1,0 +1,2 @@
+vhdl work "../Lab 6/L5P1 SequenceDetector.vhd"
+vhdl work "../Lab 6/L5P1 SequenceDetector_tb.vhd"

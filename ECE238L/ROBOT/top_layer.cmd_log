@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.xst" -ofn "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.xst" -ofn "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_layer.ucf -p xc6slx16-csg324-3 top_layer.ngc top_layer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o top_layer_map.ncd top_layer.ngd top_layer.pcf 
+par -w -intstyle ise -ol high -mt off top_layer_map.ncd top_layer.ncd top_layer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml top_layer.twx top_layer.ncd -o top_layer.twr top_layer.pcf -ucf top_layer.ucf 
+bitgen -intstyle ise -f top_layer.ut top_layer.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.xst" -ofn "C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/top_layer.syr" 

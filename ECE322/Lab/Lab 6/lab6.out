@@ -1,0 +1,211 @@
+
+**** 03/26/13 16:54:44 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ * this is a comment
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+
+r1s1 3 4 49.77k 
+r2s1 0 3 50.7k
+rss1 1 2 493
+res1 0 5 2197
+
+r1s2 4 6 56.1k
+r2s2 0 6 12.02k
+rcs2 4 7 1999
+res2 0 8 474
+
+vdd 4 0 dc 10
+
+vac 1 0 sin 0 .01 1000hz 0ms 0 0
+c1 2 3 .33uf
+c2 5 6 .32uf
+
+
+Q1 4 3 5 NPN1
+Q2 7 6 8 NPN2
+.MODEL NPN1 NPN(BF=148 CJC=20pf CJE=20pf)
+.MODEL NPN2 NPN(BF=152 CJC=20pf CJE=20pf)
+
+
+.tran 1ms 25ms
+.probe
+.op
+.end
+
+**** 03/26/13 16:54:44 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ * this is a comment
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NPN1            NPN2            
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  100.000000E-18  100.000000E-18 
+          BF  148             152            
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE   20.000000E-12   20.000000E-12 
+         VJE     .75             .75         
+         CJC   20.000000E-12   20.000000E-12 
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 03/26/13 16:54:44 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ * this is a comment
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    0.0000  (    2)    0.0000  (    3)    4.7429  (    4)   10.0000      
+
+(    5)    3.9537  (    6)    1.6474  (    7)    6.4051  (    8)     .8580  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    vdd         -3.840E-03
+    vac          0.000E+00
+
+    TOTAL POWER DISSIPATION   3.84E-02  WATTS
+
+
+**** 03/26/13 16:54:44 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ * this is a comment
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q1          Q2        
+MODEL        NPN1        NPN2      
+IB           1.21E-05    1.18E-05 
+IC           1.79E-03    1.80E-03 
+VBE          7.89E-01    7.89E-01 
+VBC         -5.26E+00   -4.76E+00 
+VCE          6.05E+00    5.55E+00 
+BETADC       1.48E+02    1.52E+02 
+GM           6.91E-02    6.95E-02 
+RPI          2.14E+03    2.19E+03 
+RX           0.00E+00    0.00E+00 
+RO           1.00E+12    1.00E+12 
+CBE          3.43E-11    3.43E-11 
+CBC          1.01E-11    1.04E-11 
+CJS          0.00E+00    0.00E+00 
+BETAAC       1.48E+02    1.52E+02 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2       2.48E+08    2.48E+08 
+
+
+**** 03/26/13 16:54:44 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ * this is a comment
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    0.0000  (    2)    0.0000  (    3)    4.7429  (    4)   10.0000      
+
+(    5)    3.9537  (    6)    1.6474  (    7)    6.4051  (    8)     .8580  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    vdd         -3.840E-03
+    vac          0.000E+00
+
+    TOTAL POWER DISSIPATION   3.84E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/26/13 16:54:44 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ * this is a comment
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .25
+
+**** 03/26/13 16:54:44 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+  
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+

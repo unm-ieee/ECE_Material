@@ -1,0 +1,6 @@
+EN top NULL "F:/ECE CLASSES/ECE238/lab5/top.vhd" sub00/vhpl00 1333413145
+EN encoder NULL "F:/ECE CLASSES/ECE238/lab5/encoder.vhd" sub00/vhpl04 1333413988
+AR top behavioral "F:/ECE CLASSES/ECE238/lab5/top.vhd" sub00/vhpl01 1333413146
+AR encoder behavioral F:/ECE238/lab5/encoder.vhd sub00/vhpl05 1332205977
+AR decoder behavioral F:/ECE238/lab5/Decoder.vhd sub00/vhpl03 1332205992
+EN decoder NULL F:/ECE238/lab5/Decoder.vhd sub00/vhpl02 1334015102

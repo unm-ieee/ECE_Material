@@ -1,0 +1,4 @@
+vhdl work "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/losr.vhd"
+vhdl work "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/ctrm.vhd"
+vhdl work "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40.vhd"
+vhdl work "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40_test.vhd"

@@ -1,0 +1,392 @@
+Release 13.1 - xst O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.78 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.79 secs
+ 
+--> Reading design: Circuit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Circuit.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Circuit"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Circuit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/ECE238/Lab 6/L5P2 StateMachine1.vhd" in Library work.
+Architecture statemachinearch of Entity statemachineone is up to date.
+Compiling vhdl file "F:/ECE238/Lab 6/L5P2 StateMachine2.vhd" in Library work.
+Architecture statemachinearch of Entity statemachinetwo is up to date.
+Compiling vhdl file "F:/ECE238/Lab 6/L5P3 StateMachineCombine.vhd" in Library work.
+Entity <circuit> compiled.
+Entity <circuit> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Circuit> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <StateMachineOne> in library <work> (architecture <statemachinearch>).
+
+Analyzing hierarchy for entity <StateMachineTwo> in library <work> (architecture <statemachinearch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Circuit> in library <work> (Architecture <behavioral>).
+Entity <Circuit> analyzed. Unit <Circuit> generated.
+
+Analyzing Entity <StateMachineOne> in library <work> (Architecture <statemachinearch>).
+Entity <StateMachineOne> analyzed. Unit <StateMachineOne> generated.
+
+Analyzing Entity <StateMachineTwo> in library <work> (Architecture <statemachinearch>).
+Entity <StateMachineTwo> analyzed. Unit <StateMachineTwo> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <StateMachineOne>.
+    Related source file is "F:/ECE238/Lab 6/L5P2 StateMachine1.vhd".
+    Using one-hot encoding for signal <currState>.
+    Found 1-bit register for signal <output>.
+    Found 5-bit register for signal <currState>.
+    Found 5-bit register for signal <nextState>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <StateMachineOne> synthesized.
+
+
+Synthesizing Unit <StateMachineTwo>.
+    Related source file is "F:/ECE238/Lab 6/L5P2 StateMachine2.vhd".
+    Found 1-bit register for signal <output>.
+    Found 1-bit register for signal <currState<0>>.
+    Found 1-bit register for signal <nextState<0>>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <StateMachineTwo> synthesized.
+
+
+Synthesizing Unit <Circuit>.
+    Related source file is "F:/ECE238/Lab 6/L5P3 StateMachineCombine.vhd".
+Unit <Circuit> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ 1-bit register                                        : 4
+ 5-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <nextState_0> in Unit <StateMachineTwo1> is equivalent to the following FF/Latch, which will be removed : <output> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 14
+ Flip-Flops                                            : 14
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <nextState_0> in Unit <StateMachineTwo> is equivalent to the following FF/Latch, which will be removed : <output> 
+INFO:Xst:2261 - The FF/Latch <nextState_4> in Unit <StateMachineOne> is equivalent to the following FF/Latch, which will be removed : <output> 
+
+Optimizing unit <Circuit> ...
+
+Optimizing unit <StateMachineOne> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Circuit, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Circuit.ngr
+Top Level Output File Name         : Circuit
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 7
+#      INV                         : 1
+#      LUT2                        : 3
+#      LUT3                        : 1
+#      LUT4                        : 2
+# FlipFlops/Latches                : 12
+#      FDC                         : 5
+#      FDE                         : 6
+#      FDP                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                        7  out of   4656     0%  
+ Number of Slice Flip Flops:             12  out of   9312     0%  
+ Number of 4 input LUTs:                  7  out of   9312     0%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    232     1%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_in                             | BUFGP                  | 12    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+Reset_in                           | IBUF                   | 6     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 2.198ns (Maximum Frequency: 454.959MHz)
+   Minimum input arrival time before clock: 3.854ns
+   Maximum output required time after clock: 4.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_in'
+  Clock period: 2.198ns (frequency: 454.959MHz)
+  Total number of paths / destination ports: 18 / 12
+-------------------------------------------------------------------------
+Delay:               2.198ns (Levels of Logic = 1)
+  Source:            StateMachineTwo1/currState_0 (FF)
+  Destination:       StateMachineTwo1/nextState_0 (FF)
+  Source Clock:      clk_in rising
+  Destination Clock: clk_in rising
+
+  Data Path: StateMachineTwo1/currState_0 to StateMachineTwo1/nextState_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.595  StateMachineTwo1/currState_0 (StateMachineTwo1/currState_0)
+     LUT2:I0->O            1   0.704   0.000  StateMachineTwo1/nextState_0_mux00001 (StateMachineTwo1/nextState_0_mux0000)
+     FDC:D                     0.308          StateMachineTwo1/nextState_0
+    ----------------------------------------
+    Total                      2.198ns (1.603ns logic, 0.595ns route)
+                                       (72.9% logic, 27.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.854ns (Levels of Logic = 2)
+  Source:            Reset_in (PAD)
+  Destination:       StateMachineTwo1/currState_0 (FF)
+  Destination Clock: clk_in rising
+
+  Data Path: Reset_in to StateMachineTwo1/currState_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.218   0.708  Reset_in_IBUF (Reset_in_IBUF)
+     INV:I->O              6   0.704   0.669  StateMachineTwo1/reset_inv1_INV_0 (StateMachineOne1/reset_inv)
+     FDE:CE                    0.555          StateMachineOne1/currState_0
+    ----------------------------------------
+    Total                      3.854ns (2.477ns logic, 1.377ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_in'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            StateMachineTwo1/nextState_0 (FF)
+  Destination:       output_out (PAD)
+  Source Clock:      clk_in rising
+
+  Data Path: StateMachineTwo1/nextState_0 to output_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.447  StateMachineTwo1/nextState_0 (StateMachineTwo1/nextState_0)
+     OBUF:I->O                 3.272          output_out_OBUF (output_out)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.25 secs
+ 
+--> 
+
+Total memory usage is 188064 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

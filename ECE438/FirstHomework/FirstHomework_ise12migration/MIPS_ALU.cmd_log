@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE438/FirstHomework/MIPS_ALU.xst" -ofn "D:/ECE.CLASSES/ECE438/FirstHomework/MIPS_ALU.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE438/FirstHomework/MIPS_ALU.xst" -ofn "D:/ECE.CLASSES/ECE438/FirstHomework/MIPS_ALU.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE438/FirstHomework/FirstHomework_ise12migration/MIPS_ALU.xst" -ofn "D:/ECE.CLASSES/ECE438/FirstHomework/FirstHomework_ise12migration/MIPS_ALU.syr" 
+xst -intstyle ise -ifn "D:/ECE.CLASSES/ECE438/FirstHomework/FirstHomework_ise12migration/MIPS_ALU.xst" -ofn "D:/ECE.CLASSES/ECE438/FirstHomework/FirstHomework_ise12migration/MIPS_ALU.syr" 

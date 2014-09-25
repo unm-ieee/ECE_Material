@@ -1,0 +1,308 @@
+/lib/ld-linux.so.2
+l[Vj
+__gmon_start__
+libc.so.6
+_IO_stdin_used
+socket
+fflush
+strcpy
+exit
+sprintf
+fopen
+__isoc99_sscanf
+connect
+signal
+puts
+stdin
+strtol
+fgets
+__errno_location
+read
+stdout
+memcpy
+strcasecmp
+__ctype_b_loc
+getenv
+stderr
+alarm
+gethostbyname
+gethostname
+bcopy
+close
+fprintf
+sleep
+__libc_start_main
+write
+GLIBC_2.3
+GLIBC_2.1
+GLIBC_2.7
+GLIBC_2.0
+PTRh
+|$(D
+:D$'t
+@[^_
+UWVS
+<[^_]
+UWVS
+Erro
+r: C
+lien
+t un
+able
+ to 
+crea
+te s
+@ ockef
+Erro
+r: D
+NS i
+s un
+able
+ to 
+reso
+lve 
+B serv
+B$er a
+B(ddref
+B,ss
+Erro
+r: U
+nabl
+e to
+ con
+nect
+ to 
+the 
+A servf
+A$er
+D$,+D$(
+Erro
+r: R
+esul
+t st
+ring
+ too
+ lar
+ge. 
+@ Incr
+@$ease
+@( SUB
+@,MITR
+@0_MAX
+@4BUF
+<-t$<*t <.t
+Q< u
+Erro
+r: C
+lien
+t un
+able
+ to 
+writ
+e to
+A  the
+A$ ser
+A(ver
+Erro
+r: C
+lien
+t un
+able
+ to 
+read
+ fir
+@ st h
+@$eade
+@(r fr
+@,om s
+@0ervef
+Erro
+r: C
+lien
+t un
+able
+ to 
+read
+ hea
+A ders
+A$ fro
+A(m se
+A,rver
+Erro
+r: C
+lien
+t un
+able
+ to 
+read
+ sta
+@ tus 
+@$mess
+@(age 
+@,from
+@0 ser
+@4ver
+[^_]
+Erro
+r: C
+lien
+t un
+able
+ to 
+crea
+te s
+F ockef
+Erro
+r: D
+NS i
+s un
+able
+ to 
+reso
+lve 
+F serv
+F$er a
+F(ddref
+F,ss
+ [^_
+[^_]
+%s: Error: Couldn't open %s
+Usage: %s [<input_file>]
+That's number 2.  Keep going!
+Halfway there!
+Good work!  On to the next...
+Welcome to my fiendish little bomb. You have 6 phases with
+which to blow yourself up. Have a nice day!
+Phase 1 defused. How about the next one?
+So you got that one.  Try this one.
+For NASA, space is still a high priority.
+Wow! You've defused the secret stage!
+%d %c %d
+So you think you can stop the bomb with ctrl-c, do you?
+Initialization error: Running on an illegal host [1]
+Initialization error: Running on an illegal host [2]
+ERROR: Input string is too large.
+Your instructor has been notified.
+Curses, you've found the secret phase!
+But finding it and solving it are quite different...
+Congratulations! You've defused the bomb!
+Your instructor has been notified and will verify your solution.
+Well...
+OK. :-)
+Invalid phase%s
+Initialization error:
+defused
+exploded
+%d:%s:%d:%s
+BOOM!!!
+The bomb has blown up.
+Error: Premature EOF on stdin
+GRADE_BOMB
+Error: Input line too long
+***truncated***
+%d %d %d %d %d %d
+%d %d %s
+DrEvil
+brown.cs.unm.edu
+callisto.cs.unm.edu
+chawla.cs.unm.edu
+clark.cs.unm.edu
+deimos.cs.unm.edu
+ganymede.cs.unm.edu
+leda.cs.unm.edu
+oberon.cs.unm.edu
+phobos.cs.unm.edu
+phoebe.cs.unm.edu
+prospero.cs.unm.edu
+ramon.cs.unm.edu
+rhea.cs.unm.edu
+setebos.cs.unm.edu
+sycorax.cs.unm.edu
+axel.cs.unm.edu
+b146-01.cs.unm.edu
+b146-02.cs.unm.edu
+b146-03.cs.unm.edu
+b146-04.cs.unm.edu
+b146-05.cs.unm.edu
+b146-06.cs.unm.edu
+b146-07.cs.unm.edu
+b146-08.cs.unm.edu
+b146-09.cs.unm.edu
+b146-10.cs.unm.edu
+b146-11.cs.unm.edu
+b146-12.cs.unm.edu
+b146-13.cs.unm.edu
+b146-14.cs.unm.edu
+b146-15.cs.unm.edu
+b146-16.cs.unm.edu
+b146-17.cs.unm.edu
+b146-18.cs.unm.edu
+b146-19.cs.unm.edu
+b146-20.cs.unm.edu
+b146-21.cs.unm.edu
+b146-22.cs.unm.edu
+b146-23.cs.unm.edu
+b146-24.cs.unm.edu
+b146-25.cs.unm.edu
+b146-26.cs.unm.edu
+b146-27.cs.unm.edu
+b146-28.cs.unm.edu
+b146-29.cs.unm.edu
+b146-30.cs.unm.edu
+b146-31.cs.unm.edu
+b146-32.cs.unm.edu
+b146-33.cs.unm.edu
+b146-34.cs.unm.edu
+b146-35.cs.unm.edu
+b146-36.cs.unm.edu
+b146-37.cs.unm.edu
+b146-38.cs.unm.edu
+b146-39.cs.unm.edu
+b146-40.cs.unm.edu
+b146-41.cs.unm.edu
+b146-42.cs.unm.edu
+b146-43.cs.unm.edu
+b146-44.cs.unm.edu
+b146-45.cs.unm.edu
+b146-46.cs.unm.edu
+b146-47.cs.unm.edu
+b146-48.cs.unm.edu
+b146-49.cs.unm.edu
+b146-50.cs.unm.edu
+b146-51.cs.unm.edu
+b146-52.cs.unm.edu
+b146-53.cs.unm.edu
+b146-54.cs.unm.edu
+b146-55.cs.unm.edu
+b146-56.cs.unm.edu
+b146-57.cs.unm.edu
+b146-58.cs.unm.edu
+b146-59.cs.unm.edu
+b146-60.cs.unm.edu
+b146-61.cs.unm.edu
+b146-62.cs.unm.edu
+b146-63.cs.unm.edu
+b146-64.cs.unm.edu
+b146-65.cs.unm.edu
+b146-66.cs.unm.edu
+b146-67.cs.unm.edu
+b146-68.cs.unm.edu
+b146-69.cs.unm.edu
+b146-70.cs.unm.edu
+b146-71.cs.unm.edu
+b146-72.cs.unm.edu
+b146-73.cs.unm.edu
+b146-74.cs.unm.edu
+Program timed out after %d seconds
+Error: HTTP request failed with error %d: %s
+GET /%s/submitr.pl/?userid=%s&lab=%s&result=%s&submit=submit HTTP/1.0
+Error: Result string contains an illegal or unprintable character.
+Error: Unable to connect to server %s
+%%%02X
+%s %d %[a-zA-z ]
+navistar.cs.unm.edu
+AUTORESULT_STRING=%s
+bomblab
+csapp
+;*2$" 
+sseppala

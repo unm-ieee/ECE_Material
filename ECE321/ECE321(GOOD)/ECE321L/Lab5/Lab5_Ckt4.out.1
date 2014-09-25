@@ -1,0 +1,169 @@
+
+**** 10/02/12 18:21:54 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+R2 N1 N2 200k
+
+R1 N2 N5 150k
+
+V1 N5 0  5V
+
+Rs N5 N4 1.2k
+
+M1 N3 N2 N4 N4 ptype l=1e-6 w=1e-6 
+.model ptype pmos level=2 vto=-1 kp=250e-6
+
+Rd N3 N1 4k
+
+V2 0  N1 5V
+
+
+
+.op
+
+.end
+
+**** 10/02/12 18:21:54 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ptype           
+               PMOS            
+       LEVEL    2            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO   -1            
+          KP  250.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 10/02/12 18:21:54 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   N1)   -5.0000  (   N2)     .7143  (   N3)   -2.0897  (   N4)    4.1269      
+
+(   N5)    5.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V1          -7.562E-04
+    V2          -7.562E-04
+
+    TOTAL POWER DISSIPATION   7.56E-03  WATTS
+
+
+**** 10/02/12 18:21:54 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M1        
+MODEL        ptype     
+ID          -7.28E-04 
+VGS         -3.41E+00 
+VDS         -6.22E+00 
+VBS          0.00E+00 
+VTH         -1.00E+00 
+VDSAT       -2.41E+00 
+Lin0/Sat1   -1.00E+00 
+if          -1.00E+00 
+ir          -1.00E+00 
+TAU         -1.00E+00 
+GM           6.03E-04 
+GDS          0.00E+00 
+GMB          0.00E+00 
+CBD          0.00E+00 
+CBS          0.00E+00 
+CGSOV        0.00E+00 
+CGDOV        0.00E+00 
+CGBOV        0.00E+00 
+CGS          2.30E-16 
+CGD          0.00E+00 
+CGB          0.00E+00 
+
+          JOB CONCLUDED
+
+**** 10/02/12 18:21:54 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

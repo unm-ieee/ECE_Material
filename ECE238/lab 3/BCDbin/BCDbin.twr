@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------
+Release 13.1 Trace  (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.1\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml BCDbin.twx BCDbin.ncd -o BCDbin.twr BCDbin.pcf -ucf
+BCDbin.ucf
+
+Design file:              BCDbin.ncd
+Physical constraint file: BCDbin.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2011-02-03)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Binary<0>      |OUTPUT<0>      |    7.499|
+Binary<1>      |OUTPUT<1>      |    9.122|
+Binary<1>      |OUTPUT<2>      |    8.978|
+Binary<1>      |OUTPUT<3>      |    9.168|
+Binary<1>      |OUTPUT<4>      |    9.422|
+Binary<2>      |OUTPUT<1>      |    7.913|
+Binary<2>      |OUTPUT<2>      |    7.807|
+Binary<2>      |OUTPUT<3>      |    8.155|
+Binary<2>      |OUTPUT<4>      |    8.444|
+Binary<3>      |OUTPUT<1>      |    9.236|
+Binary<3>      |OUTPUT<2>      |    9.099|
+Binary<3>      |OUTPUT<3>      |    9.991|
+Binary<3>      |OUTPUT<4>      |   10.285|
+Disp           |OUTPUT<1>      |    9.034|
+Disp           |OUTPUT<2>      |    8.955|
+Disp           |OUTPUT<3>      |    8.700|
+Disp           |OUTPUT<4>      |    8.929|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Mar 05 19:39:35 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 112 MB
+
+
+

@@ -1,0 +1,25 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/ATB_CORDIC_isim_beh.exe -prj D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/ATB_CORDIC_beh.prj work.ATB_CORDIC 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/CORDIC.vhd" into library work
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/CordicTB.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package numeric_std
+Compiling package math_real
+Compiling architecture behavioral of entity CORDIC [cordic_default]
+Compiling architecture atb_cordic of entity atb_cordic
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 11 VHDL Units
+Built simulation executable D:/ECE.CLASSES/ECE338/CordicsystemonUNMComputer/ATB_CORDIC_isim_beh.exe
+Fuse Memory Usage: 37556 KB
+Fuse CPU Usage: 639 ms

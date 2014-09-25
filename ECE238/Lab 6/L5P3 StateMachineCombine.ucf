@@ -1,0 +1,8 @@
+#NET "board_clk" LOC = "C9"; #Board clock
+NET "clk_in"	LOC = "D18"; #User clock input, Sw1
+NET "x_in"	LOC = "L13"; # sw0
+NET "Reset_in"	LOC = "N17"; #Sw3
+
+NET "output_out"	LOC = "C11"; #LED0
+NET "clk_in" CLOCK_DEDICATED_ROUTE = FALSE; 
+#NET "board_clk" CLOCK_DEDICATED_ROUTE = FALSE; 

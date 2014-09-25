@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="r.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="D_MEMORY.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="D_MEMORY.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="D_MEMORY.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="MIPS_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_MIPS_Top.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="TB_MIPS_Top.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="TB_MIPS_Top.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_MIPS_Top_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_MIPS_Top_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TB_MIPS_Top_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1386459583" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1386459583">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1386646695" xil_pn:in_ck="7492883606932414908" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1386646695">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU_Top.vhd"/>
+      <outfile xil_pn:name="Data_Memory.vhd"/>
+      <outfile xil_pn:name="Instruction_Memory.vhd"/>
+      <outfile xil_pn:name="MIPS.vhd"/>
+      <outfile xil_pn:name="MIPS_Top.vhd"/>
+      <outfile xil_pn:name="One_Bit.vhd"/>
+      <outfile xil_pn:name="Registers.vhd"/>
+      <outfile xil_pn:name="TB_MIPS_Top.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1386460560" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="2969860446319134512" xil_pn:start_ts="1386460560">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1386460560" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1930187408982373116" xil_pn:start_ts="1386460560">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1386459583" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-2345100871201083741" xil_pn:start_ts="1386459583">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1386646695" xil_pn:in_ck="7492883606932414908" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1386646695">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU_Top.vhd"/>
+      <outfile xil_pn:name="Data_Memory.vhd"/>
+      <outfile xil_pn:name="Instruction_Memory.vhd"/>
+      <outfile xil_pn:name="MIPS.vhd"/>
+      <outfile xil_pn:name="MIPS_Top.vhd"/>
+      <outfile xil_pn:name="One_Bit.vhd"/>
+      <outfile xil_pn:name="Registers.vhd"/>
+      <outfile xil_pn:name="TB_MIPS_Top.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1386646699" xil_pn:in_ck="7492883606932414908" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-9176452237129239091" xil_pn:start_ts="1386646695">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TB_MIPS_Top_beh.prj"/>
+      <outfile xil_pn:name="TB_MIPS_Top_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1386647999" xil_pn:in_ck="8616744444764151095" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="949541643231957360" xil_pn:start_ts="1386647998">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TB_MIPS_Top_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
+
+</generated_project>

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+rm -fr autom4te.cache
+rm -f  config.status
+rm -f  ChangeLog
+rm -f  config.log
+rm -f *.pyc
+rm -f c2cpp/*.pyc
+rm -f demo.prj
+rm -f demo.hpj
+rm -f *.bak
+
+rm -f ../ctocpp-1.4.0.tar.gz
+rm -f ../ctocpp-1.4.0.zip
+
+
+cd ..
+tar zcpPsvf ctocpp-1.4.0.tar.gz ctocpp-1.4.0/*
+zip -r ctocpp-1.4.0.zip ctocpp-1.4.0/*
+
+
+

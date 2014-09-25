@@ -1,0 +1,6 @@
+vhdl work "state_5.vhd"
+vhdl work "../../../ROBOT/Reverse_out_02.vhd"
+vhdl work "../../../ROBOT/Reverse_out.vhd"
+vhdl work "../../../ROBOT/main(1).vhd"
+vhdl work "../../../ROBOT/And_gate.vhd"
+vhdl work "../../../ROBOT/Top_layer(2).vhd"

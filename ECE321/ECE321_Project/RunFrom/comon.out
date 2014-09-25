@@ -1,0 +1,266 @@
+
+**** 12/05/12 23:14:06 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+* TDB File:  C:\Users\Tony\Desktop\321_Project\RunFrom\Dimensions, Cell:  Cell0
+* Extract Definition File:  C:\Users\Tony\Desktop\321_Project\RunFrom\template.ext
+* Extract Date and Time:  12/05/2012 - 14:23
+
+.include 2um_CMOS.modlib
+
+**** INCLUDING 2um_CMOS.modlib ****
+* 2um Process MOSFET Transistor Model for ECE321 Project
+
+.MODEL CMOSN NMOS LEVEL=3 PHI=0.600000 TOX=2.1200E-08 XJ=0.200000U   
++TPG=1 VTO=0.7860 DELTA=6.9670E-01 LD=1.6470E-07 KP=9.6379E-05
++UO=591.7 THETA=8.1220E-02 RSH=8.5450E+01 GAMMA=0.5863
++NSUB=2.7470E+16 NFS=1.98E+12 VMAX=1.7330E+05 ETA=4.3680E-02
++KAPPA=1.3960E-01 CGDO=4.0241E-10 CGSO=4.0241E-10
++CGBO=3.6144E-10 CJ=3.8541E-04 MJ=1.1854 CJSW=1.3940E-10
++MJSW=0.125195 PB=0.800000
+
+.MODEL CMOSP PMOS LEVEL=3 PHI=0.600000 TOX=2.1200E-08 XJ=0.200000U 
++TPG=-1 VTO=-0.9056 DELTA=1.5200E+00 LD=2.2000E-08 KP=2.9352E-05
++UO=180.2 THETA=1.2480E-01 RSH=1.0470E+02 GAMMA=0.4863
++NSUB=1.8900E+16 NFS=3.46E+12 VMAX=3.7320E+05 ETA=1.6410E-01
++KAPPA=9.6940E+00 CGDO=5.3752E-11 CGSO=5.3752E-11
++CGBO=3.3650E-10 CJ=4.8447E-04 MJ=0.5027 CJSW=1.6457E-10
++MJSW=0.217168 PB=0.850000
+
+**** RESUMING comon.cir ****
+
+
+* NODE NAME ALIASES
+
+VDD 1 0 dc 5v
+V_SEL 6 0 dc  0v pulse(5 0 0ps 1ps 1ps 50ns 100ns)
+V_IN_0 4 0 dc 5v pulse(0 5 10ns 1ps 1ps 10ns 50ns)
+V_IN_1 3 0 dc 5v pulse(0 5 30ns 1ps 1ps 10ns 50ns)
+CL 2 0 100Ff
+*Rin 7 4 10000ohms
+
+M1 2 5 3 1 cmosp L=2u W=5u AD=95p PD=58u AS=40p PS=26u 
+* M1 DRAIN GATE SOURCE BULK (200.5 -82.5 202.5 -77.5) 
+M2 2 6 4 1 cmosp L=2u W=5u AD=95p PD=58u AS=40p PS=26u 
+* M2 DRAIN GATE SOURCE BULK (173.5 -82.5 175.5 -77.5) 
+M3 5 6 1 1 cmosp L=2u W=5u AD=27.5p PD=21u AS=40p PS=26u 
+* M3 DRAIN GATE SOURCE BULK (147.5 -82.5 149.5 -77.5) 
+M4 2 6 3 0 cmosn L=2u W=5u AD=67.5p PD=47u AS=67.5p PS=37u 
+* M4 DRAIN GATE SOURCE BULK (206 -118 208 -113) 
+M5 2 5 4 0 cmosn L=2u W=5u AD=67.5p PD=47u AS=42.5p PS=27u 
+* M5 DRAIN GATE SOURCE BULK (174 -118 176 -113) 
+M6 5 6 0 0 cmosn L=2u W=5u AD=27.5p PD=21u AS=40p PS=26u 
+* M6 DRAIN GATE SOURCE BULK (147.5 -118 149.5 -113) 
+
+.op
+.probe
+.tran 100ps 300ns
+
+* Total Nodes: 8
+* Total Elements: 6
+* Extract Elapsed Time: 0 seconds
+.END
+
+**** 12/05/12 23:14:06 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSN           CMOSP           
+               NMOS            PMOS            
+       LEVEL    3               3            
+         TPG                   -1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  164.700000E-09   22.000000E-09 
+         VTO     .786           -.9056       
+          KP   96.379000E-06   29.352000E-06 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ  385.410000E-06  484.470000E-06 
+        CJSW  139.400000E-12  164.570000E-12 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO  402.410000E-12   53.752000E-12 
+        CGDO  402.410000E-12   53.752000E-12 
+        CGBO  361.440000E-12  336.500000E-12 
+        NSUB   27.470000E+15   18.900000E+15 
+         NFS    1.980000E+12    3.460000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  173.300000E+03  373.200000E+03 
+       DELTA     .6967          1.52         
+       THETA     .08122          .1248       
+         ETA     .04368          .1641       
+       KAPPA     .1396          9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 12/05/12 23:14:06 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    5.0000  (    3)    5.0000  (    4)    5.0000      
+
+(    5)    5.0000  (    6)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VDD         -6.134E-11
+    V_SEL        0.000E+00
+    V_IN_0      -1.503E-11
+    V_IN_1      -5.010E-12
+
+    TOTAL POWER DISSIPATION   4.07E-10  WATTS
+
+
+**** 12/05/12 23:14:06 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M1          M2          M3          M4          M5        
+MODEL        CMOSP       CMOSP       CMOSP       CMOSN       CMOSN     
+ID          -1.04E-16   -1.00E-11   -6.13E-11    5.01E-12    5.01E-12 
+VGS         -3.01E-07   -5.00E+00   -5.00E+00   -5.00E+00   -3.01E-07 
+VDS         -4.92E-08   -4.92E-08   -3.01E-07   -4.92E-08   -4.92E-08 
+VBS          0.00E+00    0.00E+00    0.00E+00   -5.00E+00   -5.00E+00 
+VTH         -1.02E+00   -1.02E+00   -1.02E+00    1.68E+00    1.68E+00 
+VDSAT       -1.03E-01   -3.39E+00   -3.39E+00    7.36E-02    7.36E-02 
+Lin0/Sat1   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+if          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+ir          -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+TAU         -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00   -1.00E+00 
+GM           8.56E-16    1.61E-12    9.88E-12    0.00E+00    8.36E-21 
+GDS          2.12E-09    2.04E-04    2.04E-04    0.00E+00    1.34E-14 
+GMB          3.11E-16    7.41E-13    4.54E-12    0.00E+00    9.71E-22 
+CBD          5.56E-14    5.56E-14    1.68E-14    7.60E-15    7.60E-15 
+CBS          2.37E-14    2.37E-14    2.37E-14    6.51E-15    4.50E-15 
+CGSOV        2.69E-16    2.69E-16    2.69E-16    2.01E-15    2.01E-15 
+CGDOV        2.69E-16    2.69E-16    2.69E-16    2.01E-15    2.01E-15 
+CGBOV        6.58E-16    6.58E-16    6.58E-16    6.04E-16    6.04E-16 
+CGS          0.00E+00    7.97E-15    7.97E-15    0.00E+00    0.00E+00 
+CGD          0.00E+00    7.97E-15    7.97E-15    0.00E+00    0.00E+00 
+CGB          1.07E-14    0.00E+00    0.00E+00    6.70E-15    1.72E-15 
+
+NAME         M6        
+MODEL        CMOSN     
+ID           6.13E-11 
+VGS          0.00E+00 
+VDS          5.00E+00 
+VBS          0.00E+00 
+VTH          8.26E-01 
+VDSAT        7.13E-02 
+Lin0/Sat1   -1.00E+00 
+if          -1.00E+00 
+ir          -1.00E+00 
+TAU         -1.00E+00 
+GM           6.67E-10 
+GDS          3.27E-12 
+GMB          2.81E-10 
+CBD          3.30E-15 
+CBS          1.90E-14 
+CGSOV        2.01E-15 
+CGDOV        2.01E-15 
+CGBOV        6.04E-16 
+CGS          0.00E+00 
+CGD          0.00E+00 
+CGB          6.70E-15 
+**** 12/05/12 23:14:06 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2) 11.02E-09  (    3)    0.0000  (    4)    0.0000      
+
+(    5) 194.6E-09  (    6)    5.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VDD         -1.970E-10
+    V_SEL        0.000E+00
+    V_IN_0       5.010E-12
+    V_IN_1       1.503E-11
+
+    TOTAL POWER DISSIPATION   9.85E-10  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .09
+

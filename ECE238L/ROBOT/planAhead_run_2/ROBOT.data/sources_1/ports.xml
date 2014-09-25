@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="cmpPwm">
+			<Port Id="7" Dir="IN"/>
+			<Port Id="6" Dir="IN"/>
+			<Port Id="5" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Port Id="clk" Dir="IN"/>
+		<Port Id="data_in_Right" Dir="IN"/>
+		<Port Id="data_in_Left" Dir="IN"/>
+		<Port Id="pwm_out_01" Dir="OUT"/>
+		<Port Id="pwm_out_02" Dir="OUT"/>
+		<Port Id="Direction_01" Dir="OUT"/>
+		<Port Id="Direction_02" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

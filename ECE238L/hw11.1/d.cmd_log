@@ -1,0 +1,4 @@
+sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl d.vhf -w C:/Users/Ryan/Desktop/School/ECE238L/hw11.1/d.sch 
+xst -intstyle ise -ifn "C:/Users/Ryan/Desktop/School/ECE238L/hw11.1/d.xst" -ofn "C:/Users/Ryan/Desktop/School/ECE238L/hw11.1/d.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 d.ngc d.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o d_map.ncd d.ngd d.pcf 

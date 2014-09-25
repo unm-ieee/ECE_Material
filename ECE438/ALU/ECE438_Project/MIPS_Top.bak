@@ -1,0 +1,119 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity MIPS_Top is
+port(
+  clock : in std_logic;
+  reset : in std_logic;
+  PCsrc : in std_logic
+);
+
+end entity MIPS_Top;
+
+architecture MIPS_Top of MIPS_Top is
+
+--Instruction_Memory_Signals
+signal Instruction_Address_PC : std_logic_vector(31 downto 0);
+signal Instruction_Data : std_logic_vector(31 downto 0);
+signal PC_Mux : std_logic_vector(31 downto 0);
+signal PC_Addition : std_logic_vector(31 downto 0);
+--signal PCsrc : std_logic;
+signal EX_MEM_Addition : std_logic_vector(31 downto 0);
+
+--Instruction_Fetch_Decode_Registers
+signal PC_Addition_reg : STD_LOGIC_VECTOR (31 downto 0);  
+signal Instruction_Data_reg : STD_LOGIC_VECTOR (31 downto 0); 
+
+--Register_Signals
+signal Read_Register_1 : STD_LOGIC_VECTOR (4 downto 0);
+signal Reg_Value_1 : STD_LOGIC_VECTOR (31 downto 0);
+signal Read_Register_2 : STD_LOGIC_VECTOR (4 downto 0);
+signal Reg_Value_2 : STD_LOGIC_VECTOR (31 downto 0);
+signal Write_Address : STD_LOGIC_VECTOR (4 downto 0);
+signal Write_Value : STD_LOGIC_VECTOR (31 downto 0);
+signal Write_Enable : STD_LOGIC;
+
+--Data_Memory
+signal Data_Address : STD_LOGIC_VECTOR (31 downto 0);
+signal Data_Out : STD_LOGIC_VECTOR (31 downto 0);
+signal Data_In : STD_LOGIC_VECTOR (31 downto 0);
+signal Memory_Read : STD_LOGIC;
+signal Memory_Write : STD_LOGIC;
+
+
+begin
+
+Mux_2_to_1 : process(clock, reset)
+begin
+  if reset = '1' then
+    PC_Mux <= (others => '0');
+  elsif rising_edge(clock) then 
+    if PCsrc = '0' then  
+      PC_Mux <= PC_Addition;
+    else
+      PC_Mux <= EX_MEM_Addition;
+  end if;
+end process;  
+  
+Program_Counter : process(clock, reset)
+begin
+  if reset = '1' then 
+    Instruction_Address_PC <= (others => '0');
+  elsif rising_edge(clock) then   
+    Instruction_Address_PC <= PC_Mux;
+  end if;  
+end process;
+
+Adder : process(clock, reset)
+begin
+  if reset = '1' then
+    PC_Addition <= (others => '0');
+  elsif rising_edge(clock) then  
+    PC_Addition <= Instruction_Address_PC + "0100";
+  end if;
+end process;
+
+Register_Instruction_Fetch_Decode : process(clock, reset)
+begin
+  if reset = '1' then
+    PC_Addition <= (others => '0');
+    Instruction_Data <= (others => '0');
+  elsif rising_edge(clock) then
+    PC_Addition_reg <= PC_Addition; 
+    Instruction_Data_reg <= Instruction_Data;
+  end if;  
+end process;
+
+
+Instruction_Memory : entity work.I_MEMORY
+  port map(
+    I_ADDR => Instruction_Address_PC,    --: in  STD_LOGIC_VECTOR ( 31 downto 0 );
+    I_DATA => Instruction_Data,       --: out STD_LOGIC_VECTOR ( 31 downto 0 );
+    CLK => Clock                      --: in  STD_LOGIC
+  );
+
+Registers : entity work.REGISTERS
+  port map(
+    READ1 => Read_Register_1,         --: in  STD_LOGIC_VECTOR ( 4 downto 0 );
+    R_VAL1 => Reg_Value_1,            --: out STD_LOGIC_VECTOR ( 31 downto 0 );
+    READ2 => Read_Register_2,         --: in  STD_LOGIC_VECTOR ( 4 downto 0 );
+    R_VAL2 => Reg_Value_2,            --: out STD_LOGIC_VECTOR ( 31 downto 0 );
+    WADDR => Write_Address,           --: in  STD_LOGIC_VECTOR ( 4 downto 0 );
+    W_VAL => Write_Value,             --: in  STD_LOGIC_VECTOR ( 31 downto 0 );
+    WRIT_EN => Write_Enable,          --: in  STD_LOGIC;
+    CLK => Clock                      --: in  STD_LOGIC
+  );
+
+Data_Memory : entity work.D_MEMORY
+  port map(
+    D_ADDR => Data_Address,           --: in  STD_LOGIC_VECTOR ( 31 downto 0 );
+    D_OUT_DATA => Data_Out,           --: out STD_LOGIC_VECTOR ( 31 downto 0 );
+    D_IN_DATA => Data_In,             --: in  STD_LOGIC_VECTOR ( 31 downto 0 );
+    MEM_READ => Memory_Read,          --: in  STD_LOGIC;
+    MEM_WRITE => Memory_Write,        --: in  STD_LOGIC;
+    CLK => Clock                      --: in  STD_LOGIC
+  );
+
+
+end MIPS_Top;

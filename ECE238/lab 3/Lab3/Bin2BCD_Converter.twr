@@ -1,0 +1,72 @@
+--------------------------------------------------------------------------------
+Release 13.1 Trace  (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.1\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml Bin2BCD_Converter.twx Bin2BCD_Converter.ncd -o
+Bin2BCD_Converter.twr Bin2BCD_Converter.pcf -ucf Bin2BCD_Converter.ucf
+
+Design file:              Bin2BCD_Converter.ncd
+Physical constraint file: Bin2BCD_Converter.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2011-02-03)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+bin_num<0>     |bcd_digit_1<0> |    7.499|
+bin_num<1>     |bcd_digit_1<1> |    9.125|
+bin_num<1>     |bcd_digit_1<2> |    9.632|
+bin_num<1>     |bcd_digit_1<3> |    9.491|
+bin_num<1>     |bcd_digit_2<0> |    9.795|
+bin_num<2>     |bcd_digit_1<1> |    8.128|
+bin_num<2>     |bcd_digit_1<2> |    8.557|
+bin_num<2>     |bcd_digit_1<3> |    8.447|
+bin_num<2>     |bcd_digit_2<0> |    8.763|
+bin_num<3>     |bcd_digit_1<1> |    9.128|
+bin_num<3>     |bcd_digit_1<2> |    9.824|
+bin_num<3>     |bcd_digit_1<3> |    9.676|
+bin_num<3>     |bcd_digit_2<0> |    9.823|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Mar 05 17:58:18 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 111 MB
+
+
+

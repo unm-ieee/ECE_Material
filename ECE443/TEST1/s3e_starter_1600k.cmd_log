@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "F:/ECE.CLASSES/ECE 443/TEST1/s3e_starter_1600k.xst" -ofn "F:/ECE.CLASSES/ECE 443/TEST1/s3e_starter_1600k.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/s3e_starter_1600k.ucf -p acr2 "s3e_starter_1600k.ngc" s3e_starter_1600k.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/s3e_starter_1600k.ucf -p acr2 "s3e_starter_1600k.ngc" s3e_starter_1600k.ngd  

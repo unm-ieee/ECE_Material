@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Wed Feb 13 13:32:42 2013
+# Process ID: 3920
+# Log file: C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/Ryan/Desktop/School/ECE238L/ROBOT/pa.fromNetlist.tcl
+startgroup
+set_property package_pin K2 [get_ports data_in_Left]
+endgroup
+startgroup
+set_property package_pin K1 [get_ports data_in_Right]
+endgroup
+startgroup
+set_property package_pin T12 [get_ports Direction_01]
+endgroup
+startgroup
+set_property package_pin V12 [get_ports Direction_02]
+endgroup
+startgroup
+set_property package_pin N10 [get_ports pwm_out_01]
+endgroup
+startgroup
+set_property package_pin P11 [get_ports pwm_out_02]
+endgroup
+save_constraints

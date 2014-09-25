@@ -1,0 +1,21 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Ryan/Desktop/School/ECE238L/hw11.1/d_isim_beh.exe -prj C:/Users/Ryan/Desktop/School/ECE238L/hw11.1/d_beh.prj work.d 
+ISim O.61xd (signature 0x1cce1bb2)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Ryan/Desktop/School/ECE238L/hw11.1/d.vhf" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture behavioral of entity d
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 9 VHDL Units
+Built simulation executable C:/Users/Ryan/Desktop/School/ECE238L/hw11.1/d_isim_beh.exe
+Fuse Memory Usage: 35520 KB
+Fuse CPU Usage: 2464 ms

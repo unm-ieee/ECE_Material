@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "F:/ECE238/lab5/lab5/top.xst" -ofn "F:/ECE238/lab5/lab5/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 top.ngc top.ngd  
+xst -intstyle ise -ifn "F:/ECE238/lab5/lab5/top.xst" -ofn "F:/ECE238/lab5/lab5/top.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab5/lab5/top.xst" -ofn "F:/ECE238/lab5/lab5/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 top.ngc top.ngd  

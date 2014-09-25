@@ -1,0 +1,27 @@
+**
+
+Vdd 1 0 5
+
+vina 2 0 pulse ( 0 5 0us .001us .001us 40us 80us)
+vinb 3 0 pulse ( 0 5 10us .001us .001us 40us 80us)
+vinc 4 0 pulse ( 0 5 20us .001us .001us 40us 80us)
+
+M1 8 2 1 1 cmosp l=2e-6 w=8e-6
+M2 9 3 8 8 cmosp l=2e-6 w=8e-6
+M3 10 4 9 9 cmosp l=2e-6 w=8e-6
+M4 10 2 0 0 cmosn l=2e-6 w=8e-6
+M5 10 3 0 0 cmosn l=2e-6 w=8e-6
+M6 10 4 0 0 cmosn l=2e-6 w=8e-6
+
+
+.MODEL cmosn nmos LEVEL=2 VTO=0.6 KP=50e-6
+.MODEL cmosp pmos LEVEL=2 VTO=-0.6 KP=50e-6
+
+c1 10 0 500pf
+
+
+
+.PROBE
+.TRAN  1n  180e-6s   
+
+.end

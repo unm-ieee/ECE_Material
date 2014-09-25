@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.68d on Mon Dec 02 15:19:10 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "hsync_out" LOCATE = SITE "N6" LEVEL 1;
+COMP "blue_out" LOCATE = SITE "T7" LEVEL 1;
+COMP "kb_data" LOCATE = SITE "J13" LEVEL 1;
+COMP "green_out" LOCATE = SITE "V6" LEVEL 1;
+COMP "kb_clk" LOCATE = SITE "L12" LEVEL 1;
+COMP "vsync_out" LOCATE = SITE "P7" LEVEL 1;
+COMP "red_out" LOCATE = SITE "N7" LEVEL 1;
+SCHEMATIC END;
+

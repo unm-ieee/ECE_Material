@@ -1,0 +1,1780 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+###############################################################
+#
+# (c) Copyright 2009 Xilinx, Inc. All rights reserved.
+#
+# This file contains confidential and proprietary information
+# of Xilinx, Inc. and is protected under U.S. and
+# international copyright and other intellectual property
+# laws.
+#
+# DISCLAIMER
+# This disclaimer is not a license and does not grant any
+# rights to the materials distributed herewith. Except as
+# otherwise provided in a valid license issued to you by
+# Xilinx, and to the maximum extent permitted by applicable
+# law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+# WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+# AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+# BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+# INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+# (2) Xilinx shall not be liable (whether in contract or tort,
+# including negligence, or under any other theory of
+# liability) for any loss or damage of any kind or nature
+# related to, arising under or in connection with these
+# materials, including for any direct, or any indirect,
+# special, incidental, or consequential loss or damage
+# (including loss of data, profits, goodwill, or any type of
+# loss or damage suffered as a result of any action brought
+# by a third party) even if such damage or loss was
+# reasonably foreseeable or Xilinx had been advised of the
+# possibility of the same.
+#
+# CRITICAL APPLICATIONS
+# Xilinx products are not designed or intended to be fail-
+# safe, or for use in any application requiring fail-safe
+# performance, such as life-support or safety devices or
+# systems, Class III medical devices, nuclear facilities,
+# applications related to the deployment of airbags, or any
+# other applications that could lead to death, personal
+# injury, or severe property or environmental damage
+# (individually and collectively, "Critical
+# Applications"). Customer assumes the sole risk and
+# liability of any use of Xilinx products in Critical
+# Applications, subject only to applicable laws and
+# regulations governing limitations on product liability.
+#
+# THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+# PART OF THIS FILE AT ALL TIMES.
+#
+#  All rights reserved.
+###############################################################
+-->
+
+<!DOCTYPE doc SYSTEM "../../ipdialog.dtd" [
+        <!-- -->
+	<!ENTITY C_DATA_WIDTH '
+	<widget id="C_DATA_WIDTH">
+		<key>C_DATA_WIDTH</key>
+		<label>Data Channel Width</label>
+		<tip>The bit width of each data channel.</tip>
+        <value type="enum" default="8">
+            <range>
+                <discrete data="8" display="8"/>
+                <discrete data="10" display="10"/>
+                <discrete data="12" display="12"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_NUM_DATA_CHANNELS '
+	<widget id="C_NUM_DATA_CHANNELS">
+		<key>C_NUM_DATA_CHANNELS</key>
+		<label>Number of Data Channels</label>
+		<tip>The number of data channels, not including the alpha channel.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="3" display="3"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_ALPHA_CHANNEL_EN '
+	<widget id="C_ALPHA_CHANNEL_EN">
+		<key>C_ALPHA_CHANNEL_EN</key>
+		<label>Enable Alpha Channel Input</label>
+                <tip>Enable the alpha channel on all AXI4-Stream and XSVI inputs.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+
+        <!-- -->
+	<!ENTITY C_NUM_LAYERS '
+	<widget id="C_NUM_LAYERS">
+		<key>C_NUM_LAYERS</key>
+		<label>Number of Layers</label>
+		<tip>The number video or graphics layers.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="1"/>
+                <discrete data="2" display="2"/>
+                <discrete data="3" display="3"/>
+                <discrete data="4" display="4"/>
+                <discrete data="5" display="5"/>
+                <discrete data="6" display="6"/>
+                <discrete data="7" display="7"/>
+                <discrete data="8" display="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_SCREEN_WIDTH '
+	<widget id="C_SCREEN_WIDTH">
+		<key>C_SCREEN_WIDTH</key>
+		<label>Maximum Output Screen Width</label>
+		<tip>The maximum number pixels per line.</tip>
+        <value type="int" default="1280">
+            <range>
+                <intrange min="128" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+
+
+        <!-- -->
+	<!ENTITY C_OUTPUT_MODE '
+	<widget id="C_OUTPUT_MODE">
+		<key>C_OUTPUT_MODE</key>
+		<label>Output Mode</label>
+		<tip>The output interface of the OSD, either AXI4-Stream or XSVI.</tip>
+        <value type="enum" default="1">
+            <range>
+                <discrete data="1" display="XSVI"/>
+                <discrete data="0" display="AXI4-Stream"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER0_TYPE '
+	<widget id="C_LAYER0_TYPE">
+		<key>C_LAYER0_TYPE</key>
+		<label>Layer 0 Type</label>
+		<tip>The layer type of layer 0.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="Internal Graphics Controller"/>
+                <discrete data="2" display="AXI4-Stream"/>
+                <discrete data="3" display="XSVI"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER1_TYPE '
+	<widget id="C_LAYER1_TYPE">
+		<key>C_LAYER1_TYPE</key>
+		<label>Layer 1 Type</label>
+		<tip>The layer type of layer 1.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="Internal Graphics Controller"/>
+                <discrete data="2" display="AXI4-Stream"/>
+                <discrete data="3" display="XSVI"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER2_TYPE '
+	<widget id="C_LAYER2_TYPE">
+		<key>C_LAYER2_TYPE</key>
+		<label>Layer 2 Type</label>
+		<tip>The layer type of layer 2.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="Internal Graphics Controller"/>
+                <discrete data="2" display="AXI4-Stream"/>
+                <discrete data="3" display="XSVI"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER3_TYPE '
+	<widget id="C_LAYER3_TYPE">
+		<key>C_LAYER3_TYPE</key>
+		<label>Layer 3 Type</label>
+		<tip>The layer type of layer 3.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="Internal Graphics Controller"/>
+                <discrete data="2" display="AXI4-Stream"/>
+                <discrete data="3" display="XSVI"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER4_TYPE '
+	<widget id="C_LAYER4_TYPE">
+		<key>C_LAYER4_TYPE</key>
+		<label>Layer 4 Type</label>
+		<tip>The layer type of layer 4.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="Internal Graphics Controller"/>
+                <discrete data="2" display="AXI4-Stream"/>
+                <discrete data="3" display="XSVI"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER5_TYPE '
+	<widget id="C_LAYER5_TYPE">
+		<key>C_LAYER5_TYPE</key>
+		<label>Layer 5 Type</label>
+		<tip>The layer type of layer 5.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="Internal Graphics Controller"/>
+                <discrete data="2" display="AXI4-Stream"/>
+                <discrete data="3" display="XSVI"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER6_TYPE '
+	<widget id="C_LAYER6_TYPE">
+		<key>C_LAYER6_TYPE</key>
+		<label>Layer 6 Type</label>
+		<tip>The layer type of layer 6.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="Internal Graphics Controller"/>
+                <discrete data="2" display="AXI4-Stream"/>
+                <discrete data="3" display="XSVI"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER7_TYPE '
+	<widget id="C_LAYER7_TYPE">
+		<key>C_LAYER7_TYPE</key>
+		<label>Layer 7 Type</label>
+		<tip>The layer type of layer 7.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="1" display="Internal Graphics Controller"/>
+                <discrete data="2" display="AXI4-Stream"/>
+                <discrete data="3" display="XSVI"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER0_IMEM_SIZE '
+	<widget id="C_LAYER0_IMEM_SIZE">
+		<key>C_LAYER0_IMEM_SIZE</key>
+		<label>Number of Instructions</label>
+		<tip>The Number of instructions per frame.</tip>
+        <value type="int" default="48">
+            <range>
+                <intrange min="2" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER0_INS_BOX_EN '
+	<widget id="C_LAYER0_INS_BOX_EN">
+		<key>C_LAYER0_INS_BOX_EN</key>
+		<label>Enable Box Instructions</label>
+                <tip>Enable Box Instructions.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER0_INS_TEXT_EN '
+	<widget id="C_LAYER0_INS_TEXT_EN">
+		<key>C_LAYER0_INS_TEXT_EN</key>
+		<label>Enable Text Instructions</label>
+                <tip>Enable Text Instructions.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER0_CLUT_SIZE '
+	<widget id="C_LAYER0_CLUT_SIZE">
+		<key>C_LAYER0_CLUT_SIZE</key>
+		<label>CLUT Size</label>
+		<tip>The size of the color look up table.</tip>
+        <value type="enum" default="16">
+            <range>
+                <discrete data="16" display="16"/>
+                <discrete data="256" display="256"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER0_CLUT_MEMTYPE '
+	<widget id="C_LAYER0_CLUT_MEMTYPE">
+		<key>C_LAYER0_CLUT_MEMTYPE</key>
+		<label>CLUT Memory Type</label>
+		<tip>The type and resources used for the color look up table.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="0" display="Distributed RAM"/>
+                <discrete data="1" display="Block RAM"/>
+                <discrete data="2" display="Auto Select"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER0_FONT_NUM_CHARS '
+	<widget id="C_LAYER0_FONT_NUM_CHARS">
+		<key>C_LAYER0_FONT_NUM_CHARS</key>
+		<label>Number of Font Characters</label>
+                <tip>The maximum number of characters in the font.</tip>
+        <value type="int" default="96">
+            <range>
+                <intrange min="1" max="256" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER0_FONT_WIDTH '
+	<widget id="C_LAYER0_FONT_WIDTH">
+		<key>C_LAYER0_FONT_WIDTH</key>
+		<label>Character Width</label>
+                <tip>The pixel width of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER0_FONT_HEIGHT '
+	<widget id="C_LAYER0_FONT_HEIGHT">
+		<key>C_LAYER0_FONT_HEIGHT</key>
+		<label>Character Height</label>
+                <tip>The pixel height of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER0_FONT_BPP '
+	<widget id="C_LAYER0_FONT_BPP">
+		<key>C_LAYER0_FONT_BPP</key>
+		<label>Font Bits Per Pixel</label>
+                <tip>The bits per pixel of each character pixel.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="1" max="2" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER0_FONT_ASCII_OFFSET '
+	<widget id="C_LAYER0_FONT_ASCII_OFFSET">
+		<key>C_LAYER0_FONT_ASCII_OFFSET</key>
+		<label>ASCII Offset</label>
+                <tip>The ASCII value of the first character in the Font RAM.</tip>
+        <value type="int" default="32">
+            <range>
+                <intrange min="0" max="255" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER0_TEXT_NUM_STRINGS '
+	<widget id="C_LAYER0_TEXT_NUM_STRINGS">
+		<key>C_LAYER0_TEXT_NUM_STRINGS</key>
+		<label>Number of Strings</label>
+                <tip>The maximum number of strings that can be selected to use for each Text Instruction.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="1" max="32" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+ 
+        <!-- -->
+	<!ENTITY C_LAYER0_TEXT_MAX_STRING_LENGTH '
+	<widget id="C_LAYER0_TEXT_MAX_STRING_LENGTH">
+		<key>C_LAYER0_TEXT_MAX_STRING_LENGTH</key>
+		<label>Maximum String Length</label>
+		<tip>The maximum string length of each string.</tip>
+        <value type="enum" default="32">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="4" display="4"/>
+                <discrete data="8" display="8"/>
+                <discrete data="16" display="16"/>
+                <discrete data="32" display="32"/>
+                <discrete data="64" display="64"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER1_IMEM_SIZE '
+	<widget id="C_LAYER1_IMEM_SIZE">
+		<key>C_LAYER1_IMEM_SIZE</key>
+		<label>Number of Instructions</label>
+		<tip>The Number of instructions per frame.</tip>
+        <value type="int" default="48">
+            <range>
+                <intrange min="2" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER1_INS_BOX_EN '
+	<widget id="C_LAYER1_INS_BOX_EN">
+		<key>C_LAYER1_INS_BOX_EN</key>
+		<label>Enable Box Instructions</label>
+                <tip>Enable Box Instructions.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER1_INS_TEXT_EN '
+	<widget id="C_LAYER1_INS_TEXT_EN">
+		<key>C_LAYER1_INS_TEXT_EN</key>
+		<label>Enable Text Instructions</label>
+                <tip>Enable Text Instructions.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER1_CLUT_SIZE '
+	<widget id="C_LAYER1_CLUT_SIZE">
+		<key>C_LAYER1_CLUT_SIZE</key>
+		<label>CLUT Size</label>
+		<tip>The size of the color look up table.</tip>
+        <value type="enum" default="16">
+            <range>
+                <discrete data="16" display="16"/>
+                <discrete data="256" display="256"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER1_CLUT_MEMTYPE '
+	<widget id="C_LAYER1_CLUT_MEMTYPE">
+		<key>C_LAYER1_CLUT_MEMTYPE</key>
+		<label>CLUT Memory Type</label>
+		<tip>The type and resources used for the color look up table.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="0" display="Distributed RAM"/>
+                <discrete data="1" display="Block RAM"/>
+                <discrete data="2" display="Auto Select"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER1_FONT_NUM_CHARS '
+	<widget id="C_LAYER1_FONT_NUM_CHARS">
+		<key>C_LAYER1_FONT_NUM_CHARS</key>
+		<label>Number of Font Characters</label>
+                <tip>The maximum number of characters in the font.</tip>
+        <value type="int" default="96">
+            <range>
+                <intrange min="1" max="256" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER1_FONT_WIDTH '
+	<widget id="C_LAYER1_FONT_WIDTH">
+		<key>C_LAYER1_FONT_WIDTH</key>
+		<label>Character Width</label>
+                <tip>The pixel width of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER1_FONT_HEIGHT '
+	<widget id="C_LAYER1_FONT_HEIGHT">
+		<key>C_LAYER1_FONT_HEIGHT</key>
+		<label>Character Height</label>
+                <tip>The pixel height of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER1_FONT_BPP '
+	<widget id="C_LAYER1_FONT_BPP">
+		<key>C_LAYER1_FONT_BPP</key>
+		<label>Font Bits Per Pixel</label>
+                <tip>The bits per pixel of each character pixel.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="1" max="2" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER1_FONT_ASCII_OFFSET '
+	<widget id="C_LAYER1_FONT_ASCII_OFFSET">
+		<key>C_LAYER1_FONT_ASCII_OFFSET</key>
+		<label>ASCII Offset</label>
+                <tip>The ASCII value of the first character in the Font RAM.</tip>
+        <value type="int" default="32">
+            <range>
+                <intrange min="0" max="255" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER1_TEXT_NUM_STRINGS '
+	<widget id="C_LAYER1_TEXT_NUM_STRINGS">
+		<key>C_LAYER1_TEXT_NUM_STRINGS</key>
+		<label>Number of Strings</label>
+                <tip>The maximum number of strings that can be selected to use for each Text Instruction.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="1" max="32" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+ 
+        <!-- -->
+	<!ENTITY C_LAYER1_TEXT_MAX_STRING_LENGTH '
+	<widget id="C_LAYER1_TEXT_MAX_STRING_LENGTH">
+		<key>C_LAYER1_TEXT_MAX_STRING_LENGTH</key>
+		<label>Maximum String Length</label>
+		<tip>The maximum string length of each string.</tip>
+        <value type="enum" default="32">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="4" display="4"/>
+                <discrete data="8" display="8"/>
+                <discrete data="16" display="16"/>
+                <discrete data="32" display="32"/>
+                <discrete data="64" display="64"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER2_IMEM_SIZE '
+	<widget id="C_LAYER2_IMEM_SIZE">
+		<key>C_LAYER2_IMEM_SIZE</key>
+		<label>Number of Instructions</label>
+		<tip>The Number of instructions per frame.</tip>
+        <value type="int" default="48">
+            <range>
+                <intrange min="2" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER2_INS_BOX_EN '
+	<widget id="C_LAYER2_INS_BOX_EN">
+		<key>C_LAYER2_INS_BOX_EN</key>
+		<label>Enable Box Instructions</label>
+                <tip>Enable Box Instructions.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER2_INS_TEXT_EN '
+	<widget id="C_LAYER2_INS_TEXT_EN">
+		<key>C_LAYER2_INS_TEXT_EN</key>
+		<label>Enable Text Instructions</label>
+                <tip>Enable Text Instructions.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER2_CLUT_SIZE '
+	<widget id="C_LAYER2_CLUT_SIZE">
+		<key>C_LAYER2_CLUT_SIZE</key>
+		<label>CLUT Size</label>
+		<tip>The size of the color look up table.</tip>
+        <value type="enum" default="16">
+            <range>
+                <discrete data="16" display="16"/>
+                <discrete data="256" display="256"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER2_CLUT_MEMTYPE '
+	<widget id="C_LAYER2_CLUT_MEMTYPE">
+		<key>C_LAYER2_CLUT_MEMTYPE</key>
+		<label>CLUT Memory Type</label>
+		<tip>The type and resources used for the color look up table.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="0" display="Distributed RAM"/>
+                <discrete data="1" display="Block RAM"/>
+                <discrete data="2" display="Auto Select"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER2_FONT_NUM_CHARS '
+	<widget id="C_LAYER2_FONT_NUM_CHARS">
+		<key>C_LAYER2_FONT_NUM_CHARS</key>
+		<label>Number of Font Characters</label>
+                <tip>The maximum number of characters in the font.</tip>
+        <value type="int" default="96">
+            <range>
+                <intrange min="1" max="256" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER2_FONT_WIDTH '
+	<widget id="C_LAYER2_FONT_WIDTH">
+		<key>C_LAYER2_FONT_WIDTH</key>
+		<label>Character Width</label>
+                <tip>The pixel width of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER2_FONT_HEIGHT '
+	<widget id="C_LAYER2_FONT_HEIGHT">
+		<key>C_LAYER2_FONT_HEIGHT</key>
+		<label>Character Height</label>
+                <tip>The pixel height of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER2_FONT_BPP '
+	<widget id="C_LAYER2_FONT_BPP">
+		<key>C_LAYER2_FONT_BPP</key>
+		<label>Font Bits Per Pixel</label>
+                <tip>The bits per pixel of each character pixel.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="1" max="2" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER2_FONT_ASCII_OFFSET '
+	<widget id="C_LAYER2_FONT_ASCII_OFFSET">
+		<key>C_LAYER2_FONT_ASCII_OFFSET</key>
+		<label>ASCII Offset</label>
+                <tip>The ASCII value of the first character in the Font RAM.</tip>
+        <value type="int" default="32">
+            <range>
+                <intrange min="0" max="255" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER2_TEXT_NUM_STRINGS '
+	<widget id="C_LAYER2_TEXT_NUM_STRINGS">
+		<key>C_LAYER2_TEXT_NUM_STRINGS</key>
+		<label>Number of Strings</label>
+                <tip>The maximum number of strings that can be selected to use for each Text Instruction.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="1" max="32" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+ 
+        <!-- -->
+	<!ENTITY C_LAYER2_TEXT_MAX_STRING_LENGTH '
+	<widget id="C_LAYER2_TEXT_MAX_STRING_LENGTH">
+		<key>C_LAYER2_TEXT_MAX_STRING_LENGTH</key>
+		<label>Maximum String Length</label>
+		<tip>The maximum string length of each string.</tip>
+        <value type="enum" default="32">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="4" display="4"/>
+                <discrete data="8" display="8"/>
+                <discrete data="16" display="16"/>
+                <discrete data="32" display="32"/>
+                <discrete data="64" display="64"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER3_IMEM_SIZE '
+	<widget id="C_LAYER3_IMEM_SIZE">
+		<key>C_LAYER3_IMEM_SIZE</key>
+		<label>Number of Instructions</label>
+		<tip>The Number of instructions per frame.</tip>
+        <value type="int" default="48">
+            <range>
+                <intrange min="2" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER3_INS_BOX_EN '
+	<widget id="C_LAYER3_INS_BOX_EN">
+		<key>C_LAYER3_INS_BOX_EN</key>
+		<label>Enable Box Instructions</label>
+                <tip>Enable Box Instructions.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER3_INS_TEXT_EN '
+	<widget id="C_LAYER3_INS_TEXT_EN">
+		<key>C_LAYER3_INS_TEXT_EN</key>
+		<label>Enable Text Instructions</label>
+                <tip>Enable Text Instructions.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER3_CLUT_SIZE '
+	<widget id="C_LAYER3_CLUT_SIZE">
+		<key>C_LAYER3_CLUT_SIZE</key>
+		<label>CLUT Size</label>
+		<tip>The size of the color look up table.</tip>
+        <value type="enum" default="16">
+            <range>
+                <discrete data="16" display="16"/>
+                <discrete data="256" display="256"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER3_CLUT_MEMTYPE '
+	<widget id="C_LAYER3_CLUT_MEMTYPE">
+		<key>C_LAYER3_CLUT_MEMTYPE</key>
+		<label>CLUT Memory Type</label>
+		<tip>The type and resources used for the color look up table.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="0" display="Distributed RAM"/>
+                <discrete data="1" display="Block RAM"/>
+                <discrete data="2" display="Auto Select"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER3_FONT_NUM_CHARS '
+	<widget id="C_LAYER3_FONT_NUM_CHARS">
+		<key>C_LAYER3_FONT_NUM_CHARS</key>
+		<label>Number of Font Characters</label>
+                <tip>The maximum number of characters in the font.</tip>
+        <value type="int" default="96">
+            <range>
+                <intrange min="1" max="256" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER3_FONT_WIDTH '
+	<widget id="C_LAYER3_FONT_WIDTH">
+		<key>C_LAYER3_FONT_WIDTH</key>
+		<label>Character Width</label>
+                <tip>The pixel width of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER3_FONT_HEIGHT '
+	<widget id="C_LAYER3_FONT_HEIGHT">
+		<key>C_LAYER3_FONT_HEIGHT</key>
+		<label>Character Height</label>
+                <tip>The pixel height of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER3_FONT_BPP '
+	<widget id="C_LAYER3_FONT_BPP">
+		<key>C_LAYER3_FONT_BPP</key>
+		<label>Font Bits Per Pixel</label>
+                <tip>The bits per pixel of each character pixel.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="1" max="2" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER3_FONT_ASCII_OFFSET '
+	<widget id="C_LAYER3_FONT_ASCII_OFFSET">
+		<key>C_LAYER3_FONT_ASCII_OFFSET</key>
+		<label>ASCII Offset</label>
+                <tip>The ASCII value of the first character in the Font RAM.</tip>
+        <value type="int" default="32">
+            <range>
+                <intrange min="0" max="255" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER3_TEXT_NUM_STRINGS '
+	<widget id="C_LAYER3_TEXT_NUM_STRINGS">
+		<key>C_LAYER3_TEXT_NUM_STRINGS</key>
+		<label>Number of Strings</label>
+                <tip>The maximum number of strings that can be selected to use for each Text Instruction.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="1" max="32" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+ 
+        <!-- -->
+	<!ENTITY C_LAYER3_TEXT_MAX_STRING_LENGTH '
+	<widget id="C_LAYER3_TEXT_MAX_STRING_LENGTH">
+		<key>C_LAYER3_TEXT_MAX_STRING_LENGTH</key>
+		<label>Maximum String Length</label>
+		<tip>The maximum string length of each string.</tip>
+        <value type="enum" default="32">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="4" display="4"/>
+                <discrete data="8" display="8"/>
+                <discrete data="16" display="16"/>
+                <discrete data="32" display="32"/>
+                <discrete data="64" display="64"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER4_IMEM_SIZE '
+	<widget id="C_LAYER4_IMEM_SIZE">
+		<key>C_LAYER4_IMEM_SIZE</key>
+		<label>Number of Instructions</label>
+		<tip>The Number of instructions per frame.</tip>
+        <value type="int" default="48">
+            <range>
+                <intrange min="2" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER4_INS_BOX_EN '
+	<widget id="C_LAYER4_INS_BOX_EN">
+		<key>C_LAYER4_INS_BOX_EN</key>
+		<label>Enable Box Instructions</label>
+                <tip>Enable Box Instructions.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER4_INS_TEXT_EN '
+	<widget id="C_LAYER4_INS_TEXT_EN">
+		<key>C_LAYER4_INS_TEXT_EN</key>
+		<label>Enable Text Instructions</label>
+                <tip>Enable Text Instructions.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER4_CLUT_SIZE '
+	<widget id="C_LAYER4_CLUT_SIZE">
+		<key>C_LAYER4_CLUT_SIZE</key>
+		<label>CLUT Size</label>
+		<tip>The size of the color look up table.</tip>
+        <value type="enum" default="16">
+            <range>
+                <discrete data="16" display="16"/>
+                <discrete data="256" display="256"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER4_CLUT_MEMTYPE '
+	<widget id="C_LAYER4_CLUT_MEMTYPE">
+		<key>C_LAYER4_CLUT_MEMTYPE</key>
+		<label>CLUT Memory Type</label>
+		<tip>The type and resources used for the color look up table.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="0" display="Distributed RAM"/>
+                <discrete data="1" display="Block RAM"/>
+                <discrete data="2" display="Auto Select"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER4_FONT_NUM_CHARS '
+	<widget id="C_LAYER4_FONT_NUM_CHARS">
+		<key>C_LAYER4_FONT_NUM_CHARS</key>
+		<label>Number of Font Characters</label>
+                <tip>The maximum number of characters in the font.</tip>
+        <value type="int" default="96">
+            <range>
+                <intrange min="1" max="256" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER4_FONT_WIDTH '
+	<widget id="C_LAYER4_FONT_WIDTH">
+		<key>C_LAYER4_FONT_WIDTH</key>
+		<label>Character Width</label>
+                <tip>The pixel width of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER4_FONT_HEIGHT '
+	<widget id="C_LAYER4_FONT_HEIGHT">
+		<key>C_LAYER4_FONT_HEIGHT</key>
+		<label>Character Height</label>
+                <tip>The pixel height of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER4_FONT_BPP '
+	<widget id="C_LAYER4_FONT_BPP">
+		<key>C_LAYER4_FONT_BPP</key>
+		<label>Font Bits Per Pixel</label>
+                <tip>The bits per pixel of each character pixel.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="1" max="2" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER4_FONT_ASCII_OFFSET '
+	<widget id="C_LAYER4_FONT_ASCII_OFFSET">
+		<key>C_LAYER4_FONT_ASCII_OFFSET</key>
+		<label>ASCII Offset</label>
+                <tip>The ASCII value of the first character in the Font RAM.</tip>
+        <value type="int" default="32">
+            <range>
+                <intrange min="0" max="255" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER4_TEXT_NUM_STRINGS '
+	<widget id="C_LAYER4_TEXT_NUM_STRINGS">
+		<key>C_LAYER4_TEXT_NUM_STRINGS</key>
+		<label>Number of Strings</label>
+                <tip>The maximum number of strings that can be selected to use for each Text Instruction.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="1" max="32" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+ 
+        <!-- -->
+	<!ENTITY C_LAYER4_TEXT_MAX_STRING_LENGTH '
+	<widget id="C_LAYER4_TEXT_MAX_STRING_LENGTH">
+		<key>C_LAYER4_TEXT_MAX_STRING_LENGTH</key>
+		<label>Maximum String Length</label>
+		<tip>The maximum string length of each string.</tip>
+        <value type="enum" default="32">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="4" display="4"/>
+                <discrete data="8" display="8"/>
+                <discrete data="16" display="16"/>
+                <discrete data="32" display="32"/>
+                <discrete data="64" display="64"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER5_IMEM_SIZE '
+	<widget id="C_LAYER5_IMEM_SIZE">
+		<key>C_LAYER5_IMEM_SIZE</key>
+		<label>Number of Instructions</label>
+		<tip>The Number of instructions per frame.</tip>
+        <value type="int" default="48">
+            <range>
+                <intrange min="2" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER5_INS_BOX_EN '
+	<widget id="C_LAYER5_INS_BOX_EN">
+		<key>C_LAYER5_INS_BOX_EN</key>
+		<label>Enable Box Instructions</label>
+                <tip>Enable Box Instructions.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER5_INS_TEXT_EN '
+	<widget id="C_LAYER5_INS_TEXT_EN">
+		<key>C_LAYER5_INS_TEXT_EN</key>
+		<label>Enable Text Instructions</label>
+                <tip>Enable Text Instructions.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER5_CLUT_SIZE '
+	<widget id="C_LAYER5_CLUT_SIZE">
+		<key>C_LAYER5_CLUT_SIZE</key>
+		<label>CLUT Size</label>
+		<tip>The size of the color look up table.</tip>
+        <value type="enum" default="16">
+            <range>
+                <discrete data="16" display="16"/>
+                <discrete data="256" display="256"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER5_CLUT_MEMTYPE '
+	<widget id="C_LAYER5_CLUT_MEMTYPE">
+		<key>C_LAYER5_CLUT_MEMTYPE</key>
+		<label>CLUT Memory Type</label>
+		<tip>The type and resources used for the color look up table.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="0" display="Distributed RAM"/>
+                <discrete data="1" display="Block RAM"/>
+                <discrete data="2" display="Auto Select"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER5_FONT_NUM_CHARS '
+	<widget id="C_LAYER5_FONT_NUM_CHARS">
+		<key>C_LAYER5_FONT_NUM_CHARS</key>
+		<label>Number of Font Characters</label>
+                <tip>The maximum number of characters in the font.</tip>
+        <value type="int" default="96">
+            <range>
+                <intrange min="1" max="256" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER5_FONT_WIDTH '
+	<widget id="C_LAYER5_FONT_WIDTH">
+		<key>C_LAYER5_FONT_WIDTH</key>
+		<label>Character Width</label>
+                <tip>The pixel width of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER5_FONT_HEIGHT '
+	<widget id="C_LAYER5_FONT_HEIGHT">
+		<key>C_LAYER5_FONT_HEIGHT</key>
+		<label>Character Height</label>
+                <tip>The pixel height of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER5_FONT_BPP '
+	<widget id="C_LAYER5_FONT_BPP">
+		<key>C_LAYER5_FONT_BPP</key>
+		<label>Font Bits Per Pixel</label>
+                <tip>The bits per pixel of each character pixel.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="1" max="2" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER5_FONT_ASCII_OFFSET '
+	<widget id="C_LAYER5_FONT_ASCII_OFFSET">
+		<key>C_LAYER5_FONT_ASCII_OFFSET</key>
+		<label>ASCII Offset</label>
+                <tip>The ASCII value of the first character in the Font RAM.</tip>
+        <value type="int" default="32">
+            <range>
+                <intrange min="0" max="255" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER5_TEXT_NUM_STRINGS '
+	<widget id="C_LAYER5_TEXT_NUM_STRINGS">
+		<key>C_LAYER5_TEXT_NUM_STRINGS</key>
+		<label>Number of Strings</label>
+                <tip>The maximum number of strings that can be selected to use for each Text Instruction.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="1" max="32" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+ 
+        <!-- -->
+	<!ENTITY C_LAYER5_TEXT_MAX_STRING_LENGTH '
+	<widget id="C_LAYER5_TEXT_MAX_STRING_LENGTH">
+		<key>C_LAYER5_TEXT_MAX_STRING_LENGTH</key>
+		<label>Maximum String Length</label>
+		<tip>The maximum string length of each string.</tip>
+        <value type="enum" default="32">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="4" display="4"/>
+                <discrete data="8" display="8"/>
+                <discrete data="16" display="16"/>
+                <discrete data="32" display="32"/>
+                <discrete data="64" display="64"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER6_IMEM_SIZE '
+	<widget id="C_LAYER6_IMEM_SIZE">
+		<key>C_LAYER6_IMEM_SIZE</key>
+		<label>Number of Instructions</label>
+		<tip>The Number of instructions per frame.</tip>
+        <value type="int" default="48">
+            <range>
+                <intrange min="2" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER6_INS_BOX_EN '
+	<widget id="C_LAYER6_INS_BOX_EN">
+		<key>C_LAYER6_INS_BOX_EN</key>
+		<label>Enable Box Instructions</label>
+                <tip>Enable Box Instructions.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER6_INS_TEXT_EN '
+	<widget id="C_LAYER6_INS_TEXT_EN">
+		<key>C_LAYER6_INS_TEXT_EN</key>
+		<label>Enable Text Instructions</label>
+                <tip>Enable Text Instructions.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER6_CLUT_SIZE '
+	<widget id="C_LAYER6_CLUT_SIZE">
+		<key>C_LAYER6_CLUT_SIZE</key>
+		<label>CLUT Size</label>
+		<tip>The size of the color look up table.</tip>
+        <value type="enum" default="16">
+            <range>
+                <discrete data="16" display="16"/>
+                <discrete data="256" display="256"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER6_CLUT_MEMTYPE '
+	<widget id="C_LAYER6_CLUT_MEMTYPE">
+		<key>C_LAYER6_CLUT_MEMTYPE</key>
+		<label>CLUT Memory Type</label>
+		<tip>The type and resources used for the color look up table.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="0" display="Distributed RAM"/>
+                <discrete data="1" display="Block RAM"/>
+                <discrete data="2" display="Auto Select"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER6_FONT_NUM_CHARS '
+	<widget id="C_LAYER6_FONT_NUM_CHARS">
+		<key>C_LAYER6_FONT_NUM_CHARS</key>
+		<label>Number of Font Characters</label>
+                <tip>The maximum number of characters in the font.</tip>
+        <value type="int" default="96">
+            <range>
+                <intrange min="1" max="256" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER6_FONT_WIDTH '
+	<widget id="C_LAYER6_FONT_WIDTH">
+		<key>C_LAYER6_FONT_WIDTH</key>
+		<label>Character Width</label>
+                <tip>The pixel width of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER6_FONT_HEIGHT '
+	<widget id="C_LAYER6_FONT_HEIGHT">
+		<key>C_LAYER6_FONT_HEIGHT</key>
+		<label>Character Height</label>
+                <tip>The pixel height of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER6_FONT_BPP '
+	<widget id="C_LAYER6_FONT_BPP">
+		<key>C_LAYER6_FONT_BPP</key>
+		<label>Font Bits Per Pixel</label>
+                <tip>The bits per pixel of each character pixel.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="1" max="2" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER6_FONT_ASCII_OFFSET '
+	<widget id="C_LAYER6_FONT_ASCII_OFFSET">
+		<key>C_LAYER6_FONT_ASCII_OFFSET</key>
+		<label>ASCII Offset</label>
+                <tip>The ASCII value of the first character in the Font RAM.</tip>
+        <value type="int" default="32">
+            <range>
+                <intrange min="0" max="255" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER6_TEXT_NUM_STRINGS '
+	<widget id="C_LAYER6_TEXT_NUM_STRINGS">
+		<key>C_LAYER6_TEXT_NUM_STRINGS</key>
+		<label>Number of Strings</label>
+                <tip>The maximum number of strings that can be selected to use for each Text Instruction.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="1" max="32" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+ 
+        <!-- -->
+	<!ENTITY C_LAYER6_TEXT_MAX_STRING_LENGTH '
+	<widget id="C_LAYER6_TEXT_MAX_STRING_LENGTH">
+		<key>C_LAYER6_TEXT_MAX_STRING_LENGTH</key>
+		<label>Maximum String Length</label>
+		<tip>The maximum string length of each string.</tip>
+        <value type="enum" default="32">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="4" display="4"/>
+                <discrete data="8" display="8"/>
+                <discrete data="16" display="16"/>
+                <discrete data="32" display="32"/>
+                <discrete data="64" display="64"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER7_IMEM_SIZE '
+	<widget id="C_LAYER7_IMEM_SIZE">
+		<key>C_LAYER7_IMEM_SIZE</key>
+		<label>Number of Instructions</label>
+		<tip>The Number of instructions per frame.</tip>
+        <value type="int" default="48">
+            <range>
+                <intrange min="2" max="4096" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER7_INS_BOX_EN '
+	<widget id="C_LAYER7_INS_BOX_EN">
+		<key>C_LAYER7_INS_BOX_EN</key>
+		<label>Enable Box Instructions</label>
+                <tip>Enable Box Instructions.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+        '>
+        <!-- -->
+	<!ENTITY C_LAYER7_INS_TEXT_EN '
+	<widget id="C_LAYER7_INS_TEXT_EN">
+		<key>C_LAYER7_INS_TEXT_EN</key>
+		<label>Enable Text Instructions</label>
+                <tip>Enable Text Instructions.</tip>
+        <value type="int" default="0">
+            <range>
+                <intrange min="0" max="1" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER7_CLUT_SIZE '
+	<widget id="C_LAYER7_CLUT_SIZE">
+		<key>C_LAYER7_CLUT_SIZE</key>
+		<label>CLUT Size</label>
+		<tip>The size of the color look up table.</tip>
+        <value type="enum" default="16">
+            <range>
+                <discrete data="16" display="16"/>
+                <discrete data="256" display="256"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER7_CLUT_MEMTYPE '
+	<widget id="C_LAYER7_CLUT_MEMTYPE">
+		<key>C_LAYER7_CLUT_MEMTYPE</key>
+		<label>CLUT Memory Type</label>
+		<tip>The type and resources used for the color look up table.</tip>
+        <value type="enum" default="2">
+            <range>
+                <discrete data="0" display="Distributed RAM"/>
+                <discrete data="1" display="Block RAM"/>
+                <discrete data="2" display="Auto Select"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+        <!-- -->
+	<!ENTITY C_LAYER7_FONT_NUM_CHARS '
+	<widget id="C_LAYER7_FONT_NUM_CHARS">
+		<key>C_LAYER7_FONT_NUM_CHARS</key>
+		<label>Number of Font Characters</label>
+                <tip>The maximum number of characters in the font.</tip>
+        <value type="int" default="96">
+            <range>
+                <intrange min="1" max="256" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER7_FONT_WIDTH '
+	<widget id="C_LAYER7_FONT_WIDTH">
+		<key>C_LAYER7_FONT_WIDTH</key>
+		<label>Character Width</label>
+                <tip>The pixel width of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER7_FONT_HEIGHT '
+	<widget id="C_LAYER7_FONT_HEIGHT">
+		<key>C_LAYER7_FONT_HEIGHT</key>
+		<label>Character Height</label>
+                <tip>The pixel height of each character within the font.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="8" max="16" step="8"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER7_FONT_BPP '
+	<widget id="C_LAYER7_FONT_BPP">
+		<key>C_LAYER7_FONT_BPP</key>
+		<label>Font Bits Per Pixel</label>
+                <tip>The bits per pixel of each character pixel.</tip>
+        <value type="int" default="1">
+            <range>
+                <intrange min="1" max="2" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER7_FONT_ASCII_OFFSET '
+	<widget id="C_LAYER7_FONT_ASCII_OFFSET">
+		<key>C_LAYER7_FONT_ASCII_OFFSET</key>
+		<label>ASCII Offset</label>
+                <tip>The ASCII value of the first character in the Font RAM.</tip>
+        <value type="int" default="32">
+            <range>
+                <intrange min="0" max="255" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+        <!-- -->
+	<!ENTITY C_LAYER7_TEXT_NUM_STRINGS '
+	<widget id="C_LAYER7_TEXT_NUM_STRINGS">
+		<key>C_LAYER7_TEXT_NUM_STRINGS</key>
+		<label>Number of Strings</label>
+                <tip>The maximum number of strings that can be selected to use for each Text Instruction.</tip>
+        <value type="int" default="8">
+            <range>
+                <intrange min="1" max="32" step="1"/>
+            </range>
+        </value>
+	</widget>
+	'>
+ 
+        <!-- -->
+	<!ENTITY C_LAYER7_TEXT_MAX_STRING_LENGTH '
+	<widget id="C_LAYER7_TEXT_MAX_STRING_LENGTH">
+		<key>C_LAYER7_TEXT_MAX_STRING_LENGTH</key>
+		<label>Maximum String Length</label>
+		<tip>The maximum string length of each string.</tip>
+        <value type="enum" default="32">
+            <range>
+                <discrete data="2" display="2"/>
+                <discrete data="4" display="4"/>
+                <discrete data="8" display="8"/>
+                <discrete data="16" display="16"/>
+                <discrete data="32" display="32"/>
+                <discrete data="64" display="64"/>
+            </range>
+        </value>
+	</widget>
+	'>
+
+]>
+
+<doc>
+	    <view id="User">
+		    <display>User</display>
+		    <group id="General">
+			    <display>General</display>
+			    <item>&C_DATA_WIDTH;</item>
+			    <item>&C_NUM_DATA_CHANNELS;</item>
+			    <item>&C_ALPHA_CHANNEL_EN;</item>
+			    <item>&C_NUM_LAYERS;</item>
+			    <item>&C_SCREEN_WIDTH;</item>
+			    <item>&C_OUTPUT_MODE;</item>
+                            <item>&C_LAYER0_TYPE;</item>
+                            <item>&C_LAYER1_TYPE;</item>
+                            <item>&C_LAYER2_TYPE;</item>
+                            <item>&C_LAYER3_TYPE;</item>
+                            <item>&C_LAYER4_TYPE;</item>
+                            <item>&C_LAYER5_TYPE;</item>
+                            <item>&C_LAYER6_TYPE;</item>
+                            <item>&C_LAYER7_TYPE;</item>
+                    </group>
+		    <group id="Layer0_Options">
+			    <display>Graphics Layer 0 Options</display>
+			    <item>&C_LAYER0_IMEM_SIZE;</item>
+			    <item>&C_LAYER0_INS_BOX_EN;</item>
+			    <item>&C_LAYER0_INS_TEXT_EN;</item>
+			    <item>&C_LAYER0_CLUT_SIZE;</item>
+                            <item>&C_LAYER0_CLUT_MEMTYPE;</item>
+                            <item>&C_LAYER0_FONT_NUM_CHARS;</item>
+                            <item>&C_LAYER0_FONT_WIDTH;</item>
+                            <item>&C_LAYER0_FONT_HEIGHT;</item>
+                            <item>&C_LAYER0_FONT_BPP;</item>
+                            <item>&C_LAYER0_FONT_ASCII_OFFSET;</item>
+                            <item>&C_LAYER0_TEXT_NUM_STRINGS;</item>
+                            <item>&C_LAYER0_TEXT_MAX_STRING_LENGTH;</item>
+                            
+                    </group>
+		    <group id="Layer1_Options">
+			    <display>Graphics Layer 1 Options</display>
+			    <item>&C_LAYER1_IMEM_SIZE;</item>
+			    <item>&C_LAYER1_INS_BOX_EN;</item>
+			    <item>&C_LAYER1_INS_TEXT_EN;</item>
+			    <item>&C_LAYER1_CLUT_SIZE;</item>
+                            <item>&C_LAYER1_CLUT_MEMTYPE;</item>
+                            <item>&C_LAYER1_FONT_NUM_CHARS;</item>
+                            <item>&C_LAYER1_FONT_WIDTH;</item>
+                            <item>&C_LAYER1_FONT_HEIGHT;</item>
+                            <item>&C_LAYER1_FONT_BPP;</item>
+                            <item>&C_LAYER1_FONT_ASCII_OFFSET;</item>
+                            <item>&C_LAYER1_TEXT_NUM_STRINGS;</item>
+                            <item>&C_LAYER1_TEXT_MAX_STRING_LENGTH;</item>
+                            
+                    </group>
+		    <group id="Layer2_Options">
+			    <display>Graphics Layer 2 Options</display>
+			    <item>&C_LAYER2_IMEM_SIZE;</item>
+			    <item>&C_LAYER2_INS_BOX_EN;</item>
+			    <item>&C_LAYER2_INS_TEXT_EN;</item>
+			    <item>&C_LAYER2_CLUT_SIZE;</item>
+                            <item>&C_LAYER2_CLUT_MEMTYPE;</item>
+                            <item>&C_LAYER2_FONT_NUM_CHARS;</item>
+                            <item>&C_LAYER2_FONT_WIDTH;</item>
+                            <item>&C_LAYER2_FONT_HEIGHT;</item>
+                            <item>&C_LAYER2_FONT_BPP;</item>
+                            <item>&C_LAYER2_FONT_ASCII_OFFSET;</item>
+                            <item>&C_LAYER2_TEXT_NUM_STRINGS;</item>
+                            <item>&C_LAYER2_TEXT_MAX_STRING_LENGTH;</item>
+                            
+                    </group>
+		    <group id="Layer3_Options">
+			    <display>Graphics Layer 3 Options</display>
+			    <item>&C_LAYER3_IMEM_SIZE;</item>
+			    <item>&C_LAYER3_INS_BOX_EN;</item>
+			    <item>&C_LAYER3_INS_TEXT_EN;</item>
+			    <item>&C_LAYER3_CLUT_SIZE;</item>
+			    <item>&C_LAYER3_CLUT_MEMTYPE;</item>
+                            <item>&C_LAYER3_FONT_NUM_CHARS;</item>
+                            <item>&C_LAYER3_FONT_WIDTH;</item>
+                            <item>&C_LAYER3_FONT_HEIGHT;</item>
+                            <item>&C_LAYER3_FONT_BPP;</item>
+                            <item>&C_LAYER3_FONT_ASCII_OFFSET;</item>
+                            <item>&C_LAYER3_TEXT_NUM_STRINGS;</item>
+                            <item>&C_LAYER3_TEXT_MAX_STRING_LENGTH;</item>
+                    </group>
+		    <group id="Layer4_Options">
+			    <display>Graphics Layer 4 Options</display>
+			    <item>&C_LAYER4_IMEM_SIZE;</item>
+			    <item>&C_LAYER4_INS_BOX_EN;</item>
+			    <item>&C_LAYER4_INS_TEXT_EN;</item>
+			    <item>&C_LAYER4_CLUT_SIZE;</item>
+			    <item>&C_LAYER4_CLUT_MEMTYPE;</item>
+                            <item>&C_LAYER4_FONT_NUM_CHARS;</item>
+                            <item>&C_LAYER4_FONT_WIDTH;</item>
+                            <item>&C_LAYER4_FONT_HEIGHT;</item>
+                            <item>&C_LAYER4_FONT_BPP;</item>
+                            <item>&C_LAYER4_FONT_ASCII_OFFSET;</item>
+                            <item>&C_LAYER4_TEXT_NUM_STRINGS;</item>
+                            <item>&C_LAYER4_TEXT_MAX_STRING_LENGTH;</item>
+                    </group>
+		    <group id="Layer5_Options">
+			    <display>Graphics Layer 5 Options</display>
+			    <item>&C_LAYER5_IMEM_SIZE;</item>
+			    <item>&C_LAYER5_INS_BOX_EN;</item>
+			    <item>&C_LAYER5_INS_TEXT_EN;</item>
+			    <item>&C_LAYER5_CLUT_SIZE;</item>
+			    <item>&C_LAYER5_CLUT_MEMTYPE;</item>
+                            <item>&C_LAYER5_FONT_NUM_CHARS;</item>
+                            <item>&C_LAYER5_FONT_WIDTH;</item>
+                            <item>&C_LAYER5_FONT_HEIGHT;</item>
+                            <item>&C_LAYER5_FONT_BPP;</item>
+                            <item>&C_LAYER5_FONT_ASCII_OFFSET;</item>
+                            <item>&C_LAYER5_TEXT_NUM_STRINGS;</item>
+                            <item>&C_LAYER5_TEXT_MAX_STRING_LENGTH;</item>
+                    </group>
+		    <group id="Layer6_Options">
+			    <display>Graphics Layer 6 Options</display>
+			    <item>&C_LAYER6_IMEM_SIZE;</item>
+			    <item>&C_LAYER6_INS_BOX_EN;</item>
+			    <item>&C_LAYER6_INS_TEXT_EN;</item>
+			    <item>&C_LAYER6_CLUT_SIZE;</item>
+			    <item>&C_LAYER6_CLUT_MEMTYPE;</item>
+                            <item>&C_LAYER6_FONT_NUM_CHARS;</item>
+                            <item>&C_LAYER6_FONT_WIDTH;</item>
+                            <item>&C_LAYER6_FONT_HEIGHT;</item>
+                            <item>&C_LAYER6_FONT_BPP;</item>
+                            <item>&C_LAYER6_FONT_ASCII_OFFSET;</item>
+                            <item>&C_LAYER6_TEXT_NUM_STRINGS;</item>
+                            <item>&C_LAYER6_TEXT_MAX_STRING_LENGTH;</item>
+                    </group>
+		    <group id="Layer7_Options">
+			    <display>Graphics Layer 7 Options</display>
+			    <item>&C_LAYER7_IMEM_SIZE;</item>
+			    <item>&C_LAYER7_INS_BOX_EN;</item>
+			    <item>&C_LAYER7_INS_TEXT_EN;</item>
+			    <item>&C_LAYER7_CLUT_SIZE;</item>
+			    <item>&C_LAYER7_CLUT_MEMTYPE;</item>
+                            <item>&C_LAYER7_FONT_NUM_CHARS;</item>
+                            <item>&C_LAYER7_FONT_WIDTH;</item>
+                            <item>&C_LAYER7_FONT_HEIGHT;</item>
+                            <item>&C_LAYER7_FONT_BPP;</item>
+                            <item>&C_LAYER7_FONT_ASCII_OFFSET;</item>
+                            <item>&C_LAYER7_TEXT_NUM_STRINGS;</item>
+                            <item>&C_LAYER7_TEXT_MAX_STRING_LENGTH;</item>
+                    </group>
+
+	    </view>
+	    <view id="System">
+		    <display>System</display>
+		    <group id="Addresses">
+			    <display>Addresses</display>
+			    <item>&C_BASEADDR;</item>
+			    <item>&C_HIGHADDR;</item>
+                    </group>
+		    <group id="Hidden">
+			    <display>Hidden</display>
+			    <item>&C_FAMILY;</item>
+                    </group>
+	    </view>
+</doc>
+

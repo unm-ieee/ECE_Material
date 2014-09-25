@@ -1,0 +1,31 @@
+* this is a comment
+
+
+r1s1 3 4 49.77k 
+r2s1 0 3 50.7k
+rss1 1 2 493
+res1 0 5 2197
+
+r1s2 4 6 56.1k
+r2s2 0 6 12.02k
+rcs2 4 7 1999
+res2 0 8 474
+
+vdd 4 0 dc 10
+
+vac 1 0 sin 0 .01 1000hz 0ms 0 0
+c1 2 3 .33uf
+c2 5 6 .32uf
+
+
+Q1 4 3 5 NPN1
+Q2 7 6 8 NPN2
+.MODEL NPN1 NPN(BF=148 CJC=20pf CJE=20pf)
+.MODEL NPN2 NPN(BF=152 CJC=20pf CJE=20pf)
+
+
+.tran 1ms 25ms
+.probe
+.op
+.end
+

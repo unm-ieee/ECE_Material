@@ -1,0 +1,451 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: vga80x40_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vga80x40_test.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vga80x40_test"
+Output Format                      : NGC
+Target Device                      : Automotive CoolRunner2
+
+---- Source Options
+Top Module Name                    : vga80x40_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/ctrm.vhd" in Library work.
+Entity <ctrm> compiled.
+Entity <ctrm> (Architecture <arch>) compiled.
+Compiling vhdl file "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/losr.vhd" in Library work.
+Entity <losr> compiled.
+Entity <losr> (Architecture <arch>) compiled.
+Compiling vhdl file "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40.vhd" in Library work.
+Entity <vga80x40> compiled.
+Entity <vga80x40> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40_test.vhd" in Library work.
+Entity <vga80x40_test> compiled.
+Entity <vga80x40_test> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <vga80x40_test> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vga80x40> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <ctrm> in library <work> (architecture <arch>) with generics.
+	M = 794
+
+Analyzing hierarchy for entity <ctrm> in library <work> (architecture <arch>) with generics.
+	M = 525
+
+Analyzing hierarchy for entity <ctrm> in library <work> (architecture <arch>) with generics.
+	M = 8
+
+Analyzing hierarchy for entity <ctrm> in library <work> (architecture <arch>) with generics.
+	M = 12
+
+Analyzing hierarchy for entity <ctrm> in library <work> (architecture <arch>) with generics.
+	M = 80
+
+Analyzing hierarchy for entity <ctrm> in library <work> (architecture <arch>) with generics.
+	M = 40
+
+Analyzing hierarchy for entity <losr> in library <work> (architecture <arch>) with generics.
+	N = 8
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <vga80x40_test> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40_test.vhd" line 117: Instantiating black box module <mem_text>.
+WARNING:Xst:2211 - "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40_test.vhd" line 129: Instantiating black box module <mem_font>.
+Entity <vga80x40_test> analyzed. Unit <vga80x40_test> generated.
+
+Analyzing Entity <vga80x40> in library <work> (Architecture <rtl>).
+Entity <vga80x40> analyzed. Unit <vga80x40> generated.
+
+Analyzing generic Entity <ctrm.1> in library <work> (Architecture <arch>).
+	M = 794
+Entity <ctrm.1> analyzed. Unit <ctrm.1> generated.
+
+Analyzing generic Entity <ctrm.2> in library <work> (Architecture <arch>).
+	M = 525
+Entity <ctrm.2> analyzed. Unit <ctrm.2> generated.
+
+Analyzing generic Entity <ctrm.3> in library <work> (Architecture <arch>).
+	M = 8
+Entity <ctrm.3> analyzed. Unit <ctrm.3> generated.
+
+Analyzing generic Entity <ctrm.4> in library <work> (Architecture <arch>).
+	M = 12
+Entity <ctrm.4> analyzed. Unit <ctrm.4> generated.
+
+Analyzing generic Entity <ctrm.5> in library <work> (Architecture <arch>).
+	M = 80
+Entity <ctrm.5> analyzed. Unit <ctrm.5> generated.
+
+Analyzing generic Entity <ctrm.6> in library <work> (Architecture <arch>).
+	M = 40
+Entity <ctrm.6> analyzed. Unit <ctrm.6> generated.
+
+Analyzing generic Entity <losr> in library <work> (Architecture <arch>).
+	N = 8
+Entity <losr> analyzed. Unit <losr> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ctrm_1>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/ctrm.vhd".
+    Found 10-bit up counter for signal <c>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ctrm_1> synthesized.
+
+
+Synthesizing Unit <ctrm_2>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/ctrm.vhd".
+    Found 10-bit up counter for signal <c>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ctrm_2> synthesized.
+
+
+Synthesizing Unit <ctrm_3>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/ctrm.vhd".
+    Found 3-bit up counter for signal <c>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ctrm_3> synthesized.
+
+
+Synthesizing Unit <ctrm_4>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/ctrm.vhd".
+    Found 4-bit up counter for signal <c>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ctrm_4> synthesized.
+
+
+Synthesizing Unit <ctrm_5>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/ctrm.vhd".
+    Found 7-bit up counter for signal <c>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ctrm_5> synthesized.
+
+
+Synthesizing Unit <ctrm_6>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/ctrm.vhd".
+    Found 6-bit up counter for signal <c>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ctrm_6> synthesized.
+
+
+Synthesizing Unit <losr>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/losr.vhd".
+    Found 8-bit register for signal <data>.
+Unit <losr> synthesized.
+
+
+Synthesizing Unit <vga80x40>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40.vhd".
+WARNING:Xst:647 - Input <octl<3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ocrx<7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ocry<7:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <ctl> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <cry_tmp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <crx_tmp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Register <R> equivalent to <B> has been removed
+WARNING:Xst:643 - "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40.vhd" line 242: The result of a 6x7-bit multiplication is partially used. Only the 12 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 1-bit register for signal <B>.
+    Found 1-bit register for signal <G>.
+    Found 10-bit comparator greater for signal <blank$cmp_gt0000> created at line 149.
+    Found 10-bit comparator greater for signal <blank$cmp_gt0001> created at line 149.
+    Found 23-bit up counter for signal <counter>.
+    Found 1-bit register for signal <hsync_int>.
+    Found 10-bit comparator greater for signal <hsync_int$cmp_gt0000> created at line 120.
+    Found 10-bit comparator less for signal <hsync_int$cmp_lt0000> created at line 120.
+    Found 6x7-bit multiplier for signal <mult0000$mult0000> created at line 242.
+    Found 12-bit adder for signal <ram_tmp$addsub0000> created at line 242.
+    Found 12-bit adder for signal <rom_tmp>.
+    Found 8x4-bit multiplier for signal <rom_tmp$mult0000> created at line 248.
+    Found 4-bit comparator greater for signal <small$cmp_gt0000> created at line 297.
+    Found 1-bit register for signal <vsync_int>.
+    Found 10-bit comparator greater for signal <vsync_int$cmp_gt0000> created at line 138.
+    Found 10-bit comparator less for signal <vsync_int$cmp_lt0000> created at line 138.
+    Found 1-bit xor2 for signal <y>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred   7 Comparator(s).
+	inferred   1 Xor(s).
+Unit <vga80x40> synthesized.
+
+
+Synthesizing Unit <vga80x40_test>.
+    Related source file is "C:/Users/sseppala/Desktop/interface_vga80x40/web_uploads/if_vga80x40/hw/vga80x40_test.vhd".
+WARNING:Xst:646 - Signal <ram_doA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ctl_oreg_ce> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cry_oreg_ce> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crx_oreg_ce> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <clk25MHz>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <vga80x40_test> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 6x7-bit multiplier                                    : 1
+ 8x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 2
+ 12-bit adder                                          : 2
+# Counters                                             : 7
+ 10-bit up counter                                     : 2
+ 23-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 6
+ 1-bit register                                        : 5
+ 8-bit register                                        : 1
+# Comparators                                          : 7
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 2
+ 4-bit comparator greater                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <B>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 6x7-bit multiplier                                    : 1
+ 8x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 2
+ 12-bit adder                                          : 2
+# Counters                                             : 7
+ 10-bit up counter                                     : 2
+ 23-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <B> (without init value) has a constant value of 0 in block <vga80x40>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <vga80x40_test> ...
+
+Optimizing unit <losr> ...
+
+Optimizing unit <ctrm_1> ...
+  implementation constraint: INIT=s	 : c_9
+  implementation constraint: INIT=s	 : c_8
+  implementation constraint: INIT=r	 : c_7
+  implementation constraint: INIT=r	 : c_6
+  implementation constraint: INIT=r	 : c_5
+  implementation constraint: INIT=s	 : c_4
+  implementation constraint: INIT=s	 : c_3
+  implementation constraint: INIT=r	 : c_2
+  implementation constraint: INIT=r	 : c_1
+  implementation constraint: INIT=s	 : c_0
+
+Optimizing unit <ctrm_2> ...
+  implementation constraint: INIT=s	 : c_9
+  implementation constraint: INIT=r	 : c_8
+  implementation constraint: INIT=r	 : c_7
+  implementation constraint: INIT=r	 : c_6
+  implementation constraint: INIT=r	 : c_5
+  implementation constraint: INIT=r	 : c_4
+  implementation constraint: INIT=s	 : c_3
+  implementation constraint: INIT=s	 : c_2
+  implementation constraint: INIT=r	 : c_1
+  implementation constraint: INIT=r	 : c_0
+
+Optimizing unit <ctrm_3> ...
+  implementation constraint: INIT=s	 : c_2
+  implementation constraint: INIT=s	 : c_1
+  implementation constraint: INIT=s	 : c_0
+
+Optimizing unit <ctrm_4> ...
+  implementation constraint: INIT=s	 : c_3
+  implementation constraint: INIT=r	 : c_2
+  implementation constraint: INIT=s	 : c_1
+  implementation constraint: INIT=s	 : c_0
+
+Optimizing unit <ctrm_5> ...
+  implementation constraint: INIT=s	 : c_6
+  implementation constraint: INIT=r	 : c_5
+  implementation constraint: INIT=r	 : c_4
+  implementation constraint: INIT=s	 : c_3
+  implementation constraint: INIT=s	 : c_2
+  implementation constraint: INIT=s	 : c_1
+  implementation constraint: INIT=s	 : c_0
+
+Optimizing unit <ctrm_6> ...
+  implementation constraint: INIT=s	 : c_5
+  implementation constraint: INIT=r	 : c_4
+  implementation constraint: INIT=r	 : c_3
+  implementation constraint: INIT=s	 : c_2
+  implementation constraint: INIT=s	 : c_1
+  implementation constraint: INIT=s	 : c_0
+
+Optimizing unit <vga80x40> ...
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : vga80x40_test.ngr
+Top Level Output File Name         : vga80x40_test
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : Automotive CoolRunner2
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 513
+#      AND2                        : 213
+#      AND3                        : 7
+#      AND4                        : 8
+#      AND8                        : 3
+#      GND                         : 2
+#      INV                         : 125
+#      OR2                         : 46
+#      OR3                         : 4
+#      XOR2                        : 105
+# FlipFlops/Latches                : 75
+#      FD                          : 23
+#      FDC                         : 12
+#      FDCE                        : 38
+#      FDP                         : 2
+# IO Buffers                       : 7
+#      IBUF                        : 2
+#      OBUF                        : 5
+# Others                           : 2
+#      mem_font                    : 1
+#      mem_text                    : 1
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.50 secs
+ 
+--> 
+
+Total memory usage is 252144 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

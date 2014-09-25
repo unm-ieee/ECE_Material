@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/sseppala/Desktop/MIPS_CPU_IMPLEMENTED/TB_MIPS_Top_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="tb_mips_top" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/tb_mips_top/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/cycle" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">cycle</obj_property>
+      <obj_property name="ObjectShortName">cycle</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/mem_dly" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_dly</obj_property>
+      <obj_property name="ObjectShortName">mem_dly</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/cyc_time" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">cyc_time</obj_property>
+      <obj_property name="ObjectShortName">cyc_time</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider11" type="divider">
+      <obj_property name="label">WAT_ARE_THIS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/Data_Memory/:DATA_MEMORY_PROCESS/str" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">str[1:3]</obj_property>
+      <obj_property name="ObjectShortName">str[1:3]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/Instruction_Memory/huhins" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">huhins[1:25]</obj_property>
+      <obj_property name="ObjectShortName">huhins[1:25]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/Instruction_Memory/huh" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">huh[31:0]</obj_property>
+      <obj_property name="ObjectShortName">huh[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider12" type="divider">
+      <obj_property name="label">M_DAT_IN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/Data_Memory/m_data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_data_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider12" type="divider">
+      <obj_property name="label">R_W_LOC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/Data_Memory/m_data_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m_data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_data_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/Data_Memory/memwrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">memwrite</obj_property>
+      <obj_property name="ObjectShortName">memwrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/Data_Memory/memread" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">memread</obj_property>
+      <obj_property name="ObjectShortName">memread</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/Data_Memory/m_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_addr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider23" type="divider">
+      <obj_property name="label">ALU_UNIT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/alu_con" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_con[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_con[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/a_val" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_val[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/b_val" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_val[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/f_val" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">f_val[31:0]</obj_property>
+      <obj_property name="ObjectShortName">f_val[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/zero" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/o_flo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_flo</obj_property>
+      <obj_property name="ObjectShortName">o_flo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/carry_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">carry_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">carry_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mips_top/MIPS_Top_Level_Desgin/ALU_Unit/less" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">less[31:0]</obj_property>
+      <obj_property name="ObjectShortName">less[31:0]</obj_property>
+   </wvobject>
+</wave_config>

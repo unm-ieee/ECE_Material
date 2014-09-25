@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Apr 10 21:04:30 2007
+Quartus II Version : 7.1 Build 156 04/30/2007 SJ Web Edition
+Revision Name : Round
+Top-level Entity Name : Round
+Family : Cyclone
+Device : EP1C6Q240C8
+Timing Models : Final
+Total logic elements : 450 / 5,980 ( 8 % )
+Total pins : 78 / 185 ( 42 % )
+Total virtual pins : 0
+Total memory bits : 0 / 92,160 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

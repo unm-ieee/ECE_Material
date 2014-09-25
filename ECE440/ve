@@ -1,0 +1,31 @@
+traceroute to presidencia.gob.ve (190.202.23.171), 30 hops max, 60 byte packets
+ 1  129.24.28.1 (129.24.28.1)  0.895 ms  1.099 ms  1.460 ms
+ 2  198.83.93.121 (198.83.93.121)  0.813 ms  0.811 ms  0.794 ms
+ 3  rtr-129-24-192-69.unm.edu (129.24.192.69)  0.775 ms  0.758 ms  0.740 ms
+ 4  129.24.212.33 (129.24.212.33)  1.766 ms  2.066 ms  2.048 ms
+ 5  208.77.76.150 (208.77.76.150)  1.693 ms  2.000 ms  1.963 ms
+ 6  dc-lax-agg1--unm.cenic.net (137.164.50.193)  22.997 ms  23.005 ms  22.981 ms
+ 7  dc-lax-agg6--lax-agg1-10ge.cenic.net (137.164.46.105)  23.629 ms  23.609 ms  23.607 ms
+ 8  xe-9-3-0.edge5.losangeles1.level3.net (4.59.48.177)  34.356 ms  34.359 ms  34.041 ms
+ 9  ae-3-80.edge2.losangeles9.level3.net (4.69.144.143)  34.021 ms ae-4-90.edge2.losangeles9.level3.net (4.69.144.207)  48.113 ms ae-3-80.edge2.losangeles9.level3.net (4.69.144.143)  34.048 ms
+10  telecomitalia-level3.losangeles9.level3.net (4.68.71.2)  131.835 ms  131.846 ms  131.828 ms
+11  ge9-0-0.miami2.mia.seabone.net (195.22.199.217)  161.166 ms  174.909 ms  162.140 ms
+12  cantv.miami2.mia.seabone.net (195.22.199.106)  218.801 ms  218.807 ms  218.789 ms
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  190-202-24-214.estatic.cantv.net (190.202.24.214)  200.523 ms  200.492 ms  200.488 ms
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *

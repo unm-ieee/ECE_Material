@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# PlanAhead v13.1
+# Build 117799 by hdbuild on Thu Feb 17 11:38:00 PST 2011
+# Start of session at: Tue Feb 07 16:33:42 2012
+# Process ID: 2332
+# Log file: C:/Users/238user/Desktop/Steven/tutorial_5/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/238user/Desktop/Steven/tutorial_5/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui -source C:/Users/238user/Desktop/Steven/tutorial_5/pa.fromHdl.tcl
+startgroup
+set_property loc PAD45 [get_ports {count_out[0]}]
+endgroup
+startgroup
+set_property loc PAD44 [get_ports {count_out[1]}]
+endgroup
+startgroup
+set_property loc PAD41 [get_ports {count_out[2]}]
+endgroup
+startgroup
+set_property loc PAD40 [get_ports {count_out[3]}]
+endgroup
+startgroup
+set_property loc IPAD171 [get_ports clk]
+endgroup
+startgroup
+set_property loc IPAD98 [get_ports pause]
+endgroup
+startgroup
+set_property loc IPAD93 [get_ports reset]
+endgroup
+set_property PULLDOWN 1 [get_ports reset]
+set_property PULLDOWN 1 [get_ports clk]
+save_design
+exit

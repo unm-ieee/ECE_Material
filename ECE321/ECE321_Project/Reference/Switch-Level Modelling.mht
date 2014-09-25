@@ -1,0 +1,217 @@
+From: "Saved by Windows Internet Explorer 9"
+Subject: Switch-Level Modelling
+Date: Tue, 27 Nov 2012 21:07:52 -0700
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CDCCE3.438D7940"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6002.18463
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CDCCE3.438D7940
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ee.ed.ac.uk/~gerard/Teach/Verilog/me5cds/me95chn0.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE html><HTML><HEAD><TITLE>Switch-Level Modelling</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3D"Content-Type">
+<META name=3D"GENERATOR" content=3D"MSHTML 9.00.8112.16455"></HEAD>
+<BODY>
+<H1>Switch-Level Modelling: Examples</H1>
+<HR SIZE=3D"4">
+
+<P>This section provides two examples of implementing circuit designs at =
+
+switch-level.
+<H2>1. CMOS Inverter</H2><IMG alt=3D"cmos inverter" align=3D"bottom" =
+src=3D"http://www.ee.ed.ac.uk/~gerard/Teach/Verilog/me5cds/inv_sw.gif">
+<P>The switch-level description has a similar structure to that of the=20
+behavioural, functional or gate level codes, as in this example of a =
+CMOS=20
+inverter:<PRE>// Switch-level description of a CMOS inverter=0A=
+=0A=
+module inv_sw (out, in);=0A=
+   =0A=
+   output  out;               // inverter output=0A=
+   input   in;                // inverter input=0A=
+   =0A=
+   supply1 power;             // "power" connected to Vdd=0A=
+   supply0 ground;            // "ground" connected to Gnd=0A=
+   =0A=
+   pmos (out, power, in);     // instantiate pmos switch=0A=
+   nmos (out, ground, in);    // instantiate nmos switch=0A=
+   =0A=
+endmodule=0A=
+</PRE>
+<P>Connection to the Vdd power supply is made using the <I>supply1</I> =
+net,=20
+declared as "power". Similarly, the "ground" terminal is connected to =
+the=20
+<I>supply0</I> net.
+<P>Using the <I>pmos</I> and <I>nmos</I> switch-level primitives the =
+respective=20
+transistors are instantiated, based on the terminology shown in the =
+previous=20
+section. Note that the instance name is optional, and has been omitted =
+in this=20
+example.
+<P><A=20
+href=3D"http://www.ee.ed.ac.uk/~gerard/Teach/Verilog/me5cds/me95chn1.html=
+">Stimulus=20
+code for inverter</A>
+<H2>2. 1-bit 2-1 Multiplexer</H2><IMG alt=3D"2-1 multiplexer" =
+align=3D"bottom" =
+src=3D"http://www.ee.ed.ac.uk/~gerard/Teach/Verilog/me5cds/mux21_sw.gif">=
+
+<P>This circuit assigns the output <B>out</B> to either inputs =
+<B>in1</B> or=20
+<B>in2</B> depending on the low or high values of <B>ctrl</B> =
+respectively.<PRE>// Switch-level description of a 1-bit 2-1 multiplexer=0A=
+// ctrl=3D0, out=3Din1; ctrl=3D1, out=3Din2=0A=
+=0A=
+module mux21_sw (out, ctrl, in1, in2);=0A=
+   =0A=
+   output out;                    // mux output=0A=
+   input  ctrl, in1, in2;         // mux inputs=0A=
+   wire	  w;                      // internal wire=0A=
+   =0A=
+   inv_sw I1 (w, ctrl);           // instantiate inverter module=0A=
+   =0A=
+   cmos C1 (out, in1, w, ctrl);   // instantiate cmos switches=0A=
+   cmos C2 (out, in2, ctrl, w);=0A=
+   =0A=
+endmodule=0A=
+</PRE>
+<P>An inverter is required in the multiplexer circuit, which is =
+instantiated=20
+from the previously defined module.
+<P>Two transmission gates, of instance names C1 and C2, are implemented =
+with the=20
+<I>cmos</I> statement, in the format <CODE>cmos=20
+[instancename]([output],[input],[nmosgate],[pmosgate])</CODE>. Again, =
+the=20
+instance name is optional.
+<P><A=20
+href=3D"http://www.ee.ed.ac.uk/~gerard/Teach/Verilog/me5cds/me95chn2.html=
+">Stimulus=20
+code for multiplexer</A><BR>
+<P>Prepared by: <B>Chun Hsiung Ng</B>Last updated: 23 January 1997
+</P></BODY></HTML>
+
+------=_NextPart_000_0000_01CDCCE3.438D7940
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ee.ed.ac.uk/~gerard/Teach/Verilog/me5cds/inv_sw.gif
+
+R0lGODdhzQEZAfAAAP///wAAACwAAAAAzQEZAQAC/oSPqcvtD6OctNqLs968+w+G4kiW5omm6sq2
+7gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2P
+y+f0uv2Oz+v3/L7/DxgoOEhYaHiImKi4yNjo+AgZKTlJWWl5iZmpucnZWRgQAAAamjBKKnoKeqBq
+MIqgyuopy2bqulrbymqra3prOwuMtstLOowKW5yafBrcXBaLmvuafBzKeyvtrE0GfY0d3UvcG71d
+DtZN/V29Xm1s/s41vJyrPJ9dygyvX1WLPk4P0Je7fe/6GTyIMKHChQgfIMvHzldAgeoIlmOIMaNG
+/owOIVr8GGKjyJEiO4I8yQ+aB5UoWzL55TKmGpgyaz5jaTPnF5o6e8bD6TOoFZ5Ci04hajSpE6RK
+myZh6jQqEahSq/6gajWrDqxau9bg6jUsDLBiy64gazatCbRq24YE6jZuCbZy62KgazfvBLx6+zrg
+6zcwPo+CC0sAbDgw4sReSzLOC9Px47qRN062W5nwZcGZN1/u7Pkx6NCJR5MubPq0Yn+qDaduLdfg
+NM2wyzaUWDv2wdm54477d6y3VMu4JwpXStz44uMEHQNfzlwf1tvGowudvru49etwBz/vvl0m3dfh
+c45nXT7oeWbQ0ztbz9t9T/ja5dekX91+TPzB/vXb5N+ef54AmJyA2kAnmYHvgXdYgQoGE2AEET6Y
+yIQd0UahJhb+xWCGl2zYAIicYIhahx+IuAmKw5m4EovNAceYioP5JJtoLnIgIybUlUgiCDl++BCM
+ff2Yn3ix1OgXkf3pRBOSkN24gZKUEOWkbj2eCCU8TFXZlpJSTkIVl2Z5mWVBHYoZFplXWkQWmlqp
+SeONblYF53xZzulUnYCUiQJgePLApxGB3jVoBV+GuKYPhZKw2J85LCoEpBToSYOktCzqJi6VJnoH
+pTNYGsM1h87YoqazCRllZdPQw+lT1KDoKZborBqRq6yOWh+O/Qhkqq7/zHoPFuKIGGsHuwZ7/mSr
+O3hDTqig3npsrRnIg6wyWzD7bK5rPUtts81m6wK2hJFErrINRgutRgoAC6y3V4g7F7gMWMgue9a+
+lI67vJab0QlOlruuvdVW9G6+QPHba5/kmvRNu/KyAO8CCCf4FrrtOOgts9+ae0TEAU/M8QUAc0ir
+wyHf4PFY2SpEka8BJXtvFimfijDEC3NoD8wEIzFzuKAiuWOqvwL9MA49y2rzyfOamt2Stm78qaRc
+Ojppk660W/A98hZrrNXI0EoIghbTzGTRpJZ9MtVxKl012834OfaKbp+7tshx02l2fGgberdVXLvU
+Zt9Z/d0SV2pHRThKYQreWN7a7gfX4X47/l4k5B5JPjjlTv+nEuZvao7rI7943lXiJ13NuG+gaz5l
+0zwmvTaqq80tIetgys7Z6rTPEvreZ9kuye5p6u4hhMQXz/vxyA+o/PIjNu+8htBHryOmGFNvCYHq
+Yi99q5n1y30m2odvzvjkb2P++Qt6j576b0NJnvudpC9/8uzbK3z9YcPfvv7M3683/82Pf/gToCzo
+Z8DuWSB+CaxEzR7XwNaNrHIRvN0EN1dBLfUvgxosIAf3wcAPvs+DIjQTCUt4kQ2icH0BXCELIejC
+/7UwhsAIIQ1TpMIbynBfC9EhDrfnw+oBMYgHAh4R+dC7I3bKiErMQxKbSIcnQlEOUpwi/hyqaEU3
+YDGLl8ofF/fExC/GYYtiFEYYy6jFM6Kxi2tUYBuF+EY4xjF7apyjGchox53UMY9jwCMff+LFP1Jx
+j4LUYyC/cshCasCPLVLksgg5AkjWD2SUHEntrPGqegisYZiECOocSbNKijIhEKiRpqJVr16R7ouj
+bCXLcPYynfWnXuroFiiFtUmsacxjWLtlSkq2yWzQUmvB9OUvOQk2cgwTajszZhS6hZ6BSLMeFHTm
+Uo7VOaaZMmYXS6Q1N4XJYLHKO8rkZnAk+c14pTMQtlynHxLmznjKc570rKc974nPfOpzn/zspz//
+CdCACnSgBC2oQQ+K0IQqdKEM/WA4/t71ojOVskd8shRO0KmCZM0LCJrxJiNSYagQHWaRIdmoFzpn
+UkWJ9CMgndRKS0lSH6U0HrAcXTZFIZFTWqM41PraklAXTor49Hne+RoxhKqvUvDmky8LWDlPhQ1q
+4vSkMypGK1aB1fiANB27wKpVt2rVqU41rGK1li6Yp9SyXnWtygQHbVqK05ZuVWJcZatRybpTqqY1
+q5rMB/5gwVey/TWvY12XXbN6VbgSNbBqPewrECsxXhX2VmJ9rGPZ01hceHQrhm0qWzv72cxatmR7
+JessEYtZxS42sYSFq1+9ik3IJla2l0PtZ1sb2s0+6rWTVe1oKyta2Xq1tJd1bGVxpTsiyIbTtbQV
+7mg92VjnMve4wXWuzDDb27ia9rhfZawwC3tWucZ1rTuNGXJT1Fzqzja81rUrXklb28uClbzdPcfQ
+mLo50PwmmjoDajk/adOHYJCOLMGruDo54J92o6rZRLA8+goQRi6loWnQLYU5itELa3jDHO6whz8M
+4hCLeMQkLrGJT4ziFKt4xSxusYtfDOMYy3jGNK6xjW+M4xzreMc85kEBAAA7
+
+------=_NextPart_000_0000_01CDCCE3.438D7940
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ee.ed.ac.uk/~gerard/Teach/Verilog/me5cds/mux21_sw.gif
+
+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
+iqu5OgoFAAA7
+
+------=_NextPart_000_0000_01CDCCE3.438D7940--

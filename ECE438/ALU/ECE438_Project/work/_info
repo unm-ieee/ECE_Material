@@ -1,0 +1,266 @@
+m255
+K3
+13
+cModel Technology
+dC:\modeltech_10.0b\examples
+Ealu32
+Z0 w1322424297
+Z1 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dZ:\ECE438_Project
+Z4 8Z:/ECE438_Project/ALU_Top.vhd
+Z5 FZ:/ECE438_Project/ALU_Top.vhd
+l0
+L4
+VbCg2E55Xm>bDQ0?jW5P:^0
+Z6 OE;C;10.0b;49
+32
+Z7 !s108 1322953918.054000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|Z:/ECE438_Project/ALU_Top.vhd|
+Z9 !s107 Z:/ECE438_Project/ALU_Top.vhd|
+Z10 o-work work -2002 -explicit
+Z11 tExplicit 1
+!s100 Gj14fkac<N@TlenE=NHAN3
+Aalu32
+R1
+R2
+Z12 DEx4 work 5 alu32 0 22 bCg2E55Xm>bDQ0?jW5P:^0
+32
+l37
+L17
+Vd3a9GgQ3IDfcmQof4BbAd1
+R6
+R7
+R8
+R9
+R10
+R11
+!s100 feN1`FZY[E_62CJmlT5Zi2
+Ed_memory
+Z13 w1322082929
+Z14 DPx4 ieee 16 std_logic_textio 0 22 nS@;e8VD1o]DCVjBMSZYk3
+Z15 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R1
+R2
+R3
+Z17 8Z:/ECE438_Project/Data_Memory.vhd
+Z18 FZ:/ECE438_Project/Data_Memory.vhd
+l0
+L8
+Vj^`Bc:gzgGU:7gHAEX`532
+R6
+32
+Z19 !s108 1322953918.444000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|Z:/ECE438_Project/Data_Memory.vhd|
+Z21 !s107 Z:/ECE438_Project/Data_Memory.vhd|
+R10
+R11
+!s100 VX94JRFo5j^d1XMdmkn?h3
+Afor_438
+R14
+R15
+R16
+R1
+R2
+Z22 DEx4 work 8 d_memory 0 22 j^`Bc:gzgGU:7gHAEX`532
+32
+l21
+L19
+VOk0b:G39lNXYC8PG4`fQg1
+R6
+R19
+R20
+R21
+R10
+R11
+!s100 >6[<PE8Q<KOadn:IXSf?e0
+Ei_memory
+Z23 w1322360753
+R14
+R15
+R16
+R1
+R2
+R3
+Z24 8Z:/ECE438_Project/Instruction_Memory.vhd
+Z25 FZ:/ECE438_Project/Instruction_Memory.vhd
+l0
+L8
+Vd:4>ShhOcfjoD[E@OAVB33
+R6
+32
+Z26 !s108 1322953918.684000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|Z:/ECE438_Project/Instruction_Memory.vhd|
+Z28 !s107 Z:/ECE438_Project/Instruction_Memory.vhd|
+R10
+R11
+!s100 `6SlLRI:4F1BB:eF1DW?G2
+Afor_438
+R14
+R15
+R16
+R1
+R2
+Z29 DEx4 work 8 i_memory 0 22 d:4>ShhOcfjoD[E@OAVB33
+32
+l19
+L16
+V0IG2Mbdf?fDOeT^gzR`8_3
+R6
+R26
+R27
+R28
+R10
+R11
+!s100 EQzOHN7<Gf^7;QO?^:dVa1
+Emips_top
+Z30 w1322953919
+R15
+R16
+R1
+R2
+R3
+Z31 8Z:/ECE438_Project/MIPS_Top.vhd
+Z32 FZ:/ECE438_Project/MIPS_Top.vhd
+l0
+L5
+VQd;Y>:Y9zT>kzVi?BY]Pc3
+R6
+32
+Z33 !s108 1322953919.864000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|Z:/ECE438_Project/MIPS_Top.vhd|
+Z35 !s107 Z:/ECE438_Project/MIPS_Top.vhd|
+R10
+R11
+!s100 7BTLdP<YU^W3AfgcGO;Mm1
+Amips_top
+R22
+R12
+Z36 DEx4 work 9 registers 0 22 VSO:]S]]G1eGF<oEi8Odh2
+R14
+R29
+R15
+R16
+R1
+R2
+Z37 DEx4 work 8 mips_top 0 22 Qd;Y>:Y9zT>kzVi?BY]Pc3
+32
+l108
+L14
+VG9fBOLkGO<[K[O^d2eKC52
+R6
+R33
+R34
+R35
+R10
+R11
+!s100 m@Ao:X=K2_6c1goPZIUMK1
+Eone_bit
+Z38 w1322437656
+R1
+R2
+R3
+Z39 8Z:/ECE438_Project/One_Bit.vhd
+Z40 FZ:/ECE438_Project/One_Bit.vhd
+l0
+L4
+VGRVS8F_>JJ3<_i=h>?JN42
+R6
+32
+Z41 !s108 1322953918.244000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|Z:/ECE438_Project/One_Bit.vhd|
+Z43 !s107 Z:/ECE438_Project/One_Bit.vhd|
+R10
+R11
+!s100 JZ07KOH@EDg?bCOk4RY>e1
+Aone_bit
+R1
+R2
+DEx4 work 7 one_bit 0 22 GRVS8F_>JJ3<_i=h>?JN42
+32
+l29
+L19
+V^@Ym48SY;E45DcSGP<oi61
+R6
+R41
+R42
+R43
+R10
+R11
+!s100 ;]1PbQdLP2;mNFXGKnljL2
+Eregisters
+Z44 w1322082884
+R15
+R16
+R1
+R2
+R3
+Z45 8Z:/ECE438_Project/Registers.vhd
+Z46 FZ:/ECE438_Project/Registers.vhd
+l0
+L5
+VVSO:]S]]G1eGF<oEi8Odh2
+R6
+32
+Z47 !s108 1322953920.124000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|Z:/ECE438_Project/Registers.vhd|
+Z49 !s107 Z:/ECE438_Project/Registers.vhd|
+R10
+R11
+!s100 D2QBM;ACIXPPA3@C4bl9m3
+Afor_438
+R15
+R16
+R1
+R2
+R36
+32
+l23
+L18
+VDTGa4Na?5nNU?j;B@R]VG1
+R6
+R47
+R48
+R49
+R10
+R11
+!s100 h`^5Qg^8N>_o=Bm:;F:=X0
+Etb_mips_top
+Z50 w1322424855
+R15
+R16
+R1
+R2
+R3
+Z51 8Z:/ECE438_Project/TB_MIPS_Top.vhd
+Z52 FZ:/ECE438_Project/TB_MIPS_Top.vhd
+l0
+L5
+VHUBdY]ZVTnoCFeNC018^E3
+R6
+32
+Z53 !s108 1322953920.364000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|Z:/ECE438_Project/TB_MIPS_Top.vhd|
+Z55 !s107 Z:/ECE438_Project/TB_MIPS_Top.vhd|
+R10
+R11
+!s100 zCEh67d1izK_So;7FE<3J0
+Atb_mips_top
+R37
+R15
+R16
+R1
+R2
+DEx4 work 11 tb_mips_top 0 22 HUBdY]ZVTnoCFeNC018^E3
+32
+l14
+L8
+VLi>ZcPm8f:OW2gdez1O5B3
+R6
+R53
+R54
+R55
+R10
+R11
+!s100 35:m=;QMJ9nl_k=]N6AQe1

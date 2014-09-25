@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter_isim_beh.exe" -prj "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter_beh.prj" "work.Bin2BCD_Converter" 

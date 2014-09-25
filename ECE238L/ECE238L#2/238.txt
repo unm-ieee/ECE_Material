@@ -1,0 +1,30 @@
+LED1 <= (((A AND NOT (B) AND NOT (C)) AND D) OR ((((NOT (A) AND B AND NOT (C)))) OR (A AND B AND NOT (C)) OR (NOT(A) AND B AND C) OR ((A AND B AND C) AND NOT (D))));
+LED0 <= ((NOT(A) AND NOT (B) AND NOT (C)) AND D) OR ((((A AND NOT(B) AND NOT (C)) OR (A AND B AND NOT (C)) OR (A AND NOT (B) AND (C)) OR (A AND B AND C)) AND NOT D));
+
+signal_A: process
+begin
+A <= NOT A;
+wait for 10 ns;
+end process;
+
+signal_B: process
+begin
+B <= NOT B;
+wait for 10 ns;
+end process;
+
+signal_C: process
+begin
+C <= NOT C;
+wait for 10 ns;
+end process;
+
+signal_D: process
+begin
+D <= NOT D;
+wait for 20 ns;
+end process;
+
+
+
+END;

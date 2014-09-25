@@ -1,0 +1,3 @@
+vhdl work "KE.vhd"
+vhdl work "DDD.vhd"
+vhdl work "Top_Layer.vhd"

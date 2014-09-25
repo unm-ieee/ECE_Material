@@ -1,0 +1,59 @@
+
+  C to C++ converter
+  Free Open Source program - GNU GPL Licence.
+  www.scriptol.com
+
+
+Goal
+
+This tool automatically converts a C project into C++.
+It requires the python interpreter (2.0 or above) installed.
+It is useful:
+- to make a C program a reusable component.
+- to avoid name conflicts on large programs, especially if
+you include external libraries.
+- to use overloading, templates or other object-oriented features.
+
+
+Description
+
+The main program is ctocpp.py that performs successive stages for
+converting C to C++. A script, ctocpp gives it as parameter to
+the python interpreter with options you add.
+
+The archive also includes scripts that may help you:
+- mover.py changes the location of a project.
+- search.py performs searches and replacements.
+- mkheader.py corrects a header file.
+
+
+License
+
+The C to C++ program with all the python sources is under the GNU GPL license, 
+that minds you may use it and distribute it freely, providing the copyright 
+is unchanged.
+See at the COPYING file for details. This doesn't mean GNU
+encourages you to convert your C sources to C++. In fact, most of
+the tools here included may help C programmers outside C++ conversion.
+
+
+Installing
+
+Type: 
+./configure
+./setup
+mkdoc      ...this will generate an html and info manuals.
+
+For more options, see at the INSTALL file
+
+
+Instructions
+
+Before to convert your own project, read carefully the manual.
+If you can,print it.
+It may be preferable also to apply a file formatter as astyle on your
+sources - there are lot of such other tools on the web - to make
+the code easier to process by the converter.
+
+                
+by Denis Sureau 2004.

@@ -1,0 +1,10 @@
+Command line:
+   ATB_CORDIC_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1419
+
+Wed Apr 17 15:25:44 2013
+
+
+ Elaboration Time: 0.0624 sec

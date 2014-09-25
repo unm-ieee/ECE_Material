@@ -1,0 +1,62 @@
+
+receive input from terminal and echo backwards
+
+.set UARTLITE, 0x8400	#setting UARTLITE location
+.set RXFIFO, 0x00	#setting RXFIFO location
+.set TXFIFO, 0x04	#setting TXFIFO location
+.set STATREG, 0x08	#setting STATREG location
+.set CTRLREG, 0x0c	#setting CTRLREG location
+
+.org 0x1000		#defining the origine of the program
+
+start:
+lis r1, UARTLITE 	#loads r1 with mem form 0x8400
+li r2, 0x2000 		#store data at 2000 
+li r3,0 		#Initialize to 0
+li r4,0 		#Initialize to 0
+li r5,0 		#Initialize to 0
+li r6,0 		#Initialize to 0
+
+li r7,13 		#Initialize R7 to "carriage return"
+li r8,10		#Iitialize R8 to "line feed" 
+
+
+
+Rxfifo_R:
+lwz r6,STATREG(r1)		#load value of ststus reg
+andi. r6,r6,0x01		#checking if there is data in the FIFO
+bt 2,Rxfifo_R
+
+lwz r5, RXFIFO(r1)		#load the RX recieve buffer
+stw r5, TXFIFO(r1)		#load the TX Transmit buffer
+stwu r5,4(r2) 			#storing to memory
+addi r3,r3,1			#incrementc the data
+cmpwi r5,13			#check for carriage return
+bt 2, cr			#if carriage return branch to CR
+b Rxfifo_R			#if no CR continue to read data
+
+cr:
+stw r7, TXFIFO(r1)		#sending a CR back to the terminal
+stw r8, TXFIFO(r1)		#send new line to uart
+mtctr r3			#update counter
+
+Txfifo:
+lwz r6,STATREG(r1)		#load value of ststus reg
+andi. r6,r6,0x08		#checking if there is data in the FIFO
+bf 2,Txfifo			# if the TXFIFO is fill keep looking until its empty
+
+
+output:
+lwz r4, -4(r2)			#load previeus word from r2 decremented
+stw r4, TXFIFO(r1)		#Transmit to TX buffer
+subi r2,r2,4			#decrement address by 1
+bdnz Txfifo	 		#repeat until done
+stw r7, TXFIFO(r1)		#send CR to terminal
+stw r8, TXFIFO(r1)		#send new line to uart
+li r3,0				#re initilize r3
+li r2,0x2000			#re initilize r2
+b Rxfifo_R
+
+nop
+here: b here
+nop

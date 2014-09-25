@@ -1,0 +1,67 @@
+##############################################################
+#
+# Xilinx Core Generator version 13.4
+# Date: Thu Sep 26 20:10:27 2013
+#
+##############################################################
+#
+#  This file contains the customisation parameters for a
+#  Xilinx CORE Generator IP GUI. It is strongly recommended
+#  that you do not manually alter this file as it may cause
+#  unexpected and unsupported behavior.
+#
+##############################################################
+#
+#  Generated from component: xilinx.com:ip:v_tc:3.0
+#
+##############################################################
+#
+# BEGIN Project Options
+SET addpads = false
+SET asysymbol = true
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = false
+SET designentry = VHDL
+SET device = xc6slx16
+SET devicefamily = spartan6
+SET flowvendor = Other
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET package = csg324
+SET removerpms = false
+SET simulationfiles = Behavioral
+SET speedgrade = -3
+SET verilogsim = false
+SET vhdlsim = true
+# END Project Options
+# BEGIN Select
+SELECT Video_Timing_Controller family Xilinx,_Inc. 3.0
+# END Select
+# BEGIN Parameters
+CSET active_chroma_detection=false
+CSET active_chroma_generation=false
+CSET active_video_detection=true
+CSET active_video_generation=true
+CSET auto_generation_mode=false
+CSET component_name=v_tc_v3_0_u0
+CSET enable_detection=true
+CSET enable_generation=true
+CSET frame_syncs=1
+CSET horizontal_blank_detection=true
+CSET horizontal_blank_generation=true
+CSET horizontal_sync_detection=true
+CSET horizontal_sync_generation=true
+CSET interface_selection=General_Purpose_Processor
+CSET max_clocks_per_line=2048
+CSET max_lines_per_frame=2048
+CSET vertical_blank_detection=true
+CSET vertical_blank_generation=true
+CSET vertical_sync_detection=true
+CSET vertical_sync_generation=true
+# END Parameters
+# BEGIN Extra information
+MISC pkg_timestamp=2012-01-07T15:29:19Z
+# END Extra information
+GENERATE
+# CRC: e765b3a6

@@ -1,0 +1,20 @@
+*ECE322L Lab 5 Circuit 2
+
+Vcc 1 0 DC 10
+Vs 5 0 AC 0.01 0
+
+C1 4 2 0.33uF
+
+R1 1 2 56.49k
+R2 2 0 11.95k
+RC 1 6 1.801k
+RE 3 0 530.7
+RS 5 4 531.8
+
+
+*Qxxx C B E NPN
+Q1 6 2 3 NPN
+
+.MODEL NPN NPN(BF=146 IS=52.1513E-15)
+
+.OP

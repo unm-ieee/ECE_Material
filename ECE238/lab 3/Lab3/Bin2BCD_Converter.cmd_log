@@ -1,0 +1,67 @@
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Bin2BCD_Converter.twx Bin2BCD_Converter.ncd -o Bin2BCD_Converter.twr Bin2BCD_Converter.pcf 
+bitgen -intstyle ise -f Bin2BCD_Converter.ut Bin2BCD_Converter.ncd 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Bin2BCD_Converter.ucf -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Bin2BCD_Converter.twx Bin2BCD_Converter.ncd -o Bin2BCD_Converter.twr Bin2BCD_Converter.pcf -ucf Bin2BCD_Converter.ucf 
+bitgen -intstyle ise -f Bin2BCD_Converter.ut Bin2BCD_Converter.ncd 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Bin2BCD_Converter.ucf -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Bin2BCD_Converter.ucf -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Bin2BCD_Converter.ucf -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Bin2BCD_Converter.ucf -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Bin2BCD_Converter.ucf -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Bin2BCD_Converter.twx Bin2BCD_Converter.ncd -o Bin2BCD_Converter.twr Bin2BCD_Converter.pcf -ucf Bin2BCD_Converter.ucf 
+bitgen -intstyle ise -f Bin2BCD_Converter.ut Bin2BCD_Converter.ncd 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.xst" -ofn "F:/ECE238/lab 3/Lab3/Bin2BCD_Converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Bin2BCD_Converter.ucf -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Bin2BCD_Converter.twx Bin2BCD_Converter.ncd -o Bin2BCD_Converter.twr Bin2BCD_Converter.pcf -ucf Bin2BCD_Converter.ucf 
+bitgen -intstyle ise -f Bin2BCD_Converter.ut Bin2BCD_Converter.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Bin2BCD_Converter.ucf -p xc3s500e-fg320-4 "Bin2BCD_Converter.ngc" Bin2BCD_Converter.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ngd Bin2BCD_Converter.pcf 
+par -w -intstyle ise -ol high -t 1 Bin2BCD_Converter_map.ncd Bin2BCD_Converter.ncd Bin2BCD_Converter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Bin2BCD_Converter.twx Bin2BCD_Converter.ncd -o Bin2BCD_Converter.twr Bin2BCD_Converter.pcf -ucf Bin2BCD_Converter.ucf 
+bitgen -intstyle ise -f Bin2BCD_Converter.ut Bin2BCD_Converter.ncd 

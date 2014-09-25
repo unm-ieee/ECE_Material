@@ -1,0 +1,29 @@
+Command line:
+   Accumulator_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  49647
+
+Mon Apr 23 19:19:34 2012
+
+
+ Elaboration Time: 0.187201 sec
+
+ Current Memory Usage: 802.98 Meg
+
+ Total Signals          : 8
+ Total Nets             : 17
+ Total Signal Drivers   : 4
+ Total Blocks           : 3
+ Total Primitive Blocks : 3
+ Total Processes        : 2
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 395
+
+ Total Simulation Time: 0.280802 sec
+
+ Current Memory Usage: 804.028 Meg
+
+Mon Apr 23 19:19:56 2012
+
+

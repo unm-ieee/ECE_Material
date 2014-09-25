@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map O.40d on Tue Feb 07 18:24:20 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "z" LOCATE = SITE "F12" LEVEL 1;
+COMP "a" LOCATE = SITE "N17" LEVEL 1;
+COMP "b" LOCATE = SITE "H18" LEVEL 1;
+COMP "c" LOCATE = SITE "L14" LEVEL 1;
+COMP "d" LOCATE = SITE "L13" LEVEL 1;
+SCHEMATIC END;
+

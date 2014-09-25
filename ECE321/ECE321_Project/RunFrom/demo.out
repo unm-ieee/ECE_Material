@@ -1,0 +1,76 @@
+
+**** 12/02/12 18:33:38 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+* TDB File:  C:\Users\Tony\Desktop\321_Project\RunFrom\ledit_demo, Cell:  Cell0
+* Extract Definition File:  C:\Users\Tony\Desktop\321_Project\RunFrom\template.ext
+* Extract Date and Time:  12/02/2012 - 18:30
+
+.include 2um_CMOS.modlib
+
+**** INCLUDING 2um_CMOS.modlib ****
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>><HTML><HEAD>
+--$
+ERROR -- Name "DOCTYPE" is defined more than once
+<META content="text/html; charset=utf-8" http-equiv="Content-Type"></HEAD>
+--------------$
+ERROR -- Quoted strings must fit on one line
+--------------------------------------------------------------------------$
+ERROR -- Missing node
+<BODY><PRE><PRE>* 2um Process MOSFET Transistor Model for ECE321 Project
+----------------------$
+ERROR -- Invalid parameter
+
+.MODEL CMOSN NMOS LEVEL=3 PHI=0.600000 TOX=2.1200E-08 XJ=0.200000U   
++TPG=1 VTO=0.7860 DELTA=6.9670E-01 LD=1.6470E-07 KP=9.6379E-05
++UO=591.7 THETA=8.1220E-02 RSH=8.5450E+01 GAMMA=0.5863
++NSUB=2.7470E+16 NFS=1.98E+12 VMAX=1.7330E+05 ETA=4.3680E-02
++KAPPA=1.3960E-01 CGDO=4.0241E-10 CGSO=4.0241E-10
++CGBO=3.6144E-10 CJ=3.8541E-04 MJ=1.1854 CJSW=1.3940E-10
++MJSW=0.125195 PB=0.800000
+
+.MODEL CMOSP PMOS LEVEL=3 PHI=0.600000 TOX=2.1200E-08 XJ=0.200000U 
++TPG=-1 VTO=-0.9056 DELTA=1.5200E+00 LD=2.2000E-08 KP=2.9352E-05
++UO=180.2 THETA=1.2480E-01 RSH=1.0470E+02 GAMMA=0.4863
++NSUB=1.8900E+16 NFS=3.46E+12 VMAX=3.7320E+05 ETA=1.6410E-01
++KAPPA=9.6940E+00 CGDO=5.3752E-11 CGSO=5.3752E-11
++CGBO=3.3650E-10 CJ=4.8447E-04 MJ=0.5027 CJSW=1.6457E-10
++MJSW=0.217168 PB=0.850000
+</PRE></PRE></BODY></HTML>
+-$
+ERROR -- Invalid device
+
+**** RESUMING demo.cir ****
+
+
+* NODE NAME ALIASES
+*       1 = VDD (2,40.5)
+*       2 = GND (0.5,1.5)
+*       3 = Out (49.5,22)
+*       5 = In (0.5,22)
+
+
+M1 3 4 1 1 cmosp L=2u W=5u AD=27.5p PD=21u AS=80p PS=52u 
+* M1 DRAIN GATE SOURCE BULK (37.5 27 39.5 32) 
+M2 4 5 1 1 cmosp L=2u W=5u AD=27.5p PD=21u AS=80p PS=52u 
+* M2 DRAIN GATE SOURCE BULK (12 27 14 32) 
+M3 3 4 2 2 cmosn L=2u W=5u AD=27.5p PD=21u AS=80p PS=52u 
+* M3 DRAIN GATE SOURCE BULK (37.5 10 39.5 15) 
+M4 4 5 2 2 cmosn L=2u W=5u AD=27.5p PD=21u AS=80p PS=52u 
+* M4 DRAIN GATE SOURCE BULK (12 10 14 15) 
+
+* Total Nodes: 5
+* Total Elements: 4
+* Extract Elapsed Time: 0 seconds
+.END
+

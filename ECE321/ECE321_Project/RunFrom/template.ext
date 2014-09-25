@@ -1,0 +1,36 @@
+# File:            ORBTn20.ext
+# For:             Extract definition file
+# Vendor:          Orbit Semiconductor, Inc.
+# Technology:      2.0U (Lambda = 1.0um) / N-well (N202P2MNPN)
+# Technology File: ORBTn20.tdb
+# This file will work only with L-EDIT Version 7 and greater.
+# Copyright (c)  1991-98
+# Tanner Research, Inc.  All rights reserved
+# ****************************************************************************
+
+connect(n well wire, ndiff, ndiff)
+connect(Substrate, pdiff, pdiff)
+connect(ndiff, Metal1, Active Contact)
+connect(pdiff, Metal1, Active Contact)
+connect(poly wire, Metal1, Poly Contact)
+connect(Metal1, Metal2, Via1)
+
+# NMOS transistor with poly gate
+device = MOSFET(
+               RLAYER=ntran;  
+               Drain=ndiff, AREA, PERIMETER;
+               Gate=poly wire;   
+               Source=ndiff, AREA, PERIMETER;
+               Bulk=Substrate;
+               MODEL=NMOS;
+               )
+
+# PMOS transistor with poly gate
+device = MOSFET(
+               RLAYER=ptran;
+               Drain=pdiff, AREA, PERIMETER;
+               Gate=poly wire;
+               Source=pdiff, AREA, PERIMETER;
+               Bulk=n well wire;
+               MODEL=PMOS;
+               )

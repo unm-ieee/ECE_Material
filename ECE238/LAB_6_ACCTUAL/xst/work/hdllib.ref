@@ -1,0 +1,6 @@
+AR statemachineone statemachinearch "F:/ECE238/Lab 6/L5P2 StateMachine1.vhd" sub00/vhpl01 1335227791
+EN statemachinetwo NULL "F:/ECE238/Lab 6/L5P2 StateMachine2.vhd" sub00/vhpl02 1335227792
+EN statemachineone NULL "F:/ECE238/Lab 6/L5P2 StateMachine1.vhd" sub00/vhpl00 1335227790
+AR circuit behavioral "F:/ECE238/Lab 6/L5P3 StateMachineCombine.vhd" sub00/vhpl05 1335227795
+AR statemachinetwo statemachinearch "F:/ECE238/Lab 6/L5P2 StateMachine2.vhd" sub00/vhpl03 1335227793
+EN circuit NULL "F:/ECE238/Lab 6/L5P3 StateMachineCombine.vhd" sub00/vhpl04 1335227794

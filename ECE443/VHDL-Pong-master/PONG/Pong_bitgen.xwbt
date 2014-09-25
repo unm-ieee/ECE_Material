@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/PONG/Pong.ncd
+OUTFILE=/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/PONG/Pong.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/PONG
+LICENSE=WebPack
+USER_INFO=209364116_0_0_573

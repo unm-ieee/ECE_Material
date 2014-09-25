@@ -1,0 +1,992 @@
+Release 13.4 Map O.87xd (nt64)
+Xilinx Mapping Report File for Design 'SCRN'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o SCRN_map.ncd SCRN.ngd SCRN.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu Nov 21 14:41:13 2013
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :  13
+
+Section 1 - Errors
+------------------
+ERROR:Pack:198 - NCD was not produced.  All logic was removed from the design. 
+   This is usually due to having no input or output PAD connections in the
+   design and no nets or symbols marked as 'SAVE'.  You can either add PADs or
+   'SAVE' attributes to the design, or run 'map -u' to disable logic trimming in
+   the mapper.  For more information on trimming issues search the Xilinx
+   Answers database for "ERROR:Pack:198" and read the Master Answer Record for
+   MAP Trimming Issues.
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:MapLib:701 - Signal vga<7> connected to top level port vga<7> has been
+   removed.
+WARNING:MapLib:701 - Signal vga<6> connected to top level port vga<6> has been
+   removed.
+WARNING:MapLib:701 - Signal vga<5> connected to top level port vga<5> has been
+   removed.
+WARNING:MapLib:701 - Signal vga<4> connected to top level port vga<4> has been
+   removed.
+WARNING:MapLib:701 - Signal vga<3> connected to top level port vga<3> has been
+   removed.
+WARNING:MapLib:701 - Signal vga<2> connected to top level port vga<2> has been
+   removed.
+WARNING:MapLib:701 - Signal vga<1> connected to top level port vga<1> has been
+   removed.
+WARNING:MapLib:701 - Signal vga<0> connected to top level port vga<0> has been
+   removed.
+WARNING:MapLib:701 - Signal Hsync connected to top level port Hsync has been
+   removed.
+WARNING:MapLib:701 - Signal Vsync connected to top level port Vsync has been
+   removed.
+WARNING:MapLib:701 - Signal clk connected to top level port clk has been
+   removed.
+WARNING:MapLib:41 - All members of TNM group "sys_clk_pin" have been optimized
+   out of the design.
+WARNING:MapLib:50 - The period specification "TS_sys_clk_pin" has been discarded
+   because the group "sys_clk_pin" has been optimized away.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@proton.ece.unm.edu'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 315 block(s) removed
+ 305 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "clk_BUFGP/IBUFG" is sourceless and has been removed.
+ Sourceless block "clk_BUFGP/BUFG" (CKBUF) removed.
+  The signal "clk_BUFGP" is sourceless and has been removed.
+   Sourceless block "screen_process_enable" (SFF) removed.
+    The signal "screen_process_enable" is sourceless and has been removed.
+     Sourceless block "X_0" (SFF) removed.
+      The signal "X<0>" is sourceless and has been removed.
+       Sourceless block "PWR_6_o_X[9]_equal_6_o<9>1" (ROM) removed.
+        The signal "PWR_6_o_X[9]_equal_6_o" is sourceless and has been removed.
+         Sourceless block "Y_1_rstpot" (ROM) removed.
+          The signal "Y_1_rstpot" is sourceless and has been removed.
+           Sourceless block "Y_1" (FF) removed.
+            The signal "Y<1>" is sourceless and has been removed.
+             Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<1>"
+(MUX) removed.
+              The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<1>" is
+sourceless and has been removed.
+               Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<2>"
+(MUX) removed.
+                The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<2>" is
+sourceless and has been removed.
+                 Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<3>"
+(MUX) removed.
+                  The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<3>" is
+sourceless and has been removed.
+                   Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<4>"
+(MUX) removed.
+                    The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<4>" is
+sourceless and has been removed.
+                     Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<5>"
+(MUX) removed.
+                      The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<5>" is
+sourceless and has been removed.
+                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<6>"
+(MUX) removed.
+                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<6>" is
+sourceless and has been removed.
+                         Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<7>"
+(MUX) removed.
+                          The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<7>" is
+sourceless and has been removed.
+                           Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<8>"
+(MUX) removed.
+                            The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<8>" is
+sourceless and has been removed.
+                             Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<9>"
+(XOR) removed.
+                              The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<9>" is sourceless and
+has been removed.
+                               Sourceless block "Y[9]_PWR_6_o_mod_22/BUS_0011_INV_129_o22" (ROM) removed.
+                                The signal "Y[9]_PWR_6_o_mod_22/BUS_0011_INV_129_o21" is sourceless and has been
+removed.
+                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_o31" (ROM) removed.
+                                  The signal "Y[9]_PWR_6_o_mod_22_OUT<2>" is sourceless and has been removed.
+                                   Sourceless block "Mmux_PWR_6_o_GND_6_o_mux_25_OUT<7>11" (ROM) removed.
+                                    The signal "PWR_6_o_GND_6_o_mux_25_OUT<7>" is sourceless and has been removed.
+                                     Sourceless block "xx_vga_7" (LATCH) removed.
+                                      The signal "xx_vga_7" is sourceless and has been removed.
+                                       Sourceless block "vga_6_OBUF" (BUF) removed.
+                                        The signal "vga<6>" is sourceless and has been removed.
+                                         Sourceless block "vga<6>" (PAD) removed.
+                                     Sourceless block "xx_vga_7_1" (LATCH) removed.
+                                      The signal "xx_vga_7_1" is sourceless and has been removed.
+                                       Sourceless block "vga_7_OBUF" (BUF) removed.
+                                        The signal "vga<7>" is sourceless and has been removed.
+                                         Sourceless block "vga<7>" (PAD) removed.
+                                   Sourceless block "Mmux_PWR_6_o_GND_6_o_mux_25_OUT<5>11" (ROM) removed.
+                                    The signal "PWR_6_o_GND_6_o_mux_25_OUT<5>" is sourceless and has been removed.
+                                     Sourceless block "xx_vga_5" (LATCH) removed.
+                                      The signal "xx_vga_5" is sourceless and has been removed.
+                                       Sourceless block "vga_3_OBUF" (BUF) removed.
+                                        The signal "vga<3>" is sourceless and has been removed.
+                                         Sourceless block "vga<3>" (PAD) removed.
+                                     Sourceless block "xx_vga_5_1" (LATCH) removed.
+                                      The signal "xx_vga_5_1" is sourceless and has been removed.
+                                       Sourceless block "vga_5_OBUF" (BUF) removed.
+                                        The signal "vga<5>" is sourceless and has been removed.
+                                         Sourceless block "vga<5>" (PAD) removed.
+                                     Sourceless block "xx_vga_5_2" (LATCH) removed.
+                                      The signal "xx_vga_5_2" is sourceless and has been removed.
+                                       Sourceless block "vga_4_OBUF" (BUF) removed.
+                                        The signal "vga<4>" is sourceless and has been removed.
+                                         Sourceless block "vga<4>" (PAD) removed.
+                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_o21" (ROM) removed.
+                                  The signal "Y[9]_PWR_6_o_mod_22_OUT<1>" is sourceless and has been removed.
+                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_o41" (ROM) removed.
+                                  The signal "Y[9]_PWR_6_o_mod_22_OUT<3>" is sourceless and has been removed.
+                           Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<8>"
+(XOR) removed.
+                            The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<8>" is sourceless and
+has been removed.
+                         Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<7>"
+(XOR) removed.
+                          The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<7>" is sourceless and
+has been removed.
+                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<6>"
+(XOR) removed.
+                        The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<6>" is sourceless and
+has been removed.
+                     Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<5>"
+(XOR) removed.
+                      The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<5>" is sourceless and
+has been removed.
+                   Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<4>"
+(XOR) removed.
+                    The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<4>" is sourceless and
+has been removed.
+                 Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<3>"
+(XOR) removed.
+                  The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<3>" is sourceless and
+has been removed.
+                   Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[0]_a[9]_MUX_214_o131" (ROM)
+removed.
+                    The signal "Y[9]_PWR_6_o_mod_22/a[3]_a[9]_MUX_211_o" is sourceless and has been
+removed.
+               Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<2>"
+(XOR) removed.
+                The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<2>" is sourceless and
+has been removed.
+                 Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[0]_a[9]_MUX_214_o121" (ROM)
+removed.
+                  The signal "Y[9]_PWR_6_o_mod_22/a[2]_a[9]_MUX_212_o" is sourceless and has been
+removed.
+             Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[0]_a[9]_MUX_214_o111" (ROM)
+removed.
+              The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_21_OUT_Madd_Madd_lut<1>"
+is sourceless and has been removed.
+             Sourceless block "GND_6_o_INV_8_o_SW0" (ROM) removed.
+              The signal "N6" is sourceless and has been removed.
+               Sourceless block "GND_6_o_INV_8_o" (ROM) removed.
+                The signal "GND_6_o_INV_8_o" is sourceless and has been removed.
+                 Sourceless block "Vsync" (LATCH) removed.
+                  The signal "Vsync_OBUF" is sourceless and has been removed.
+                   Sourceless block "Vsync_OBUF" (BUF) removed.
+                    The signal "Vsync" is sourceless and has been removed.
+                     Sourceless block "Vsync.PAD" (PAD) removed.
+             Sourceless block "Mcount_Y_cy<1>_rt" (ROM) removed.
+              The signal "Mcount_Y_cy<1>_rt" is sourceless and has been removed.
+               Sourceless block "Mcount_Y_cy<1>" (MUX) removed.
+                The signal "Mcount_Y_cy<1>" is sourceless and has been removed.
+                 Sourceless block "Mcount_Y_cy<2>" (MUX) removed.
+                  The signal "Mcount_Y_cy<2>" is sourceless and has been removed.
+                   Sourceless block "Mcount_Y_cy<3>" (MUX) removed.
+                    The signal "Mcount_Y_cy<3>" is sourceless and has been removed.
+                     Sourceless block "Mcount_Y_cy<4>" (MUX) removed.
+                      The signal "Mcount_Y_cy<4>" is sourceless and has been removed.
+                       Sourceless block "Mcount_Y_cy<5>" (MUX) removed.
+                        The signal "Mcount_Y_cy<5>" is sourceless and has been removed.
+                         Sourceless block "Mcount_Y_cy<6>" (MUX) removed.
+                          The signal "Mcount_Y_cy<6>" is sourceless and has been removed.
+                           Sourceless block "Mcount_Y_cy<7>" (MUX) removed.
+                            The signal "Mcount_Y_cy<7>" is sourceless and has been removed.
+                             Sourceless block "Mcount_Y_cy<8>" (MUX) removed.
+                              The signal "Mcount_Y_cy<8>" is sourceless and has been removed.
+                               Sourceless block "Mcount_Y_xor<9>" (XOR) removed.
+                                The signal "Result<9>" is sourceless and has been removed.
+                                 Sourceless block "Y_9_rstpot" (ROM) removed.
+                                  The signal "Y_9_rstpot" is sourceless and has been removed.
+                                   Sourceless block "Y_9" (FF) removed.
+                                    The signal "Y<9>" is sourceless and has been removed.
+                                     Sourceless block "Mcount_Y_xor<9>_rt" (ROM) removed.
+                                      The signal "Mcount_Y_xor<9>_rt" is sourceless and has been removed.
+                                     Sourceless block "Mcount_X_lut<0>" (ROM) removed.
+                                      The signal "Mcount_X_lut<0>" is sourceless and has been removed.
+                                       Sourceless block "Mcount_X_cy<0>" (MUX) removed.
+                                        The signal "Mcount_X_cy<0>" is sourceless and has been removed.
+                                         Sourceless block "Mcount_X_cy<1>" (MUX) removed.
+                                          The signal "Mcount_X_cy<1>" is sourceless and has been removed.
+                                           Sourceless block "Mcount_X_cy<2>" (MUX) removed.
+                                            The signal "Mcount_X_cy<2>" is sourceless and has been removed.
+                                             Sourceless block "Mcount_X_cy<3>" (MUX) removed.
+                                              The signal "Mcount_X_cy<3>" is sourceless and has been removed.
+                                               Sourceless block "Mcount_X_cy<4>" (MUX) removed.
+                                                The signal "Mcount_X_cy<4>" is sourceless and has been removed.
+                                                 Sourceless block "Mcount_X_cy<5>" (MUX) removed.
+*The signal "Mcount_X_cy<5>" is sourceless and has been removed.
+* Sourceless block "Mcount_X_cy<6>" (MUX) removed.
+*  The signal "Mcount_X_cy<6>" is sourceless and has been removed.
+*   Sourceless block "Mcount_X_cy<7>" (MUX) removed.
+*    The signal "Mcount_X_cy<7>" is sourceless and has been removed.
+*     Sourceless block "Mcount_X_cy<8>" (MUX) removed.
+*      The signal "Mcount_X_cy<8>" is sourceless and has been removed.
+*       Sourceless block "Mcount_X_xor<9>" (XOR) removed.
+*        The signal "Mcount_X9" is sourceless and has been removed.
+*         Sourceless block "X_9" (SFF) removed.
+*          The signal "X<9>" is sourceless and has been removed.
+*           Sourceless block "PWR_6_o_INV_7_o11" (ROM) removed.
+*            The signal "PWR_6_o_INV_7_o" is sourceless and has been removed.
+*             Sourceless block "Hsync" (LATCH) removed.
+*              The signal "Hsync_OBUF" is sourceless and has been removed.
+*               Sourceless block "Hsync_OBUF" (BUF) removed.
+*                The signal "Hsync" is sourceless and has been removed.
+*                 Sourceless block "Hsync.PAD" (PAD) removed.
+*           Sourceless block "Mcount_X_lut<9>" (ROM) removed.
+*            The signal "Mcount_X_lut<9>" is sourceless and has been removed.
+*           Sourceless block "Y_0_rstpot1_SW0" (ROM) removed.
+*            The signal "N38" is sourceless and has been removed.
+*             Sourceless block "Y_0_rstpot1" (ROM) removed.
+*              The signal "Y_0_rstpot1" is sourceless and has been removed.
+*               Sourceless block "Y_0" (FF) removed.
+*                The signal "Y<0>" is sourceless and has been removed.
+*                 Sourceless block "PWR_6_o_Y[9]_equal_8_o<9>_SW1" (ROM) removed.
+*                  The signal "N16" is sourceless and has been removed.
+*                   Sourceless block "Mcount_X_lut<1>" (ROM) removed.
+*                    The signal "Mcount_X_lut<1>" is sourceless and has been removed.
+*                     Sourceless block "Mcount_X_xor<1>" (XOR) removed.
+*                      The signal "Mcount_X1" is sourceless and has been removed.
+*                       Sourceless block "X_1" (SFF) removed.
+*                        The signal "X<1>" is sourceless and has been removed.
+*                         Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<1>"
+(MUX) removed.
+*                          The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<1>" is
+sourceless and has been removed.
+*                           Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<2>"
+(MUX) removed.
+*                            The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<2>" is
+sourceless and has been removed.
+*                             Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<3>"
+(MUX) removed.
+*                              The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<3>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<4>"
+(MUX) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<4>" is
+sourceless and has been removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<5>"
+(MUX) removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<5>" is
+sourceless and has been removed.
+*                                   Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<6>"
+(MUX) removed.
+*                                    The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<6>" is
+sourceless and has been removed.
+*                                     Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<7>"
+(MUX) removed.
+*                                      The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<7>" is
+sourceless and has been removed.
+*                                       Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<8>"
+(MUX) removed.
+*                                        The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_cy<8>" is
+sourceless and has been removed.
+*                                         Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<9>"
+(XOR) removed.
+*                                          The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<9>" is sourceless and
+has been removed.
+*                                           Sourceless block "X[9]_PWR_6_o_mod_20/BUS_0011_INV_129_o22" (ROM) removed.
+*                                            The signal "X[9]_PWR_6_o_mod_20/BUS_0011_INV_129_o21" is sourceless and has been
+removed.
+*                                             Sourceless block "X[9]_PWR_6_o_mod_20/BUS_0011_INV_129_o23" (ROM) removed.
+*                                              The signal "X[9]_PWR_6_o_mod_20/BUS_0011_INV_129_o" is sourceless and has been
+removed.
+*                                               Sourceless block "PWR_6_o_GND_6_o_mux_25_OUT<2><3>1" (ROM) removed.
+*                                                The signal "PWR_6_o_GND_6_o_mux_25_OUT<2>" is sourceless and has been removed.
+*                                                 Sourceless block "xx_vga_2" (LATCH) removed.
+**The signal "xx_vga_2" is sourceless and has been removed.
+** Sourceless block "vga_0_OBUF" (BUF) removed.
+**  The signal "vga<0>" is sourceless and has been removed.
+**   Sourceless block "vga<0>" (PAD) removed.
+*                                                 Sourceless block "xx_vga_2_1" (LATCH) removed.
+**The signal "xx_vga_2_1" is sourceless and has been removed.
+** Sourceless block "vga_2_OBUF" (BUF) removed.
+**  The signal "vga<2>" is sourceless and has been removed.
+**   Sourceless block "vga<2>" (PAD) removed.
+*                                                 Sourceless block "xx_vga_2_2" (LATCH) removed.
+**The signal "xx_vga_2_2" is sourceless and has been removed.
+** Sourceless block "vga_1_OBUF" (BUF) removed.
+**  The signal "vga<1>" is sourceless and has been removed.
+**   Sourceless block "vga<1>" (PAD) removed.
+*                                       Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<8>"
+(XOR) removed.
+*                                        The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<8>" is sourceless and
+has been removed.
+*                                     Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<7>"
+(XOR) removed.
+*                                      The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<7>" is sourceless and
+has been removed.
+*                                   Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<6>"
+(XOR) removed.
+*                                    The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<6>" is sourceless and
+has been removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<5>"
+(XOR) removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<5>" is sourceless and
+has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<4>"
+(XOR) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<4>" is sourceless and
+has been removed.
+*                             Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<3>"
+(XOR) removed.
+*                              The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<3>" is sourceless and
+has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_214_o131" (ROM)
+removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[3]_a[9]_MUX_211_o" is sourceless and has been
+removed.
+*                           Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<2>"
+(XOR) removed.
+*                            The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<2>" is sourceless and
+has been removed.
+*                             Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_214_o121" (ROM)
+removed.
+*                              The signal "X[9]_PWR_6_o_mod_20/a[2]_a[9]_MUX_212_o" is sourceless and has been
+removed.
+*                         Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_214_o111" (ROM)
+removed.
+*                          The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_21_OUT_Madd_Madd_lut<1>"
+is sourceless and has been removed.
+*                         Sourceless block
+"X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<1>1_INV_0" (BUF)
+removed.
+*                          The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<1>" is
+sourceless and has been removed.
+*                           Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<1>"
+(XOR) removed.
+*                            The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_19_OUT<1>" is sourceless and
+has been removed.
+*                         Sourceless block "PWR_6_o_X[9]_equal_6_o<9>11" (ROM) removed.
+*                          The signal "PWR_6_o_X[9]_equal_6_o<9>1" is sourceless and has been removed.
+*                           Sourceless block "_n01181" (ROM) removed.
+*                            The signal "_n0118" is sourceless and has been removed.
+*                             Sourceless block "X_2" (SFF) removed.
+*                              The signal "X<2>" is sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<2>"
+(MUX) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<2>" is
+sourceless and has been removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<3>"
+(MUX) removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<3>" is
+sourceless and has been removed.
+*                                   Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<4>"
+(MUX) removed.
+*                                    The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<4>" is
+sourceless and has been removed.
+*                                     Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<5>"
+(MUX) removed.
+*                                      The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<5>" is
+sourceless and has been removed.
+*                                       Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<6>"
+(MUX) removed.
+*                                        The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<6>" is
+sourceless and has been removed.
+*                                         Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<7>"
+(MUX) removed.
+*                                          The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<7>" is
+sourceless and has been removed.
+*                                           Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<8>"
+(MUX) removed.
+*                                            The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<8>" is
+sourceless and has been removed.
+*                                             Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<9>"
+(XOR) removed.
+*                                              The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_17_OUT<9>" is sourceless and
+has been removed.
+*                                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[9]_a[9]_MUX_195_o11" (ROM) removed.
+*                                                The signal "X[9]_PWR_6_o_mod_20/a[9]_a[9]_MUX_195_o" is sourceless and has been
+removed.
+*                                                 Sourceless block "X[9]_PWR_6_o_mod_20/BUS_0010_INV_118_o1" (ROM) removed.
+**The signal "X[9]_PWR_6_o_mod_20/BUS_0010_INV_118_o" is sourceless and has been
+removed.
+*                                                 Sourceless block "X[9]_PWR_6_o_mod_20/BUS_0011_INV_129_o21" (ROM) removed.
+**The signal "X[9]_PWR_6_o_mod_20/BUS_0011_INV_129_o2" is sourceless and has been
+removed.
+*                                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<9>"
+(ROM) removed.
+*                                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<9>" is
+sourceless and has been removed.
+*                                           Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<8>"
+(XOR) removed.
+*                                            The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_17_OUT<8>" is sourceless and
+has been removed.
+*                                             Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[8]_a[9]_MUX_196_o11" (ROM) removed.
+*                                              The signal "X[9]_PWR_6_o_mod_20/a[8]_a[9]_MUX_196_o" is sourceless and has been
+removed.
+*                                             Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<8>"
+(ROM) removed.
+*                                              The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<8>" is
+sourceless and has been removed.
+*                                         Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<7>"
+(XOR) removed.
+*                                          The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_17_OUT<7>" is sourceless and
+has been removed.
+*                                           Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[7]_a[9]_MUX_197_o11" (ROM) removed.
+*                                            The signal "X[9]_PWR_6_o_mod_20/a[7]_a[9]_MUX_197_o" is sourceless and has been
+removed.
+*                                           Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<7>"
+(ROM) removed.
+*                                            The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<7>" is
+sourceless and has been removed.
+*                                       Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<6>"
+(XOR) removed.
+*                                        The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_17_OUT<6>" is sourceless and
+has been removed.
+*                                         Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[6]_a[9]_MUX_198_o11" (ROM) removed.
+*                                          The signal "X[9]_PWR_6_o_mod_20/a[6]_a[9]_MUX_198_o" is sourceless and has been
+removed.
+*                                         Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<6>"
+(ROM) removed.
+*                                          The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<6>" is
+sourceless and has been removed.
+*                                     Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<5>"
+(XOR) removed.
+*                                      The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_17_OUT<5>" is sourceless and
+has been removed.
+*                                       Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[5]_a[9]_MUX_199_o11" (ROM) removed.
+*                                        The signal "X[9]_PWR_6_o_mod_20/a[5]_a[9]_MUX_199_o" is sourceless and has been
+removed.
+*                                       Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<5>"
+(ROM) removed.
+*                                        The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<5>" is
+sourceless and has been removed.
+*                                   Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<4>"
+(XOR) removed.
+*                                    The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_17_OUT<4>" is sourceless and
+has been removed.
+*                                     Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[4]_a[9]_MUX_200_o11" (ROM) removed.
+*                                      The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<4>" is
+sourceless and has been removed.
+*                                     Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[4]_a[9]_MUX_200_o111" (ROM)
+removed.
+*                                      The signal "X[9]_PWR_6_o_mod_20/Mmux_a[4]_a[9]_MUX_200_o11" is sourceless and
+has been removed.
+*                                     Sourceless block "X[9]_PWR_6_o_mod_20/BUS_0010_INV_118_o1_SW0" (ROM) removed.
+*                                      The signal "N12" is sourceless and has been removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<3>"
+(XOR) removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_17_OUT<3>" is sourceless and
+has been removed.
+*                                   Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_204_o131" (ROM)
+removed.
+*                                    The signal "X[9]_PWR_6_o_mod_20/a[3]_a[9]_MUX_201_o" is sourceless and has been
+removed.
+*                                   Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<3>1"
+(ROM) removed.
+*                                    The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<3>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_204_o121" (ROM)
+removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<2>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_204_o1211" (ROM)
+removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_204_o121" is sourceless and
+has been removed.
+*                               Sourceless block "Mcount_X_lut<2>" (ROM) removed.
+*                                The signal "Mcount_X_lut<2>" is sourceless and has been removed.
+*                                 Sourceless block "Mcount_X_xor<2>" (XOR) removed.
+*                                  The signal "Mcount_X2" is sourceless and has been removed.
+*                               Sourceless block
+"X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<2>1_INV_0" (BUF)
+removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<2>" is
+sourceless and has been removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<2>"
+(XOR) removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/a[9]_GND_7_o_add_17_OUT<2>" is sourceless and
+has been removed.
+*                             Sourceless block "X_3" (SFF) removed.
+*                              The signal "X<3>" is sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/BUS_0009_INV_107_o1" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/BUS_0009_INV_107_o" is sourceless and has been
+removed.
+*                               Sourceless block
+"X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<3>_rt" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<3>_rt" is
+sourceless and has been removed.
+*                               Sourceless block "Mcount_X_lut<3>" (ROM) removed.
+*                                The signal "Mcount_X_lut<3>" is sourceless and has been removed.
+*                                 Sourceless block "Mcount_X_xor<3>" (XOR) removed.
+*                                  The signal "Mcount_X3" is sourceless and has been removed.
+*                             Sourceless block "X_4" (SFF) removed.
+*                              The signal "X<4>" is sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[5]_a[9]_MUX_189_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<5>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/BUS_0008_INV_96_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/BUS_0008_INV_96_o" is sourceless and has been
+removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[9]_a[9]_MUX_185_o11" (ROM) removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/a[9]_a[9]_MUX_185_o" is sourceless and has been
+removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[5]_a[9]_MUX_189_o111" (ROM)
+removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/Mmux_a[5]_a[9]_MUX_189_o11" is sourceless and
+has been removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<9>"
+(ROM) removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<9>" is
+sourceless and has been removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<6>"
+(ROM) removed.
+*                                  The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<6>" is
+sourceless and has been removed.
+*                               Sourceless block "Mcount_X_lut<4>" (ROM) removed.
+*                                The signal "Mcount_X_lut<4>" is sourceless and has been removed.
+*                                 Sourceless block "Mcount_X_xor<4>" (XOR) removed.
+*                                  The signal "Mcount_X4" is sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[4]_a[9]_MUX_190_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[4]_a[9]_MUX_190_o" is sourceless and has been
+removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_15_OUT_Madd_cy<6>11"
+(ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_15_OUT_Madd_cy<6>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_15_OUT_Madd_cy<5>11"
+(ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_15_OUT_Madd_cy<5>" is
+sourceless and has been removed.
+*                                 Sourceless block "X[9]_PWR_6_o_mod_20/BUS_0009_INV_107_o1_SW0" (ROM) removed.
+*                                  The signal "N14" is sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<4>1"
+(ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<4>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[8]_a[9]_MUX_186_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[8]_a[9]_MUX_186_o" is sourceless and has been
+removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<8>"
+(ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<8>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[7]_a[9]_MUX_187_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[7]_a[9]_MUX_187_o" is sourceless and has been
+removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<7>"
+(ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<7>" is
+sourceless and has been removed.
+*                             Sourceless block "X_5" (SFF) removed.
+*                              The signal "X<5>" is sourceless and has been removed.
+*                               Sourceless block "Mcount_X_lut<5>" (ROM) removed.
+*                                The signal "Mcount_X_lut<5>" is sourceless and has been removed.
+*                                 Sourceless block "Mcount_X_xor<5>" (XOR) removed.
+*                                  The signal "Mcount_X5" is sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[6]_a[9]_MUX_178_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_15_OUT_Madd_lut<6>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[5]_a[9]_MUX_179_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[5]_a[9]_MUX_179_o" is sourceless and has been
+removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[8]_a[9]_MUX_176_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[8]_a[9]_MUX_176_o" is sourceless and has been
+removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[7]_a[9]_MUX_177_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[7]_a[9]_MUX_177_o" is sourceless and has been
+removed.
+*                             Sourceless block "X_6" (SFF) removed.
+*                              The signal "X<6>" is sourceless and has been removed.
+*                               Sourceless block "Mcount_X_lut<6>" (ROM) removed.
+*                                The signal "Mcount_X_lut<6>" is sourceless and has been removed.
+*                                 Sourceless block "Mcount_X_xor<6>" (XOR) removed.
+*                                  The signal "Mcount_X6" is sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[7]_a[9]_MUX_167_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_13_OUT_Madd_lut<7>" is
+sourceless and has been removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[6]_a[9]_MUX_168_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[6]_a[9]_MUX_168_o" is sourceless and has been
+removed.
+*                               Sourceless block "X[9]_PWR_6_o_mod_20/Mmux_a[8]_a[9]_MUX_166_o11" (ROM) removed.
+*                                The signal "X[9]_PWR_6_o_mod_20/a[8]_a[9]_MUX_166_o" is sourceless and has been
+removed.
+*                             Sourceless block "X_7" (SFF) removed.
+*                              The signal "X<7>" is sourceless and has been removed.
+*                               Sourceless block "Mcount_X_lut<7>" (ROM) removed.
+*                                The signal "Mcount_X_lut<7>" is sourceless and has been removed.
+*                                 Sourceless block "Mcount_X_xor<7>" (XOR) removed.
+*                                  The signal "Mcount_X7" is sourceless and has been removed.
+*                             Sourceless block "X_8" (SFF) removed.
+*                              The signal "X<8>" is sourceless and has been removed.
+*                               Sourceless block "Mcount_X_lut<8>" (ROM) removed.
+*                                The signal "Mcount_X_lut<8>" is sourceless and has been removed.
+*                                 Sourceless block "Mcount_X_xor<8>" (XOR) removed.
+*                                  The signal "Mcount_X8" is sourceless and has been removed.
+*                           Sourceless block "Y_5_rstpot" (ROM) removed.
+*                            The signal "Y_5_rstpot" is sourceless and has been removed.
+*                             Sourceless block "Y_5" (FF) removed.
+*                              The signal "Y<5>" is sourceless and has been removed.
+*                               Sourceless block "Mcount_Y_cy<5>_rt" (ROM) removed.
+*                                The signal "Mcount_Y_cy<5>_rt" is sourceless and has been removed.
+*                                 Sourceless block "Mcount_Y_xor<5>" (XOR) removed.
+*                                  The signal "Result<5>" is sourceless and has been removed.
+*                               Sourceless block "PWR_6_o_Y[9]_equal_8_o<9>_SW9" (ROM) removed.
+*                                The signal "N32" is sourceless and has been removed.
+*                               Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[6]_a[9]_MUX_178_o11" (ROM) removed.
+*                                The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_15_OUT_Madd_lut<6>" is
+sourceless and has been removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/BUS_0008_INV_96_o11" (ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/BUS_0008_INV_96_o" is sourceless and has been
+removed.
+*                                   Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[9]_a[9]_MUX_185_o11" (ROM) removed.
+*                                    The signal "Y[9]_PWR_6_o_mod_22/a[9]_a[9]_MUX_185_o" is sourceless and has been
+removed.
+*                                     Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[9]_a[9]_MUX_195_o11" (ROM) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/a[9]_a[9]_MUX_195_o" is sourceless and has been
+removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/BUS_0010_INV_118_o1" (ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/BUS_0010_INV_118_o" is sourceless and has been
+removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/BUS_0011_INV_129_o21" (ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/BUS_0011_INV_129_o2" is sourceless and has been
+removed.
+*                                     Sourceless block "Y[9]_PWR_6_o_mod_22/BUS_0009_INV_107_o1" (ROM) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/BUS_0009_INV_107_o" is sourceless and has been
+removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[0]_a[9]_MUX_204_o121" (ROM)
+removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<2>" is
+sourceless and has been removed.
+*                                         Sourceless block "Y[9]_PWR_6_o_mod_22/BUS_0010_INV_118_o1_SW0" (ROM) removed.
+*                                          The signal "N8" is sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[0]_a[9]_MUX_204_o131" (ROM)
+removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/a[3]_a[9]_MUX_201_o" is sourceless and has been
+removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[8]_a[9]_MUX_196_o11" (ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/a[8]_a[9]_MUX_196_o" is sourceless and has been
+removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[4]_a[9]_MUX_200_o11" (ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<4>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[7]_a[9]_MUX_197_o11" (ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/a[7]_a[9]_MUX_197_o" is sourceless and has been
+removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[5]_a[9]_MUX_199_o11" (ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/a[5]_a[9]_MUX_199_o" is sourceless and has been
+removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[4]_a[9]_MUX_200_o111" (ROM)
+removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Mmux_a[4]_a[9]_MUX_200_o11" is sourceless and
+has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[0]_a[9]_MUX_204_o1211" (ROM)
+removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Mmux_a[0]_a[9]_MUX_204_o121" is sourceless and
+has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<9>"
+(ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<9>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<8>"
+(ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<8>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<7>"
+(ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<7>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<5>"
+(ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<5>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<3>1"
+(ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<3>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[6]_a[9]_MUX_198_o11" (ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/a[6]_a[9]_MUX_198_o" is sourceless and has been
+removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<6>"
+(ROM) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<6>" is
+sourceless and has been removed.
+*                                   Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[5]_a[9]_MUX_189_o111" (ROM)
+removed.
+*                                    The signal "Y[9]_PWR_6_o_mod_22/Mmux_a[5]_a[9]_MUX_189_o11" is sourceless and
+has been removed.
+*                                     Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<5>"
+(MUX) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<5>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<6>"
+(MUX) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<6>" is
+sourceless and has been removed.
+*                                         Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<7>"
+(MUX) removed.
+*                                          The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<7>" is
+sourceless and has been removed.
+*                                           Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<8>"
+(MUX) removed.
+*                                            The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<8>" is
+sourceless and has been removed.
+*                                             Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<9>"
+(XOR) removed.
+*                                              The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_17_OUT<9>" is sourceless and
+has been removed.
+*                                           Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<8>"
+(XOR) removed.
+*                                            The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_17_OUT<8>" is sourceless and
+has been removed.
+*                                         Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<7>"
+(XOR) removed.
+*                                          The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_17_OUT<7>" is sourceless and
+has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<6>"
+(XOR) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_17_OUT<6>" is sourceless and
+has been removed.
+*                                     Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<5>"
+(XOR) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_17_OUT<5>" is sourceless and
+has been removed.
+*                                   Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<9>"
+(ROM) removed.
+*                                    The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<9>" is
+sourceless and has been removed.
+*                                   Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<6>"
+(ROM) removed.
+*                                    The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<6>" is
+sourceless and has been removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[5]_a[9]_MUX_189_o11" (ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<5>" is
+sourceless and has been removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[4]_a[9]_MUX_190_o11" (ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/a[4]_a[9]_MUX_190_o" is sourceless and has been
+removed.
+*                                   Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<4>"
+(MUX) removed.
+*                                    The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<4>" is
+sourceless and has been removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_15_OUT_Madd_cy<6>11"
+(ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_15_OUT_Madd_cy<6>" is
+sourceless and has been removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<4>1"
+(ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<4>" is
+sourceless and has been removed.
+*                                   Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<4>"
+(XOR) removed.
+*                                    The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_17_OUT<4>" is sourceless and
+has been removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[8]_a[9]_MUX_186_o11" (ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/a[8]_a[9]_MUX_186_o" is sourceless and has been
+removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<8>"
+(ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<8>" is
+sourceless and has been removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[7]_a[9]_MUX_187_o11" (ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/a[7]_a[9]_MUX_187_o" is sourceless and has been
+removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<7>"
+(ROM) removed.
+*                                  The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<7>" is
+sourceless and has been removed.
+*                                 Sourceless block "Y[9]_PWR_6_o_mod_22/BUS_0009_INV_107_o1_SW0" (ROM) removed.
+*                                  The signal "N10" is sourceless and has been removed.
+*                               Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[5]_a[9]_MUX_179_o11" (ROM) removed.
+*                                The signal "Y[9]_PWR_6_o_mod_22/a[5]_a[9]_MUX_179_o" is sourceless and has been
+removed.
+*                               Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[8]_a[9]_MUX_176_o11" (ROM) removed.
+*                                The signal "Y[9]_PWR_6_o_mod_22/a[8]_a[9]_MUX_176_o" is sourceless and has been
+removed.
+*                               Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[7]_a[9]_MUX_177_o11" (ROM) removed.
+*                                The signal "Y[9]_PWR_6_o_mod_22/a[7]_a[9]_MUX_177_o" is sourceless and has been
+removed.
+*                               Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_15_OUT_Madd_cy<5>11"
+(ROM) removed.
+*                                The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_15_OUT_Madd_cy<5>" is
+sourceless and has been removed.
+*                               Sourceless block "PWR_6_o_Y[9]_equal_8_o<9>" (ROM) removed.
+*                                The signal "PWR_6_o_Y[9]_equal_8_o" is sourceless and has been removed.
+*                                 Sourceless block "Y_2_rstpot" (ROM) removed.
+*                                  The signal "Y_2_rstpot" is sourceless and has been removed.
+*                                   Sourceless block "Y_2" (FF) removed.
+*                                    The signal "Y<2>" is sourceless and has been removed.
+*                                     Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<2>"
+(MUX) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<2>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<3>"
+(MUX) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<3>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<3>"
+(XOR) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_17_OUT<3>" is sourceless and
+has been removed.
+*                                     Sourceless block "Mcount_Y_cy<2>_rt" (ROM) removed.
+*                                      The signal "Mcount_Y_cy<2>_rt" is sourceless and has been removed.
+*                                       Sourceless block "Mcount_Y_xor<2>" (XOR) removed.
+*                                        The signal "Result<2>" is sourceless and has been removed.
+*                                     Sourceless block "PWR_6_o_Y[9]_equal_8_o<9>_SW10" (ROM) removed.
+*                                      The signal "N36" is sourceless and has been removed.
+*                                     Sourceless block
+"Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<2>1_INV_0" (BUF)
+removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_lut<2>" is
+sourceless and has been removed.
+*                                       Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_xor<2>"
+(XOR) removed.
+*                                        The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_17_OUT<2>" is sourceless and
+has been removed.
+*                                     Sourceless block "PWR_6_o_Y[9]_equal_8_o_inv1" (ROM) removed.
+*                                      The signal "PWR_6_o_Y[9]_equal_8_o_inv" is sourceless and has been removed.
+*                                       Sourceless block "Mcount_X_xor<0>" (XOR) removed.
+*                                        The signal "Mcount_X" is sourceless and has been removed.
+*                                 Sourceless block "Y_3_rstpot" (ROM) removed.
+*                                  The signal "Y_3_rstpot" is sourceless and has been removed.
+*                                   Sourceless block "Y_3" (FF) removed.
+*                                    The signal "Y<3>" is sourceless and has been removed.
+*                                     Sourceless block "Mcount_Y_cy<3>_rt" (ROM) removed.
+*                                      The signal "Mcount_Y_cy<3>_rt" is sourceless and has been removed.
+*                                       Sourceless block "Mcount_Y_xor<3>" (XOR) removed.
+*                                        The signal "Result<3>" is sourceless and has been removed.
+*                                     Sourceless block
+"Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<3>_rt" (ROM) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_17_OUT_Madd_cy<3>_rt" is
+sourceless and has been removed.
+*                                 Sourceless block "Y_4_rstpot" (ROM) removed.
+*                                  The signal "Y_4_rstpot" is sourceless and has been removed.
+*                                   Sourceless block "Y_4" (FF) removed.
+*                                    The signal "Y<4>" is sourceless and has been removed.
+*                                     Sourceless block "Mcount_Y_cy<4>_rt" (ROM) removed.
+*                                      The signal "Mcount_Y_cy<4>_rt" is sourceless and has been removed.
+*                                       Sourceless block "Mcount_Y_xor<4>" (XOR) removed.
+*                                        The signal "Result<4>" is sourceless and has been removed.
+*                                     Sourceless block "PWR_6_o_Y[9]_equal_8_o<9>_SW0" (ROM) removed.
+*                                      The signal "N4" is sourceless and has been removed.
+*                                 Sourceless block "Y_6_rstpot" (ROM) removed.
+*                                  The signal "Y_6_rstpot" is sourceless and has been removed.
+*                                   Sourceless block "Y_6" (FF) removed.
+*                                    The signal "Y<6>" is sourceless and has been removed.
+*                                     Sourceless block "Mcount_Y_cy<6>_rt" (ROM) removed.
+*                                      The signal "Mcount_Y_cy<6>_rt" is sourceless and has been removed.
+*                                       Sourceless block "Mcount_Y_xor<6>" (XOR) removed.
+*                                        The signal "Result<6>" is sourceless and has been removed.
+*                                     Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[7]_a[9]_MUX_167_o11" (ROM) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_13_OUT_Madd_lut<7>" is
+sourceless and has been removed.
+*                                     Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[6]_a[9]_MUX_168_o11" (ROM) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/a[6]_a[9]_MUX_168_o" is sourceless and has been
+removed.
+*                                     Sourceless block "Y[9]_PWR_6_o_mod_22/Mmux_a[8]_a[9]_MUX_166_o11" (ROM) removed.
+*                                      The signal "Y[9]_PWR_6_o_mod_22/a[8]_a[9]_MUX_166_o" is sourceless and has been
+removed.
+*                                 Sourceless block "Y_7_rstpot" (ROM) removed.
+*                                  The signal "Y_7_rstpot" is sourceless and has been removed.
+*                                   Sourceless block "Y_7" (FF) removed.
+*                                    The signal "Y<7>" is sourceless and has been removed.
+*                                     Sourceless block "Mcount_Y_cy<7>_rt" (ROM) removed.
+*                                      The signal "Mcount_Y_cy<7>_rt" is sourceless and has been removed.
+*                                       Sourceless block "Mcount_Y_xor<7>" (XOR) removed.
+*                                        The signal "Result<7>" is sourceless and has been removed.
+*                                 Sourceless block "Y_8_rstpot" (ROM) removed.
+*                                  The signal "Y_8_rstpot" is sourceless and has been removed.
+*                                   Sourceless block "Y_8" (FF) removed.
+*                                    The signal "Y<8>" is sourceless and has been removed.
+*                                     Sourceless block "Mcount_Y_cy<8>_rt" (ROM) removed.
+*                                      The signal "Mcount_Y_cy<8>_rt" is sourceless and has been removed.
+*                                       Sourceless block "Mcount_Y_xor<8>" (XOR) removed.
+*                                        The signal "Result<8>" is sourceless and has been removed.
+*                 Sourceless block "Mcount_Y_lut<0>_INV_0" (BUF) removed.
+*                  The signal "Mcount_Y_lut<0>" is sourceless and has been removed.
+*                   Sourceless block "Mcount_Y_cy<0>" (MUX) removed.
+*                    The signal "Mcount_Y_cy<0>" is sourceless and has been removed.
+*                     Sourceless block "Mcount_Y_xor<1>" (XOR) removed.
+*                      The signal "Result<1>1" is sourceless and has been removed.
+*                   Sourceless block "Mcount_Y_xor<0>" (XOR) removed.
+*                    The signal "Result<0>1" is sourceless and has been removed.
+             Sourceless block
+"Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<1>1_INV_0" (BUF)
+removed.
+              The signal "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<1>" is
+sourceless and has been removed.
+               Sourceless block "Y[9]_PWR_6_o_mod_22/Madd_a[9]_GND_7_o_add_19_OUT_Madd_xor<1>"
+(XOR) removed.
+                The signal "Y[9]_PWR_6_o_mod_22/a[9]_GND_7_o_add_19_OUT<1>" is sourceless and
+has been removed.
+       Sourceless block "PWR_6_o_X[9]_equal_6_o<9>1_SW0" (ROM) removed.
+        The signal "N34" is sourceless and has been removed.
+   Sourceless block "NW_CLK.divider_0" (SFF) removed.
+    The signal "NW_CLK.divider<0>" is sourceless and has been removed.
+     Sourceless block "PWR_6_o_NW_CLK.divider[1]_equal_1_o<1>1" (ROM) removed.
+      The signal "PWR_6_o_NW_CLK.divider[1]_equal_1_o" is sourceless and has been
+removed.
+       Sourceless block "NW_CLK.divider_1" (SFF) removed.
+        The signal "NW_CLK.divider<1>" is sourceless and has been removed.
+         Sourceless block "Mcount_NW_CLK.divider_xor<1>11" (ROM) removed.
+          The signal "Result<1>" is sourceless and has been removed.
+         Sourceless block "NW_CLK.divider<1>_inv1_INV_0" (BUF) removed.
+          The signal "NW_CLK.divider<1>_inv" is sourceless and has been removed.
+     Sourceless block "Mcount_NW_CLK.divider_xor<0>11_INV_0" (BUF) removed.
+      The signal "Result<0>" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "N0" is unused and has been removed.
+ Unused block "XST_VCC" (ONE) removed.
+The signal "init_draw.GO<29>" is unused and has been removed.
+ Unused block "XST_GND" (ZERO) removed.
+The signal "init_draw.GO_0" is unused and has been removed.
+ Unused block "init_draw.GO_0" (LATCH) removed.
+  The signal "init_draw.GO_0_G" is unused and has been removed.
+   Unused block "n0017_inv1_INV_0" (BUF) removed.
+The signal "clk" is unused and has been removed.
+ Unused block "clk" (PAD) removed.
+Unused block "clk_BUFGP/IBUFG" (CKBUF) removed.

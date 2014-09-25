@@ -1,0 +1,6 @@
+V3 3
+FL "F:/ECE238/lab 3/BCDbin/BCDbin.vhd" 2012/03/05.19:38:30 O.40d
+EN work/BCDbin 1331001521 FL "F:/ECE238/lab 3/BCDbin/BCDbin.vhd" \
+      PB ieee/std_logic_1164 1296775758
+AR work/BCDbin/Behavioral 1331001522 \
+      FL "F:/ECE238/lab 3/BCDbin/BCDbin.vhd" EN work/BCDbin 1331001521

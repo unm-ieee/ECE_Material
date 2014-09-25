@@ -1,0 +1,1 @@
+MAIN_FUNC.o: MAIN_FUNC.S

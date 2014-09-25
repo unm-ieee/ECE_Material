@@ -1,0 +1,464 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Reading design: SCRN.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SCRN.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SCRN"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : SCRN
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCRN.vhd" into library work
+Parsing entity <SCRN>.
+Parsing architecture <Behavioral> of entity <scrn>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SCRN> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SCRN>.
+    Related source file is "/media/rapture/My Passport/ECE.CLASSES/ECE 443/Screeen/SCRN.vhd".
+    Found 1-bit register for signal <screen_process_enable>.
+    Found 10-bit register for signal <X>.
+    Found 10-bit register for signal <Y>.
+    Found 2-bit register for signal <NW_CLK.divider>.
+    Found 2-bit adder for signal <NW_CLK.divider[1]_GND_6_o_add_1_OUT> created at line 42.
+    Found 10-bit adder for signal <X[9]_GND_6_o_add_4_OUT> created at line 54.
+    Found 10-bit adder for signal <Y[9]_GND_6_o_add_6_OUT> created at line 57.
+    Found 10-bit comparator greater for signal <PWR_6_o_X[9]_LessThan_17_o> created at line 71
+    Found 10-bit comparator greater for signal <X[9]_PWR_6_o_LessThan_18_o> created at line 71
+    Found 10-bit comparator greater for signal <GND_6_o_Y[9]_LessThan_19_o> created at line 77
+    Found 10-bit comparator greater for signal <Y[9]_GND_6_o_LessThan_20_o> created at line 77
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <SCRN> synthesized.
+
+Synthesizing Unit <mod_10u_4u>.
+    Related source file is "".
+    Found 14-bit adder for signal <n0333> created at line 0.
+    Found 14-bit adder for signal <GND_7_o_b[3]_add_1_OUT> created at line 0.
+    Found 13-bit adder for signal <n0337> created at line 0.
+    Found 13-bit adder for signal <GND_7_o_b[3]_add_3_OUT> created at line 0.
+    Found 12-bit adder for signal <n0341> created at line 0.
+    Found 12-bit adder for signal <GND_7_o_b[3]_add_5_OUT> created at line 0.
+    Found 11-bit adder for signal <n0345> created at line 0.
+    Found 11-bit adder for signal <GND_7_o_b[3]_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <n0349> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[3]_add_9_OUT> created at line 0.
+    Found 10-bit adder for signal <n0353> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <n0357> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <n0361> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_15_OUT> created at line 0.
+    Found 10-bit adder for signal <n0365> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_17_OUT> created at line 0.
+    Found 10-bit adder for signal <n0369> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_19_OUT> created at line 0.
+    Found 10-bit adder for signal <n0373> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_7_o_add_21_OUT> created at line 0.
+    Found 14-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  22 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred 101 Multiplexer(s).
+Unit <mod_10u_4u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 47
+ 10-bit adder                                          : 30
+ 11-bit adder                                          : 4
+ 12-bit adder                                          : 4
+ 13-bit adder                                          : 4
+ 14-bit adder                                          : 4
+ 2-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 10-bit register                                       : 2
+ 2-bit register                                        : 1
+# Comparators                                          : 26
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 14
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+# Multiplexers                                         : 204
+ 1-bit 2-to-1 multiplexer                              : 200
+ 10-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <SCRN>.
+The following registers are absorbed into counter <NW_CLK.divider>: 1 register on signal <NW_CLK.divider>.
+The following registers are absorbed into counter <X>: 1 register on signal <X>.
+The following registers are absorbed into counter <Y>: 1 register on signal <Y>.
+Unit <SCRN> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 22
+ 10-bit adder carry in                                 : 20
+ 4-bit adder carry in                                  : 2
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Comparators                                          : 26
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 14
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+# Multiplexers                                         : 203
+ 1-bit 2-to-1 multiplexer                              : 200
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <SCRN> ...
+
+Optimizing unit <mod_10u_4u> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SCRN, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SCRN.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 262
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 11
+#      LUT2                        : 8
+#      LUT3                        : 39
+#      LUT4                        : 10
+#      LUT5                        : 35
+#      LUT6                        : 48
+#      MUXCY                       : 48
+#      VCC                         : 1
+#      XORCY                       : 54
+# FlipFlops/Latches                : 23
+#      FD                          : 10
+#      FDR                         : 3
+#      FDRE                        : 9
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              23  out of  18224     0%  
+ Number of Slice LUTs:                  158  out of   9112     1%  
+    Number used as Logic:               158  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    160
+   Number with an unused Flip Flop:     137  out of    160    85%  
+   Number with an unused LUT:             2  out of    160     1%  
+   Number of fully used LUT-FF pairs:    21  out of    160    13%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    232     4%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 23    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.945ns (Maximum Frequency: 253.505MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 17.912ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.945ns (frequency: 253.505MHz)
+  Total number of paths / destination ports: 1069 / 46
+-------------------------------------------------------------------------
+Delay:               3.945ns (Levels of Logic = 2)
+  Source:            X_0 (FF)
+  Destination:       X_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: X_0 to X_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             5   0.447   1.059  X_0 (X_0)
+     LUT5:I0->O            6   0.203   0.745  PWR_6_o_X[9]_equal_6_o<9>_SW0 (N6)
+     LUT6:I5->O           10   0.205   0.856  _n00611 (_n0061)
+     FDSE:S                    0.430          X_0
+    ----------------------------------------
+    Total                      3.945ns (1.285ns logic, 2.660ns route)
+                                       (32.6% logic, 67.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 806169 / 10
+-------------------------------------------------------------------------
+Offset:              17.912ns (Levels of Logic = 13)
+  Source:            X_6 (FF)
+  Destination:       vga<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: X_6 to vga<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             9   0.447   1.077  X_6 (X_6)
+     LUT4:I0->O            5   0.203   1.059  X[9]_PWR_6_o_mod_20/Mmux_a[6]_a[9]_MUX_136_o11 (X[9]_PWR_6_o_mod_20/a[6]_a[9]_MUX_136_o)
+     LUT5:I0->O           12   0.203   1.273  X[9]_PWR_6_o_mod_20/Mmux_a[6]_a[9]_MUX_146_o11 (X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_15_OUT_Madd_lut<6>)
+     LUT6:I0->O           10   0.203   0.961  X[9]_PWR_6_o_mod_20/BUS_0008_INV_96_o11 (X[9]_PWR_6_o_mod_20/BUS_0008_INV_96_o)
+     LUT3:I1->O            1   0.203   0.924  X[9]_PWR_6_o_mod_20/Mmux_a[6]_a[9]_MUX_156_o11 (X[9]_PWR_6_o_mod_20/a[6]_a[9]_MUX_156_o)
+     LUT6:I1->O           19   0.203   1.300  X[9]_PWR_6_o_mod_20/BUS_0009_INV_107_o1 (X[9]_PWR_6_o_mod_20/BUS_0009_INV_107_o)
+     LUT3:I0->O            1   0.205   0.827  X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_172_o121 (X[9]_PWR_6_o_mod_20/Madd_a[9]_GND_7_o_add_19_OUT_Madd_lut<2>)
+     LUT6:I2->O            1   0.203   0.580  X[9]_PWR_6_o_mod_20/BUS_0010_INV_118_o1_SW0 (N14)
+     LUT6:I5->O            4   0.205   1.028  X[9]_PWR_6_o_mod_20/BUS_0010_INV_118_o1 (X[9]_PWR_6_o_mod_20/BUS_0010_INV_118_o)
+     LUT5:I0->O            3   0.203   1.015  X[9]_PWR_6_o_mod_20/Mmux_a[0]_a[9]_MUX_182_o131 (X[9]_PWR_6_o_mod_20/a[3]_a[9]_MUX_179_o)
+     LUT6:I0->O            2   0.203   0.845  X[9]_PWR_6_o_mod_20/BUS_0011_INV_129_o23 (X[9]_PWR_6_o_mod_20/BUS_0011_INV_129_o)
+     LUT5:I2->O            4   0.205   0.912  GND_6_o_X[9]_equal_22_o<3>1 (vga_2_OBUF)
+     LUT3:I0->O            3   0.205   0.650  vga<4>4 (vga_4_OBUF)
+     OBUF:I->O                 2.571          vga_5_OBUF (vga<5>)
+    ----------------------------------------
+    Total                     17.912ns (5.462ns logic, 12.450ns route)
+                                       (30.5% logic, 69.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.945|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.22 secs
+ 
+--> 
+
+
+Total memory usage is 395400 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

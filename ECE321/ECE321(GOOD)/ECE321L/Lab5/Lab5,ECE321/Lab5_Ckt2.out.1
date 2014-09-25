@@ -1,0 +1,210 @@
+
+**** 10/02/12 17:07:00 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+Vdd 1 0 5
+
+vina 2 0 pulse ( 0 5 0us .001us .001us 40us 80us)
+vinb 3 0 pulse ( 0 5 20us .001us .001us 40us 80us)
+
+M1 4 2 5 5 cmosn l=2e-6 w=8e-6
+M2 5 3 0 0 cmosn l=2e-6 w=8e-6
+M3 4 2 1 1 cmosp l=2e-6 w=8e-6
+M4 4 3 1 1 cmosp l=2e-6 w=8e-6
+
+.MODEL cmosn nmos LEVEL=2 VTO=0.6 KP=50e-6
+.MODEL cmosp pmos LEVEL=2 VTO=-0.6 KP=50e-6
+
+c1 4 0 500pf
+
+
+
+.PROBE
+.TRAN  1n  100e-6s   
+
+.end
+
+**** 10/02/12 17:07:00 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               cmosn           cmosp           
+               NMOS            PMOS            
+       LEVEL    2               2            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .6             -.6          
+          KP   50.000000E-06   50.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX  100.000000E-09  100.000000E-09 
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 10/02/12 17:07:00 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    0.0000  (    4)    5.0000      
+
+(    5)    2.5000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    Vdd         -2.510E-12
+    vina         0.000E+00
+    vinb         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-11  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  60.00E-06.
+         Time step =  118.9E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(5)                      =  -521.05mV  \  -546.91mV
+
+  These supply currents failed to converge:
+
+    I(Vdd)                    =    2.863mA  \   -13.87uA
+    I(vina)                   =   -43.56uA  \   -77.16pA
+    I(vinb)                   =   -5.848mA  \    43.61uA
+
+  These devices failed to converge:
+    M2        
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    0.0000  (    4)    5.0000      
+
+(    5)    -.5211  
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 0.0001
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 10
+
+ **** Published Runtime Parameters *****************************
+                                                               
+                                       ABSTOL =      1.0000E-12
+                                        c1.ic =      0.0000E+00
+                                     c1.value =      5.0000E-10
+                                         GMIN =      1.0000E-12
+                                         ITL1 =      1.5000E+02
+                                         ITL2 =      2.0000E+01
+                                         ITL4 =      1.0000E+01
+                                       RELTOL =      1.0000E-03
+                                       RUNFOR =      0.0000E+00
+                                         TMAX =      0.0000E+00
+                                        TSTOP =      1.0000E-04
+                                       Vdd.ac =      0.0000E+00
+                                  Vdd.acphase =      0.0000E+00
+                                       Vdd.dc =      5.0000E+00
+                                      vina.ac =      0.0000E+00
+                                 vina.acphase =      0.0000E+00
+                                      vina.dc =      0.0000E+00
+                                      vinb.ac =      0.0000E+00
+                                 vinb.acphase =      0.0000E+00
+                                      vinb.dc =      0.0000E+00
+                                        VNTOL =      1.0000E-06
+                                               
+               
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  60.00E-06.
+         Time step =  951.2E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(5)                      =  -521.05mV  \  -546.91mV
+
+  These supply currents failed to converge:
+
+    I(Vdd)                    =   357.84uA  \   -13.87uA
+    I(vina)                   =   -5.445uA  \   -77.16pA
+    I(vinb)                   =  -730.94uA  \    43.61uA
+
+  These devices failed to converge:
+    M2        
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    0.0000  (    4)    5.0000      
+
+(    5)    -.5211  
+
+
+**** Interrupt ****

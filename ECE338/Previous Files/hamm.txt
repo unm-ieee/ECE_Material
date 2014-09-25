@@ -1,0 +1,202 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.STD_LOGIC_ARITH.all;
+
+entity HAMM is
+end entity HAMM;
+
+architecture HAMM of HAMM is
+
+component ODD is
+  port (
+    DIN : in  STD_LOGIC_VECTOR ( 7 downto 0 );
+    ODD : out STD_LOGIC
+  );
+end component ODD;
+
+signal DATA_IN  : STD_LOGIC_VECTOR ( 10 downto 0 );
+signal DATA_XFR : STD_LOGIC_VECTOR ( 10 downto 0 );
+signal DATA_OUT : STD_LOGIC_VECTOR ( 10 downto 0 );
+
+signal HAMM     : STD_LOGIC_VECTOR ( 3 downto 0 );
+signal ZEND     : STD_LOGIC_VECTOR ( 3 downto 0 );
+
+alias DI0  : STD_LOGIC is DATA_IN(0);
+alias DI1  : STD_LOGIC is DATA_IN(1);
+alias DI2  : STD_LOGIC is DATA_IN(2);
+alias DI3  : STD_LOGIC is DATA_IN(3);
+alias DI4  : STD_LOGIC is DATA_IN(4);
+alias DI5  : STD_LOGIC is DATA_IN(5);
+alias DI6  : STD_LOGIC is DATA_IN(6);
+alias DI7  : STD_LOGIC is DATA_IN(7);
+alias DI8  : STD_LOGIC is DATA_IN(8);
+alias DI9  : STD_LOGIC is DATA_IN(9);
+alias DI10 : STD_LOGIC is DATA_IN(10);
+
+alias DX0  : STD_LOGIC is DATA_XFR(0);
+alias DX1  : STD_LOGIC is DATA_XFR(1);
+alias DX2  : STD_LOGIC is DATA_XFR(2);
+alias DX3  : STD_LOGIC is DATA_XFR(3);
+alias DX4  : STD_LOGIC is DATA_XFR(4);
+alias DX5  : STD_LOGIC is DATA_XFR(5);
+alias DX6  : STD_LOGIC is DATA_XFR(6);
+alias DX7  : STD_LOGIC is DATA_XFR(7);
+alias DX8  : STD_LOGIC is DATA_XFR(8);
+alias DX9  : STD_LOGIC is DATA_XFR(9);
+alias DX10 : STD_LOGIC is DATA_XFR(10);
+
+signal BYTE_0 : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal BYTE_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal BYTE_2 : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal BYTE_3 : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal END_0  : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal END_1  : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal END_2  : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal END_3  : STD_LOGIC_VECTOR ( 7 downto 0 );
+
+alias P0 : STD_LOGIC is HAMM(0);
+alias P1 : STD_LOGIC is HAMM(1);
+alias P2 : STD_LOGIC is HAMM(2);
+alias P3 : STD_LOGIC is HAMM(3);
+alias E0 : STD_LOGIC is ZEND(0);
+alias E1 : STD_LOGIC is ZEND(1);
+alias E2 : STD_LOGIC is ZEND(2);
+alias E3 : STD_LOGIC is ZEND(3);
+signal PE0 : STD_LOGIC;
+signal PE1 : STD_LOGIC;
+signal PE2 : STD_LOGIC;
+signal PE3 : STD_LOGIC;
+
+signal ZERO : STD_LOGIC := '0';
+signal ONE  : STD_LOGIC := '1';
+
+signal CYCLE : INTEGER := 1;
+
+type DARRAY_TYPE is array ( 0 to 15 ) of STD_LOGIC_VECTOR ( 10 downto 0 );
+constant DARRAY : DARRAY_TYPE := (
+  B"000_0000_0000", B"001_0101_1001", B"001_1001_0011", B"010_0101_1001",
+  B"101_0101_1001", B"101_0011_1001", B"101_0101_1101", B"111_0110_1010",
+  B"100_1001_1001", B"101_0101_1001", B"110_0101_1101", B"111_0101_1010",
+  B"101_0101_1001", B"101_0011_1001", B"101_0101_1101", B"111_0110_1010"
+);
+
+signal PK   : STD_LOGIC;          -- when parity bits identify error
+signal PT   : STD_LOGIC;          -- Parity Total - data and parity bits
+signal PTE  : STD_LOGIC;          -- Parity Total at end (received)
+signal PTEE : STD_LOGIC;          -- Parity Total at end (calc)
+
+begin
+
+----------------------------- Send Side -------------------------
+--- generate the test data....
+  process
+  variable INDEX : INTEGER := 0;
+  begin
+    DATA_IN <=  DARRAY(INDEX);
+    wait for 50 ns;
+    CYCLE <= CYCLE + 1;
+    INDEX := (INDEX + 1) mod 16;
+  end process;
+-- create the Hamming bits
+HAMMING_0: ODD
+  port map (
+    DIN => BYTE_0,
+    ODD => P0
+  );
+  BYTE_0 <= DI10 & DI8 & DI6 & DI4 & DI3 & DI1 & DI0 & ZERO;
+
+HAMMING_1: ODD
+  port map (
+    DIN => BYTE_1,
+    ODD => P1
+  );
+  BYTE_1 <= DI10 & DI9 & DI6 & DI5 & DI3 & DI2 & DI0 & ZERO;
+
+HAMMING_2: ODD
+  port map (
+    DIN => BYTE_2,
+    ODD => P2
+  );
+  BYTE_2 <= DI10 & DI9 & DI8 & DI7 & DI3 & DI2 & DI1 & ZERO;
+
+HAMMING_3: ODD
+  port map (
+    DIN => BYTE_3,
+    ODD => P3
+  );
+  BYTE_3 <= DI10 & DI9 & DI8 & DI7 & DI6 & DI5 & DI4 & ZERO;
+
+  PT <= DI10 xor DI9 xor DI8 xor DI7 xor DI6 xor DI5 xor -- PT = parity
+         DI4 xor DI3 xor DI2 xor DI1 xor DI0 xor         -- across whole
+         P0 xor P1 xor P2 xor P3 ;                       -- thing...
+
+
+
+----------------------------- Transmission -------------------------
+-- send data to DATA_XFR, with error in cycle 4 and cycle 9
+
+  DATA_XFR <= DI10 & DI9 & DI8 & DI7 & DI6 & DI5 &
+                  DI4 & not DI3 & DI2 & DI1 & DI0   when CYCLE = 4 else
+              DI10 & DI9 & DI8 & DI7 & not DI6 & DI5 &
+                  DI4 & DI3 & DI2 & DI1 & DI0       when CYCLE = 9 else
+              DATA_IN;
+  PTE <= PT;
+  PE0 <= P0;
+  PE1 <= P1;
+  PE2 <= P2;
+  PE3 <= P3;
+
+
+----------------------------- Receive Side -------------------------
+-- first, set up the parity checker units...  E0 to E3 - will be '0'
+-- for correct parity, '1' for parity error
+
+END_UNIT_0: ODD
+  port map (
+    DIN => END_0,
+    ODD => E0
+  );
+  END_0 <= DX10 & DX8 & DX6 & DX4 & DX3 & DX1 & DX0 & PE0;
+
+END_UNIT_1: ODD
+  port map (
+    DIN => END_1,
+    ODD => E1
+  );
+  END_1 <= DX10 & DX9 & DX6 & DX5 & DX3 & DX2 & DX0 & PE1;
+
+END_UNIT_2: ODD
+  port map (
+    DIN => END_2,
+    ODD => E2
+  );
+  END_2 <= DX10 & DX9 & DX8 & DX7 & DX3 & DX2 & DX1 & PE2;
+
+END_UNIT_3: ODD
+  port map (
+    DIN => END_3,
+    ODD => E3
+  );
+  END_3 <= DX10 & DX9 & DX8 & DX7 & DX6 & DX5 & DX4 & PE3;
+
+  PK <= E0 or E1 or E2 or E3;   -- PK is '1' when any E bit not zero
+
+  PTEE <= DX10 xor DX9 xor DX8 xor DX7 xor DX6 xor DX5 xor DX4 xor
+           DX3 xor DX2 xor DX1 xor DX0 xor PE0 xor PE1 xor PE2 xor
+           PE3 xor PTE;
+           
+
+  DATA_OUT(0)  <= not DX0  when ZEND = "0011" and PTEE = '1' else DX0;
+  DATA_OUT(1)  <= not DX1  when ZEND = "0101" and PTEE = '1' else DX1;
+  DATA_OUT(2)  <= not DX2  when ZEND = "0110" and PTEE = '1' else DX2;
+  DATA_OUT(3)  <= not DX3  when ZEND = "0111" and PTEE = '1' else DX3;
+  DATA_OUT(4)  <= not DX4  when ZEND = "1001" and PTEE = '1' else DX4;
+  DATA_OUT(5)  <= not DX5  when ZEND = "1010" and PTEE = '1' else DX5;
+  DATA_OUT(6)  <= not DX6  when ZEND = "1011" and PTEE = '1' else DX6;
+  DATA_OUT(7)  <= not DX7  when ZEND = "1100" and PTEE = '1' else DX7;
+  DATA_OUT(8)  <= not DX8  when ZEND = "1101" and PTEE = '1' else DX8;
+  DATA_OUT(9)  <= not DX9  when ZEND = "1110" and PTEE = '1' else DX9;
+  DATA_OUT(10) <= not DX10 when ZEND = "1111" and PTEE = '1' else DX10;
+
+end architecture HAMM;

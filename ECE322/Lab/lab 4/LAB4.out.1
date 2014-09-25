@@ -1,0 +1,109 @@
+
+**** 02/26/13 17:00:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *ECE322L Lab 4
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+R1 1 2 50.9k
+R2 0 1 12.62K
+RC 2 3 2.2K
+RE 4 0 434
+VDD 2 0 10V
+
+*C B E Type
+Q1 3 1 4 NPN
+
+.MODEL NPN NPN(BF=140 CJC=20pf CJE=20pf)
+
+
+**** 02/26/13 17:00:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *ECE322L Lab 4
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NPN             
+               NPN             
+       LEVEL    1            
+          IS  100.000000E-18 
+          BF  140            
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE   20.000000E-12 
+         VJE     .75         
+         CJC   20.000000E-12 
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 02/26/13 17:00:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *ECE322L Lab 4
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    1.8179  (    2)   10.0000  (    3)    4.8573  (    4)    1.0218  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VDD         -2.498E-03
+
+    TOTAL POWER DISSIPATION   2.50E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/26/13 17:00:14 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *ECE322L Lab 4
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

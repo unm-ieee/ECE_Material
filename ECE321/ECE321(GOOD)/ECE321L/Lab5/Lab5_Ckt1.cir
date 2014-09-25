@@ -1,0 +1,22 @@
+*Circuit HW1, problem 1.13*
+
+R2 N1 N2 40k
+
+R1 N2 N5 60k
+
+V1 N5 0  5V
+
+Rd N5 N4 2k
+
+M1 N4 N2 N3 N3 ntype l=1e-6 w=1e-6 
+.model ntype nmos level=2 vto=1 kp=500e-6
+
+Rs N3 N1 1k
+
+V2 0  N1 5V
+
+
+
+.op
+
+.end

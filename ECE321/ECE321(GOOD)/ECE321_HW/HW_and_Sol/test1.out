@@ -1,0 +1,150 @@
+
+**** 11/18/12 21:19:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Test1 SPICE demo file *
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+M1 3 2 0 0 ntype l=0.25u w=2.5u
+M2 3 2 1 1 ptype l=0.25u w=5.0u
+CL 3 0 1pf
+
+VDD 1 0 DC 5V
+Vin 2 0 DC 0V pulse(0 5 0ps 1ps 1ps 2ns 4ns)
+
+.model ntype nmos vto = 1.2V kp=100u lambda=0.01
+.model ptype pmos vto = -1.0V kp=60u lambda=0.05
+
+*.DC Vin 0 5 0.01*
+*.tran 100ps 5ns*
+*.probe V(2) V(3)*
+.op
+.end
+
+**** 11/18/12 21:19:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Test1 SPICE demo file *
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ntype           ptype           
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    1.2            -1            
+          KP  100.000000E-06   60.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA     .01             .05         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    0               0            
+       XPART    0               0            
+
+
+**** 11/18/12 21:19:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Test1 SPICE demo file *
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    5.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VDD         -5.010E-12
+    Vin          0.000E+00
+
+    TOTAL POWER DISSIPATION   2.51E-11  WATTS
+
+
+**** 11/18/12 21:19:21 *********** Evaluation PSpice (Nov 1999) **************
+
+ * Test1 SPICE demo file *
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** MOSFETS
+
+
+NAME         M1          M2        
+MODEL        ntype       ptype     
+ID           5.01E-12   -5.01E-12 
+VGS          0.00E+00   -5.00E+00 
+VDS          5.00E+00   -1.04E-09 
+VBS          0.00E+00    0.00E+00 
+VTH          1.20E+00   -1.00E+00 
+VDSAT        0.00E+00   -4.00E+00 
+Lin0/Sat1   -1.00E+00   -1.00E+00 
+if          -1.00E+00   -1.00E+00 
+ir          -1.00E+00   -1.00E+00 
+TAU         -1.00E+00   -1.00E+00 
+GM           0.00E+00    1.25E-12 
+GDS          0.00E+00    4.80E-03 
+GMB          0.00E+00    0.00E+00 
+CBD          0.00E+00    0.00E+00 
+CBS          0.00E+00    0.00E+00 
+CGSOV        0.00E+00    0.00E+00 
+CGDOV        0.00E+00    0.00E+00 
+CGBOV        0.00E+00    0.00E+00 
+CGS          0.00E+00    0.00E+00 
+CGD          0.00E+00    0.00E+00 
+CGB          0.00E+00    0.00E+00 
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

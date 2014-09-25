@@ -1,0 +1,17 @@
+type two_d_ary
+	is array
+	(1 to 35, 1 to 50)
+	of std_logci_vector (7 downto 0 );
+
+signal data : two_d_ary;
+
+This discribes a two dimentional array.
+
+!!!!!!
+D latch ; 7470 -- IC
+(with enable)
+to remember some data
+on an enable
+
+update data matrix when on porch (front or back or both ect)
+

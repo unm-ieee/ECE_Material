@@ -1,0 +1,171 @@
+<html>
+<head>
+<title>Bomb Lab Scoreboard</title>
+</head>
+<body bgcolor=ffffff>
+
+<h2>Bomb Lab Scoreboard</h2>
+<p>
+<table width=500><tr><td>
+This page contains the latest information
+that we have received from your bomb. If your solution is marked 
+<font color=ff0000><b>invalid</b></font>, 
+this means your bomb reported a solution that didn't actually defuse your bomb.
+</td></tr></table>
+<p>Last updated: Thu Sep 19 18:12:51 2013 (updated every 40 secs)<br>
+
+<p>
+<table border=0 cellspacing=1 cellpadding=1>
+<tr bgcolor=#b8d8ff align=center>
+<th align=center> # </th> 
+<th align=center, width=90>  Bomb number</th>
+<th align=center, width=120>Submission date</th>
+<th align=center, width=80>Phases defused</th>
+<th align=center, width=80>Explosions</th>
+<th align=center, width=80>Score</th>
+<th >Status</th>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>1</td>
+<td align=left> <font size=-1> bomb2 </font></td><td align=left><font size=-1> Mon Sep 16 22:11</font> </td>
+<td align=center> <font size=-1> 7 </font></td><td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> 70 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>2</td>
+<td align=left> <font size=-1> bomb4 </font></td><td align=left><font size=-1> Sun Sep 15 23:13</font> </td>
+<td align=center> <font size=-1> 6 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 70 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>3</td>
+<td align=left> <font size=-1> bomb34 </font></td><td align=left><font size=-1> Thu Sep 19 16:08</font> </td>
+<td align=center> <font size=-1> 6 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 70 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>4</td>
+<td align=left> <font size=-1> bomb8 </font></td><td align=left><font size=-1> Tue Sep 17 21:10</font> </td>
+<td align=center> <font size=-1> 5 </font></td><td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> 55 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>5</td>
+<td align=left> <font size=-1> bomb21 </font></td><td align=left><font size=-1> Wed Sep 18 23:18</font> </td>
+<td align=center> <font size=-1> 5 </font></td><td align=center> <font size=-1> 3 </font></td><td align=center> <font size=-1> 54 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>6</td>
+<td align=left> <font size=-1> bomb23 </font></td><td align=left><font size=-1> Wed Sep 18 23:39</font> </td>
+<td align=center> <font size=-1> 5 </font></td><td align=center> <font size=-1> 4 </font></td><td align=center> <font size=-1> 53 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>7</td>
+<td align=left> <font size=-1> bomb6 </font></td><td align=left><font size=-1> Wed Sep 18 17:51</font> </td>
+<td align=center> <font size=-1> 4 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 40 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>8</td>
+<td align=left> <font size=-1> bomb25 </font></td><td align=left><font size=-1> Wed Sep 18 14:37</font> </td>
+<td align=center> <font size=-1> 4 </font></td><td align=center> <font size=-1> 6 </font></td><td align=center> <font size=-1> 37 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>9</td>
+<td align=left> <font size=-1> bomb22 </font></td><td align=left><font size=-1> Thu Sep 19 13:51</font> </td>
+<td align=center> <font size=-1> 4 </font></td><td align=center> <font size=-1> 11 </font></td><td align=center> <font size=-1> 35 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>10</td>
+<td align=left> <font size=-1> bomb15 </font></td><td align=left><font size=-1> Mon Sep 16 17:34</font> </td>
+<td align=center> <font size=-1> 3 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 30 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>11</td>
+<td align=left> <font size=-1> bomb12 </font></td><td align=left><font size=-1> Mon Sep 16 22:24</font> </td>
+<td align=center> <font size=-1> 3 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 30 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>12</td>
+<td align=left> <font size=-1> bomb13 </font></td><td align=left><font size=-1> Thu Sep 19 10:10</font> </td>
+<td align=center> <font size=-1> 2 </font></td><td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> 20 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>13</td>
+<td align=left> <font size=-1> bomb1 </font></td><td align=left><font size=-1> Mon Sep 16 14:33</font> </td>
+<td align=center> <font size=-1> 2 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 20 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>14</td>
+<td align=left> <font size=-1> bomb10 </font></td><td align=left><font size=-1> Wed Sep 18 11:00</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> <font color=ff0000><b>invalid phase 2</b></font> </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>15</td>
+<td align=left> <font size=-1> bomb11 </font></td><td align=left><font size=-1> Thu Sep 19 11:59</font> </td>
+<td align=center> <font size=-1> 2 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 20 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>16</td>
+<td align=left> <font size=-1> bomb24 </font></td><td align=left><font size=-1> Thu Sep 19 10:53</font> </td>
+<td align=center> <font size=-1> 2 </font></td><td align=center> <font size=-1> 2 </font></td><td align=center> <font size=-1> 19 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>17</td>
+<td align=left> <font size=-1> bomb26 </font></td><td align=left><font size=-1> Thu Sep 19 09:44</font> </td>
+<td align=center> <font size=-1> 2 </font></td><td align=center> <font size=-1> 8 </font></td><td align=center> <font size=-1> 16 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>18</td>
+<td align=left> <font size=-1> bomb39 </font></td><td align=left><font size=-1> Wed Sep 18 21:09</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>19</td>
+<td align=left> <font size=-1> bomb40 </font></td><td align=left><font size=-1> Thu Sep 19 09:54</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>20</td>
+<td align=left> <font size=-1> bomb3 </font></td><td align=left><font size=-1> Thu Sep 19 10:35</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>21</td>
+<td align=left> <font size=-1> bomb45 </font></td><td align=left><font size=-1> Thu Sep 19 15:29</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>22</td>
+<td align=left> <font size=-1> bomb9 </font></td><td align=left><font size=-1> Tue Sep 17 14:09</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>23</td>
+<td align=left> <font size=-1> bomb28 </font></td><td align=left><font size=-1> Tue Sep 17 16:01</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>24</td>
+<td align=left> <font size=-1> bomb38 </font></td><td align=left><font size=-1> Thu Sep 19 12:33</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>25</td>
+<td align=left> <font size=-1> bomb27 </font></td><td align=left><font size=-1> Thu Sep 19 17:01</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 10 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>26</td>
+<td align=left> <font size=-1> bomb35 </font></td><td align=left><font size=-1> Thu Sep 19 15:57</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 2 </font></td><td align=center> <font size=-1> 9 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>27</td>
+<td align=left> <font size=-1> bomb16 </font></td><td align=left><font size=-1> Thu Sep 19 16:59</font> </td>
+<td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 4 </font></td><td align=center> <font size=-1> 8 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+<tr bgcolor=#dfefff align=center>
+<td align=center>28</td>
+<td align=left> <font size=-1> bomb29 </font></td><td align=left><font size=-1> Tue Sep 17 09:49</font> </td>
+<td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> 1 </font></td><td align=center> <font size=-1> 0 </font></td><td align=center> <font size=-1> valid </font> </td>
+</tr>
+</table>
+<font size=-1> <p>Summary [phase:cnt]  </font>
+<font size=-1> [1:11]  </font><font size=-1> [2:5]  </font><font size=-1> [3:2]  </font><font size=-1> [4:3]  </font><font size=-1> [5:3]  </font><font size=-1> [6:2]  </font><font size=-1> [7:1]  </font><font size=-1> total defused = 3/28<br>
+ </font><p></body></html>

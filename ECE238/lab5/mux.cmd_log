@@ -1,0 +1,44 @@
+xst -intstyle ise -ifn "F:/ECE238/lab5/mux.xst" -ofn "F:/ECE238/lab5/mux.syr" 
+xst -intstyle ise -ifn "F:/ECE238/lab5/mux.xst" -ofn "F:/ECE238/lab5/mux.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 mux.ngc mux.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mux_map.ncd mux.ngd mux.pcf 
+par -w -intstyle ise -ol high -t 1 mux_map.ncd mux.ncd mux.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux.twx mux.ncd -o mux.twr mux.pcf 
+bitgen -intstyle ise -f mux.ut mux.ncd 
+xst -intstyle ise -ifn "F:/ECE238/lab5/mux.xst" -ofn "F:/ECE238/lab5/mux.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PUSH_ALL_THE_BUTTONS.ucf -p xc3s500e-fg320-4 mux.ngc mux.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mux_map.ncd mux.ngd mux.pcf 
+par -w -intstyle ise -ol high -t 1 mux_map.ncd mux.ncd mux.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux.twx mux.ncd -o mux.twr mux.pcf -ucf PUSH_ALL_THE_BUTTONS.ucf 
+bitgen -intstyle ise -f mux.ut mux.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PUSH_ALL_THE_BUTTONS.ucf -p xc3s500e-fg320-4 mux.ngc mux.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mux_map.ncd mux.ngd mux.pcf 
+par -w -intstyle ise -ol high -t 1 mux_map.ncd mux.ncd mux.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux.twx mux.ncd -o mux.twr mux.pcf -ucf PUSH_ALL_THE_BUTTONS.ucf 
+bitgen -intstyle ise -f mux.ut mux.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PUSH_ALL_THE_BUTTONS.ucf -p xc3s500e-fg320-4 mux.ngc mux.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mux_map.ncd mux.ngd mux.pcf 
+par -w -intstyle ise -ol high -t 1 mux_map.ncd mux.ncd mux.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux.twx mux.ncd -o mux.twr mux.pcf -ucf PUSH_ALL_THE_BUTTONS.ucf 
+bitgen -intstyle ise -f mux.ut mux.ncd 
+xst -intstyle ise -ifn "F:/ECE238/lab5/mux.xst" -ofn "F:/ECE238/lab5/mux.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PUSH_ALL_THE_BUTTONS.ucf -p xc3s500e-fg320-4 mux.ngc mux.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mux_map.ncd mux.ngd mux.pcf 
+par -w -intstyle ise -ol high -t 1 mux_map.ncd mux.ncd mux.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux.twx mux.ncd -o mux.twr mux.pcf -ucf PUSH_ALL_THE_BUTTONS.ucf 
+bitgen -intstyle ise -f mux.ut mux.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PUSH_ALL_THE_BUTTONS.ucf -p xc3s500e-fg320-4 mux.ngc mux.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mux_map.ncd mux.ngd mux.pcf 
+par -w -intstyle ise -ol high -t 1 mux_map.ncd mux.ncd mux.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux.twx mux.ncd -o mux.twr mux.pcf -ucf PUSH_ALL_THE_BUTTONS.ucf 
+bitgen -intstyle ise -f mux.ut mux.ncd 
+xst -intstyle ise -ifn "F:/ECE238/lab5/mux.xst" -ofn "F:/ECE238/lab5/mux.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PUSH_ALL_THE_BUTTONS.ucf -p xc3s500e-fg320-4 mux.ngc mux.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mux_map.ncd mux.ngd mux.pcf 
+par -w -intstyle ise -ol high -t 1 mux_map.ncd mux.ncd mux.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux.twx mux.ncd -o mux.twr mux.pcf -ucf PUSH_ALL_THE_BUTTONS.ucf 
+bitgen -intstyle ise -f mux.ut mux.ncd 
+xst -intstyle ise -ifn "F:/ECE238/lab5/mux.xst" -ofn "F:/ECE238/lab5/mux.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PUSH_ALL_THE_BUTTONS.ucf -p xc3s500e-fg320-4 mux.ngc mux.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o mux_map.ncd mux.ngd mux.pcf 
+par -w -intstyle ise -ol high -t 1 mux_map.ncd mux.ncd mux.pcf 

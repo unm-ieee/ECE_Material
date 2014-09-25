@@ -1,0 +1,59 @@
+Z:/Eight_Bit_Compare.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Eight_Bit_Compare.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity eight_bit_compare
+-- Compiling architecture eight_bit_compare of eight_bit_compare
+
+} {} {}} Z:/compare_mux_top.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/compare_mux_top.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity compare_mux_top
+-- Compiling architecture compare_mux_top of compare_mux_top
+
+} {} {}} Z:/1bitcompare.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/1bitcompare.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity compare_1bit
+-- Compiling architecture compare_1bit of compare_1bit
+
+} {} {}} Z:/Mux_2_1.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/Mux_2_1.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity mux_2_1
+-- Compiling architecture mux_2_1 of mux_2_1
+
+} {} {}} Z:/top_TB.vhd {0 {vcom -work work -2002 -explicit -vopt Z:/top_TB.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity ieee_32bit_floating_point_adder_tb
+-- Compiling architecture ieee_32bit_floating_point_adder_tb of ieee_32bit_floating_point_adder_tb
+** Error: Z:/top_TB.vhd(23): near "entity": expecting "COMPONENT"
+** Error: (vcom-11) Could not find work.top.
+** Error: Z:/top_TB.vhd(34): (vcom-1195) Cannot find expanded name "work.top".
+** Error: Z:/top_TB.vhd(34): Unknown expanded name.
+** Error: Z:/top_TB.vhd(41): near "entity": expecting ';'
+
+} {9.0 14.0} {}} Z:/TB_compare.vhd {1 {vcom -work work -2002 -explicit -vopt Z:/TB_compare.vhd
+Model Technology ModelSim SE vcom 6.6c Compiler 2010.08 Aug 23 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity tb_compare
+-- Compiling architecture tb_compare of tb_compare
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Loading entity compare_mux_top
+
+} {} {}}

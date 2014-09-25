@@ -1,0 +1,6 @@
+vhdl isim_temp "../LACUnit.vhd"
+vhdl isim_temp "../FA.vhd"
+vhdl isim_temp "SLT.vhd"
+vhdl isim_temp "../Adder.vhd"
+vhdl isim_temp "../Top.vhd"
+vhdl isim_temp "../atb_ALU.vhd"

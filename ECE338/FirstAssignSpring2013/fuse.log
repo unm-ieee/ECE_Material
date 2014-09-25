@@ -1,0 +1,32 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM_isim_beh.exe" -prj "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM_beh.prj" "work.ATB_FPM" 
+ISim O.87xd (signature 0xc3576ebc)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/CSAdder_vhd.vhd" into library work
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/WTA7_3_vhd.vhd" into library work
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/RRU7_3.vhd" into library work
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/RRU3_2.vhd" into library work
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/FP_MULTIPLIER.vhd" into library work
+Parsing VHDL file "D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/Tester.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package std_logic_arith
+Compiling package numeric_std
+Compiling package std_logic_unsigned
+Compiling architecture basic of entity CSADDER [\CSADDER(1000)\]
+Compiling architecture basic of entity WTA7_3 [wta7_3_default]
+Compiling architecture wasteful of entity RRU7_3 [rru7_3_default]
+Compiling architecture wasteful of entity RRU3_2 [rru3_2_default]
+Compiling architecture behavioral of entity FP_MULTIPLIER [fp_multiplier_default]
+Compiling architecture atb_fpm of entity atb_fpm
+Time Resolution for simulation is 1ps.
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 18 VHDL Units
+Built simulation executable D:/ECE.CLASSES/ECE338/FirstAssignSpring2013/ATB_FPM_isim_beh.exe
+Fuse Memory Usage: 37596 KB
+Fuse CPU Usage: 982 ms

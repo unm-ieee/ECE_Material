@@ -1,0 +1,6 @@
+vhdl work "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/yavga_pkg.vhd"
+vhdl work "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/waveform_RAM.vhd"
+vhdl work "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/chars_RAM.vhd"
+vhdl work "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/charmaps_ROM.vhd"
+vhdl work "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/vga_ctrl.vhd"
+vhdl work "C:/Users/sseppala/Desktop/yavga/tags/yavga-0.8.3/vhdl/s3e_starter_1600k.vhd"

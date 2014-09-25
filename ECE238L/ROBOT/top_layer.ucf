@@ -1,0 +1,15 @@
+NET "clk" LOC = V10;
+NET "cmpPwm[0]" LOC = T10;
+NET "cmpPwm[1]" LOC = T9;
+NET "cmpPwm[2]" LOC = V9;
+NET "cmpPwm[3]" LOC = M8;
+NET "cmpPwm[4]" LOC = N8;
+NET "cmpPwm[5]" LOC = U8;
+NET "cmpPwm[6]" LOC = V8;
+NET "cmpPwm[7]" LOC = T5;
+NET "data_in_Left" LOC = K2;
+NET "data_in_Right" LOC = K1;
+NET "Direction_01" LOC = T12;
+NET "Direction_02" LOC = V12;
+NET "pwm_out_01" LOC = N10;
+NET "pwm_out_02" LOC = P11;

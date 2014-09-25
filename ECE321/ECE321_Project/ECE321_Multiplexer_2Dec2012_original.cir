@@ -1,0 +1,37 @@
+* Circuit Extracted by Tanner Research's L-Edit V7.12 / Extract V4.00 ;
+* TDB File:  C:\Users\Tony\Desktop\321_Project\RunFrom\spread3_2dec1, Cell:  Cell0
+* Extract Definition File:  C:\Users\Tony\Desktop\321_Project\RunFrom\template.ext
+* Extract Date and Time:  12/02/2012 - 19:36
+
+.include 2um_CMOS.modlib
+
+
+* NODE NAME ALIASES
+
+VDD 1 0 dc 5v
+V_SEL 6 0 dc  0v pulse(0 5 0ps 1ps 1ps 10ns 20s)
+V_IN_0 4 0 dc 5v pulse(0 5 10ps 1ps 1ps 30ns 60ns)
+V_IN_1 3 0 dc 5v pulse(0 5 5ps 1ps 1ps 20ns 40ns)
+CL 2 0 100ff
+
+M1 2 5 3 1 cmosp L=2u W=5u AD=95p PD=58u AS=40p PS=26u 
+* M1 DRAIN GATE SOURCE BULK (200.5 -82.5 202.5 -77.5) 
+M2 2 6 4 1 cmosp L=2u W=5u AD=95p PD=58u AS=40p PS=26u 
+* M2 DRAIN GATE SOURCE BULK (173.5 -82.5 175.5 -77.5) 
+M3 5 6 1 1 cmosp L=2u W=5u AD=27.5p PD=21u AS=40p PS=26u 
+* M3 DRAIN GATE SOURCE BULK (147.5 -82.5 149.5 -77.5) 
+M4 2 6 3 0 cmosn L=2u W=5u AD=67.5p PD=47u AS=67.5p PS=37u 
+* M4 DRAIN GATE SOURCE BULK (206 -118 208 -113) 
+M5 2 5 4 0 cmosn L=2u W=5u AD=67.5p PD=47u AS=42.5p PS=27u 
+* M5 DRAIN GATE SOURCE BULK (174 -118 176 -113) 
+M6 5 6 0 0 cmosn L=2u W=5u AD=27.5p PD=21u AS=40p PS=26u 
+* M6 DRAIN GATE SOURCE BULK (147.5 -118 149.5 -113) 
+
+.op
+.probe
+.tran 100ps 300ns
+
+* Total Nodes: 8
+* Total Elements: 6
+* Extract Elapsed Time: 0 seconds
+.END

@@ -1,0 +1,35 @@
+Release 13.1 - xst O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to F:/ECE238/lab5/lab5/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to F:/ECE238/lab5/lab5/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/ECE238/lab5/Decoder.vhd" in Library work.
+Entity <decoder> compiled.
+ERROR:HDLParsers:164 - "F:/ECE238/lab5/Decoder.vhd" Line 45. parse error, unexpected CASE
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.58 secs
+ 
+--> 
+
+Total memory usage is 156336 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

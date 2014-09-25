@@ -1,0 +1,65 @@
+2013 Exam 2, problem 4
+##############################################
+.set LED, 0x8448
+.org 0x1010
+b FITCODE
+
+.org 0x3000
+li r0, 0x0
+
+##LED's
+lis r1, LED	#LED address
+stw r0, 4(r1)	#tristate LED's
+lis r31, b000000111100			#0x400
+mttcr r31
+mttsr r0
+mtevpr r0
+wrteei 1
+here: b here
+
+nop
+nop
+
+FITCODE:
+	lis r31, b00000100	# clear interrupt
+	addi r27, r27, 1
+	stw r27, 1
+	rfi
+
+##############################################
+same problem usinf PIT
+in 1us incriments
+##############################################
+
+.set LED, 0x8448
+.org 0x1000
+b PITCODE
+
+.org 0x3000
+li r0, 0x0
+
+##LED's
+li r27, 0
+lis r1, LED	#LED address
+stw r0, 4(r1)	#tristate LED's
+
+#set up PIT
+r31, 200	#send 
+mtpit r31
+
+lis r31, b0000010001000000		#0x800
+mttcr r31
+mttsr r0
+mtevpr r0
+wrteei 1
+here: b here
+
+nop
+nop
+
+PITCODE:
+	lis r31, b0000100000000000	# clear interrupt
+	mttsr r31
+	addi r27, r27, 1
+	stw r27, 0(r1)
+	rfi

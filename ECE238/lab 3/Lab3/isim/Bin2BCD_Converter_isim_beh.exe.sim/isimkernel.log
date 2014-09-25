@@ -1,0 +1,28 @@
+Command line:
+   Bin2BCD_Converter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51664
+
+Mon Mar 05 18:04:44 2012
+
+
+ Elaboration Time: 0.218401 sec
+
+ Current Memory Usage: 803.299 Meg
+
+ Total Signals          : 4
+ Total Nets             : 13
+ Total Signal Drivers   : 2
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 1
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 373
+
+ Total Simulation Time: 0.280801 sec
+
+ Current Memory Usage: 646.013 Meg
+
+Mon Mar 05 18:16:13 2012
+

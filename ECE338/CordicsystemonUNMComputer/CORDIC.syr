@@ -1,0 +1,135 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.37 secs
+ 
+--> Reading design: CORDIC.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CORDIC.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CORDIC"
+Output Format                      : NGC
+Target Device                      : xc7a8-3-csg324
+
+---- Source Options
+Top Module Name                    : CORDIC
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" into library work
+Parsing entity <CORDIC>.
+Parsing architecture <Behavioral> of entity <cordic>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <CORDIC> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 25: Using initial value "000000000000000000000000000000000000" for y_initial since it is never assigned
+WARNING:HDLCompiler:871 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 26: Using initial value "111111111111111111111111111111111111" for x_initial since it is never assigned
+WARNING:HDLCompiler:871 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 30: Using initial value 35 for done since it is never assigned
+WARNING:HDLCompiler:871 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 31: Using initial value "000000000000000000000000000000000000" for zero since it is never assigned
+WARNING:HDLCompiler:1127 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 136: Assignment to read_adr ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 145: zero should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 173: zero should be on the sensitivity list of the process
+ERROR:HDLCompiler:1401 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 144: Signal Z[35] in unit CORDIC is connected to following multiple drivers:
+ERROR:HDLCompiler:1379 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 171: Driver 0: output signal Z[35] of instance Flip-flop
+ERROR:HDLCompiler:1379 - "D:\ECE.CLASSES\ECE338\CordicsystemonUNMComputer\CORDIC.vhd" Line 144: Driver 1: output signal Z[35] of instance Flip-flop
+--> 
+
+Total memory usage is 250068 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

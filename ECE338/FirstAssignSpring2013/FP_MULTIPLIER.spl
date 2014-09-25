@@ -1,0 +1,6 @@
+[Inputs]
+=A_VAL[31:0]=
+=B_VAL[31:0]=
+[Outputs]
+=F_VAL[31:0]=
+[BiDir]

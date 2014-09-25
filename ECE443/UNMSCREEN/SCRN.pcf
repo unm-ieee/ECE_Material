@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.68d on Mon Oct 28 17:46:29 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "JD<0>" LOCATE = SITE "G11" LEVEL 1;
+COMP "JD<1>" LOCATE = SITE "F10" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "Hsync" LOCATE = SITE "N6" LEVEL 1;
+COMP "vga<0>" LOCATE = SITE "U7" LEVEL 1;
+COMP "vga<1>" LOCATE = SITE "V7" LEVEL 1;
+COMP "vga<2>" LOCATE = SITE "N7" LEVEL 1;
+COMP "vga<3>" LOCATE = SITE "P8" LEVEL 1;
+COMP "vga<4>" LOCATE = SITE "T6" LEVEL 1;
+COMP "vga<5>" LOCATE = SITE "V6" LEVEL 1;
+COMP "vga<6>" LOCATE = SITE "R7" LEVEL 1;
+COMP "vga<7>" LOCATE = SITE "T7" LEVEL 1;
+COMP "Vsync" LOCATE = SITE "P7" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "s_clk_0" BEL "s_clk_1" BEL "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,8 @@
+V3 6
+FL C:/Users/Ryan/Desktop/School/ECE238L/andagain/sch.vhf 2012/03/17.17:01:16 O.61xd
+EN work/sch 1332028890 FL C:/Users/Ryan/Desktop/School/ECE238L/andagain/sch.vhf \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 LB UNISIM \
+      PH unisim/VCOMPONENTS 1308643377
+AR work/sch/BEHAVIORAL 1332028891 \
+      FL C:/Users/Ryan/Desktop/School/ECE238L/andagain/sch.vhf EN work/sch 1332028890 \
+      CP AND2 CP INV

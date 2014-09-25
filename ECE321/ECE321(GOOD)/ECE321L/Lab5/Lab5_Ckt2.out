@@ -1,0 +1,130 @@
+
+**** 10/02/12 17:07:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+Vdd 1 0 5
+
+vina 2 0 pulse ( 0 5 0us .001us .001us 40us 80us)
+vinb 3 0 pulse ( 0 5 20us .001us .001us 40us 80us)
+
+M1 4 2 5 5 cmosn l=2e-6 w=8e-6
+M2 5 3 0 0 cmosn l=2e-6 w=8e-6
+M3 4 2 1 1 cmosp l=2e-6 w=8e-6
+M4 4 3 1 1 cmosp l=2e-6 w=8e-6
+
+.MODEL cmosn nmos LEVEL=2 VTO=0.6 KP=50e-6
+.MODEL cmosp pmos LEVEL=2 VTO=-0.6 KP=50e-6
+
+c1 4 0 500pf
+
+
+
+.PROBE
+.TRAN  1n  60e-6s   
+
+.end
+
+**** 10/02/12 17:07:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               cmosn           cmosp           
+               NMOS            PMOS            
+       LEVEL    2               2            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .6             -.6          
+          KP   50.000000E-06   50.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX  100.000000E-09  100.000000E-09 
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 10/02/12 17:07:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    5.0000  (    2)    0.0000  (    3)    0.0000  (    4)    5.0000      
+
+(    5)    2.5000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    Vdd         -2.510E-12
+    vina         0.000E+00
+    vinb         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/02/12 17:07:26 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *Circuit HW1, problem 1.13*
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

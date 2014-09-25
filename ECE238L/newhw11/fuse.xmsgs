@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"C:/Users/Ryan/Desktop/School/ECE238L/newhw11/../hw11.1/hw11_1tb.vhd" Line 61: &lt;<arg fmt="%s" index="1">hw11_1</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Users/Ryan/Desktop/School/ECE238L/newhw11/../hw11.1/hw11_1tb.vhd</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. Instance <arg fmt="%s" index="3">hw11_1</arg> is unbound
+</msg>
+
+</messages>
+

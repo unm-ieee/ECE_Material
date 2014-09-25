@@ -1,0 +1,55 @@
+IsEmpty
+Push 5
+Push 7
+Push 6
+Push 9
+Top
+Pop
+Top
+Pop
+Top
+Pop
+Top
+Pop
+Push 2
+Push 3
+Push 3
+Push 4
+Top
+Pop
+Top
+Pop
+Top
+Pop
+Top
+Pop
+Push 5
+Pop
+Push 3
+Push 7
+Pop
+Top
+Pop
+IsEmpty
+Push 2
+IsEmpty
+Pop
+IsEmpty
+Push 2
+Push 3
+Push 3
+Push 4
+IsFull
+Push 1
+IsFull
+Push 2
+Pop
+Pop
+Pop
+Pop
+Pop
+Pop
+Top
+Quit
+
+

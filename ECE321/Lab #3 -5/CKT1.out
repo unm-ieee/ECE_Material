@@ -1,0 +1,83 @@
+
+**** 09/17/13 15:38:29 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+.lib "nom.lib"
+
+vin 1 0 dc 10v
+r1 1 2 .47k
+r2 2 0 1.5k
+r3 2 3 .56k
+r4 3 0 2.2k
+
+
+.op
+
+**** 09/17/13 15:38:29 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)   10.0000  (    2)    6.7403  (    3)    5.3727  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    vin         -6.936E-03
+
+    TOTAL POWER DISSIPATION   6.94E-02  WATTS
+
+
+**** 09/17/13 15:38:29 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+**** 09/17/13 15:38:29 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ *
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

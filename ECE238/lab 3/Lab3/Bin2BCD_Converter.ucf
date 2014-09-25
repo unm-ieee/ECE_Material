@@ -1,0 +1,13 @@
+NET "bcd_digit_1<0>" LOC = "F12" ; # LED<0>
+NET "bcd_digit_1<1>" LOC = "E12" ; # LED<1>
+NET "bcd_digit_1<2>" LOC = "E11" ; # LED<2>
+NET "bcd_digit_1<3>" LOC = "F11" ; # LED<3>
+NET "bcd_digit_2<0>" LOC = "C11" ; # LED<4>
+NET "bcd_digit_2<1>" LOC = "D11" ; # LED<5>
+NET "bcd_digit_2<2>" LOC = "E9" ; # LED<6>
+NET "bcd_digit_2<3>" LOC = "F9" ; # LED<7>
+NET "bin_num<0>" LOC = "L13" ; #SW0
+NET "bin_num<1>" LOC = "L14" ; #SW1
+NET "bin_num<2>" LOC = "H18" ; #SW2
+NET "bin_num<3>" LOC = "N17" ; #SW3
+NET "bindis" LOC = "K17" | PULLDOWN ;

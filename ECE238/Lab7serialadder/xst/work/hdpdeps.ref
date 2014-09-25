@@ -1,0 +1,12 @@
+V3 7
+FL C:/Users/238user/Lab7serialadder/Accumulator.vhd 2012/04/05.13:06:44 O.40d
+EN work/Accumulator 1333652921 \
+      FL C:/Users/238user/Lab7serialadder/Accumulator.vhd PB ieee/std_logic_1164 1296775758
+AR work/Accumulator/Behavioral 1333652922 \
+      FL C:/Users/238user/Lab7serialadder/Accumulator.vhd EN work/Accumulator 1333652921
+FL C:/Users/238user/Lab7serialadder/FullAdder.vhd 2012/04/05.12:38:32 O.40d
+FL F:/ECE238/Lab7serialadder/FullAdder.vhd 2012/04/21.09:24:14 O.40d
+EN work/FullAdder 1335231958 FL F:/ECE238/Lab7serialadder/FullAdder.vhd \
+      PB ieee/std_logic_1164 1296775758
+AR work/FullAdder/Behavioral 1335231959 \
+      FL F:/ECE238/Lab7serialadder/FullAdder.vhd EN work/FullAdder 1335231958

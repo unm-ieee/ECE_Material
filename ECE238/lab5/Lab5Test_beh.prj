@@ -1,0 +1,4 @@
+vhdl work "../../encoder.vhdl"
+vhdl work "../../decoder.vhdl"
+vhdl work "../../mux.vhdl"
+vhdl work "Lab5Test.vhd"

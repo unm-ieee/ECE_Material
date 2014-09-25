@@ -1,0 +1,60 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Ryan/Desktop/School/ECE238L/Robot491/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.50 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Ryan/Desktop/School/ECE238L/Robot491/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.51 secs
+ 
+--> Reading design: PMW.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd" into library work
+Parsing entity <PWM>.
+Parsing architecture <Behavioral> of entity <pwm>.
+ERROR:HDLCompiler:32 - "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd" Line 21: <data_in_right> is already declared in this region.
+ERROR:HDLCompiler:32 - "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd" Line 22: <data_in_left> is already declared in this region.
+ERROR:HDLCompiler:806 - "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd" Line 35: Syntax error near "uut".
+ERROR:HDLCompiler:806 - "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd" Line 47: Syntax error near "and".
+ERROR:HDLCompiler:806 - "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd" Line 49: Syntax error near "if".
+WARNING:HDLCompiler:1369 - "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd" Line 50: Possible infinite loop; process does not have a wait statement
+ERROR:HDLCompiler:854 - "C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd" Line 16: Unit <behavioral> ignored due to previous errors.
+VHDL file C:\Users\Ryan\Desktop\School\ECE238L\Robot491\PMW.vhd ignored due to errors
+--> 
+
+Total memory usage is 179088 kilobytes
+
+Number of errors   :    6 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/238user/Lab7serialadder/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/238user/Lab7serialadder/xst"
+elaborate
+-ifn Accumulator.prj
+-ifmt mixed

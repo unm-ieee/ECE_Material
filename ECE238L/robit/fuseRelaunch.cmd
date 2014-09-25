@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM_isim_beh.exe" -prj "C:/Users/Ryan/Desktop/School/ECE238L/robit/PWM_beh.prj" "work.PWM" 

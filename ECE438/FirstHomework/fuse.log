@@ -1,0 +1,27 @@
+Running: /home/rapture/Desktop/14.6/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/ATB_MIPS_ALU_isim_beh.exe -prj /media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/ATB_MIPS_ALU_beh.prj work.ATB_MIPS_ALU 
+ISim P.68d (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/LACUnit.vhd" into library work
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/FA.vhd" into library work
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/Adder.vhd" into library work
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/Top.vhd" into library work
+Parsing VHDL file "/media/rapture/My Passport/ECE.CLASSES/ECE438/FirstHomework/atb_ALU.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 97760 KB
+Fuse CPU Usage: 1740 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture behavioral of entity FA [fa_default]
+Compiling architecture basic of entity LACUNit [lacunit_default]
+Compiling architecture behavioral of entity Adder [adder_default]
+Compiling architecture behavioral of entity MIPS_ALU [\MIPS_ALU(1000)\]
+Compiling architecture atb_mips_alu of entity atb_mips_alu
+Time Resolution for simulation is 1ps.
+ERROR:Simulator:861 - Failed to link the design

@@ -1,0 +1,108 @@
+
+.set uart, 0x8400
+.set Rxfifo, 0x0
+.set Txfifo, 0x4
+.set stat_reg, 0x8
+.set u_con, 0xC
+.set evpr, 0x3D6
+.set LEDA, 0x8146
+.set LEDB, 0x8148
+.set LEDpos, 0x8144
+.set LEDedge, 0x8142
+.set data, 0x0
+.set tri, 0x4
+.set int_con, 0x8180
+.set ipr, 4
+.set ier, 8
+.set iar, 0x0C
+.set mer, 0x1C
+# External Interupt Routine
+.org 0x500
+rotate led's and send to uart
+stw r10, iar(r9)	# Reset interrupt in IAR
+stmw r12, 4(r1)
+lmw r12, 44(r1)
+lwz r20, stat_reg(r2) 	# Load uart status register
+andi. r21, r20, 1	# Check for valid data at uart receiver
+bt 2, return		# If true then Rxfifo was empty
+lwz r31, Rxfifo(r2)	# Load char from Rxfifo
+stw r31, 0(r1)		# Store character in mailbox
+return:
+	stmw r12, 44(r1)
+	lmw r12, 4(r1)
+	rfi
+# Enabling Interupts
+.org 0x10000		# Set starting point
+li r0, 0		# Set r0 to be 0
+lis r1, 0x0001		# Set pointer to the memory
+ori r1, r1, 0x5000
+lis r2, uart		# Load uart base address
+lis r3, LEDA		# Load address of A LED's
+lis r4, LEDB		# Load address of B LED's
+lis r5, LEDpos		# Load address of postion button LED's
+lis r6, LEDedge		# Load address of edge LED's
+li r7, 0x10		# Value to configure uart interrupt control reg
+lis r8, 2		# Constant to determine speed of LED rotation
+lis r9, int_con		# Load interrupt controller base address
+li r10, 8		# Value to enable uart interrupts in IER
+li r11, 3		# Value to enable interrupts in MER
+li r12, 0		# Temp shift storage
+li r13, 0
+li r14, 0
+li r15, 0
+li r16, 0xFF		# Initial values for LEDS
+li r17, 0
+li r18, 0
+li r19, 0
+mtevpr r0		# Set EVPR
+stw r7, u_con(r2)	# Configure uart control register
+stw r10, ier(r9)	# Configure IER
+stw r11, mer(r9)	# Configure MER
+wrteei 1		# Enable external interupts
+# Main Program
+	stw r0, tri(r3)		# enable tri
+	stw r0, tri(r4)
+	stw r0, tri(r5)
+	stw r0, tri(r6)
+	stw r27, data(r3)		# Send start value to A LED's
+	bl speed
+# LED Shift 
+shift:
+	andi. r12, r16, 1
+	andi. r13, r17, 1
+	andi. r14, r18, 1
+	andi. r15, r19, 1
+	srwi r16, r16, 1
+	srwi r17, r17, 1
+	srwi r18, r18, 1
+	srwi r19, r19, 1
+	slwi r12, r12, 31
+	slwi r13, r13, 3
+	slwi r14, r14, 4
+	slwi r15, r15, 31
+	or r16, r16, r15
+	or r17, r17, r12
+	or r18, r18, r13
+	or r19, r19, r14
+	stw r16, data(r3)
+	stw r17, data(r4)
+	stw r18, data(r5)
+	stw r19, data(r6)
+	bl speed
+# Check Mail
+lwz r31, 0(r1)		# Load char from mailbox
+cmpi 0, r31 ,0		# Check if char is 0
+bt 2, shift		# If 0, continue shift 
+stw r31 , Txfifo(r2)	# Otherwise transmit char to terminal
+stw r0, 0(r1)		# Clear mailbox
+b shift
+# Delay loops
+speed: mtctr r8		# Set counter for rotation speed
+speed1:	nop		# Set nop instructions for delay
+	nop
+	nop
+	nop
+	nop
+	bdnz speed1	# Loop until count is complete
+	blr		# Return to main routine from subroutine
+

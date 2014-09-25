@@ -1,0 +1,109 @@
+----------------------------------------------------------------------------------
+-- Company: 			SinclarSolutions
+-- Engineer: 			Steven Seppälä
+-- 
+-- Create Date:    22:55:29 09/17/2013 
+-- Design Name: 
+-- Module Name:    Top - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity Top is
+    Port ( --A : in  STD_LOGIC;
+           --B : in  STD_LOGIC;
+	  Button0 : in STD_LOGIC;--Button is for reset
+			clk : in STD_LOGIC;
+           F : out  STD_LOGIC;
+			  U : out  STD_LOGIC;
+			  N : out  STD_LOGIC;
+			  C : out  STD_LOGIC;
+			  T : out  STD_LOGIC;
+			  I : out  STD_LOGIC;
+			  O : out  STD_LOGIC;
+			  N2 : out  STD_LOGIC;
+			  SegNum0 : out  STD_LOGIC;
+			  SEGMENT0 : out  STD_LOGIC;
+			  SEGMENT1 : out  STD_LOGIC;
+			  SEGMENT2 : out  STD_LOGIC;
+			  SEGMENT3 : out  STD_LOGIC;
+			  SEGMENT4 : out  STD_LOGIC;
+			  SEGMENT5 : out  STD_LOGIC;
+			  SEGMENT6 : out  STD_LOGIC;
+			  SEGMENT7 : out  STD_LOGIC);
+end Top;
+
+architecture Behavioral of Top is
+
+signal counter : STD_LOGIC_VECTOR ( 7 downto 0)  :="00000000";
+signal divider : STD_LOGIC_VECTOR ( 25 downto 0) := (others => '0');
+signal slow_clk : std_logic;
+
+begin
+
+clk_division : process (clk, divider)
+begin
+	if ( clk'event and clk = '1') then
+		divider <= divider + 1;
+	end if;
+		slow_clk <= divider(25);
+end process;
+
+iterating: process (slow_clk, Button0)
+	constant one : std_logic_vector := "00000001";
+begin
+	if (slow_clk = '1' ) then
+		counter <= counter + one;
+	end if;
+	if	(Button0 = '1') then
+		counter <= "00000000";
+	end if;
+end process;
+
+F <= counter(0);
+U <= counter(1);
+N <= counter(2);
+C <= counter(3);
+T <= counter(4);
+I <= counter(5);
+O <= counter(6);
+N2 <= counter(7);
+
+SEGMENT0 <= counter(0);
+SEGMENT1 <= counter(1);
+SEGMENT2 <= counter(2);
+SEGMENT3 <= counter(3);
+SEGMENT4 <= counter(4);
+SEGMENT5 <= counter(5);
+SEGMENT6 <= counter(6);
+SEGMENT7 <= counter(7);		
+
+SegNum0 <= counter(7);
+--flashes 81??
+-- 10101000
+-- FUNCTIOn2
+
+end Behavioral;
+

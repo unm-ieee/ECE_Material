@@ -1,0 +1,2 @@
+vhdl isim_temp "Top.vhd"
+vhdl isim_temp "atb_ALU.vhd"

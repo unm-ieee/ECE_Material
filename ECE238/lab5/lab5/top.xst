@@ -1,0 +1,5 @@
+set -tmpdir "F:/ECE CLASSES/ECE238/lab5/lab5/xst/projnav.tmp"
+set -xsthdpdir "F:/ECE CLASSES/ECE238/lab5/lab5/xst"
+elaborate
+-ifn top.prj
+-ifmt mixed

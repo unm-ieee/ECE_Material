@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="871" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 49: Using initial value <arg fmt="%s" index="1">30</arg> for <arg fmt="%s" index="2">paddlehalfheight</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="439" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 28: Formal port <arg fmt="%s" index="1">leftpaddledirection</arg> of mode <arg fmt="%s" index="2">buffer</arg> cannot be associated with actual port <arg fmt="%s" index="3">leftpaddledirection</arg> of mode <arg fmt="%s" index="4">out</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="439" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 29: Formal port <arg fmt="%s" index="1">rightpaddledirection</arg> of mode <arg fmt="%s" index="2">buffer</arg> cannot be associated with actual port <arg fmt="%s" index="3">rightpaddledirection</arg> of mode <arg fmt="%s" index="4">out</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 182: <arg fmt="%s" index="1">gameover</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 314: <arg fmt="%s" index="1">leftpaddley</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 316: <arg fmt="%s" index="1">rightpaddley</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 323: <arg fmt="%s" index="1">bally</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 325: <arg fmt="%s" index="1">bally</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 327: <arg fmt="%s" index="1">bally</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 331: <arg fmt="%s" index="1">leftlifes</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 332: <arg fmt="%s" index="1">rightlifes</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 337: <arg fmt="%s" index="1">leftlifes</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"/media/rapture/My Passport/ECE.CLASSES/ECE 443/VHDL-Pong-master/Pong.vhd" Line 338: <arg fmt="%s" index="1">rightlifes</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">gameOver</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Clock</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">RightPaddleDirection_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">kbController</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">29 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;RightPaddleDirection_2&gt; &lt;RightPaddleDirection_3&gt; &lt;RightPaddleDirection_4&gt; &lt;RightPaddleDirection_5&gt; &lt;RightPaddleDirection_6&gt; &lt;RightPaddleDirection_7&gt; &lt;RightPaddleDirection_8&gt; &lt;RightPaddleDirection_9&gt; &lt;RightPaddleDirection_10&gt; &lt;RightPaddleDirection_11&gt; &lt;RightPaddleDirection_12&gt; &lt;RightPaddleDirection_13&gt; &lt;RightPaddleDirection_14&gt; &lt;RightPaddleDirection_15&gt; &lt;RightPaddleDirection_16&gt; &lt;RightPaddleDirection_17&gt; &lt;RightPaddleDirection_18&gt; &lt;RightPaddleDirection_19&gt; &lt;RightPaddleDirection_20&gt; &lt;RightPaddleDirection_21&gt; &lt;RightPaddleDirection_22&gt; &lt;RightPaddleDirection_23&gt; &lt;RightPaddleDirection_24&gt; &lt;RightPaddleDirection_25&gt; &lt;RightPaddleDirection_26&gt; &lt;RightPaddleDirection_27&gt; &lt;RightPaddleDirection_28&gt; &lt;RightPaddleDirection_29&gt; &lt;RightPaddleDirection_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">LeftPaddleDirection_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">kbController</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">29 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LeftPaddleDirection_2&gt; &lt;LeftPaddleDirection_3&gt; &lt;LeftPaddleDirection_4&gt; &lt;LeftPaddleDirection_5&gt; &lt;LeftPaddleDirection_6&gt; &lt;LeftPaddleDirection_7&gt; &lt;LeftPaddleDirection_8&gt; &lt;LeftPaddleDirection_9&gt; &lt;LeftPaddleDirection_10&gt; &lt;LeftPaddleDirection_11&gt; &lt;LeftPaddleDirection_12&gt; &lt;LeftPaddleDirection_13&gt; &lt;LeftPaddleDirection_14&gt; &lt;LeftPaddleDirection_15&gt; &lt;LeftPaddleDirection_16&gt; &lt;LeftPaddleDirection_17&gt; &lt;LeftPaddleDirection_18&gt; &lt;LeftPaddleDirection_19&gt; &lt;LeftPaddleDirection_20&gt; &lt;LeftPaddleDirection_21&gt; &lt;LeftPaddleDirection_22&gt; &lt;LeftPaddleDirection_23&gt; &lt;LeftPaddleDirection_24&gt; &lt;LeftPaddleDirection_25&gt; &lt;LeftPaddleDirection_26&gt; &lt;LeftPaddleDirection_27&gt; &lt;LeftPaddleDirection_28&gt; &lt;LeftPaddleDirection_29&gt; &lt;LeftPaddleDirection_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">RightPaddleDirection_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">KeyboardController</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">29 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;RightPaddleDirection_2&gt; &lt;RightPaddleDirection_3&gt; &lt;RightPaddleDirection_4&gt; &lt;RightPaddleDirection_5&gt; &lt;RightPaddleDirection_6&gt; &lt;RightPaddleDirection_7&gt; &lt;RightPaddleDirection_8&gt; &lt;RightPaddleDirection_9&gt; &lt;RightPaddleDirection_10&gt; &lt;RightPaddleDirection_11&gt; &lt;RightPaddleDirection_12&gt; &lt;RightPaddleDirection_13&gt; &lt;RightPaddleDirection_14&gt; &lt;RightPaddleDirection_15&gt; &lt;RightPaddleDirection_16&gt; &lt;RightPaddleDirection_17&gt; &lt;RightPaddleDirection_18&gt; &lt;RightPaddleDirection_19&gt; &lt;RightPaddleDirection_20&gt; &lt;RightPaddleDirection_21&gt; &lt;RightPaddleDirection_22&gt; &lt;RightPaddleDirection_23&gt; &lt;RightPaddleDirection_24&gt; &lt;RightPaddleDirection_25&gt; &lt;RightPaddleDirection_26&gt; &lt;RightPaddleDirection_27&gt; &lt;RightPaddleDirection_28&gt; &lt;RightPaddleDirection_29&gt; &lt;RightPaddleDirection_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">LeftPaddleDirection_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">KeyboardController</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">29 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;LeftPaddleDirection_2&gt; &lt;LeftPaddleDirection_3&gt; &lt;LeftPaddleDirection_4&gt; &lt;LeftPaddleDirection_5&gt; &lt;LeftPaddleDirection_6&gt; &lt;LeftPaddleDirection_7&gt; &lt;LeftPaddleDirection_8&gt; &lt;LeftPaddleDirection_9&gt; &lt;LeftPaddleDirection_10&gt; &lt;LeftPaddleDirection_11&gt; &lt;LeftPaddleDirection_12&gt; &lt;LeftPaddleDirection_13&gt; &lt;LeftPaddleDirection_14&gt; &lt;LeftPaddleDirection_15&gt; &lt;LeftPaddleDirection_16&gt; &lt;LeftPaddleDirection_17&gt; &lt;LeftPaddleDirection_18&gt; &lt;LeftPaddleDirection_19&gt; &lt;LeftPaddleDirection_20&gt; &lt;LeftPaddleDirection_21&gt; &lt;LeftPaddleDirection_22&gt; &lt;LeftPaddleDirection_23&gt; &lt;LeftPaddleDirection_24&gt; &lt;LeftPaddleDirection_25&gt; &lt;LeftPaddleDirection_26&gt; &lt;LeftPaddleDirection_27&gt; &lt;LeftPaddleDirection_28&gt; &lt;LeftPaddleDirection_29&gt; &lt;LeftPaddleDirection_30&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="3002" delta="old" >This design contains one or more registers/latches that are directly
+incompatible with the <arg fmt="%s" index="1">Spartan6</arg> architecture. The two primary causes of this is
+either a register or latch described with both an asynchronous set and
+asynchronous reset, or a register or latch described with an asynchronous
+set or reset which however has an initialization value of the opposite 
+polarity (i.e. asynchronous reset with an initialization value of 1).
+ While this circuit can be built, it creates a sub-optimal implementation
+in terms of area, power and performance. For a more optimal implementation
+Xilinx highly recommends one of the following:
+
+       1) Remove either the set or reset from all registers and latches
+          if not needed for required functionality
+       2) Modify the code in order to produce a synchronous set
+          and/or reset (both is preferred)
+       3) Ensure all registers have the same initialization value as the
+          described asynchronous set or reset polarity
+       4) Use the -async_to_sync option to transform the asynchronous
+          set/reset to synchronous operation
+          (timing simulation highly recommended when using this option)
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ballY_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Pong</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ballSpeedX_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Pong</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ballSpeedX_5&gt; &lt;ballSpeedX_6&gt; &lt;ballSpeedX_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ballSpeedY_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Pong</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ballSpeedY_4&gt; &lt;ballSpeedY_5&gt; &lt;ballSpeedY_6&gt; &lt;ballSpeedY_7&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">ballY_0_LD</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Pong</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">ballY_4_LD</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Pong</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

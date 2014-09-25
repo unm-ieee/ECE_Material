@@ -1,0 +1,8 @@
+V3 6
+FL C:/Users/Ryan/Desktop/School/ECE238L/yetagain/fds.vhd 2012/03/18.23:41:56 O.61xd
+EN work/d 1332139321 FL C:/Users/Ryan/Desktop/School/ECE238L/yetagain/fds.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 LB UNISIM \
+      PH unisim/VCOMPONENTS 1308643377
+AR work/d/BEHAVIORAL 1332139322 \
+      FL C:/Users/Ryan/Desktop/School/ECE238L/yetagain/fds.vhd EN work/d 1332139321 \
+      CP AND2 CP INV

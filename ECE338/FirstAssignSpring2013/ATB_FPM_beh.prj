@@ -1,0 +1,6 @@
+vhdl work "CSAdder_vhd.vhd"
+vhdl work "WTA7_3_vhd.vhd"
+vhdl work "RRU7_3.vhd"
+vhdl work "RRU3_2.vhd"
+vhdl work "FP_MULTIPLIER.vhd"
+vhdl work "Tester.vhd"

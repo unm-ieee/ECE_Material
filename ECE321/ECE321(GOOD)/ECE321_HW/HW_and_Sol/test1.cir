@@ -1,0 +1,17 @@
+* Test1 SPICE demo file *
+
+M1 3 2 0 0 ntype l=0.25u w=2.5u
+M2 3 2 1 1 ptype l=0.25u w=5.0u
+CL 3 0 1pf
+
+VDD 1 0 DC 5V
+Vin 2 0 DC 0V pulse(0 5 0ps 1ps 1ps 2ns 4ns)
+
+.model ntype nmos vto = 1.2V kp=100u lambda=0.01
+.model ptype pmos vto = -1.0V kp=60u lambda=0.05
+
+*.DC Vin 0 5 0.01*
+*.tran 100ps 5ns*
+*.probe V(2) V(3)*
+.op
+.end

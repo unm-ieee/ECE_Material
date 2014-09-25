@@ -1,0 +1,18 @@
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Ryan/Desktop/School/ECE238L/newhw11/hw11_1tb_isim_beh.exe -prj C:/Users/Ryan/Desktop/School/ECE238L/newhw11/hw11_1tb_beh.prj work.hw11_1tb 
+ISim O.61xd (signature 0x1cce1bb2)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Ryan/Desktop/School/ECE238L/newhw11/../hw11.1/hw11_1tb.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:89 - "C:/Users/Ryan/Desktop/School/ECE238L/newhw11/../hw11.1/hw11_1tb.vhd" Line 61: <hw11_1> remains a black-box since it has no binding entity.
+Completed static elaboration
+WARNING:Simulator:648 - "C:/Users/Ryan/Desktop/School/ECE238L/newhw11/../hw11.1/hw11_1tb.vhd" Line 61. Instance hw11_1 is unbound
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavior of entity hw11_1tb
+Time Resolution for simulation is 1ps.
+Compiled 3 VHDL Units
+Built simulation executable C:/Users/Ryan/Desktop/School/ECE238L/newhw11/hw11_1tb_isim_beh.exe
+Fuse Memory Usage: 18992 KB
+Fuse CPU Usage: 467 ms

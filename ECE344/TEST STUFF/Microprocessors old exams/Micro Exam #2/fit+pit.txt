@@ -1,0 +1,114 @@
+.set num, 200000
+
+.org 0x1000
+b PITISR
+.org 0x1010
+b FITISR
+
+.org 0x3000
+li r0,0
+li r27, 0x4000 
+#for pit
+li r28, 0x2828 
+li r29, 0x0800
+li r30, 0x3030
+li r31, 0x3131
+
+stmw r28, 0x10(r27)#context switch
+stw r0, 0x40(r27)#mailbox
+
+#for FIT
+li r28, 0x7228
+li r29, 0x0400
+li r30, 0x0330
+li r31, 0x1331
+stmw r28, 0x20(r27)#context switch
+stw r0, 0x50(r27)#mailbox
+li r28, 0
+stmw r28, 0x0(r27)
+lis r10, num@h
+ori r10, r10, num@l
+mtpit r10
+lis r11 0x7c0
+mttcr r11
+mtevpr, r0
+lis r12, 0x8146 
+lis r7, 0x8148
+stw r0, 4(r12)
+stw r0, 4(r7)
+li r9,0
+li r6,0
+wrteei 1
+
+
+##Main
+loop:lwz r14, 0x40(r27) #loop= pit loop
+cmpwi, 0,r14,0
+bt 2, loop2 
+stw r0,0x40(r27)
+addi r9,r9,1
+cmpwi 0,r9,500
+bt, 0, ones
+cmpwi 0,r9,1500
+bt 0,zeros
+li r9,0
+b loop3
+ones:
+not r8,r0
+stw r8, 0(r12)
+b loop2
+zeros:
+stw r0, 0(r12)
+b loop2
+
+loop2:
+lwz r14,0x50(r27)
+cmpwi 0,r14,0
+bt 2, loop
+stw r0, 0x50(r27)
+addi r6,r6,1
+cmpwi 0,r6,33
+bt 0, fitones
+cmpwi 0, r6,66
+bt 0, fitzeros
+li r6,0
+b loop
+fitones:
+not r8,r0
+stw r0, 0(r27)
+b loop
+fitzeros:
+stw r0,0(r9)
+b loop
+
+
+# PIT and FIT ISR
+pitisr:
+stmw r28, 0(r27)
+lwm r28, 0x10(r27)#context switch
+stw r29, 0x40(r27)#mailbox location
+lis r30, 0x0800
+metsr r30
+stmw r28, 0x10(r27)
+lwm r28, 0(r27)
+rfi
+
+fitisr:
+stmw r28, 0(r27)
+lmw r28, 0x20(r27)
+stw r29, 0x50(r27)
+lis r30, 0x0400
+mttsr r30
+stmw r28,0x20(r27)
+lmw r28, 0(r27)
+rfi
+
+
+
+
+main @0x4000
+contex sw FIT @ 0x4020
+contex sw PIT @ 0x4010
+malib FIT @ 0x4050
+mailb PIT @ 0x4040
+

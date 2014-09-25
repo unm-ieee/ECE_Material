@@ -1,0 +1,49 @@
+#4 check an array for values less than 10000000 and greater 5000000
+lis r8,0x000b
+li r9 ,6000
+mtctr r9
+li r10,0
+lis r11,5000000@h
+ori r11,r11,5000000@l
+over:
+    lwz r12,0(r8)
+addi r8,r8,4
+cmp 0,r12,r11
+bf 2 next
+addi r10,r10,1
+
+next:bdnz over
+lis r13,0x0001
+stw r10,0(r13)
+
+
+#5 use pit to cause led to toggle
+lis r10,3
+mtevpr r10
+lis r11, 66666666@h
+ori r11, r11,66666666@l #1/3/5ns=66666666
+mtpit r11
+lis r14,0x8144
+li r13,0
+stw r13, 4(r14)
+li r9,0
+wrteei 1
+
+part to steady state
+.org 0x1000
+lis r20,0x8144
+not r9,r9
+stw r9,0(r20)
+lis r21, 0x0800
+mttsr r21
+rfi
+
+#6 stack 6 registers
+addi r2,r2,-1
+addi r1,r1,-16
+stmw r28,0(r1)
+bl
+lmw r28,0(r1)
+addi r1,r1,16
+
+

@@ -1,0 +1,2 @@
+vhdl work "../FlippityFlopper.vhd"
+vhdl work "../FF_TestBench.vhd"

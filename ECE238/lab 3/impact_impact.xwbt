@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=F:\ECE238\lab 3\impact.xsl
+OUTFILE=F:\ECE238\lab 3\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=F:\ECE238\lab 3
+LICENSE=iMPACT
+USER_INFO=iMPACT

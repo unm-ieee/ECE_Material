@@ -1,0 +1,5 @@
+vhdl work "LACUnit.vhd"
+vhdl work "FA.vhd"
+vhdl work "Adder.vhd"
+vhdl work "Top.vhd"
+vhdl work "atb_ALU.vhd"

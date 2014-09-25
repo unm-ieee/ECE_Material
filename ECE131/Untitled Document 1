@@ -1,0 +1,32 @@
+//Steven Seppala
+
+#include <stdio.h>
+
+int main (void)
+{
+
+int add, fibbler;
+
+printf("Fibonacci number count to?");
+
+scanf("%i", &fibbler);
+
+	if (fibbler < 1 || fibbler > 50)
+		{
+		printf("Game Over, Try again. \n") ;
+		return 1;
+		}
+	
+unsigned long long int fib[fibbler];
+
+fib[0] = 0;
+fib[1] = 1;
+
+for ( i = 2; i < fibbler; ++i)
+	fib[i] = fib[i-2] + fin[i-1];
+
+for (i=0; i<fibbler; i++)
+	printf("%llu", fib[i]);
+
+return 0;
+}

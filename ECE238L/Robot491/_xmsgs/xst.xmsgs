@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 5: Syntax error near &quot;<arg fmt="%s" index="1">(</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="854" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 4: Unit &lt;<arg fmt="%s" index="1">top_layer</arg>&gt; ignored due to previous errors.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="374" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 15: Entity &lt;<arg fmt="%s" index="1">top_layer</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 19: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 20: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 21: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 22: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 23: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 24: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 31: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 32: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 33: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 34: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 35: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 36: &lt;<arg fmt="%s" index="1">std_logic_vector</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 40: &lt;<arg fmt="%s" index="1">std_logic</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 45: &lt;<arg fmt="%s" index="1">ck</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 46: &lt;<arg fmt="%s" index="1">cmppwm</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\Ryan\Downloads\Top_layer.vhd" Line 47: &lt;<arg fmt="%s" index="1">pwm_out</arg>&gt; is not declared.
+</msg>
+
+</messages>
+

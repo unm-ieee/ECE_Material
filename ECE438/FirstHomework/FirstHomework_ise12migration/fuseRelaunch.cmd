@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "E:/ECE.CLASSES/ECE438/FirstHomework/FirstHomework_ise12migration/ATB_MIPS_ALU_isim_beh.exe" -prj "E:/ECE.CLASSES/ECE438/FirstHomework/FirstHomework_ise12migration/ATB_MIPS_ALU_beh.prj" "work.ATB_MIPS_ALU" 

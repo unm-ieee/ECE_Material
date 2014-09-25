@@ -1,0 +1,46 @@
+#3 evpr at 0x00f0000
+(to pit)
+lis r8, 2000000@h
+ori r8,r8,2000000@l
+mtpit r8
+(to TCR)
+lis r9,0xffc
+mttcr r9
+(to evpr)
+lis r10, 0x000f
+mtevpr r10
+wrteei 1
+
+
+#4 use fit to create a periodic time function
+li r27,0
+ori r27,r27 0x9000
+stmw r28, 0(r27)
+lmw r28,0x10(r27)
+lis r29, 0x0400
+mttsr r29
+stw r29, 0x0c(r27)
+stmw r28,0x20(r27)
+lmw r28,0x10(r27)
+rfi
+
+#5 data structure
+.set data1 100000
+.set data2 200000
+lis r6,data1@h
+ori r9,r9,data1@l
+lis r7,data2@h
+ori r7,r7,data2@l
+li r8, 10000
+mtctr r8
+li r9,0
+lis r10,0x10
+lwz r11,0(r10)
+addi r10,r10,4
+cmp 1, r11, r6
+cmp 2, r11, r7
+bt 4, goout
+bt 9, goout
+addir9,r9,1
+bdnz loop
+b.

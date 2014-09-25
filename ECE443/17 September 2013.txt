@@ -1,0 +1,42 @@
+entity inital is
+	port(
+	SW0 : in STD_LOGIC;
+	.
+	.
+	.
+	.
+	SW7 : in STD_LOGIC;	
+	LD0 ... LD7 : out STD_LOGIC;
+	BT0...BT4 : in STD_LOGIC
+	);
+
+end entitiy inital
+
+architechtyure test of inital is 
+
+begin
+
+LD0 <- SW0 or BT0;
+.
+.
+.
+.
+LD7 <- SW7;
+
+end architechture test;
+
+
+--------------------------
+UCF FILE0-----------------
+--------------------------
+etc...
+
+NET LD0
+NET LD1
+NET LD3
+NET LD4
+NET LD5
+NET LD6
+NET LD7
+NET LD8
+
