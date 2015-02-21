@@ -1,0 +1,248 @@
+\documentclass[a4paper,15pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{esint}
+
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage[defaultmono]{droidmono}
+
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{graphics}
+\usepackage{lstlinebgrd}
+\usepackage{color}
+\usepackage{gensymb}
+\usepackage{geometry}
+\geometry{total={210mm,297mm},
+left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{center}
+\vspace{2ex}
+{\huge \textsc{\@title}}
+\vspace{1ex}
+\\
+\linia\\
+\@author \hfill \@date
+\vspace{4ex}
+\end{center}
+}
+\makeatother
+%%%
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Page \thepage}
+\chead{}
+\rhead{Steven Seppala}
+\lfoot{Assignment \textnumero{} 1}
+\cfoot{Antennas}
+\rfoot{ECE 469}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=[ANSI]C,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+	\definecolor{dkgreen}{rgb}{0,0.8,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+%%%----------Document begins right below this-------%%%
+%%%----------%%%----------%%%----------%%%----------%%%
+\begin{document}
+
+\title{Assignment \textnumero{} 1}
+
+\author{Steven Seppala}
+
+\date{2 Feb 2015}
+
+\maketitle
+
+\section*{Problem 2.9} 
+
+
+\[ U(\theta,\phi) = \left\{ 
+  \begin{array}{l l}
+    1 & \quad \text{0$\degree$ $\leq$ $\theta$ $<$ 20$\degree$  }\\
+    .342$\csc(\theta)$ & \quad \text{20$\degree$ $\leq$ $\theta$ $<$ 60$\degree$}\\
+    0 & \quad \text {60$\degree$ $\leq$ $\theta$ $\leq$ 180$\degree$}\\
+  \end{array} \right.\]\\
+  \begin{center}
+    $D_o$ = $\frac{U_{max}(\theta,\phi)}{P_{rad}}$\\
+    $P_{rad} = \oiint U(\theta,\phi) d\Omega$ \\
+    $\implies \int\limits_0^{2\pi} \int\limits_0^\pi U(\theta,\phi) \implies \int\limits_0^{2\pi} 
+        [\int\limits_0^{\pi/9} \sin(\theta) d\theta             
+        +\int\limits_{\pi/9}^{\pi/3}.342\csc(\theta)\sin(\theta)d\theta  
+        + \int\limits_{\pi/3}^{\pi} 0 \sin(\theta)d\theta] \\
+        \implies$ 
+    $({[-\cos(\theta]\Bigr|_{\substack{\theta=0\\ \theta=\frac{\pi}{9}}}
+    + .342 [\theta]\Bigr|_{\substack{\theta=\frac{\pi}{9} \\ \theta=\frac{\pi}{3}}}) * 2\pi$\\
+    
+    $\implies P_{rad} = 1.879$\\
+    $\implies D_o = \frac{4\piU_{max}}{1.879} = \frac{4\pi}{1.879} \implies\\
+    D_o = 6.687$ no units \\
+    $D_{dBi} = 10 log_{10} D_o \implies \\
+    D_{dBi} = 8.253$ dB
+    
+    \pagebreak
+\end{center}
+\section*{Problem 2.26}
+\begin{enumerate}
+\item  C Program source code is in appendix.\\
+        Program Output :: \\
+        \includegraphics[scale=.7]{integral.png}
+\item 
+        Krauss Approxamation = $\frac{4\pi}{\Theta_{1r} \Theta_{2r}} \\
+        \sqrt\Theta_{1r} = \sqrt\Theta_{2r} :=  U(\theta) = .5 \\
+        .5 = [\frac{\sin(\pi\sin(\theta))}{\pi\sin(\theta)}]^2 \implies \theta = .458$\\
+        $\frac{4\pi}{.916^2} = 14.9768$ dimensionless \\
+        $D_{dB} = 10 log_{10} (14.9768) = 11.75$ dB\\
+        
+\item
+        Tai-Peeira Approxamation = \\
+        $\frac{22.181}{2(.916)^2} = 13.217$ dimensionless \\
+        $D_{dB} = 10 log_{10} (13.217) = 11.21$ dB\\
+\end{enumerate}
+    
+    \pagebreak
+    
+\section*{Problem 2.35}
+    \begin{center}
+    $E^i_w = (\hat{a} x + j \hat{a} y) E_o e^{+jkz}$\\
+    $E_a=(\hat{a}+2\hat{a}y)E_1\frac{e^{-jkr}}{r}$\\
+    \begin{itemize}
+    \item $\Delta_\phi = \phi_x - \phi_y = (2n+1)\frac{\pi}{2}$\\
+    Circularly polarized because the y component is 90\degree out of phase with the x component due to its j amplitude. This will make the phase delta of x and y always be odd multiples of $\frac{\pi}{2}$ as well as $E_{x}$ being equal to $E_{y}$.\\
+    \item The rotation is clockwise because of the y component has a higher amplitude than the x component and will pull the rotation clockwise.
+    \item 
+        $E^i_w = \frac{\hat{a}_x+j\hat{a}_y}{\sqrt5} \sqrt5 E_1 \frac{e^{-jkz}}{z} $\\
+        $\implies $ 2 components with 0$\degree$ phase difference $\implies$ Linear polarization\\
+        
+    \item Since it is linear it has no rotation. \\
+    
+    \item 
+        $\hat{\rho}_w = \frac{\hat{a}_x + j\hat{a}_y}{\sqrt2} , \hat{\rho}_a = 
+                                    \frac{\hat{a}_x + 2\hat{a}_y}{\sqrt5} $\\
+                                    
+        PLF = $|\hat{\rho}_w \cdot \hat{\rho}_a|^2 \implies \frac{|1+j|^2}{10} = \frac{5}{10}$\\
+        PLF = .5 dimensionless\\
+        $PLF_{dB} = 10log_{10}(.5) = -3$ dB\\
+    
+    \end{itemize}
+    \end{center}
+    
+
+\section*{Problem 2.40}
+    $\hat{\rho_a} = \frac{4\hat{a}_x + j\hat{a}_y}{\sqrt17}$\\
+    $\tau = 45\degree$\\
+    $PLF = |\frac{4\hat{a}_x + j\hat{a}_y}{\sqrt17} * \frac{\hat{a}_x + j\hat{a}_y}{\sqrt2}|^2$\\
+    $ \implies \frac{|4+j|^2}{34} \implies .5$ dimensionless\\
+    $10log_{10}(.5) = -3.0103$ dB\\
+\pagebreak
+
+
+\section*{Problem 2.70}
+    \begin{enumerate}
+    \item Gain = Efficiency * Directivity \\
+    $ \varepsilon = \frac{A_{em}}{A_p} \implies $\\
+    $ e_o * \varepsilon = \frac{A_{em}}{A_p} * e_o \implies$ \\
+    $ 1 = \frac{\frac{\lambda^2}{4\pi} D_o}{10 cm^2}e_o \implies $\\
+    $ 10cm^2 = \frac{9cm^2}{4\pi} Gain \implies Gain = \frac{40\pi}{9} $\\
+    $ \implies 13.9626$ dimentionless \\
+    $ 10log_{10}(13.9626) = 11.45 \implies$ Gain $=11.45$ dB
+    
+    \item $P_T = A_e * W_i$ \\
+    $P_T = 10 \frac{(mW)}{(cm)^2} (10 cm^2 ) (.5) \implies P_T = 50$ mW
+    \end{enumerate}
+    
+    
+    
+\section*{Problem 2.80}
+
+    \[ U(\theta,\phi) = \left\{ 
+    \begin{array}{l l}
+    $\cos^4(\theta)$ & \quad \text{0$\degree$ $\leq$ $\theta$ $<$ 90$\degree$  }\\
+    0                & \quad \text{90$\degree$ $\leq$ $\theta$ $\leq$ 180$\degree$}\\
+    \end{array} \right.\] 
+    
+    \[\left\{ 
+    \begin{array}{l l}
+    $1$              & \quad \text{0$\degree$ $\leq$ $\phi$ $\leq$ 360$\degree$  }\\
+    \end{array} \right.\] 
+    
+    
+    $A_{em} = \frac{\lambda^2}{4\pi} D_o$ \\
+    P_{rad} = $\int\limits_0^{2\pi} \int\limits_0^{2\pi} \cos^4(\theta)\sin(\theta) d\theta d\phi$\\
+    $\rightarrow$ calculator $\rightarrow$ \\
+    $2\pi [.2] \implies P_{rad} = 1.256$\\
+    D_o = $\frac{4\pi}{1.256} = 10.0051$\\
+    $\implies \frac{9cm^2}{4\pi} (10.0051) = 7.165 * 10^{-2}$ m^2\\
+    
+    
+\section*{Problem 2.86}
+
+    P_r = e_r * D_r * \frac{\lambda^2}{4\pi} * \frac{P_t D_t}{4\pi R^2}\\
+    $\implies P_r = 20db\frac{10w*20dB}{4\pi(50)^2\lambda^2}\frac{\lambda^2}{4\pi}$\\
+    $\implies \frac{400dB*10w}{16\pi^22500} = 10$mW \\
+
+
+\pagebreak
+
+\begin{center}
+\section*{APPENDIX} 
+    \lstinputlisting{num.c}
+    \pagebreak
+    *{Makefile for compiling the above code}
+    \lstinputlisting{Makefile}
+
+\end{document}

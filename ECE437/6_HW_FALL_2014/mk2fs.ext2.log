@@ -1,0 +1,19 @@
+mke2fs 1.42.9 (4-Feb-2014)
+steven_seppala_437disk.img is not a block special device.
+Proceed anyway? (y,n) Discarding device blocks:      done                            
+Filesystem label=
+OS type: Linux
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+Stride=0 blocks, Stripe width=0 blocks
+16 inodes, 64 blocks
+3 blocks (4.69%) reserved for the super user
+First data block=1
+1 block group
+8192 blocks per group, 8192 fragments per group
+16 inodes per group
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Writing superblocks and filesystem accounting information: 0/1   done
+

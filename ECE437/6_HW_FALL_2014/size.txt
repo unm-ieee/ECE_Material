@@ -1,0 +1,41 @@
+File to monitor: size.log
+Monitoring file:: size.log at Fri Nov 14 16:31:18 2014
+Size is :: 45 ||Previous size was :: 45
+Monitoring file:: size.log at Fri Nov 14 16:31:28 2014
+Size is :: 45 ||Previous size was :: 45
+Monitoring file:: size.log at Fri Nov 14 16:31:38 2014
+Size is :: 122 ||Previous size was :: 45
+Monitoring file:: size.log at Fri Nov 14 16:31:48 2014
+Size is :: 219 ||Previous size was :: 122
+Monitoring file:: size.log at Fri Nov 14 16:31:58 2014
+Size is :: 316 ||Previous size was :: 219
+Monitoring file:: size.log at Fri Nov 14 16:32:08 2014
+Size is :: 413 ||Previous size was :: 316
+Monitoring file:: size.log at Fri Nov 14 16:32:18 2014
+Size is :: 510 ||Previous size was :: 413
+Monitoring file:: size.log at Fri Nov 14 16:32:28 2014
+Size is :: 607 ||Previous size was :: 510
+Monitoring file:: size.log at Fri Nov 14 16:32:38 2014
+Size is :: 704 ||Previous size was :: 607
+Monitoring file:: size.log at Fri Nov 14 16:32:48 2014
+Size is :: 801 ||Previous size was :: 704
+Monitoring file:: size.log at Fri Nov 14 16:32:58 2014
+Size is :: 898 ||Previous size was :: 801
+Monitoring file:: size.log at Fri Nov 14 16:33:08 2014
+Size is :: 996 ||Previous size was :: 898
+Monitoring file:: size.log at Fri Nov 14 16:33:18 2014
+Size is :: 1095 ||Previous size was :: 996
+Monitoring file:: size.log at Fri Nov 14 16:33:28 2014
+Size is :: 1194 ||Previous size was :: 1095
+Monitoring file:: size.log at Fri Nov 14 16:33:38 2014
+Size is :: 1293 ||Previous size was :: 1194
+Monitoring file:: size.log at Fri Nov 14 16:33:48 2014
+Size is :: 1392 ||Previous size was :: 1293
+Monitoring file:: size.log at Fri Nov 14 16:33:58 2014
+Size is :: 1491 ||Previous size was :: 1392
+Monitoring file:: size.log at Fri Nov 14 16:34:08 2014
+Size is :: 1590 ||Previous size was :: 1491
+Monitoring file:: size.log at Fri Nov 14 16:34:18 2014
+Size is :: 1689 ||Previous size was :: 1590
+
+Done monitoring file, goodbye.

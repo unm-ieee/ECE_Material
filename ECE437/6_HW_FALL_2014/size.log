@@ -1,0 +1,41 @@
+File to monitor: size.txt
+Monitoring file:: size.txt at Fri Nov 14 16:31:33 2014
+Size is :: 215 ||Previous size was :: 215
+Monitoring file:: size.txt at Fri Nov 14 16:31:43 2014
+Size is :: 311 ||Previous size was :: 215
+Monitoring file:: size.txt at Fri Nov 14 16:31:53 2014
+Size is :: 408 ||Previous size was :: 311
+Monitoring file:: size.txt at Fri Nov 14 16:32:03 2014
+Size is :: 505 ||Previous size was :: 408
+Monitoring file:: size.txt at Fri Nov 14 16:32:13 2014
+Size is :: 602 ||Previous size was :: 505
+Monitoring file:: size.txt at Fri Nov 14 16:32:23 2014
+Size is :: 699 ||Previous size was :: 602
+Monitoring file:: size.txt at Fri Nov 14 16:32:33 2014
+Size is :: 796 ||Previous size was :: 699
+Monitoring file:: size.txt at Fri Nov 14 16:32:43 2014
+Size is :: 893 ||Previous size was :: 796
+Monitoring file:: size.txt at Fri Nov 14 16:32:53 2014
+Size is :: 990 ||Previous size was :: 893
+Monitoring file:: size.txt at Fri Nov 14 16:33:03 2014
+Size is :: 1087 ||Previous size was :: 990
+Monitoring file:: size.txt at Fri Nov 14 16:33:13 2014
+Size is :: 1184 ||Previous size was :: 1087
+Monitoring file:: size.txt at Fri Nov 14 16:33:23 2014
+Size is :: 1282 ||Previous size was :: 1184
+Monitoring file:: size.txt at Fri Nov 14 16:33:33 2014
+Size is :: 1381 ||Previous size was :: 1282
+Monitoring file:: size.txt at Fri Nov 14 16:33:43 2014
+Size is :: 1480 ||Previous size was :: 1381
+Monitoring file:: size.txt at Fri Nov 14 16:33:53 2014
+Size is :: 1579 ||Previous size was :: 1480
+Monitoring file:: size.txt at Fri Nov 14 16:34:03 2014
+Size is :: 1678 ||Previous size was :: 1579
+Monitoring file:: size.txt at Fri Nov 14 16:34:13 2014
+Size is :: 1777 ||Previous size was :: 1678
+Monitoring file:: size.txt at Fri Nov 14 16:34:23 2014
+Size is :: 1908 ||Previous size was :: 1777
+Monitoring file:: size.txt at Fri Nov 14 16:34:33 2014
+Size is :: 1908 ||Previous size was :: 1908
+
+Done monitoring file, goodbye.
