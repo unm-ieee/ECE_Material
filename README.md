@@ -7,7 +7,7 @@ __DISCLAIMER : PLEASE RTFM AND DO NOT RELY ON THIS INFORMATION ALONE__<br>
 
 
 __Contributors__
-<br>rad-
+<br>rad- :: Steven Seppala
 
 
 !! Updated on 21 Feb 2015<br>
