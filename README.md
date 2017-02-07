@@ -7,9 +7,10 @@ __DISCLAIMER : PLEASE RTFM AND DO NOT RELY ON THIS INFORMATION ALONE__<br>
 
 
 __Contributors__
-<br>rad- :: Steven Seppala
+<br>tropical-peach :: Steven Seppala (steventseppala@gmail.com)
 
-
+!! Updated on 7 Feb 2017<br>
+`Added a few shell functions to start a baseline for code examples`
 !! Updated on 21 Feb 2015<br>
 `Addtion of class material from Fall 2014 and Begining material from Spring 2015`
 
