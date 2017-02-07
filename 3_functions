@@ -1,0 +1,148 @@
+#
+# ██████████                           
+#░░░░░██░░░                            
+#    ░██      █████  ██████ ██████████ 
+#    ░██     ██░░░██░░██░░█░░██░░██░░██
+#    ░██    ░███████ ░██ ░  ░██ ░██ ░██
+#    ░██    ░██░░░░  ░██    ░██ ░██ ░██
+#    ░██    ░░██████░███    ███ ░██ ░██
+#    ░░      ░░░░░░ ░░░    ░░░  ░░  ░░ 
+# ████████                            ██   ██                          
+#░██░░░░░                            ░██  ░░                           
+#░██       ██   ██ ███████   █████  ██████ ██  ██████  ███████   ██████
+#░███████ ░██  ░██░░██░░░██ ██░░░██░░░██░ ░██ ██░░░░██░░██░░░██ ██░░░░ 
+#░██░░░░  ░██  ░██ ░██  ░██░██  ░░   ░██  ░██░██   ░██ ░██  ░██░░█████ 
+#░██      ░██  ░██ ░██  ░██░██   ██  ░██  ░██░██   ░██ ░██  ░██ ░░░░░██
+#░██      ░░██████ ███  ░██░░█████   ░░██ ░██░░██████  ███  ░██ ██████ 
+#░░        ░░░░░░ ░░░   ░░  ░░░░░     ░░  ░░  ░░░░░░  ░░░   ░░ ░░░░░░  
+#
+#
+
+
+
+# prompt
+function prompt_git_dirty() 
+{
+gitstat=$(git status 2>/dev/null | grep '\(# Untracked\|# Changes\|# Changed but not updated:\)')
+	LD_LIBRARY_PATH=""awk
+
+if [[ $(echo ${gitstat} | grep -c "^# Changes to be committed:$") > 0 ]]; then
+	echo -n $fg_yellow
+	elif [[ $(echo ${gitstat} | grep -c "^\(# Untracked files:\|# Changed but not updated:\)$") > 0 ]]; then
+	echo -n $fg_lred
+	else
+	echo -n $fg_pink
+fi
+}
+
+function prompt_current_branch() 
+{
+	ref=$(git symbolic-ref HEAD 2> /dev/null) || return 1
+	echo ${ref#refs/heads/}
+}
+
+function prompt_hostname()
+{
+	case "`hostname`" in
+		"Arch")
+			echo -n "${fg_yellow}Arch${at_normal}";;    
+		esac
+}
+
+function precmd() 
+# Uses: setting user/root PROMPT1 variable and rehashing commands list
+{
+	# Last command status
+	cmdstatus=$?
+	sadface=`[ "$cmdstatus" != "0" ] && echo "${fg_red}:(${at_normal} "`
+
+	# Colours
+	usercolour=`[ $UID != 0 ]   && echo $fg_blue      	|| echo $fg_red`
+	usercolour2=`[ $UID != 0 ]  && echo $fg_white 		|| echo $fg_red`
+	dircolour=`[ -w "\`pwd\`" ] && echo $fg_lgray       || echo $fg_red`
+
+	# Git branch
+	git="[branch: `prompt_git_dirty``prompt_current_branch`${fg_blue}]"
+
+	export PROMPT="	${usercolour}┌─[${dircolour}♨ %n${PR_NO_COLOR} ♨ `prompt_hostname`${usercolour}]${dircolour}[%~]${at_normal} `prompt_current_branch &>/dev/null && echo -n $git`
+	${usercolour}└─${sadface}${usercolour}${dircolour}(%T)(%l)${usercolour} $HOST ─╼ ${at_normal}"                      
+}             
+
+
+
+
+## FUNCTIONS
+cdl() 
+{
+	builtin cd $@; ls 
+}
+
+# Easy extract
+extract () {
+	if [ -f $1 ] ; then
+		case $1 in
+			*.tar.bz2)   tar xvjf $1    ;;
+			*.tar.gz)    tar xvzf $1    ;;
+			*.bz2)       bunzip2 $1     ;;
+			*.rar)       rar x $1       ;;
+			*.gz)        gunzip $1      ;;
+			*.tar)       tar xvf $1     ;;
+			*.tbz2)      tar xvjf $1    ;;
+			*.tgz)       tar xvzf $1    ;;
+			*.zip)       unzip $1       ;;
+			*.Z)         uncompress $1  ;;
+			*.7z)        7z x $1        ;;
+			*)           echo "don't know how to extract '$1'..." ;;
+		esac
+	else
+		echo "'$1' is not a valid file!"
+	fi
+}
+
+#Search All PDFs for text
+search () {
+	find . -name '*.pdf' -exec sh -c 'pdftotext "{}" - | grep --with-filename --label="{}" --color "'$1'"' \;
+}
+
+
+
+# Makes directory then moves into it
+function mkcdr {
+	mkdir -p -v $1
+	cd $1
+}
+
+# Creates an archive from given directory
+mktar() 
+{ 
+	tar cvf  "${1%%/}.tar"     "${1%%/}/"; 
+}
+
+mktgz() 
+{ 
+	tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; 
+}
+
+mktbz() 
+{ 
+	tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; 
+}
+
+
+upinfo ()
+{
+	echo -ne "\t ";uptime | awk /'up/ {print $3,$4,$5,$6,$7,$8,$9,$10}'
+}
+
+# list files only
+lf () 
+{ 
+	ls -1p $@ | grep -v '\/$' 
+}
+
+
+# define words with wordnet
+ddefine () 
+{ 
+	curl dict://dict.org/d:${1}:wn; 
+}
