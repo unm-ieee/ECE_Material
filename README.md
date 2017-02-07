@@ -10,7 +10,7 @@ __Contributors__
 <br>tropical-peach :: Steven Seppala (steventseppala@gmail.com)
 
 !! Updated on 7 Feb 2017<br>
-`Added a few shell functions to start a baseline for code examples`
+`Added a few shell functions to start a baseline for code examples` <br>
 !! Updated on 21 Feb 2015<br>
 `Addtion of class material from Fall 2014 and Begining material from Spring 2015`
 
