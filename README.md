@@ -9,6 +9,12 @@ __DISCLAIMER : PLEASE RTFM AND DO NOT RELY ON THIS INFORMATION ALONE__<br>
 __Contributors__
 <br>tropical-peach :: Steven Seppala (steventseppala@gmail.com)
 
+__Change Log__
+
+**The change log will be periodically updated, but not every single commit, only add important things here. Else keep it in the commit comments**
+
+!! Updated 8 Feb 2017 <br>
+`Sectioned off scripting. Send requests to the issues or wiki once it is up and running` <br> 
 !! Updated on 7 Feb 2017<br>
 `Added a few shell functions to start a baseline for code examples` <br>
 !! Updated on 21 Feb 2015<br>
