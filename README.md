@@ -20,5 +20,4 @@ __Change Log__
 !! Updated on 21 Feb 2015<br>
 `Addtion of class material from Fall 2014 and Begining material from Spring 2015`
 
-For help on how to program and getting set up please visit <br>
-`http://ece.unm.edu/bootstrap/index.php/Main_Page`
+For help on how to program and getting set up please contact contributors, stack overflow, or your professors
