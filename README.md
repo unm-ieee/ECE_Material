@@ -1,6 +1,7 @@
-***This repo has not been updated in some time, please consider contributing***
+***This repo has not been updated in some time, please consider contributing*** <br>
 ***If you want to contribute to this repo, it would be a huge help. Please return in kind what you take.*** <br>
-***Contact steven.t.seppala@gmail.com or steven@peachy.space in order to contribute to this repo of kowledge***
+***Contact steven.t.seppala@gmail.com or steven@peachy.space in order to contribute to this repo of kowledge*** <br>
+*** 15 Aug 2017 -- STS ***
 
 *Past ECE resources gathered here to help future ECE students.*
 
